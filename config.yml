@@ -3,12 +3,16 @@
 
 RuhohSpec: '1.0'
 theme : twitter
-production_url : http://sample.com
+production_url : http://defworld.com
 
 posts:
-  permalink: /:categories/:title/
-  summary_lines: 20
+  permalink: '/:categories/:year/:month/:filename.html'
+  summary_lines: 10
   latest: 10
+  layout: 'post' # default
+  exclude: '~$'
 
 pages:
-  permalink: 'pretty'
+  permalink: 'pretty' # page file path simple mapping
+  layout: 'page' # default
+  exclude: '~$'

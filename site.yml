@@ -1,16 +1,17 @@
-title : Blog Title
+title : tiemei
 tagline: Blog Tagline
 author :
-  name : Firstname Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
-  feedburner : feedname
+  name : tiemei
+  email : jiadongkai@gmail.com
+  github : tiemei
+  twitter : tiemei
+  feedburner : tiemei
 
 navigation :
   - archive.html
+  - blogs/index.md
   - tags.html
   - categories.html
   - pages.html
-  - about.md
+  - tools/index.md
   

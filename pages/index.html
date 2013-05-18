@@ -2,25 +2,21 @@
 title: Home
 description:
 ---
-
-<h2>Start</h2>
-<p>
-  Ruhoh is all about the command-line.
-  <br>Check out the goods:
-</p>
-<pre><code>$ ruhoh help</code></pre>
-
-
-<h2>Latest Posts</h2>
-
+<h3>新鲜出炉博客</h3>
+<ul>
 {{# posts_latest }}
-<div class="post">
-  <h3 class="title"><a href="{{url}}">{{title}}</a> <span class="date">{{ date }}</span></h3>
-
-  {{{ summary }}}
-
-  <div class="more">
-    <a href="{{url}}" class="btn">read more..</a>
-  </div>
-</div>
+  <li>{{ date }}>> <a href="{{url}}">{{ title }}</a></li>
 {{/ posts_latest }}
+</ul>
+<br />
+<h3>关注的大神们</h3>
+<a href="hugozhu.myalert.info">Hugo Zhu/一粟</a><br />
+<a href="http://html5ify.com/">田永强/朴灵</a><br />
+<br />
+<div class="fright">
+  <h3>whoami</h3>
+  github:<a href="https://github.com/tiemei">tiemei</a><br />
+  ruby-china:<a href="http://ruby-china.org/tiemei">tiemei</a><br />
+  sina weibo:<a href="http://weibo.com/wgdkfk">@顽固的卡夫卡</a><br />
+</div>
+

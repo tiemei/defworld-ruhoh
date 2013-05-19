@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.3348174690739114" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.08880427434683091" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4412955563948391" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7936046383536055" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.35186460563331756" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.32391329509534883" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -63,30 +63,25 @@
     <h2>Latest Posts</h2>
 
 <div class="post">
-  <h3 class="title"><a href="/java/2013/05/a-little-things-abount-java-language.html">java语言基础细节</a> <span class="date">2013-05-18</span></h3>
+  <h3 class="title"><a href="/java/2013/05/spring-3-exception-handling.html">spring异常处理</a> <span class="date">2013-05-19</span></h3>
 
-  <p>2011年的笔记，当时是在看《细说 Java》，算是一个入门书。<br>
-虽然基础，但是平时工作中并不一定注意到这些细节，现在这些零碎的东西都整理起来。<br>
-只挑选目前看还有些价值的  </p>
+  <h2 id="toc_0">我经手的两个项目中异常处理如何做？</h2>
 
-<h2 id="toc_0">java基本数据类型</h2>
+<p><strong>项目一</strong><br>
+  所有对外接口均返回json数据，现有的异常处理是实现spring容器提供的
+HandlerExceptionResolver，所有的异常均返回一个静态的错误页面。<br>
+<strong>项目二</strong><br>
+返回html也返回json数据，同样实现HandlerExceptionResolver，针对请求html
+的情况，返回错误页面；而针对请求Json数据的情况，返回一个json数据，并告诉
+调用方resultCode+resultMsg。  </p>
 
-<p>基本数据类型由低到高排序：</p>
+<p>显然项目二针对json数据设置resultcode的方法更合适  </p>
 
-<pre><code>byte(1) short(2) ---&gt;
-                     int(4) long(8) float(4) double(8)
-        char (2) ---&gt;
-boolean(1)
-</code></pre>
-
-<p>由低到高隐式转换，高到底必须显示申明，因为数据会失真。<br>
-char是无符号类型，所以char short<br>
-boolean不能和其他类型进行相互转换<br>
-必要时使用BigInteger &amp; BigDecimal  </p>
+<h2 id="toc_1">spring提供了异常处理方案？</h2>
 
 
   <div class="more">
-    <a href="/java/2013/05/a-little-things-abount-java-language.html" class="btn">read more..</a>
+    <a href="/java/2013/05/spring-3-exception-handling.html" class="btn">read more..</a>
   </div>
 </div>
 
@@ -113,6 +108,34 @@ boolean不能和其他类型进行相互转换<br>
 
   <div class="more">
     <a href="/funny/2013/05/auto-up-img-to-filikr-and-get-shareurl.html" class="btn">read more..</a>
+  </div>
+</div>
+
+<div class="post">
+  <h3 class="title"><a href="/java/2013/05/a-little-things-abount-java-language.html">java语言基础细节</a> <span class="date">2013-05-18</span></h3>
+
+  <p>2011年的笔记，当时是在看《细说 Java》，算是一个入门书。<br>
+虽然基础，但是平时工作中并不一定注意到这些细节，现在这些零碎的东西都整理起来。<br>
+只挑选目前看还有些价值的  </p>
+
+<h2 id="toc_0">java基本数据类型</h2>
+
+<p>基本数据类型由低到高排序：</p>
+
+<pre><code>byte(1) short(2) ---&gt;
+                     int(4) long(8) float(4) double(8)
+        char (2) ---&gt;
+boolean(1)
+</code></pre>
+
+<p>由低到高隐式转换，高到底必须显示申明，因为数据会失真。<br>
+char是无符号类型，所以char short<br>
+boolean不能和其他类型进行相互转换<br>
+必要时使用BigInteger &amp; BigDecimal  </p>
+
+
+  <div class="more">
+    <a href="/java/2013/05/a-little-things-abount-java-language.html" class="btn">read more..</a>
   </div>
 </div>
 

@@ -3,12 +3,12 @@
   <channel>
     <title>tiemei</title>
     <link>http://defworld.com</link>
-    <pubDate>2013-05-19 10:28:56 +0800</pubDate>
+    <pubDate>2013-05-20 00:19:08 +0800</pubDate>
     <item>
-      <title>java&#x8BED;&#x8A00;&#x57FA;&#x7840;&#x7EC6;&#x8282;</title>
-      <link>http://defworld.com/java/2013/05/a-little-things-abount-java-language.html</link>
-      <pubDate>2013-05-18</pubDate>
-      <description>java&#x8BED;&#x8A00;&#x57FA;&#x7840;&#x7EC6;&#x8282;</description>
+      <title>spring&#x5F02;&#x5E38;&#x5904;&#x7406;</title>
+      <link>http://defworld.com/java/2013/05/spring-3-exception-handling.html</link>
+      <pubDate>2013-05-19</pubDate>
+      <description>spring&#x5F02;&#x5E38;&#x5904;&#x7406;</description>
     </item>
     <item>
       <title>markdown&#x6240;&#x7528;&#x56FE;&#x7247;&#x4E0A;&#x4F20;&#x81EA;&#x52A8;&#x5316;&#x811A;&#x672C;</title>
@@ -27,9 +27,9 @@
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9257935378673237" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.10413257442537227" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.22646153741161346" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9392799768312268" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.6681179027600821" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6455514155984943" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -210,11 +210,11 @@ sudo make install
     &lt;div class="pagination"&gt;
       &lt;ul&gt;
         &lt;ul&gt;
-            &lt;li class="prev"&gt;&lt;a href="/2013-05/build-your-blog-with-gor-and-pi.html" title="&#x6811;&#x8393;&#x6D3E;&#x642D;&#x5EFA;&#x4E2A;&#x4EBA;&#x9759;&#x6001;&#x535A;&#x5BA2;"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="prev"&gt;&lt;a href="/java/2013/05/a-little-things-abount-java-language.html" title="java&#x8BED;&#x8A00;&#x57FA;&#x7840;&#x7EC6;&#x8282;"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
 
             &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
 
-            &lt;li class="next"&gt;&lt;a href="/java/2013/05/a-little-things-abount-java-language.html" title="java&#x8BED;&#x8A00;&#x57FA;&#x7840;&#x7EC6;&#x8282;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="next"&gt;&lt;a href="/java/2013/05/spring-3-exception-handling.html" title="spring&#x5F02;&#x5E38;&#x5904;&#x7406;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
@@ -307,6 +307,12 @@ sudo make install
 </description>
     </item>
     <item>
+      <title>java&#x8BED;&#x8A00;&#x57FA;&#x7840;&#x7EC6;&#x8282;</title>
+      <link>http://defworld.com/java/2013/05/a-little-things-abount-java-language.html</link>
+      <pubDate>2013-05-18</pubDate>
+      <description>java&#x8BED;&#x8A00;&#x57FA;&#x7840;&#x7EC6;&#x8282;</description>
+    </item>
+    <item>
       <title>&#x6811;&#x8393;&#x6D3E;&#x642D;&#x5EFA;&#x4E2A;&#x4EBA;&#x9759;&#x6001;&#x535A;&#x5BA2;</title>
       <link>http://defworld.com/2013-05/build-your-blog-with-gor-and-pi.html</link>
       <pubDate>2013-05-12</pubDate>
@@ -329,9 +335,9 @@ sudo make install
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.09833274958405203" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.7519063747845964" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.21505292623782413" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.2692129837068561" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.5742161801489993" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.41026361521974364" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 

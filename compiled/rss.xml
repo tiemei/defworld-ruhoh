@@ -3,7 +3,13 @@
   <channel>
     <title>tiemei</title>
     <link>http://defworld.com</link>
-    <pubDate>2013-05-19 01:13:30 +0800</pubDate>
+    <pubDate>2013-05-19 10:28:56 +0800</pubDate>
+    <item>
+      <title>java&#x8BED;&#x8A00;&#x57FA;&#x7840;&#x7EC6;&#x8282;</title>
+      <link>http://defworld.com/java/2013/05/a-little-things-abount-java-language.html</link>
+      <pubDate>2013-05-18</pubDate>
+      <description>java&#x8BED;&#x8A00;&#x57FA;&#x7840;&#x7EC6;&#x8282;</description>
+    </item>
     <item>
       <title>markdown&#x6240;&#x7528;&#x56FE;&#x7247;&#x4E0A;&#x4F20;&#x81EA;&#x52A8;&#x5316;&#x811A;&#x672C;</title>
       <link>http://defworld.com/funny/2013/05/auto-up-img-to-filikr-and-get-shareurl.html</link>
@@ -21,9 +27,9 @@
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6958419236847819" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.7408162972111675" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7505872980190801" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9257935378673237" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.10413257442537227" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.22646153741161346" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -208,7 +214,7 @@ sudo make install
 
             &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
 
-            &lt;li class="next disabled"&gt;&lt;a&gt;Next &amp;rarr;&lt;/a&gt;
+            &lt;li class="next"&gt;&lt;a href="/java/2013/05/a-little-things-abount-java-language.html" title="java&#x8BED;&#x8A00;&#x57FA;&#x7840;&#x7EC6;&#x8282;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
@@ -323,9 +329,9 @@ sudo make install
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.507726446368716" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.7542621632295208" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7459569157526595" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.09833274958405203" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.7519063747845964" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.21505292623782413" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 

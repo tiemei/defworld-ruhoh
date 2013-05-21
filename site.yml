@@ -10,8 +10,6 @@ author :
 navigation :
   - archive.html
   - blogs/index.md
-  - tags.html
   - categories.html
-  - pages.html
   - tools/index.md
   

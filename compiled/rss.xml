@@ -3,7 +3,7 @@
   <channel>
     <title>tiemei</title>
     <link>http://defworld.com</link>
-    <pubDate>2013-05-20 00:19:08 +0800</pubDate>
+    <pubDate>2013-05-21 18:32:55 +0800</pubDate>
     <item>
       <title>spring&#x5F02;&#x5E38;&#x5904;&#x7406;</title>
       <link>http://defworld.com/java/2013/05/spring-3-exception-handling.html</link>
@@ -27,9 +27,9 @@
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9392799768312268" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.6681179027600821" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6455514155984943" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.5520252744796614" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.298878075364734" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6389897703609699" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -54,11 +54,7 @@
               
                 &lt;li&gt;&lt;a href="/blogs"&gt;Blogs&lt;/a&gt;&lt;/li&gt;
               
-                &lt;li&gt;&lt;a href="/tags"&gt;Tags&lt;/a&gt;&lt;/li&gt;
-              
                 &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
-              
-                &lt;li&gt;&lt;a href="/pages"&gt;Pages&lt;/a&gt;&lt;/li&gt;
               
                 &lt;li&gt;&lt;a href="/tools"&gt;Tools&lt;/a&gt;&lt;/li&gt;
           &lt;/ul&gt;
@@ -335,9 +331,9 @@ sudo make install
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.2692129837068561" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.5742161801489993" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.41026361521974364" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6045844834030787" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.7860737457935868" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9259510119502872" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -362,11 +358,7 @@ sudo make install
               
                 &lt;li&gt;&lt;a href="/blogs"&gt;Blogs&lt;/a&gt;&lt;/li&gt;
               
-                &lt;li&gt;&lt;a href="/tags"&gt;Tags&lt;/a&gt;&lt;/li&gt;
-              
                 &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
-              
-                &lt;li&gt;&lt;a href="/pages"&gt;Pages&lt;/a&gt;&lt;/li&gt;
               
                 &lt;li&gt;&lt;a href="/tools"&gt;Tools&lt;/a&gt;&lt;/li&gt;
           &lt;/ul&gt;

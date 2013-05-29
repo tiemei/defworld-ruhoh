@@ -3,7 +3,7 @@
   <channel>
     <title>tiemei</title>
     <link>http://defworld.com</link>
-    <pubDate>2013-05-30 07:05:36 +0800</pubDate>
+    <pubDate>2013-05-30 07:12:50 +0800</pubDate>
     <item>
       <title>spring&#x5F02;&#x5E38;&#x5904;&#x7406;</title>
       <link>http://defworld.com/java/2013/05/spring-3-exception-handling.html</link>
@@ -27,9 +27,9 @@
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.39140825611154983" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.6079892991340892" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.838398641679506" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.5097612385102931" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.7031377374264467" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.11608530065039624" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -278,6 +278,9 @@ sudo make install
           with help from &lt;a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework"&gt;ruhoh&lt;/a&gt;
           and &lt;a href="http://twitter.github.com/bootstrap/" target="_blank"&gt;Twitter Bootstrap&lt;/a&gt;
         &lt;/p&gt;
+        &lt;p&gt;
+        &lt;script src="http://s9.cnzz.com/stat.php?id=5379369&amp;web_id=5379369&amp;online=1&amp;show=line" language="JavaScript"&gt;&lt;/script&gt;
+        &lt;/p&gt;
       &lt;/footer&gt;
 
     &lt;/div&gt; &lt;!-- /container --&gt;
@@ -304,7 +307,6 @@ clicky_site_ids.push(defworld.com);
 })();
 &lt;/script&gt;
 &lt;noscript&gt;&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /&gt;&lt;/p&gt;&lt;/noscript&gt;
-    &lt;script src="http://s9.cnzz.com/stat.php?id=5379369&amp;web_id=5379369&amp;online=1&amp;show=line" language="JavaScript"&gt;&lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;
 </description>
@@ -338,9 +340,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.05230894623694726" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.3095750850637007" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.768431571038985" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.8135487864280607" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.017141305443348687" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6352887175052583" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -516,6 +518,9 @@ git push
           with help from &lt;a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework"&gt;ruhoh&lt;/a&gt;
           and &lt;a href="http://twitter.github.com/bootstrap/" target="_blank"&gt;Twitter Bootstrap&lt;/a&gt;
         &lt;/p&gt;
+        &lt;p&gt;
+        &lt;script src="http://s9.cnzz.com/stat.php?id=5379369&amp;web_id=5379369&amp;online=1&amp;show=line" language="JavaScript"&gt;&lt;/script&gt;
+        &lt;/p&gt;
       &lt;/footer&gt;
 
     &lt;/div&gt; &lt;!-- /container --&gt;
@@ -542,7 +547,6 @@ clicky_site_ids.push(defworld.com);
 })();
 &lt;/script&gt;
 &lt;noscript&gt;&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /&gt;&lt;/p&gt;&lt;/noscript&gt;
-    &lt;script src="http://s9.cnzz.com/stat.php?id=5379369&amp;web_id=5379369&amp;online=1&amp;show=line" language="JavaScript"&gt;&lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;
 </description>

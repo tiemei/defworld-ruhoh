@@ -2,7 +2,7 @@
 title: 不设限的Vim，不设限的人生
 date: '2013-06-01'
 description:
-categories: 'vim'
+categories: 'tool'
 tags: vim
 
 ---

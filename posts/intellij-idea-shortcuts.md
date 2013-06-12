@@ -13,6 +13,8 @@ tags: intellij
 [IntelliJ IDEA 的 20 个代码自动完成的特性](http://www.oschina.net/question/12_70799)  
 [从Eclipse转移到IntelliJ IDEA一点心得](http://www.ituring.com.cn/article/37792)  
 [常用IDEA快捷键](http://www.colorfuldays.org/program/idea_keymap/)
+[Intellij-IDEA-F2E](https://github.com/damao/Intellij-IDEA-F2E)  
+[@IntelliJ IDEA第二部分视频讲解：项目创建/打开/导入+主题修改+布局/界面介绍+工具栏/菜单栏介绍](http://www.youmeek.com/intellij-idea-part-ii-ui/)
 
 本文快捷键仅适用于：  
 > Mac OS X 10.5+ keymap  

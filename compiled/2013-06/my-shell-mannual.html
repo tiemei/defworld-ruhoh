@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:wb=“http://open.weibo.com/wb”>
+  <head>
+    <meta charset="utf-8">
+    <title>近一年来shell命令积累(随时更新)</title>
+    <meta name="description" content="shell">
+    <meta name="author" content="tiemei">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.5980723371572376" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.5515111174557836" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.46430422911562486" type="text/css" rel="stylesheet" media="all">
+
+ 
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">tiemei</a>
+          <ul class="nav">
+              
+                <li><a href="/archive">Archive</a></li>
+              
+                <li><a href="/blogs">Blogs</a></li>
+              
+                <li><a href="/categories">Categories</a></li>
+              
+                <li><a href="/tools">Tools</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        <div class="page-header">
+  <h1>近一年来shell命令积累(随时更新) </h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+    <p>参考:<br>
+<a href="http://roclinux.cn/">linux命令五分钟系列博文，写的简洁易懂</a>  </p>
+
+<p>按序介绍以下命令：  </p>
+
+<ul>
+<li><a href="#awk">awk</a></li>
+<li><a href="#echo">echo</a></li>
+<li><p><a href="#expect">expect</a> 对命令行提示输入自动输入，如密码验证</p></li>
+<li><p><a href="#cut">cut</a>      字节/字符/域（特殊字符分隔）的按行切割</p></li>
+<li><p><a href="#paste">paste</a>  多文件按行连接/一个文件多行连接</p></li>
+<li><p><a href="#split">split</a> 按行/大小拆分文件</p></li>
+<li><p><a href="#sed">sed</a> stream editor,面向行处理，输出到标准输出</p></li>
+<li><p><a href="#awk">awk</a></p></li>
+<li><p><a href="#cat">cat</a></p></li>
+<li><p><a href="#tac">tac</a> 逆向输出文件</p></li>
+<li><p><a href="#date">date</a></p></li>
+<li><p><a href="#%E6%88%AA%E5%8F%96%E5%AD%90%E4%B8%B2">截取子串</a></p></li>
+<li><p><a href="#%E5%85%B6%E4%BB%96">其他</a></p></li>
+<li><p><a href="#find">find</a></p></li>
+<li><p><a href="#service">service</a></p></li>
+<li><p><a href="#du">du</a> disk usage，目录及文件大小</p></li>
+<li><p><a href="#chkconfig">chkconfig</a> 设置各个系统运行级别启动的服务</p></li>
+<li><p><a href="#uname">unmae</a></p></li>
+<li><p><a href="#tr">tr</a> 标准输入到标准输出的字符串转译</p></li>
+<li><p>[压缩和解压](#压缩和解</p></li>
+<li><p><a href="#shudown">shutdown</a></p></li>
+<li><p><a href="#chsh">chsh</a> choose shell</p></li>
+<li><p><a href="#man">man</a> </p></li>
+<li><p><a href="#who%20am%20i">who am i</a>- <a href="#wc">wc</a> 字符/字节/最长行字符数/行数 统计</p></li>
+<li><p><a href="#vim">vim</a> 字符替换</p></li>
+<li><p><a href="#wget">wget</a></p></li>
+<li><p><a href="#sort">sort</a></p></li>
+</ul>
+
+<h2 id="toc_0">- <a href="#ln">ln</a></h2>
+
+<ul>
+<li><a href="#sar">sar</a>  收集、汇报与存储CPU/IO..信息</li>
+</ul>
+
+<h2 id="toc_1">- <a href="#wget">wget</a></h2>
+
+<ul>
+<li><a href="#netstat">netstat</a> 和netstat说再见！官方都不维护了！</li>
+<li><a href="#ss">ss</a> Socket Statistics</li>
+<li><a href="#iproute2">iproute2</a> 于TCP/IP协议的流量控制工具套装,取代原来包含netstat的套装net-tools</li>
+<li><a href="#%E5%AE%9E%E6%97%B6%E8%A7%82%E5%AF%9F%E6%96%87%E4%BB%B6%E5%8F%98%E5%8C%96">实时观察文件变化</a></li>
+<li><a href="#ps">ps</a></li>
+<li><a href="#shuf">shuf</a> 打乱文本的行</li>
+<li><a href="#rpm">rpm</a> </li>
+<li><p><a href="#grep">grep</a></p></li>
+<li><p><a href="#script/scriptrelay">script/scriptrelay</a> 终端演示</p></li>
+<li><p>[pushd/popd]#(#pushd/popd) 目录压栈出栈</p></li>
+</ul>
+
+<h3 id="toc_2"><a id="awk"><font color="green">awk</font></a></h3>
+
+<p><a href="http://124.16.151.186/docs/linux/script/Awk-1index.shtml#12">入门一</a>_</p>
+
+<ul>
+<li>awk &#39;{ print }&#39; file # 对每一行都执行{}内的命令</li>
+<li>$0表示整行，$1...表示第几几个字段，分割符可制定-F &#39;:&#39;</li>
+<li>&#39;{ print $1 &quot; &quot; $3 }&#39; 这样才会在两个字段间插入空格</li>
+<li><p>外部脚本 awk -f myscript.awk file</p>
+
+<pre><code># myscript.awk
+BEGIN {
+  FS=&quot;:&quot; # 不同的是，这里没有用-F参数设置分隔符
+} 
+{ print $1 }
+</code></pre></li>
+<li><p>BEFIN END 在处理所有行之前和之后做一次的事，前者通常设置FS，打印页眉，或初始化全局变量，后者执行最终计算或输出结尾摘要</p></li>
+<li><p>规则表达式和快 </p>
+
+<pre><code>/foo/ { print }，指数出有foo的行，/[0-9]+\.[0-9]*/ { print },浮点数 
+</code></pre></li>
+<li><p>表达式和块</p>
+
+<pre><code>$1 == &quot;fred&quot; { print $3 } 只有第一字段是fred时才输出
+可用： == &lt; &gt; &lt;= &gt;= !=  ~ !~
+$5 ~ /root/ { print $3 } 匹配时才
+
+() &amp;&amp;/|| () {}
+</code></pre></li>
+<li><p>条件语句</p>
+
+<pre><code>上个例子等价于：
+{
+    if ( $5 ~ /root/ ) {
+       print $3
+    }
+}
+复杂例子：
+{
+    if ( $1 == &quot;foo&quot; ) {
+        if ( $2 == &quot;foo&quot; ) {
+            print &quot;&quot;
+        } else {
+            print &quot;&quot;
+        }
+    } else if ( $1 == &quot;bar&quot; ) {
+        print &quot;&quot;
+    } else { 
+        print &quot;&quot;
+    }
+ }
+
+ ! /match/ {}
+ 等价 
+ {
+     if ( $0 !~ /match/ ) {
+     }
+ }
+</code></pre></li>
+<li><p>数值运算</p>
+
+<pre><code> BEFIN { x=0 }
+ /^$/  { x=x+1 }
+ END   { print &quot;Blank line num: &quot; x }
+</code></pre></li>
+<li><p>字符串到数字的转换自动发生</p>
+
+<pre><code> x=&quot;1.01&quot;
+ x=x+1
+ print x # 2.01
+
+ bash需要放到$()中，而python需要显示转换
+ awk { print ($1^2)+1 } ，如果不能成功转换默认0
+</code></pre></li>
+<li><p>众多运算符</p>
+
+<pre><code> + - * / 
+ ++ --（前后都支持）
+ += -= *= /=
+ ^ % ^= %=
+</code></pre></li>
+<li><p>字段分隔符</p>
+
+<pre><code> FS 可指定任意长度
+ FS=&quot;\t+&quot; 一个或多个
+ FS=&quot;[[:space:]+]&quot; 其实默认就是一个或多个空格tab
+ FS=&quot;foo[0-9][0-9][0-9]&quot;
+</code></pre></li>
+<li><p>其他特殊变量</p>
+
+<pre><code> NF 字段数量，当前记录中的字段数量
+ NR 记录号，比如当前行号
+</code></pre></li>
+</ul>
+
+<h6 id="toc_3">四行合一行</h6>
+
+<pre><code>[code:1:bde308dcc7]cat filename
+111111111
+222222222
+333333333
+444444444
+555555555
+666666666
+777777777
+888888888
+999999999
+awk &#39;{if (NR%4==0){print $0} else {printf&quot;%s &quot;,$0}}&#39; filename
+111111111 222222222 333333333 444444444
+555555555 666666666 777777777 888888888
+999999999
+</code></pre>
+
+<h6 id="toc_4">按特殊符号分隔 $NF表示最后一个匹配到的</h6>
+
+<pre><code>    cat file1
+&gt; 111.222
+&gt; 3333.44
+cat file1 | awk -F &#39;.&#39; &#39;{printf &quot;%s %s&quot;,$1,$2}&#39;
+&gt; 111 222
+&gt; 3333 44
+</code></pre>
+
+<h6 id="toc_5">split内建命令</h6>
+
+<pre><code>awk &#39;BEGIN{begno=&quot;1,2,3&quot;;split(begno,str,&quot;,&quot;);print str[1],str[2],str[3]}&#39;
+&gt; 1 2 3
+</code></pre>
+
+<h6 id="toc_6">awk其他教程</h6>
+
+<pre><code>[csdn博文](http://suo.iteye.com/blog/1319525)  
+</code></pre>
+
+<p><a href="http://124.16.151.186/docs/linux/script/Awk-1index.shtml">awk实例</a>  </p>
+
+<h3 id="toc_7"><a id="echo"><font color="green">echo</font></a></h3>
+
+<h6 id="toc_8">输出换行</h6>
+
+<pre><code>echo &quot;line1\nline2&quot;
+&gt; line1\nline2
+echo -e line1\n\line2
+&gt; line1
+&gt; line2
+</code></pre>
+
+<h3 id="toc_9"><a id="expect"><font color="green">expect</font></a></h3>
+
+<p><a href="http://en.wikipedia.org/wiki/Expect#Examples">wiki</a>  </p>
+
+<h3 id="toc_10"><a id="cut"><font color="green">cut</font></a></h3>
+
+<p><a href="http://roclinux.cn/?p=1328">网友博文：《cut命令》-linux命令五分钟系列之十九</a>  </p>
+
+<pre><code># 定位格式
+3 /3-5 / 4- / -2
+
+# 按字节切割
+[rocrocket@rocrocket programming]$ who
+rocrocket :0           2009-01-08 11:07
+rocrocket pts/0        2009-01-08 11:23 (:0.0)
+rocrocket pts/1        2009-01-08 14:15 (:0.0)
+
+[rocrocket@rocrocket programming]$ who|cut -b 3-5,8
+croe
+croe
+croe
+
+# 按字符切割
+[rocrocket@rocrocket programming]$ cat cut_ch.txt
+星期一
+星期二
+星期三
+星期四
+[rocrocket@rocrocket programming]$ cut -b 3 cut_ch.txt
+�
+�
+�
+�
+[rocrocket@rocrocket programming]$ cut -c 3 cut_ch.txt
+一
+二
+三
+四
+
+# -n选项
+[rocrocket@rocrocket programming]$ cat cut_ch.txt |cut -nb 2
+
+[rocrocket@rocrocket programming]$ cat cut_ch.txt |cut -nb 1,2,3
+星
+星
+星
+星
+
+# 按域（特殊字符分隔）切割
+# cut的-d选项的默认间隔符就是制表符，如果分隔符为空格，用&#39; &#39;(只允许一个空格，因为cut只允许间隔符为一个字符)
+[rocrocket@rocrocket programming]$ cat /etc/passwd|head -n 5
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+[rocrocket@rocrocket programming]$ cat /etc/passwd|head -n 5|cut -d : -f 1
+root
+bin
+daemon
+adm
+lp
+
+# 制表符和空格区分，制表符显示为&quot;\t&quot;，空格原样显示
+sed -n l tab_space.txt
+
+# 不足
+-d 选项多空格分隔符不支持
+</code></pre>
+
+<h3 id="toc_11"><a id="cat"><font color="green">cat</font></a></h3>
+
+<h6 id="toc_12">用cat合并文件技巧</h6>
+
+<p><a href="http://www.ibm.com/developerworks/cn/linux/l-tip-prompt/l-tiptex2/">IBM Dev博文</a>  </p>
+
+<h3 id="toc_13"><a id="date"><font color="green">date</font></a></h3>
+
+<p><a href="http://xingfujie.blog.51cto.com/2791569/637223">参考</a>
+<code>date –I –d &#39;-n day&#39;</code>   (可以得到N天前的日期，格式为YYYY-MM-DD)
+<code>date –d &#39;-n day&#39; &quot;+Y%m%d&quot;</code>       (可以得到你天前的日期，格式为YYYYMMDD)</p>
+
+<p><code>date –I –d &#39;+n day&#39;</code>   (可以得到N天后的日期，格式为YYYY-MM-DD)
+<code>date –d &#39;+n day&#39; &quot;+%Y%m%d&quot;</code>       (可以得到你天后的日期，格式为YYYYMMDD)<br>
+<code>date +%s.%N</code> (%s是秒，%N是纳秒，需要ms可以对输出做一个计算，基本可作为唯一字符戳)  </p>
+
+<h4 id="toc_14">时间戳格式化日期互转</h4>
+
+<ul>
+<li><code>date -d @1287331200  &quot;+%Y-%m-%d %M:%S&quot;</code></li>
+<li>`date -d &quot;2010-10-18 00:00:00&quot; +%s 输出时间戳</li>
+<li><p>指定时间前后几天</p>
+
+<p>s=<code>date -d &quot;2010-10-10 00:00:00&quot; +%s</code> 
+   s<em>new=<code>expr $s + 86400</code> # 加上一条的秒数
+   date</em>new=<code>date -d @$s_new &quot;+%Y-%m-%d&quot;</code></p></li>
+</ul>
+
+<h3 id="toc_15"><a id="截取子串"><font color="green">截取子串</font></a></h3>
+
+<h3 id="toc_16"><a id="其他"><font color="green">其他</font></a></h3>
+
+<p><a href="http://blog.sina.com.cn/s/blog_69516b7f01015j34.html">linux下grep分析APACHE 服务器日志 命令集合</a>  </p>
+
+<h3 id="toc_17"><a id="find"><font color="green">find</font></a></h3>
+
+<p>分几个维度查找：<br>
+<code>find . -name file_name</code> # 文件名<br>
+<code>fine . -type d -name file_name</code> # 文件类型,f(普通文件),l(链接文件)<br>
+<code>find . -user tiemei</code> # 用户/用户组<br>
+<code>find . -perm 755</code> # 权限<br>
+<code>find . -regex &#39;.*b.*3&#39;</code> # 正则过滤<br>
+<code>find . -type f -name “*.abc” -exec cat {} \</code><br>
+                 # 输出找到项的内容， -exec 表示找到的项作为后面命令的参数， -ok 表示每个匹配项用户确认是否输出，{}表示find查找的结果。<br>
+<code>find . -amin -5</code><br>
+                 # 访问过用amin，修改过用mmin，文件状态改变过用cmin<br>
+                 # 精确到分钟的用amin,mmin,cmin，精确到天的用atime,mtime,ctime<br>
+                 #  在5分钟之内的用-5，在5分钟以上的用＋5<br>
+<code>find . -size +10000000c</code><br>
+                 # -size：表示文件大小，＋表示大于某个数，－表示小于某个数。c表示单位是字节，你可以将c换成k,M,G  </p>
+
+<p><code>find . -maxdepth 1 -name “*.c”</code>  # 不想深入子目录，只想在当前目录  </p>
+
+<h3 id="toc_18"><a id="service"><font color="green"><a href="http://roclinux.cn/?p=47">service</a></font></a></h3>
+
+<p><code>service httpd start/stop/restart/reload</code>(重新载入配置)<br>
+位于/sbin目录下，一脚本命令，动作是去/etc/init.d目录下寻找相应服务。<br>
+不是所有发行版都提供  </p>
+
+<h3 id="toc_19"><a id="du"><font color="green">du</font></a></h3>
+
+<p><code>du -h .</code> # 当年前目录下所有目录以及子目录的大小
+<code>du -ch abc | tail -n 1</code> # 只想看abc目录大小，-c 表示最后计算出所有目录大小之和<br>
+<code>du -sh abc</code><br>
+<code>du -h -max-depth=0 abc</code><br>
+<code>du -ah abc</code> # 列出abc及其子目录下所有目录和文件大小<br>
+<code>du -h -exclude=&#39;*xyz*&#39;</code> # 不包含xyz字符串的目录<br>
+<code>du -0h abc</code> # -0不换行，直接输出下一个  </p>
+
+<h3 id="toc_20"><a id="chkconfig"><font color="green">chkconfig</font></a></h3>
+
+<p># 增加一个服务步骤<br>
+- 服务脚本放在/etc/ini.d/下<br>
+- <code>chkconfig -add servicename</code> 增加，此时服务会被在/etc/rc.d/rcN.d中赋予K/S入口了<br>
+- 设置服务默认启动等级  </p>
+
+<p><code>chkconfig -list</code> # 系统所有服务启动情况<br>
+<code>chkconfig -list mysqld</code> # mysqld服务设置情况<br>
+<code>chkconfig -level 35 mysqld on</code> # 只在等级3 5 执行，off表示关闭<br>
+<code>chkconfig mysqld on</code><br>
+                    # 各等级(2 3 4 5)为on<br>
+                    # 0 关机; 1 单用户模式;2 无网络连接的多用户命令行模式；<br>
+                    # 3 有网络连接的多用户命令行模式；4 不可用；5 带图形界面的多用户模式；6 重新启动<br>
+<code>chkconfig -del sevicename</code> # 删除  </p>
+
+<h3 id="toc_21"><a id="uname"><font color="green">uname</font></a></h3>
+
+<p><code>uname -a</code> 打印所有系统信息<br>
+<code>uname -s</code> 打印内核名称<br>
+<code>uname -n</code> 打印网络节点主机名<br>
+<code>uname -r</code> 答应内核发信版本号<br>
+查看系统版本号方法还有：  </p>
+
+<ul>
+<li><code>cat /proc/version</code><br></li>
+<li><code>cat /etc/redhat-release</code></li>
+<li><code>cat /etc/issue</code></li>
+</ul>
+
+<h3 id="toc_22"><a id="tr"><font color="green">tr</font></a></h3>
+
+<p><code>cat filename | tr u n</code>  将u替换为n<br>
+<code>cat filename | tr -d abc</code> 将所有a/b/c字符删去<br>
+<code>cat filename | tr [:lower:] [:upper:]</code>  小写变大写<br>
+<code>[:alnum:]</code>  所有字符数字<br>
+<code>[:alpha:]</code> 表示所有的字母<br>
+<code>[:blank:]</code> 表示所有空格<br>
+<code>[:digit:]</code> 表示所有数字<br>
+<code>[:graph:]</code> 表示所有可打印字符，但不包括空格<br>
+<code>[:print:]</code> 表示所有可打印字符，包括空格  </p>
+
+<h3 id="toc_23"><a id="压缩和解压"><font color="green">压缩和解压</font></a></h3>
+
+<p><strong>RAR</strong><br>
+去下面的网站下载一个RAR命令<br>
+<a href="http://www.rarlab.com/download.htm">http://www.rarlab.com/download.htm</a><br>
+解压后，在rar文件夹make  </p>
+
+<p><code>rar x解压 rar文件</code>  </p>
+
+<p><strong>ZIP</strong><br>
+适用Linux， Windows以及Mac OS。压缩率不是很高，而tar.gz和tar.gz2在压缩率方面做得非常好。<br>
+压缩一个目录：<br>
+ <code>zip -r archive_name.zip directory_to_compress</code> 压缩目录<br>
+ <code>zip -r a.zip abc.txt dir1</code> 压缩目录和文件到一起
+解压一个zip文档：<br>
+<code>unzip archive_name.zip</code><br>
+<code>unzip abc\?.zip</code> 解压缩多个文件（支持正则）abc1.zip，abc2.zip和abc3.zip...<br>
+<code>unzip -j music.zip</code> 内部子目录内容全部解压到一级目录<br>
+查看：<br>
+<code>unzip -v large.zip</code>  内部内容<br>
+<code>unzip -t large.zip</code>  下载的文件是否完整  </p>
+
+<p><strong>tar</strong><br>
+打包一个目录：<br>
+ <code>tar -cvf archive_name.tar directory_to_compress[ dir2]</code>单个/多个目录打包<br>
+ <code>tar -cvf my.tar file1[ file2]</code>单个/多个文件打包
+如何解包：<br>
+<code>tar -xvf archive_name.tar.gz</code><br>
+上面这个解包命令将会将文档解开在当前目录下面。当然，你也可以用这个命令来捏住解包的路径<br>
+<code>tar -xvf archive_name.tar -C /tmp/extract_here/</code>  </p>
+
+<p><strong>tar.gz</strong><br>
+它在压缩时不会占用太多CPU的，而且可以得到一个非常理想的压缩率。<br>
+<code>tar -xzvf abc.tar.gz/abc.tgz</code>  解压缩<br>
+上面这个解包命令将会将文档解开在当前目录下面。当然，你也可以用这个命令来捏住解包的路径：<br>
+<code>tar -zxvf archive_name.tar.gz -C /tmp/extract_here/</code>
+<code>tar -xzvpf abc.tar.gz</code> 解压保留原被压缩文件权限<br>
+<code>tar -czvf dirabc.tar.gz dirabc</code> 压缩文件夹  </p>
+
+<p><code>tar -ztvf abc.tar.gz</code> 仅仅是查看<br>
+<code>tar -xzvf abc.tar.gz def/xyz.txt</code> 只提取一个文件  </p>
+
+<p><code>tar -xvf abc.tar</code> 解开包（并没有解压缩动作）  </p>
+
+<p><strong>gizp : gz</strong><br>
+<code>gzip -d xyz.gz</code><br>
+<code>gzip -1 abc.tar</code> 压缩的最快，或用--fast,压缩比有1~9,9也可为--best  </p>
+
+<p><strong>TAR.BZ2</strong><br>
+bunzip2/bzip2<br>
+所有方式中压缩率最好的。就意味着，占用更多的CPU与时间。<br>
+压缩:<br>
+<code>tar -jcvf archive_name.tar.bz2 directory_to_compress</code><br>
+用这个命令来捏住解包的路径：<br>
+<code>tar -jxvf archive_name.tar.bz2 -C /tmp/extract_here/</code>  </p>
+
+<p><strong>bzip2</strong><br>
+<code>bzip2 abc.txt</code> 压缩后得到abc.txt.bz2,原文件被删除<br>
+<code>bzip five.bz2 abc1.txt abc2.txt abc3.txt dir1 dir2</code> 压缩多个目录/文件到一个文件<br>
+<code>bzip2 abc1.txt abc2.txt</code> 分别压缩多个文件
+<code>bunzip2 abc.txt.bz2 / bzip2 -d abc.txt.bz2</code> 解压缩，原文件自动删除<br>
+<code>bunzip2 abc1.txt.bz2 abc2.txt.bz2</code> 解压缩多个  </p>
+
+<p>tar它只是一个打包的命令。tar.gz与tar.bz2都是在tar命令中调用了别的压缩命令实现了一个压缩的功能，实际是实行一个先打包后压缩的过程，而且，tar.gz与tar.bz2只是一个公认的一个通行后缀而已，并不是一种压缩格式（真正实现压缩的是gzip与bzip2，这是后话。），tar.gz在很多时候，也会被简写成tgz。<br>
+如果你在fedora下工作，你会发现bunzip2是bzip2的一个符 号连接。但bunzip2和bzip2的功能却正好相反。bzip2是用来压缩文件的（当然如果使用特殊函数也是可以用来解压，用选项-d可以实现），而 bunzip2是用来解压文件的（相当于bzip2 -d）。类比，还有zip和unzip、gzip和gunzip、compress和uncompress。  </p>
+
+<h3 id="toc_24"><a id="shutdown"><font color="green">shutdown</font></a></h3>
+
+<p><code>shutdown -h 23:00</code><br>
+<code>shutdown -h +15</code><br>
+<code>shutdown -k now &quot;Server would shutdown in 15mins.&quot;</code> 吓唬一下  </p>
+
+<h3 id="toc_25"><a id="chsh"><font color="green">chsh</font></a></h3>
+
+<p><code>chsh -l</code> 当前机器安装了那些shell<br>
+<code>cat /etc/shells</code> 同上<br>
+<code>echo $SHELL</code> 正在使用的shell<br>
+<code>chsh -s /bin/zsh</code> 修改当前shell，重启shell窗口生效，修改的效果是改了文本文本文件,<code>cat /etc/passwd | grep ^tiemei</code>  </p>
+
+<h3 id="toc_26"><a id="man"><font color="green">man</font></a></h3>
+
+<p>用man查看帮助信息，同名的情况，需要引入分类：  </p>
+
+<ul>
+<li>1 用户命令</li>
+<li>2 系统调用</li>
+<li>3 C语言库函数</li>
+<li>4 设备或特殊文件</li>
+<li>5 文件格式和规则</li>
+<li>6 游戏及其他</li>
+<li>7 宏、包及其他杂项</li>
+<li>8 系统管理员相关的命令</li>
+</ul>
+
+<p><a href="http://www.linuxmanpages.com/">一个查看man信息的网站</a><br>
+<code>manpath</code>命令可查看man搜索帮助信息的路径顺序<br>
+<code>makewhatis</code> 重新建立man数据库<br>
+<code>man -k roc</code> 等效于 <code>apropos</code>(一个脚本文件) ,像搜索引擎一样，给一个关键字列出所有相关信息  </p>
+
+<h3 id="toc_27"><a id="who am i"><font color="green">who am i</font></a></h3>
+
+<p>whoami 当前操作用户,即有效用户=euid(effective user id)<br>
+who am i 等效 who -m 登录用户，即linux术语里的实际用户=uid(user id)<br>
+who 当前登录的所有用户<br>
+深入：<br>
+<a href="http://hi.baidu.com/xinbao125/item/0efe5d9a728cdb88581461eb">用标准IO实现linux的who命令</a>
+<a href="http://hi.baidu.com/xinbao125/item/a521ac313f3779159cc65eeb">实现linux的whoami命令</a>  </p>
+
+<h3 id="toc_28"><a id="wc"><font color="green">wc</font></a></h3>
+
+<pre><code>[rocrocket@rocrocket programming]$ cat wc1.txt
+1 2
+34 5
+你好
+[rocrocket@rocrocket programming]$ wc -c wc1.txt # 字节数，空格换行都算，UTF-    8编码，汉字3字节    
+16 wc1.txt    
+[rocrocket    @rocrocket programming]$ wc -m wc1.txt # 字符数，一个汉字一个字符    
+12 wc1.txt    
+[rocrocket    @rocrocket programming]$ wc -l wc1.txt # 行数    
+3 wc1.txt    
+[rocrocke    t@rocrocket programming]$ wc -L wc1.txt # 最长行长度，换行不在内    
+4 wc1.txt    
+[rocrocket@rocrocket programming]$ wc -w wc1.txt # 字数（word），34 是一个字
+5 wc1.txt
+
+
+[rocrocket@rocrocket programming]$ wc wc1.txt
+3  5 16 wc1.txt
+输出信息依次是：行数 字数 字节数 文件名称。
+</code></pre>
+
+<p>tab制表符，这个符号比较特殊，当使用-L时，制表符算7个字符（这要依据一个制表符的长度而定，在我的系统中一个制表符算7个空格长度）。而当使用-w时，制表符和空格没有两样，都作为字的间隔来看待。当用-c时，一个制表符也就算一个字符  </p>
+
+<h3 id="toc_29"><a id="vim"><font color="green">vim</font></a></h3>
+
+<p><code>s/abc/xyz/</code> 光标所在行第一项替换<br>
+<code>s/abc/xyz/g</code> 光标所在行所有项替换<br>
+<code>1,$s/abc/xyz/g</code> 第一行到最后一样替换，<code>.</code>表示当前行<br>
+<code>:s#http://roclinux\.cn/index\.php#http://www\.sohu\.com#</code> 间隔符号用#，!也行<br>
+<code>:1,$s/\([0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}\)/&#39;\1&#39;/g</code>  日期格式（XXXX-XX-XX）的字符串两侧加上一对单引号<br>
+<code>:r !sed -n &#39;1,1p&#39; file</code> 读入另一个文件第一行   </p>
+
+<p><code>num ctrl+w +/-</code>增减宽度<br>
+<code>num ctrl+w &gt;/&lt;</code>减小高度</p>
+
+<p><code>n&gt;&gt;</code> <code>n&lt;&lt;</code> 多行缩进，或进入v模式按&gt;/&lt;  </p>
+
+<h3 id="toc_30"><a id="sed"><font color="green">sed</font></a></h3>
+
+<p>按行处理，读一行到零食缓冲区（模式空间，pattern space）,处理完输出到屏幕。<br>
+<code>sed cmd file</code> 命令格式  </p>
+
+<ul>
+<li><p><code>/2/d</code> 删除含有字符&#39;2&#39;的行</p>
+
+<pre><code>[rocrocket@rocrocket programming]$ cat roc.txt
+test 1
+test2
+testtest
+XtestX
+BBtest
+[rocrocket@rocrocket programming]$ sed ‘/2/d’ roc.txt
+test 1
+testtest
+XtestX
+BBtest
+</code></pre></li>
+<li><p><code>s/:.*$//</code> 将第一个&#39;:&#39;只有的内容替换为空白</p>
+
+<pre><code>[rocrocket@rocrocket programming]$ head -n 5 /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+
+[rocrocket@rocrocket programming]$ head -n 5 /etc/passwd|sed ‘s/:.*$//’
+root
+bin
+daemon
+adm
+lp
+</code></pre></li>
+<li><p><code>/4/p</code> 输出含有&#39;4&#39;的行，sed默认先输出原始行，加上 <code>-n</code> 只输出想要的行</p>
+
+<pre><code>[rocrocket@rocrocket programming]$ cat roc.txt
+1
+2
+3
+4
+5
+[rocrocket@rocrocket programming]$ sed ‘/4/p’ roc.txt
+1
+2
+3
+4
+4
+5
+[rocrocket@rocrocket programming]$ sed -n ‘/4/p’ roc.txt
+4
+</code></pre></li>
+<li><p>command部分包括，</p>
+
+<ul>
+<li>确定范围部分 
+
+<ul>
+<li>指定行数 <code>3,5</code> <code>5,$</code> <code>2,+4p</code> 第2行后面再加4行</li>
+<li>用模式匹配进行指定，<code>/^[dD]/</code>匹配行首不是以d/D开头的行</li>
+</ul></li>
+<li>处理方式部分
+
+<ul>
+<li>d 删除行</li>
+<li>p 打印该行</li>
+<li>r 读取指定文件的内容</li>
+<li>w 写入指定文件</li>
+<li>a: 在下面插入新行内容</li>
+</ul></li>
+<li>举例:
+
+<ul>
+<li><code>sed -n &#39;10,20p&#39; test</code> 显示test文件的10到20行</li>
+<li><code>sed &#39;/^[dD]/s/x/X/g&#39; test</code> 将所有以d/D开头的行小写x替换成大写X输出</li>
+<li><code>sed &#39;s/..$//&#39; test</code>删除每行最后两个字符</li>
+<li><code>sede &#39;s/..//&#39; test</code> 删除每行前两个字符</li>
+</ul></li>
+</ul></li>
+<li><p><code>s/B.*/&amp;2008/</code>在匹配到&#39;B.*&#39;后面插入2008,<code>&amp;</code>表示被匹配的部分</p>
+
+<pre><code>[rocrocket@rocrocket programming]$ cat mysed.txt
+Beijing
+London[rocrocket@rocrocket programming]$ sed ‘s/B.*/&amp;2008/’ mysed.txt
+Beijing2008
+London
+</code></pre></li>
+<li><p><code>s/\(Beijing\)\(.*\)\(Beijing\)/\12008\2\32008/</code> 在行的第一个Beijing后加上2008，最后一个Beijing后加上2008，注意&#39;()&#39;匹配的部分存储到\1 \2 \3中</p>
+
+<pre><code>[rocrocket@rocrocket programming]$ cat mysed.txt
+Beijing Beijing Beijing Beijing
+London London London London
+[rocrocket@rocrocket programming]$ sed ‘s/\(Beijing\)\(.*\)\(Beijing\)/\12008\2\32008/’ mysed.txt
+Beijing2008 Beijing Beijing Beijing2008
+London London London London
+</code></pre></li>
+<li><p><code>sed -n &#39;1~2p&#39; file</code> 打印偶数行 <code>sed -n &#39;0~2p&#39; file</code> 打印奇数行</p></li>
+<li><p><a href="http://roclinux.cn/?p=1362">sed不支持非贪婪算法</a></p></li>
+<li><p><code>‘/2005/,/2007/p’</code> 匹配有2005的行到有2007的行结束</p>
+
+<pre><code>[rocrocket@rocrocket programming]$ cat mysed.txt
+Beijing 2003
+Beijing 2004
+Beijing 2005
+Beijing 2006
+Beijing 2007
+Beijing 2008
+Beijing 2007
+[rocrocket@rocrocket programming]$ sed -n ‘/2005/,/2007/p’ mysed.txt
+Beijing 2005
+Beijing 2006
+Beijing 2007
+</code></pre></li>
+<li><p><code>-e</code>接多个cmd，从前到后执行</p>
+
+<pre><code>[rocrocket@rocrocket programming]$ sed -n -e ’1,2p’ -e ’4p’ mysed.txt
+Beijing 2003
+Beijing 2004
+Beijing 2006
+</code></pre></li>
+<li><p><code>-f</code>将cmd部分写到file中</p>
+
+<pre><code>[rocrocket@rocrocket programming]$ cat callsed
+/2004/,/2006/p
+[rocrocket@rocrocket programming]$ sed -n -f callsed mysed.txt
+Beijing 2004
+Beijing 2005
+Beijing 2006
+</code></pre></li>
+<li><p>cmd中 <code>r  w</code>用法</p>
+
+<pre><code>[rocrocket@rocrocket programming]$ cat ins.txt
+====China====
+[rocrocket@rocrocket programming]$ sed ‘/2005/r ins.txt’ mysed.txt
+Beijing 2003
+Beijing 2004
+Beijing 2005
+====China====
+Beijing 2006
+Beijing 2007
+Beijing 2008
+[rocrocket@rocrocket programming]$ sed ‘/200[4-6]/w new.txt’ mysed.txt; cat new.txt
+Beijing 2004
+Beijing 2005
+Beijing 2006
+</code></pre></li>
+<li><p>cmd中 <code>i</code>用法  在特定行上面插入特定内容</p>
+
+<pre><code>[rocrocket@rocrocket programming]$ sed ‘/2004/i\China’ mysed.txt
+Beijing 2003
+China
+Beijing 2004
+Beijing 2005
+Beijing 2006
+Beijing 2007
+Beijing 2008
+</code></pre></li>
+<li><p>cmd中<code>y</code>用法，替换特定字符</p>
+
+<pre><code># sed -n &#39;s/eijing/EIJIGN/g&#39; mysed.txt一样的效果
+[rocrocket@rocrocket programming]$ sed ‘y/eijng/EIJNG/’ mysed.txt
+BEIJING 2003
+BEIJING 2004
+BEIJING 2005
+BEIJING 2006
+BEIJING 2007
+BEIJING 2008
+</code></pre></li>
+<li><p><code>/2004/{n;y/eijng/EIJNG/;}</code>对匹配行的下一行进行处理，n使移到下一行</p>
+
+<pre><code>[rocrocket@rocrocket programming]$ sed ‘/2004/{n;y/eijng/EIJNG/;}’ mysed.txt
+Beijing 2003
+Beijing 2004
+BEIJING 2005
+Beijing 2006
+Beijing 2007
+Beijing 2008
+[rocrocket@rocrocket programming]$ sed ‘/200/{n;y/eijng/EIJNG/;}’ mysed.txt
+Beijing 2003
+BEIJING 2004
+Beijing 2005
+BEIJING 2006
+Beijing 2007
+BEIJING 2008
+</code></pre></li>
+<li><p><a href="http://roclinux.cn/?p=1585">强势扩展</a> 复杂命令/h x G/...</p>
+
+<pre><code># 同时写多个命令，用三种方式：分号，-e，-f
+sed -n -e ‘=;p’ myfile.txt  # =表示行号，打印每行行号，然后答应每行内容
+sed -n -e ‘=’ -e ‘p’ myfile.txt
+sed -n -f mycommands.sed myfile.txt
+
+# h x G 
+h表示将模式空间中的内容拷贝到”保持空间(hold space)”中。“保持空间”是sed中除了模式空间外的另一个暂存数据的地方
+x表示交换模式空间和保持空间中的内容
+G表示将保持空间的内容追加到模式空间中内容的尾部
+
+# s///g和s///
+个都是sed里的替换命令，有g，如果一行里出现两次匹配串，那么所有的匹配串都会被替换；否则值只替换第一个匹配串
+
+# sed -e ’s/72;/72,next_val=0×11111111;/;/@/{h;s/test/next/g;x;G}’ fmt_vuln.c
+将文件中每行出现‘72;’替换为‘72,next_val=0×11111111;’；接着，如果有@符号，则将本行宝贝到hold空间，做一个全局的替换，交换保持空间和模式空间内容，并将保持空间内容追加到模式空间结尾（增加了一行）
+</code></pre></li>
+</ul>
+
+<h3 id="toc_31"><a id="wget"><font color="green">wget</font></a></h3>
+
+<p><code>wget -c &quot;www.baidu.com&quot; -O reNameFile -o wget.log</code> 重命名，并输出运行日志  </p>
+
+<h3 id="toc_32"><a id="awk"><font color="green">awk</font></a></h3>
+
+<p><code>awk &#39;NR%2&#39; file</code> 提取奇数行
+<code>awk &#39;NR%2==0&#39; file</code> 提取偶数行  </p>
+
+<h3 id="toc_33"><a id="sort"><font color="green">sort</font></a></h3>
+
+<ul>
+<li><code>-u</code> 去除重复行</li>
+<li><code>-r</code> 默认升序，改成降序</li>
+<li><code>sort file &gt; otherfile</code>不生效，用<code>sort file -o otherfile</code></li>
+<li><code>-n</code>默认按字符排序，改成按数值排序</li>
+<li><p><code>-t -k选项</code></p>
+
+<pre><code>[rocrocket@rocrocket programming]$ cat facebook.txt
+banana:30:5.5
+apple:10:2.5
+pear:90:2.3
+orange:20:3.4
+
+分隔符:，按第二列排序
+[rocrocket@rocrocket programming]$ sort -n -k 2 -t : facebook.txt
+apple:10:2.5
+orange:20:3.4
+banana:30:5.5
+pear:90:2.3
+</code></pre></li>
+<li><p>其他选项</p>
+
+<pre><code>-f 忽略大小写
+-c 检查文件是否乱序，如果乱序输出第一个乱序行信息，返回1
+-C 如果乱序，不输出，返回1
+-M 以月份来排序,比如JAN小于FEB等等
+-b 忽略每一行前面的所有空白部分，从第一个可见字符开始排序
+</code></pre></li>
+</ul>
+
+<h4 id="toc_34"><code>-k</code>选项大作战</h4>
+
+<pre><code>$ cat facebook.txt
+google 110 5000
+baidu 100 5000
+guge 50 3000
+sohu 100 4500
+
+分隔符&#39; &#39;,先按第三列数字方式降序排，再按第二列数字方式排序
+$ sort -t &#39; &#39; -k 3nr -k 2n facebook.txt
+baidu 100 5000
+google 110 5000
+sohu 100 4500
+guge 50 3000
+</code></pre>
+
+<h6 id="toc_35">完整语法： <code>[ FStart [ .CStart ] ] [ Modifier ] [ , [ FEnd [ .CEnd ] ][ Modifier ] ]</code></h6>
+
+<ul>
+<li>由<code>,</code>分成start/end两部分，end部分可省略</li>
+<li>Modifier放置类似n r的选项</li>
+<li>CStart从一个域的哪个字符开始，省略表示从第一个字符开始</li>
+<li>FStart从哪个域开始</li>
+<li><p>CEnd省略表示到域尾</p>
+
+<p>按第一个域排序，从第二字符开始
+$ sort -t &#39; &#39; -k 1.2 facebook.txt
+baidu 100 5000
+sohu 100 4500
+google 110 5000
+guge 50 3000</p>
+
+<p>按第一个域第二个字符排序，如果相同按第三个域数字方式降序
+$ sort -t &#39; &#39; -k 1.2,1.2 -k 3,3nr facebook.txt
+baidu 100 5000
+google 110 5000
+sohu 100 4500
+guge 50 3000</p></li>
+</ul>
+
+<h6 id="toc_36">Modifier还可以包括：</h6>
+
+<ul>
+<li>n</li>
+<li>r</li>
+<li>b 忽略本域的签到空白符号</li>
+<li>d 对本域按字典顺序排序（只考虑空白和字母）</li>
+<li>f 忽略带小些</li>
+<li>i 忽略不可打印字符</li>
+<li>u</li>
+<li>h 会识别单位，4G 大约699M</li>
+<li><p>s 阻止同一个域相同，不进行进一步比较</p>
+
+<pre><code>cat
+00 2
+00 1
+sort -t &#39; &#39; -k 1,1 demo -s
+00 2
+00 1
+sort -t &#39; &#39; -k 1,1 demo
+00 1
+00 2
+</code></pre></li>
+</ul>
+
+<h6 id="toc_37">-u -k 联合使用</h6>
+
+<p><font color="red">可以推测，某个域没法比较相等，从第一个域开始升序排序！！！</font></p>
+
+<pre><code>$ cat facebook.txt
+google 110 5000
+baidu 100 5000
+guge 50 3000
+sohu 100 4500
+
+取出重复行，guge也没有留下
+$ sort  -k 1.1,1.1 -u facebook.txt
+baidu 100 5000
+google 110 5000
+sohu 100 4500
+
+-u只会删除所以-k选项都相同情况，如果存在sina 100 4500就会被去掉
+$ sort -n -k 2 -k 3 -u facebook.txt
+guge 50 3000
+sohu 100 4500
+baidu 100 5000
+google 110 5000
+
+第二个域的第二个字符开始到第三个域的第一个字符结束
+原来“跨域的设定是个假象”，sort只会比较第二个域的第二个字符到第二个域的最后一个字符的部分，
+而不会把第三个域的开头字符纳入比较范围。当发现00和00相同时，sort就会自动比较第一个域去了。
+可以推测，某个域没法比较相等，从第一个域开始升序排序！！！
+$ sort -n -k 2.2,3.1 facebook.txt
+guge 50 3000
+baidu 100 5000
+sohu 100 4500
+google 110 5000
+</code></pre>
+
+<p><a href="http://roclinux.cn/?p=1472">参考原文</a><br>
+<a href="http://www.linuxso.com/command/sort.html">sort参数详解</a>  </p>
+
+<h3 id="toc_38"><a id="split"><font color="green">split</font></a></h3>
+
+<p><code>split -l 3 input_file prefix.</code> 3行拆分input_file,目标文件前缀prefix<br>
+<code>-b -k -m..</code>按大小拆分文件  </p>
+
+<h3 id="toc_39"><a id="ln"><font color="green">ln</font></a></h3>
+
+<p><a href="http://vbird.dic.ksu.edu.tw/linux_basic/0230filesystem.php">Linux ext2文件系统 / 硬链接软链接</a></p>
+
+<ul>
+<li><code>ln srcfile hardlink</code>硬链接,只能同一个文件系统，只能指向文件（）。实际是在这个目录的block增加了一条记录，指向srcfile的innode位置。由于删除文件，就是删除其目录block中的内容（需要改目录你有w权限啦~），故你删除原来的srcfile，hardlink照样存在。</li>
+<li><code>ln -s srcfile/srcdir softlink</code> 软链接，实际是创建了新的文件softlink,该文件的block内容指向srcfile/srcdir的inode号码。如果你删除srcfile/srcdir，该softlink失效啦。</li>
+</ul>
+
+<h3 id="toc_40"><a id="paste"><font color="green">paste</font></a></h3>
+
+<pre><code>[rocrocket@rocrocket programming]$ cat p3.txt
+I
+II
+III
+
+# 默认用制表符连接
+[rocrocket@rocrocket programming]$ paste p1.txt p2.txt p3.txt
+1    a    I
+2    b    II
+3    c    III
+[rocrocket@rocrocket programming]$ paste p3.txt p2.txt p1.txt
+I    a    1
+II   b    2
+III  c    3
+
+# 指定连接符号
+[rocrocket@rocrocket programming]$ paste -d &#39;*&#39; p3.txt p2.txt p1.txt
+I*a*1
+II*b*2
+III*c*3
+
+# 一个文件多行连接
+[rocrocket@rocrocket programming]$ paste -s -d &quot;*&quot; p3.txt p2.txt p1.txt
+I*II*III
+a*b*c
+1*2*3
+
+# 
+$ cat fa.txt
+20
+60
+90
+12
+$ cat fb.txt
+60
+90
+12
+14
+$ cat fc.txt
+70
+90
+80
+12
+$ paste -d&quot;+-&quot; fa.txt fb.txt fc.txt
+20+60-70
+60+90-90
+90+12-80
+12+14-12
+
+# 计算结果
+$ paste -d&quot;+-&quot; fa.txt fb.txt fc.txt| while read line
+do
+echo -n &quot;($line)=&quot; # -n不换行
+echo $line | bc
+done
+
+Output:
+(20+60-70)=10
+(60+90-90)=60
+(90+12-80)=22
+(12+14-12)=14
+$ paste fa.txt fb.txt fc.txt | awk &#39;{print &quot;(&quot;$1&quot;+&quot;$2&quot;-&quot;$3&quot;)=&quot;$1+$2-$3}&#39;
+
+Output:
+(20+60-70)=10
+(60+90-90)=60
+(90+12-80)=22
+(12+14-12)=14
+
+# Only list the elements which have rpm &gt; 3000
+$ cat element.txt
+Element E1:
+rpm=2300
+Element E5:
+rpm=8900
+Element E3:
+rpm=5000
+Element E4:
+rpm=1200
+$ paste - - &lt; element.txt | awk &#39;$NF&gt;=3000 {print $1}&#39; FS=[:,=]
+Element E5
+Element E3
+</code></pre>
+
+<p><a href="http://unstableme.blogspot.com/2009/01/linux-paste-command-good-examples-uses.html">待续</a></p>
+
+<h3 id="toc_41"><a id="sar"><font color="green">sar</font></a></h3>
+
+<h5 id="toc_42">CPU信息</h5>
+
+<ul>
+<li><code>sar 时间间隔 输出次数</code> 单位s,如果时间间隔0，输出从开机到现在为止的平均值；输出次数为0，永远输出下去。</li>
+<li><code>sar 5 6 -o sys_info</code>输出到那文件，不过格式没法cat，用<code>sar -f sys_info</code>看吧。-o没有filename，默认到var/log/saDD文件里，其中DD表示当天的日期数字</li>
+<li><p><code>sar -P ALL 1 2</code>试试多核，<code>sar -P 5 1 1</code>只看第六个核</p>
+
+<h5 id="toc_43">内存/网络/IO..信息呢？</h5>
+
+<p>-b：报告I/O使用情况以及传输速率。（只适用于2.5及之前的内核，所以新内核有可能不支持这个选项）</p>
+
+<p>-B：报告“页”使用情况</p>
+
+<p>-c：报告进程创建情况</p>
+
+<p>-d：报告每一个块设备的使用情况
+   （当你使用时，你会发现在DEV列有类似dev1-7格式的字符串，
+   其中1代表设备的主序号，n代表设备的从序号，
+   而且rd<em>sec/s列和wr</em>sec/s列的单位都是512bytes，也就是512B，也就是0.5KB）</p>
+
+<p>-I：汇报中断情况</p>
+
+<p>-n：汇报网络情况</p>
+
+<p>-P：设定CPU</p>
+
+<p>-q：汇报队列长度和负载信息</p>
+
+<p>-r：汇报内存和交换区使用情况</p>
+
+<p>-R：汇报内存情况</p>
+
+<p>-u：汇报CPU使用情况</p>
+
+<p>-v：汇报i节点、文件和其他内核表信息</p>
+
+<p>-w：汇报系统上下文切换情况</p>
+
+<p>-x：可以针对某个特定PID给出统计信息，
+   可以直接指定进程ID号；
+   也可以指定为SELF，这样就是检测sar进程本身；
+   如果设定为ALL，则表示汇报所有系统进程信息。</p>
+
+<p>-X：汇报特定PID的子进程的信息</p>
+
+<p>-y：设定TTY设备的信息。</p>
+
+<p>-A 就相当于-bBcdqrRuvwWy -I SUM -n FULL -P ALL这么一堆选项了</p></li>
+</ul>
+
+<h5 id="toc_44">网络相关</h5>
+
+<pre><code># sar命令使用-n选项可以汇报网络相关信息，可用的参数包括：DEV、EDEV、SOCK和FULL
+# 如果你使用DEV关键字，那么sar将汇报和网络设备相关的信息，如lo，eth0或eth1等，例如：
+$ sar -n DEV 1 2
+Linux 2.6.9      10/17/2009
+
+12:10:49 AM     IFACE   rxpck/s   txpck/s   rxbyt/s   txbyt/s   rxcmp/s   txcmp/s  rxmcst/s
+12:10:50 AM      eth0     63.64      0.00   4072.73      0.00      0.00      0.00      0.00
+12:10:50 AM      eth1     30.30     13.13   2907.07   1234.34      0.00      0.00      0.00
+12:10:50 AM        lo      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+IFACE：就是网络设备的名称；
+rxpck/s：每秒钟接收到的包数目
+txpck/s：每秒钟发送出去的包数目
+rxbyt/s：每秒钟接收到的字节数
+txbyt/s：每秒钟发送出去的字节数
+rxcmp/s：每秒钟接收到的压缩包数目
+txcmp/s：每秒钟发送出去的压缩包数目
+txmcst/s：每秒钟接收到的多播包的包数目
+
+# 如果你使用EDEV关键字，那么会针对网络设备汇报其失败情况
+$ sar -n EDEV 1 3
+Linux 2.6.9     10/17/2009
+
+12:15:06 AM     IFACE   rxerr/s   txerr/s    coll/s  rxdrop/s  txdrop/s  txcarr/s  rxfram/s  rxfifo/s  txfifo/s
+12:15:07 AM        lo      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+12:15:07 AM      eth0      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+12:15:07 AM      eth1      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+rxerr/s：每秒钟接收到的损坏的包的数目
+txerr/s：当发送包时，每秒钟发生的错误数
+coll/s：当发送包时，每秒钟发生的冲撞(collisions)数（这个是在半双工模式下才有）
+rxdrop/s：由于缓冲区满，网络设备接收端，每秒钟丢掉的网络包的数目
+txdrop/s：由于缓冲区满，网络设备发送端，每秒钟丢掉的网络包的数目
+txcarr/s：当发送数据包时，每秒钟载波错误发生的次数
+rxfram/s：在接收数据包时，每秒钟发生的帧对齐错误的次数
+rxfifo/s：在接收数据包时，每秒钟缓冲区溢出错误发生的次数
+txfifo/s：在发送数据包时，每秒钟缓冲区溢出错误发生的次数
+
+# 如果你使用SOCK关键字，则会针对socket连接进行汇报
+$ sar -n SOCK 1 3
+Linux 2.6.9       10/17/2009
+
+12:27:29 AM    totsck    tcpsck    udpsck    rawsck   ip-frag
+12:27:30 AM        90        41         4         0         0
+12:27:31 AM        90        41         4         0         0
+12:27:32 AM        90        41         4         0         0
+Average:           90        41         4         0         0
+totsck：被使用的socket的总数目
+tcpsck：当前正在被使用于TCP的socket数目
+udpsck：当前正在被使用于UDP的socket数目
+rawsck：当前正在被使用于RAW的socket数目
+ip-frag：当前的IP分片的数目
+
+# 如果你使用FULL关键字，相当于上述DEV、EDEV和SOCK三者的综合
+</code></pre>
+
+<h5 id="toc_45">其他好玩的</h5>
+
+<ul>
+<li>sar实时汇报机器性能情况 <code>sar -o monitor.res 间隔时间 运行次数 &gt;/dev/null 2&gt;&amp;1 &amp;</code></li>
+<li><code>-e hh:mm:ss选项</code>某个特定时间结束，只能用在读取(-f)或写入(-o)信息文件时才可用</li>
+</ul>
+
+<p><strong>或许你平时还在使用free,ifconfig或者top，从今以后，试试sar吧</strong></p>
+
+<h3 id="toc_46"><a id="wget"><font color="green">wget</font></a></h3>
+
+<h5 id="toc_47">wget是什么？</h5>
+
+<ul>
+<li>支持HTTP、HTTPS和FTP协议的下载，其中也包括通过HTTP代理的下载<br></li>
+<li>wget能够跟踪HTML文件和XHTML文件,傻傻的去下载外链站点的内容</li>
+<li>wget支持慢速网络下载和不稳定网络的下载。当因为网络不稳定而导致下载失败时，wget会重试直到把目标文件下载下来为止</li>
+<li>wget支持断点续传功能</li>
+<li>wget是使用getopt函数来处理选项和参数,支持长格式的选项和短的</li>
+<li>选项有参数时，你甚至可以在短选项和参数之间不加空格。比如-o log可以写成-olog</li>
+<li>连续使用了多个短选项，且这些短选项不需要加参数，那么可以将他们组合在一起。比如-d -r -c可以写成-drc</li>
+<li><a href="http://roclinux.cn/?p=1542">还有好多呀</a></li>
+</ul>
+
+<h5 id="toc_48"><a href="http://roclinux.cn/?p=1546">wget突破robots.txt限制</a></h5>
+
+<h5 id="toc_49"><a href="http://roclinux.cn/?p=2505">wget目录相关选项</a></h5>
+
+<h5 id="toc_50"><a href="http://roclinux.cn/?p=1561">大文件</a></h5>
+
+<h5 id="toc_51"><a href="http://roclinux.cn/?p=2107">其他选项</a></h5>
+
+<h3 id="toc_52"><a id="netstat"><font color="green">netstat</font></a></h3>
+
+<p><img src="/Dropbox/notes/a/netstat_saygb.png" alt="替代netstat的命令"></p>
+
+<h3 id="toc_53"><a id="ss"><font color="green">ss</font></a></h3>
+
+<ul>
+<li>ss快不是一点点，尤其在sock连接很多，它利用到了TCP协议栈中tcp_diag</li>
+<li><a href="http://roclinux.cn/?p=2420">如果系统没有预装ss，如何装</a><br></li>
+</ul>
+
+<p><strong>【场景一：我想查看当前服务器的网络连接统计】</strong>  </p>
+
+<pre><code>$ ss -s
+Total: 295 (kernel 312)
+TCP:   48 (estab 1, closed 31, orphaned 0, synrecv 0, timewait 0/0), ports 13
+
+Transport Total     IP        IPv6
+*         312       -         -
+RAW       0         0         0
+UDP       2         2         0
+TCP       17        12        5
+INET      19        14        5
+FRAG      0         0         0
+</code></pre>
+
+<p><strong>【场景二：我想查看所有打开的网络端口】</strong>  </p>
+
+<pre><code>$ ss -l
+Recv-Q Send-Q           Local Address:Port               Peer Address:Port
+0      128                         :::webcache                      :::*
+0      128                         :::http                         :::*
+0      128                         :::snapenetio                      :::*
+0      128                          *:snapenetio                       *:*
+0      50                           *:8531                          *:*
+0      9                           :::ftp                          :::*
+0      9                            *:ftp                           *:*
+0      128                          *:ddi-tcp-1                       *:*
+0      100                        ::1:smtp                         :::*
+0      100                  127.0.0.1:smtp                          *:*
+0      128                          *:8541                          *:*
+0      128                  127.0.0.1:entextxid                       *:*
+0      50                           *:12421                         *:*
+0      10                           *:amqp                          *:*
+0      128                          *:12521                         *:*
+0      50                           *:mysql                         *:*
+
+如果使用-pl参数的话，则会列出具体的程序名称。你会在输出中看到类似于这样的内容：
+(&quot;nginx&quot;,15786,6)
+从中可以知道，某个socket连接是属于nginx程序的，nginx程序的PID是15786
+</code></pre>
+
+<p><strong>【场景三：我想查看这台服务器上所有的socket连接】</strong>  </p>
+
+<pre><code>很简单，直接使用-a选项即可列出所有网络连接。
+ss -a
+如果只想查看TCP sockets，那么使用-ta选项；
+如果只想查看UDP sockets，那么使用-ua选项；
+如果只想查看RAW sockets，那么使用-wa选项；
+如果只想查看UNIX sockets，那么使用-xa选项
+</code></pre>
+
+<h3 id="toc_54"><a id="iproute2"><font color="green">iproute2</font></a></h3>
+
+<p><img src="/Dropbox/notes/a/net-tool_ip.png" alt="iproute工具集替代掉net-tools工具集">
+<img src="/Dropbox/notes/a/iproute2.png" alt="iproute2工具集"></p>
+
+<h3 id="toc_55"><a id="实时观察文件变化"><font color="green">实时观察文件变化</font></a></h3>
+
+<p><a href="http://bbs.chinaunix.net/thread-1257647-1-1.html">一个帖子</a>
+- <code>watch -n 1 cat file.log</code> 实时观察cat file.log的最后几行结果</p>
+
+<h2 id="toc_56">- <code>tail -f file.log</code> 末尾几行变动</h2>
+
+<h3 id="toc_57"><a id="ps"><font color="green">ps</font></a></h3>
+
+<p><code>ps -eLf | grep java | wc</code></p>
+
+<h3 id="toc_58"><a id="shuf"><font color="green">shuf</font></a></h3>
+
+<p>自己下载源码编译安装：<a href="http://mirror.yongbok.net/nongnu//shuffle/shuffle-0.9b.tar.gz">http://mirror.yongbok.net/nongnu//shuffle/shuffle-0.9b.tar.gz</a>  </p>
+
+<h3 id="toc_59"><a id="rpm"><font color="green">rpm</font></a></h3>
+
+<h3 id="toc_60"><a id="grep"><font color="green">grep</font></a></h3>
+
+<ul>
+<li><code>grep -n root /etc/passwd</code> 输出行号</li>
+<li><code>grep -v bash /etc/passwd</code> 反向输出</li>
+<li><code>grep -c false /etc/passwd</code> 统计匹配行数
+#### 正则</li>
+<li><code>grep ^root /etc/passwd</code> root开头的行</li>
+<li><code>grep :$ /etc/passwd</code> :结尾的行</li>
+<li><code>grep &#39;\&lt;PATH&#39; file</code> 有某个单词是以PATH开头 </li>
+<li><code>grep &#39;PATH\&gt; file&#39;</code> 有某个单词是以PATH结尾</li>
+<li><code>grep -w &#39;PATH&#39; file</code> 有某个独立的单词，当然前后都是空格啦</li>
+<li><code>grep [yf] file</code> 包行y或f</li>
+<li><code>grep &#39;\&lt;c...h\&gt;&#39;</code> 某个单词，c开头h结尾，中间还有三个字符</li>
+</ul>
+
+<h3 id="toc_61"><a id="script/scriptrelay"><font color="green">script/scriptrelay</font></a></h3>
+
+<ol>
+<li>open terminal 1 : $ <code>mkfifo fd1</code></li>
+<li>open terminal 2 : $ <code>cat fd1</code></li>
+<li>back terminal 1 : $ <code>script -f fd1</code></li>
+<li>write in terminal 1, terminal 2 will see same</li>
+<li>exit in terminal 1 : $ <code>exit</code> </li>
+</ol>
+
+<h3 id="toc_62"><a id="pushd/popd"><font color="green">pushd/popd</font></a></h3>
+
+<ul>
+<li><code>dirs</code> 可现实当前目录，金丹目录堆栈只有一个目录时</li>
+<li><code>pushd /path/to/dir1</code> 将目录压入目录堆栈，此时运行<code>dirs</code>输出目录堆栈，从左到右编号0...n</li>
+<li><code>pushd +3</code> 迅速切换到#3目录,此时目录堆栈的顺序会变化</li>
+<li><code>popd +3</code> 弹出并跳转到该目录</li>
+</ul>
+
+    <hr>
+    <div class="pagination">
+      <ul>
+        <ul>
+            <li class="prev"><a href="/2013-06/intellij-idea-shortcuts.html" title="intellijIDEA入门">&larr; Previous</a></li>
+
+            <li><a href="/archive">Archive</a></li>
+
+            <li class="next disabled"><a>Next &rarr;</a>
+        </ul>
+      </ul>
+    </div>
+    <hr>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  </div>
+  
+  <div class="span4">
+    <script type="text/javascript" charset="utf-8">
+    (function(){
+       var _w = 90 , _h = 24;
+       var param = {
+       url:location.href,
+       type:'2',
+       count:'1', /**是否显示分享数，1显示(可选)*/
+       appkey:'', /**您申请的应用appkey,显示分享来源(可选)*/
+       title:'', /**分享的文字内容(可选，默认为所在页面的title)*/
+       pic:'', /**分享图片的路径(可选)*/
+       ralateUid:'2388250330', /**关联用户的UID，分享微博会@该用户(可选)*/
+       language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
+       rnd:new Date().valueOf()
+     }
+     var temp = [];
+     for( var p in param ){
+     temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+     }
+     document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
+     })()
+    </script>
+
+    <h4>Published</h4>
+    <div class="date"><span>2013-06-12</span></div>
+    <br>
+    <h4>Categories</h4>
+    <ul class="tag_box">
+      <li>
+        <a href="/categories#shell-ref">shell <span>1</span></a>
+      </li>    </ul>
+    <br>
+    <h4>Tags</h4>
+    <ul class="tag_box">
+      <li>
+        <a href="/tags#shell-ref">shell <span>1</span></a>
+      </li>    </ul>
+  </div>
+</div>
+
+      </div>
+
+      <footer>
+        <p>&copy; tiemei 2012 
+          with help from <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">ruhoh</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+        <p>
+        <script src="http://s9.cnzz.com/stat.php?id=5379369&web_id=5379369&online=1&show=line" language="JavaScript"></script>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Google Prettify -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+<script>
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i < pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+</script>
+<!-- end Google Prettify -->
+    <script>
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(defworld.com);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /></p></noscript>
+  </body>
+</html>

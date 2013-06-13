@@ -3,7 +3,7 @@
   <channel>
     <title>tiemei</title>
     <link>http://defworld.com</link>
-    <pubDate>2013-06-12 14:36:38 +0800</pubDate>
+    <pubDate>2013-06-13 10:58:57 +0800</pubDate>
     <item>
       <title>&#x8FD1;&#x4E00;&#x5E74;&#x6765;shell&#x547D;&#x4EE4;&#x79EF;&#x7D2F;(&#x968F;&#x65F6;&#x66F4;&#x65B0;)</title>
       <link>http://defworld.com/2013-06/my-shell-mannual.html</link>
@@ -27,9 +27,9 @@
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6723715989692622" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.7541383095401671" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.12364749116052243" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.44366511918648577" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.9125545524990368" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.46222798399863463" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -81,7 +81,8 @@
 &lt;a href="http://www.ituring.com.cn/article/37792"&gt;&#x4ECE;Eclipse&#x8F6C;&#x79FB;&#x5230;IntelliJ IDEA&#x4E00;&#x70B9;&#x5FC3;&#x5F97;&lt;/a&gt;&lt;br&gt;
 &lt;a href="http://www.colorfuldays.org/program/idea_keymap/"&gt;&#x5E38;&#x7528;IDEA&#x5FEB;&#x6377;&#x952E;&lt;/a&gt;
 &lt;a href="https://github.com/damao/Intellij-IDEA-F2E"&gt;Intellij-IDEA-F2E&lt;/a&gt;&lt;br&gt;
-&lt;a href="http://www.youmeek.com/intellij-idea-part-ii-ui/"&gt;@IntelliJ IDEA&#x7B2C;&#x4E8C;&#x90E8;&#x5206;&#x89C6;&#x9891;&#x8BB2;&#x89E3;&#xFF1A;&#x9879;&#x76EE;&#x521B;&#x5EFA;/&#x6253;&#x5F00;/&#x5BFC;&#x5165;+&#x4E3B;&#x9898;&#x4FEE;&#x6539;+&#x5E03;&#x5C40;/&#x754C;&#x9762;&#x4ECB;&#x7ECD;+&#x5DE5;&#x5177;&#x680F;/&#x83DC;&#x5355;&#x680F;&#x4ECB;&#x7ECD;&lt;/a&gt;&lt;/p&gt;
+&lt;a href="http://www.youmeek.com/intellij-idea-part-ii-ui/"&gt;@IntelliJ IDEA&#x7B2C;&#x4E8C;&#x90E8;&#x5206;&#x89C6;&#x9891;&#x8BB2;&#x89E3;&#xFF1A;&#x9879;&#x76EE;&#x521B;&#x5EFA;/&#x6253;&#x5F00;/&#x5BFC;&#x5165;+&#x4E3B;&#x9898;&#x4FEE;&#x6539;+&#x5E03;&#x5C40;/&#x754C;&#x9762;&#x4ECB;&#x7ECD;+&#x5DE5;&#x5177;&#x680F;/&#x83DC;&#x5355;&#x680F;&#x4ECB;&#x7ECD;&lt;/a&gt;
+(&lt;a href="http://wiki.jetbrains.net/intellij/Creating_and_importing_Maven_projects"&gt;http://wiki.jetbrains.net/intellij/Creating_and_importing_Maven_projects&lt;/a&gt;)&lt;/p&gt;
 
 &lt;p&gt;&#x672C;&#x6587;&#x5FEB;&#x6377;&#x952E;&#x4EC5;&#x9002;&#x7528;&#x4E8E;&#xFF1A;  &lt;/p&gt;
 
@@ -90,7 +91,8 @@
 Intellij IDEA 12  &lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&#x5176;&#x4ED6;&#x73AF;&#x5883;&#x8BF7;&#x53C2;&#x7167;&lt;a href="http://www.jetbrains.com/idea/documentation/index.jsp"&gt;Intellij IEDA Getting Started&lt;/a&gt;  &lt;/p&gt;
+&lt;p&gt;&#x5176;&#x4ED6;&#x73AF;&#x5883;&#x8BF7;&#x53C2;&#x7167;&lt;a href="http://www.jetbrains.com/idea/documentation/index.jsp"&gt;Intellij IEDA Getting Started&lt;/a&gt;&lt;br&gt;
+&#x6216;&#x8005;&#x81EA;&#x5DF1;&#x5230;&lt;code&gt;settings &#x2192; keymap&lt;/code&gt;&#x67E5;&#x770B;&#x8BBE;&#x7F6E;  &lt;/p&gt;
 
 &lt;h2 id="toc_0"&gt;&#x81EA;&#x52A8;&#x5B8C;&#x6210;&#x529F;&#x80FD;&lt;/h2&gt;
 
@@ -141,10 +143,15 @@ changed descendants&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&#x7A7A;&#x683C;&#x66FF;&#x6362;&#x21E5; : &lt;code&gt;settings &#x2192; code type &#x2192; java&lt;/code&gt; &lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/jkaving/intellij-colors-solarized"&gt;color theme&lt;/a&gt;
 &lt;code&gt;Preferences &#x2192; Editor &#x2192; Colors &amp;amp; Fonts&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&#x6587;&#x4EF6;&#x8FC7;&#x6EE4;&lt;code&gt;settings &#x2192; file types &#x2192; Ignore files and folders&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&#x2303; + j&lt;/code&gt; class quick doc&lt;br&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&#x2318;  ,&lt;/code&gt;     &#x5168;&#x5C40;setting&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&#x2318;  ;&lt;/code&gt;     &#x9879;&#x76EE;settting&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&#x2318;  w&lt;/code&gt;    &#x5173;&#x95ED;&#x5F53;&#x524D;&#x754C;&#x9762;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#x2318; + / &#x2318; -&lt;/code&gt; expand/collapse code block&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#x2318; &#x21E7; + / &#x2318; &#x21E7; -&lt;/code&gt; expand /collapse all&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#x2318; &#x21E7; w&lt;/code&gt; &#x81EA;&#x81EA;&#x5B9A;&#x4E49;,close all&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;F2 / &#x21E7; F2&lt;/code&gt; next/preview highlighting syntax problem&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id="toc_3"&gt;&#x89C6;&#x56FE;&#x5207;&#x6362;&lt;/h3&gt;
@@ -324,9 +331,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.4444679994135218" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.1507974748277643" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.37457528517636096" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7678756804883052" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.5653656491270767" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7639708094931364" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -620,9 +627,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.5023229526957145" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.9553098184706502" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9138353843892114" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.3752019369030396" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.09191008692390767" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.35680350913536896" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1072,9 +1079,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.12548156796530185" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.6877797239293907" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.18946707608969582" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.14740780412695975" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.8191958376125446" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9546577376065001" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1386,9 +1393,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.1505255350784911" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.833075534020346" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.2646889922624396" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.983561871987645" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.4318154401600617" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6837108654765158" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 

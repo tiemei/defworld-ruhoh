@@ -15,12 +15,14 @@ tags: intellij
 [常用IDEA快捷键](http://www.colorfuldays.org/program/idea_keymap/)
 [Intellij-IDEA-F2E](https://github.com/damao/Intellij-IDEA-F2E)  
 [@IntelliJ IDEA第二部分视频讲解：项目创建/打开/导入+主题修改+布局/界面介绍+工具栏/菜单栏介绍](http://www.youmeek.com/intellij-idea-part-ii-ui/)
+(http://wiki.jetbrains.net/intellij/Creating_and_importing_Maven_projects)
 
 本文快捷键仅适用于：  
 > Mac OS X 10.5+ keymap  
 > Intellij IDEA 12  
 
 其他环境请参照[Intellij IEDA Getting Started](http://www.jetbrains.com/idea/documentation/index.jsp)  
+或者自己到`settings → keymap`查看设置  
 
 ## 自动完成功能
 相比于eclipse停留在类方法和变量的简单自动提示，IDEA实在有强太多:  
@@ -66,10 +68,15 @@ changed descendants`
 * 空格替换⇥ : `settings → code type → java` 
 * [color theme](https://github.com/jkaving/intellij-colors-solarized)
 `Preferences → Editor → Colors & Fonts`
+* 文件过滤`settings → file types → Ignore files and folders`
 * `⌃ + j` class quick doc  
 * `⌘  ,`     全局setting
 * `⌘  ;`     项目settting
 * `⌘  w`    关闭当前界面
+* `⌘ + / ⌘ -` expand/collapse code block
+* `⌘ ⇧ + / ⌘ ⇧ -` expand /collapse all
+* `⌘ ⇧ w` 自自定义,close all
+* `F2 / ⇧ F2` next/preview highlighting syntax problem
 
 ### 视图切换
 

@@ -52,7 +52,6 @@ tags: intellij
 * `⌘ d` 赋值整行、块
 * `⌘ ⌦ ` / `⌘ x` 删除一行
 * `⌥ ↑` / `⌥ ↓` 扩大/减少选中的词语的范围
-* `⌘ ⌥ b` / `⌘ b` 向上/向下深钻代码，即跳到实现处/定义处
 * eclipse`ctrl + k`同单词跳转，IDEA建议手动添加绑定`⌘ ⌃ k`(Find Word at Caret),
 结合`⌘ g` (Find Next) `⌘ ⇧ g`(find Previous)使用
 * svn /git 版本控制，修改过的eclipse默认标记到最高层目录，而IDEA默认只标记
@@ -60,6 +59,9 @@ tags: intellij
 changed descendants`
 * IDEA默认自动保存，无需手动`ctrl + s`
 * IDEA文件默认同步刷新到磁盘，无需手动刷新
+* `⌃ h` class type hierarchy
+* `⌃ ⌥ h` Call hierarchy。常见用法，查看某个方法调用处
+
 
 ## 我的其他设置及快捷键
 
@@ -77,6 +79,14 @@ changed descendants`
 * `⌘ ⇧ + / ⌘ ⇧ -` expand /collapse all
 * `⌘ ⇧ w` 自自定义,close all
 * `F2 / ⇧ F2` next/preview highlighting syntax problem
+
+### 代码跳转
+* `⌘ ⌥ b` / `⌘ b` Go to declaration / Go to implementation(s)
+* `⌃ ⇧ t` Go to type declaration
+* `⌘ u`  Go to super-method/super-class
+* `⌘ y`  Open quick definition lookup
+* `⌥ ⌘ [` / `⌥ ⌘ ]` Move to code block start/end(我机器设置)
+
 
 ### 视图切换
 

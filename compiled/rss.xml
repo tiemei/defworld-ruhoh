@@ -3,7 +3,7 @@
   <channel>
     <title>tiemei</title>
     <link>http://defworld.com</link>
-    <pubDate>2013-06-13 10:58:57 +0800</pubDate>
+    <pubDate>2013-06-14 16:43:21 +0800</pubDate>
     <item>
       <title>&#x8FD1;&#x4E00;&#x5E74;&#x6765;shell&#x547D;&#x4EE4;&#x79EF;&#x7D2F;(&#x968F;&#x65F6;&#x66F4;&#x65B0;)</title>
       <link>http://defworld.com/2013-06/my-shell-mannual.html</link>
@@ -27,9 +27,9 @@
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.44366511918648577" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.9125545524990368" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.46222798399863463" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.86061281911375" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.19999728937320604" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.3194052955527351" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -125,7 +125,6 @@ Intellij IDEA 12  &lt;/p&gt;
 &lt;li&gt;&lt;code&gt;&#x2318; d&lt;/code&gt; &#x8D4B;&#x503C;&#x6574;&#x884C;&#x3001;&#x5757;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&#x2318; &#x2326;&lt;/code&gt; / &lt;code&gt;&#x2318; x&lt;/code&gt; &#x5220;&#x9664;&#x4E00;&#x884C;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&#x2325; &#x2191;&lt;/code&gt; / &lt;code&gt;&#x2325; &#x2193;&lt;/code&gt; &#x6269;&#x5927;/&#x51CF;&#x5C11;&#x9009;&#x4E2D;&#x7684;&#x8BCD;&#x8BED;&#x7684;&#x8303;&#x56F4;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&#x2318; &#x2325; b&lt;/code&gt; / &lt;code&gt;&#x2318; b&lt;/code&gt; &#x5411;&#x4E0A;/&#x5411;&#x4E0B;&#x6DF1;&#x94BB;&#x4EE3;&#x7801;&#xFF0C;&#x5373;&#x8DF3;&#x5230;&#x5B9E;&#x73B0;&#x5904;/&#x5B9A;&#x4E49;&#x5904;&lt;/li&gt;
 &lt;li&gt;eclipse&lt;code&gt;ctrl + k&lt;/code&gt;&#x540C;&#x5355;&#x8BCD;&#x8DF3;&#x8F6C;&#xFF0C;IDEA&#x5EFA;&#x8BAE;&#x624B;&#x52A8;&#x6DFB;&#x52A0;&#x7ED1;&#x5B9A;&lt;code&gt;&#x2318; &#x2303; k&lt;/code&gt;(Find Word at Caret),
 &#x7ED3;&#x5408;&lt;code&gt;&#x2318; g&lt;/code&gt; (Find Next) &lt;code&gt;&#x2318; &#x21E7; g&lt;/code&gt;(find Previous)&#x4F7F;&#x7528;&lt;/li&gt;
 &lt;li&gt;svn /git &#x7248;&#x672C;&#x63A7;&#x5236;&#xFF0C;&#x4FEE;&#x6539;&#x8FC7;&#x7684;eclipse&#x9ED8;&#x8BA4;&#x6807;&#x8BB0;&#x5230;&#x6700;&#x9AD8;&#x5C42;&#x76EE;&#x5F55;&#xFF0C;&#x800C;IDEA&#x9ED8;&#x8BA4;&#x53EA;&#x6807;&#x8BB0;
@@ -133,6 +132,8 @@ Intellij IDEA 12  &lt;/p&gt;
 changed descendants&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;IDEA&#x9ED8;&#x8BA4;&#x81EA;&#x52A8;&#x4FDD;&#x5B58;&#xFF0C;&#x65E0;&#x9700;&#x624B;&#x52A8;&lt;code&gt;ctrl + s&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;IDEA&#x6587;&#x4EF6;&#x9ED8;&#x8BA4;&#x540C;&#x6B65;&#x5237;&#x65B0;&#x5230;&#x78C1;&#x76D8;&#xFF0C;&#x65E0;&#x9700;&#x624B;&#x52A8;&#x5237;&#x65B0;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#x2303; h&lt;/code&gt; class type hierarchy&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#x2303; &#x2325; h&lt;/code&gt; Call hierarchy&#x3002;&#x5E38;&#x89C1;&#x7528;&#x6CD5;&#xFF0C;&#x67E5;&#x770B;&#x67D0;&#x4E2A;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x5904;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id="toc_2"&gt;&#x6211;&#x7684;&#x5176;&#x4ED6;&#x8BBE;&#x7F6E;&#x53CA;&#x5FEB;&#x6377;&#x952E;&lt;/h2&gt;
@@ -154,7 +155,17 @@ changed descendants&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;F2 / &#x21E7; F2&lt;/code&gt; next/preview highlighting syntax problem&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id="toc_3"&gt;&#x89C6;&#x56FE;&#x5207;&#x6362;&lt;/h3&gt;
+&lt;h3 id="toc_3"&gt;&#x4EE3;&#x7801;&#x8DF3;&#x8F6C;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&#x2318; &#x2325; b&lt;/code&gt; / &lt;code&gt;&#x2318; b&lt;/code&gt; Go to declaration / Go to implementation(s)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#x2303; &#x21E7; t&lt;/code&gt; Go to type declaration&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#x2318; u&lt;/code&gt;  Go to super-method/super-class&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#x2318; y&lt;/code&gt;  Open quick definition lookup&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#x2325; &#x2318; [&lt;/code&gt; / &lt;code&gt;&#x2325; &#x2318; ]&lt;/code&gt; Move to code block start/end(&#x6211;&#x673A;&#x5668;&#x8BBE;&#x7F6E;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="toc_4"&gt;&#x89C6;&#x56FE;&#x5207;&#x6362;&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;&#x2318;  n&lt;/code&gt;   &#x5207;&#x6362;&#x5230;n&#x5BF9;&#x5E94;&#x7684;&#x89C6;&#x56FE;&lt;/li&gt;
@@ -163,7 +174,7 @@ changed descendants&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&#x21E7; &#x2318;  e&lt;/code&gt; &#x6700;&#x8FD1;&#x4FEE;&#x6539;&#x7684;&#x6587;&#x4EF6;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id="toc_4"&gt;&#x641C;&#x7D22;&lt;/h3&gt;
+&lt;h3 id="toc_5"&gt;&#x641C;&#x7D22;&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;&#x2318; f&lt;/code&gt;&#x641C;&#x7D22;&#xFF0C;&lt;code&gt;&#x2318; r&lt;/code&gt; &#x641C;&#x7D22;&#x66FF;&#x6362;&lt;/li&gt;
@@ -175,7 +186,7 @@ changed descendants&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&#x2318; &#x2325; o&lt;/code&gt;  &#x67E5;&#x627E;&#x6587;&#x4EF6;&#x5185;&#x5BB9;(symbol)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id="toc_5"&gt;&#x7F16;&#x8F91;&#x4EE3;&#x7801;&lt;/h3&gt;
+&lt;h3 id="toc_6"&gt;&#x7F16;&#x8F91;&#x4EE3;&#x7801;&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;&#x21E7; &#x21A9;&lt;/code&gt;/ &lt;code&gt;&#x2318; &#x2325; &#x21A9;&lt;/code&gt; &#x4E0B;/&#x4E0A;&#x63D2;&#x5165;&#x65B0;&#x884C;&lt;/li&gt;
@@ -191,7 +202,7 @@ changed descendants&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&#x21E7; &#x2325; &#x2191;/&#x2193;&lt;/code&gt; &#x9009;&#x4E2D;&#x7684;&#x6574;&#x884C;&#x884C;&#x4E0A;&#x4E0B;&#x79FB;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id="toc_6"&gt;&#x91CD;&#x6784;&lt;/h3&gt;
+&lt;h3 id="toc_7"&gt;&#x91CD;&#x6784;&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;F6&lt;/code&gt; &#x79FB;&#x52A8;&#x6587;&#x4EF6;&#x5230;&#x5176;&#x4ED6;&#x5730;&#x65B9;&lt;/li&gt;
@@ -331,9 +342,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7678756804883052" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.5653656491270767" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7639708094931364" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.21305217027398815" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.8725704355934141" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8694579448345121" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -627,9 +638,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.3752019369030396" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.09191008692390767" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.35680350913536896" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.2755498202354415" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.7204385609022789" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.014536147265313937" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1079,9 +1090,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.14740780412695975" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.8191958376125446" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9546577376065001" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.048079222387833354" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.9336709091296516" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.788191086453643" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1393,9 +1404,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.983561871987645" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.4318154401600617" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6837108654765158" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.4312846284489371" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.4616086998153509" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6927642396996939" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 

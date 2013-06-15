@@ -1,7 +1,7 @@
 ---
-title: intellijIDEA入门
+title: 从eclipse迁移到intellijIDEA(OS x 10.5)
 date: '2013-06-07'
-description:
+description: eclipse,IDEA,intellij,快捷键,OSX
 categories: 'tool'
 tags: intellij
 ---
@@ -86,6 +86,7 @@ changed descendants`
 * `⌘ u`  Go to super-method/super-class
 * `⌘ y`  Open quick definition lookup
 * `⌥ ⌘ [` / `⌥ ⌘ ]` Move to code block start/end(我机器设置)
+* `⌘ ⇧ [` / `⌘ ⇧ ]` pre/next tab
 
 
 ### 视图切换
@@ -118,6 +119,7 @@ changed descendants`
 * `⌃ i`     生成implement方方法(用⌥ + enter即可)
 * `⌘ ⌥ l`  格式化代码
 * `⇧ ⌥ ↑/↓` 选中的整行行上下移
+* `⇧ ⌘ ↑/↓` 更加智能的上下移动
 
 ### 重构  
 * `F6` 移动文件到其他地方

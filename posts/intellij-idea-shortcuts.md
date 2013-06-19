@@ -16,6 +16,7 @@ tags: intellij
 [Intellij-IDEA-F2E](https://github.com/damao/Intellij-IDEA-F2E)  
 [@IntelliJ IDEA第二部分视频讲解：项目创建/打开/导入+主题修改+布局/界面介绍+工具栏/菜单栏介绍](http://www.youmeek.com/intellij-idea-part-ii-ui/)
 (http://wiki.jetbrains.net/intellij/Creating_and_importing_Maven_projects)
+[Intellij配置文件同步](http://willerce.com/post/intellij-idea-config-sync)
 
 本文快捷键仅适用于：  
 > Mac OS X 10.5+ keymap  
@@ -79,6 +80,12 @@ changed descendants`
 * `⌘ ⇧ + / ⌘ ⇧ -` expand /collapse all
 * `⌘ ⇧ w` 自自定义,close all
 * `F2 / ⇧ F2` next/preview highlighting syntax problem
+* `⌘ ⇧ u` 大小写转换
+
+## 格式化
+* rearranger 格式化代码，给你更精细的格式化控制，设置`settings → rearranger`，
+可用云盘同步,快捷键`⌘ ⌥ ⇧ r`
+* `settings → code style`调整`⌥ ⌘ l`格式化效果
 
 ### 代码跳转
 * `⌘ ⌥ b` / `⌘ b` Go to declaration / Go to implementation(s)
@@ -131,5 +138,18 @@ changed descendants`
 * `⌘ ⌥ f`  extract filed
 * `⌘ ⌥ m`  extract method
 * `⌘ ⌥ c`  extract constant
+
+### debug & run
+
+* `⌃ ⌥ r` select configuration and run
+* `⌃ ⌥ d` select configuration and debug
+* `⌃ r`   run当前选中的config
+* `⌃ d`   debug当前选中的config
+* `F7`  step into
+* `F8`  step over
+* `⇧ F8` step out
+* `⌥ F8` evaluate expression
+* `⌥ F9` 下一个断点处
+
 
 

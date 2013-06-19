@@ -45,6 +45,7 @@ tags: intellij
 
 作为一个多年的eclipse用户，总有些情节和习惯无法割舍。好，现在
 一起看看如何平滑过度：  
+
 * show number line : settings → editor → Appearance → 勾选'show line numbers'
 * 编辑窗口与project窗口关联: 点击project栏头部第一个地球仪图案，或者选中齿轮图案的
 `AutoScroll to Source`和`AutoScroll from source`。你也可以充分利用`Navigation Bar`

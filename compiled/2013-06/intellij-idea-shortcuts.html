@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7208328443377469" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.2876986158907443" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9747418280658194" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.4347801836193529" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.7281847115480163" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.1329242493610039" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -67,8 +67,9 @@
 <a href="http://www.colorfuldays.org/program/idea_keymap/">常用IDEA快捷键</a>
 <a href="https://github.com/damao/Intellij-IDEA-F2E">Intellij-IDEA-F2E</a><br>
 <a href="http://www.youmeek.com/intellij-idea-part-ii-ui/">@IntelliJ IDEA第二部分视频讲解：项目创建/打开/导入+主题修改+布局/界面介绍+工具栏/菜单栏介绍</a>
-(<a href="http://wiki.jetbrains.net/intellij/Creating_and_importing_Maven_projects">http://wiki.jetbrains.net/intellij/Creating_and_importing_Maven_projects</a>)
-<a href="http://willerce.com/post/intellij-idea-config-sync">Intellij配置文件同步</a></p>
+(<a href="http://wiki.jetbrains.net/intellij/Creating_and_importing_Maven_projects">http://wiki.jetbrains.net/intellij/Creating_and_importing_Maven_projects</a>)<br>
+<a href="http://willerce.com/post/intellij-idea-config-sync">Intellij配置文件同步</a><br>
+<a href="http://www.myexception.cn/program/1032108.html">Intellij IDEA常用设置</a></p>
 
 <p>本文快捷键仅适用于：  </p>
 
@@ -100,29 +101,24 @@ Intellij IDEA 12  </p>
 <h2 id="toc_1">从eclipse迁移过来</h2>
 
 <p>作为一个多年的eclipse用户，总有些情节和习惯无法割舍。好，现在
-一起看看如何平滑过度：  </p>
-
-<ul>
-<li>show number line : settings → editor → Appearance → 勾选&#39;show line numbers&#39;</li>
-<li>编辑窗口与project窗口关联: 点击project栏头部第一个地球仪图案，或者选中齿轮图案的
+一起看看如何平滑过度：<br>
+* show number line : settings → editor → Appearance → 勾选&#39;show line numbers&#39;
+* 编辑窗口与project窗口关联: 点击project栏头部第一个地球仪图案，或者选中齿轮图案的
 <code>AutoScroll to Source</code>和<code>AutoScroll from source</code>。你也可以充分利用<code>Navigation Bar</code>
-(<code>⌘ ↑</code>)</li>
-<li>eclipse: ctrl + o，列出所有成员变量方法，IDEA中<code>⌘ F12</code></li>
-<li><code>⌘ d</code> 赋值整行、块</li>
-<li><code>⌘ ⌦</code> / <code>⌘ x</code> 删除一行</li>
-<li><code>⌥ ↑</code> / <code>⌥ ↓</code> 扩大/减少选中的词语的范围</li>
-<li>eclipse<code>ctrl + k</code>同单词跳转，IDEA建议手动添加绑定<code>⌘ ⌃ k</code>(Find Word at Caret),
-结合<code>⌘ g</code> (Find Next) <code>⌘ ⇧ g</code>(find Previous)使用</li>
-<li>svn /git 版本控制，修改过的eclipse默认标记到最高层目录，而IDEA默认只标记
+(<code>⌘ ↑</code>)
+* eclipse: ctrl + o，列出所有成员变量方法，IDEA中<code>⌘ F12</code>
+* <code>⌥ ↑</code> / <code>⌥ ↓</code> 扩大/减少选中的词语的范围
+* eclipse<code>ctrl + k</code>同单词跳转，IDEA建议手动添加绑定<code>⌘ ⌃ k</code>(Find Word at Caret),
+结合<code>⌘ g</code> (Find Next) <code>⌘ ⇧ g</code>(find Previous)使用
+* svn /git 版本控制，修改过的eclipse默认标记到最高层目录，而IDEA默认只标记
 有改动的文件，需要手动设置<code>settings → Version Control → 勾选show directories with
-changed descendants</code></li>
-<li>IDEA默认自动保存，无需手动<code>ctrl + s</code></li>
-<li>IDEA文件默认同步刷新到磁盘，无需手动刷新</li>
-<li><code>⌃ h</code> class type hierarchy</li>
-<li><code>⌃ ⌥ h</code> Call hierarchy。常见用法，查看某个方法调用处</li>
-</ul>
+changed descendants</code>
+* IDEA默认自动保存，无需手动<code>ctrl + s</code>
+* IDEA文件默认同步刷新到磁盘，无需手动刷新</p>
 
 <h2 id="toc_2">我的其他设置及快捷键</h2>
+
+<h3 id="toc_3">未归类</h3>
 
 <ul>
 <li>关闭拼写检查 <code>settings → spell</code></li>
@@ -131,26 +127,34 @@ changed descendants</code></li>
 <li><a href="https://github.com/jkaving/intellij-colors-solarized">color theme</a>
 <code>Preferences → Editor → Colors &amp; Fonts</code></li>
 <li>文件过滤<code>settings → file types → Ignore files and folders</code></li>
-<li><code>⌃ + j</code> class quick doc<br></li>
 <li><code>⌘  ,</code>     全局setting</li>
 <li><code>⌘  ;</code>     项目settting</li>
 <li><code>⌘  w</code>    关闭当前界面</li>
-<li><code>⌘ + / ⌘ -</code> expand/collapse code block</li>
-<li><code>⌘ ⇧ + / ⌘ ⇧ -</code> expand /collapse all</li>
-<li><code>⌘ ⇧ w</code> 自自定义,close all</li>
+<li><code>⌘ ⇧ w</code>   自定义,close all</li>
 <li><code>F2 / ⇧ F2</code> next/preview highlighting syntax problem</li>
+</ul>
+
+<h3 id="toc_4">编辑代码</h3>
+
+<ul>
+<li><code>⇧ ↩</code>/ <code>⌘ ⌥ ↩</code> 下/上插入新行</li>
+<li><code>⌘ j</code>    必statements complemention更强大， <a href="http://ooxx.me/intellij-idea-live-template.orz">live template</a></li>
+<li><code>⌘ n</code>    生成代码/创建文件/生成get&amp;setter</li>
+<li><code>⌥  ↩</code>    调出出错提示处理方法</li>
+<li><code>⌘ d</code>      double整行、块</li>
+<li><code>⌘ ⌦</code> / <code>⌘ x</code> 删除一行</li>
+<li><code>⌘  c/v/x</code> 整行操作</li>
+<li><code>⇧ ⌘ v</code>    调出寄存中保存的最近赋值的内容</li>
+<li><code>⌘ /</code>      注释/取消注释</li>
+<li><code>⌃ o</code>      生成override方法</li>
+<li><code>⌃ i</code>      生成implement方方法(用⌥ + enter即可)</li>
+<li><code>⇧ ⌥ ↑/↓</code> 选中的整行行上下移</li>
+<li><code>⇧ ⌘ ↑/↓</code> 更加智能的上下移动</li>
+<li><code>⌘ ⌥ t</code>   对选中代码自动生成环绕(if/try..catch/..)</li>
 <li><code>⌘ ⇧ u</code> 大小写转换</li>
 </ul>
 
-<h2 id="toc_3">格式化</h2>
-
-<ul>
-<li>rearranger 格式化代码，给你更精细的格式化控制，设置<code>settings → rearranger</code>，
-可用云盘同步,快捷键<code>⌘ ⌥ ⇧ r</code></li>
-<li><code>settings → code style</code>调整<code>⌥ ⌘ l</code>格式化效果</li>
-</ul>
-
-<h3 id="toc_4">代码跳转</h3>
+<h3 id="toc_5">代码跳转</h3>
 
 <ul>
 <li><code>⌘ ⌥ b</code> / <code>⌘ b</code> Go to declaration / Go to implementation(s)</li>
@@ -159,9 +163,29 @@ changed descendants</code></li>
 <li><code>⌘ y</code>  Open quick definition lookup</li>
 <li><code>⌥ ⌘ [</code> / <code>⌥ ⌘ ]</code> Move to code block start/end(我机器设置)</li>
 <li><code>⌘ ⇧ [</code> / <code>⌘ ⇧ ]</code> pre/next tab</li>
+<li><code>⌘ ⌥ ← /→</code> 在代码间前进后退</li>
 </ul>
 
-<h3 id="toc_5">视图切换</h3>
+<h3 id="toc_6">代码查看</h3>
+
+<ul>
+<li><code>⌘ + / ⌘ -</code> expand/collapse code block</li>
+<li><code>⌘ ⇧ + / ⌘ ⇧ -</code> expand /collapse all</li>
+<li><code>⌃ + j</code> class quick doc<br></li>
+<li><code>⌃ h</code> class type hierarchy</li>
+<li><code>⌃ ⌥ h</code> Call hierarchy。常见用法，查看某个方法调用处</li>
+</ul>
+
+<h3 id="toc_7">格式化</h3>
+
+<ul>
+<li>rearranger 格式化代码，给你更精细的格式化控制，设置<code>settings → rearranger</code>，
+可用云盘同步,快捷键<code>⌘ ⌥ ⇧ r</code></li>
+<li><code>settings → code style</code>调整<code>⌥ ⌘ l</code>格式化效果</li>
+<li><code>⌃ ⌥ o</code> 优化import,排除无用的import(optimize import)</li>
+</ul>
+
+<h3 id="toc_8">视图切换</h3>
 
 <ul>
 <li><code>⌘  n</code>   切换到n对应的视图</li>
@@ -170,7 +194,7 @@ changed descendants</code></li>
 <li><code>⇧ ⌘  e</code> 最近修改的文件</li>
 </ul>
 
-<h3 id="toc_6">搜索</h3>
+<h3 id="toc_9">搜索</h3>
 
 <ul>
 <li><code>⌘ f</code>搜索，<code>⌘ r</code> 搜索替换</li>
@@ -182,38 +206,21 @@ changed descendants</code></li>
 <li><code>⌘ ⌥ o</code>  查找文件内容(symbol)</li>
 </ul>
 
-<h3 id="toc_7">编辑代码</h3>
+<h3 id="toc_10">重构</h3>
 
 <ul>
-<li><code>⇧ ↩</code>/ <code>⌘ ⌥ ↩</code> 下/上插入新行</li>
-<li><code>⌘ j</code>    必statements complemention更强大， <a href="http://ooxx.me/intellij-idea-live-template.orz">live template</a></li>
-<li><code>⌘ n</code>    生成代码/创建文件/生成get&amp;setter</li>
-<li><code>⌥  ↩</code>   调出出错提示处理方法</li>
-<li><code>⌘  c/v/x</code> 整行操作</li>
-<li><code>⇧ ⌘ v</code> 调出寄存中保存的最近赋值的内容</li>
-<li><code>⌘ /</code>       注释/取消注释</li>
-<li><code>⌃ o</code>     生成override方法</li>
-<li><code>⌃ i</code>     生成implement方方法(用⌥ + enter即可)</li>
-<li><code>⌘ ⌥ l</code>  格式化代码</li>
-<li><code>⇧ ⌥ ↑/↓</code> 选中的整行行上下移</li>
-<li><code>⇧ ⌘ ↑/↓</code> 更加智能的上下移动</li>
-</ul>
-
-<h3 id="toc_8">重构</h3>
-
-<ul>
-<li><code>F6</code> 移动文件到其他地方</li>
-<li><code>F5</code> 拷贝文件到其他地方(类和xml都会相应变动)</li>
+<li><code>F5</code> 拷贝，只能是文件，到其他地方(类和xml都会相应变动)</li>
+<li><code>F6</code> 移动（文件/变量/域/方法...）</li>
 <li><code>⇧ F6</code>   改名</li>
-<li><code>⌘ F6</code>     修改方法签名</li>
-<li><code>⌘ ⌥ v</code>    extract vaiable</li>
+<li><code>⌘ F6</code>   修改方法签名(不常用，直接改代码就行)</li>
+<li><code>⌘ ⌥ v</code>  extract vaiable</li>
 <li><code>⌘ ⌥ p</code>  extract parameter</li>
 <li><code>⌘ ⌥ f</code>  extract filed</li>
 <li><code>⌘ ⌥ m</code>  extract method</li>
 <li><code>⌘ ⌥ c</code>  extract constant</li>
 </ul>
 
-<h3 id="toc_9">debug &amp; run</h3>
+<h3 id="toc_11">debug &amp; run</h3>
 
 <ul>
 <li><code>⌃ ⌥ r</code> select configuration and run</li>

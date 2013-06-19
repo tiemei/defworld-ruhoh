@@ -15,8 +15,9 @@ tags: intellij
 [常用IDEA快捷键](http://www.colorfuldays.org/program/idea_keymap/)
 [Intellij-IDEA-F2E](https://github.com/damao/Intellij-IDEA-F2E)  
 [@IntelliJ IDEA第二部分视频讲解：项目创建/打开/导入+主题修改+布局/界面介绍+工具栏/菜单栏介绍](http://www.youmeek.com/intellij-idea-part-ii-ui/)
-(http://wiki.jetbrains.net/intellij/Creating_and_importing_Maven_projects)
-[Intellij配置文件同步](http://willerce.com/post/intellij-idea-config-sync)
+(http://wiki.jetbrains.net/intellij/Creating_and_importing_Maven_projects)  
+[Intellij配置文件同步](http://willerce.com/post/intellij-idea-config-sync)  
+[Intellij IDEA常用设置](http://www.myexception.cn/program/1032108.html)
 
 本文快捷键仅适用于：  
 > Mac OS X 10.5+ keymap  
@@ -44,14 +45,11 @@ tags: intellij
 
 作为一个多年的eclipse用户，总有些情节和习惯无法割舍。好，现在
 一起看看如何平滑过度：  
-
 * show number line : settings → editor → Appearance → 勾选'show line numbers'
 * 编辑窗口与project窗口关联: 点击project栏头部第一个地球仪图案，或者选中齿轮图案的
 `AutoScroll to Source`和`AutoScroll from source`。你也可以充分利用`Navigation Bar`
 (`⌘ ↑`)
 * eclipse: ctrl + o，列出所有成员变量方法，IDEA中`⌘ F12`
-* `⌘ d` 赋值整行、块
-* `⌘ ⌦ ` / `⌘ x` 删除一行
 * `⌥ ↑` / `⌥ ↓` 扩大/减少选中的词语的范围
 * eclipse`ctrl + k`同单词跳转，IDEA建议手动添加绑定`⌘ ⌃ k`(Find Word at Caret),
 结合`⌘ g` (Find Next) `⌘ ⇧ g`(find Previous)使用
@@ -60,32 +58,40 @@ tags: intellij
 changed descendants`
 * IDEA默认自动保存，无需手动`ctrl + s`
 * IDEA文件默认同步刷新到磁盘，无需手动刷新
-* `⌃ h` class type hierarchy
-* `⌃ ⌥ h` Call hierarchy。常见用法，查看某个方法调用处
 
 
 ## 我的其他设置及快捷键
 
+### 未归类
 * 关闭拼写检查 `settings → spell`
 * 类注释修改  `settings → file template`
 * 空格替换⇥ : `settings → code type → java` 
 * [color theme](https://github.com/jkaving/intellij-colors-solarized)
 `Preferences → Editor → Colors & Fonts`
 * 文件过滤`settings → file types → Ignore files and folders`
-* `⌃ + j` class quick doc  
 * `⌘  ,`     全局setting
 * `⌘  ;`     项目settting
 * `⌘  w`    关闭当前界面
-* `⌘ + / ⌘ -` expand/collapse code block
-* `⌘ ⇧ + / ⌘ ⇧ -` expand /collapse all
-* `⌘ ⇧ w` 自自定义,close all
+* `⌘ ⇧ w`   自定义,close all
 * `F2 / ⇧ F2` next/preview highlighting syntax problem
-* `⌘ ⇧ u` 大小写转换
 
-## 格式化
-* rearranger 格式化代码，给你更精细的格式化控制，设置`settings → rearranger`，
-可用云盘同步,快捷键`⌘ ⌥ ⇧ r`
-* `settings → code style`调整`⌥ ⌘ l`格式化效果
+### 编辑代码
+
+* `⇧ ↩ `/ `⌘ ⌥ ↩ ` 下/上插入新行
+* `⌘ j`    必statements complemention更强大， [live template](http://ooxx.me/intellij-idea-live-template.orz)
+* `⌘ n`    生成代码/创建文件/生成get&setter
+* `⌥  ↩ `    调出出错提示处理方法
+* `⌘ d`      double整行、块
+* `⌘ ⌦ ` / `⌘ x` 删除一行
+* `⌘  c/v/x` 整行操作
+* `⇧ ⌘ v`    调出寄存中保存的最近赋值的内容
+* `⌘ /`      注释/取消注释
+* `⌃ o`      生成override方法
+* `⌃ i`      生成implement方方法(用⌥ + enter即可)
+* `⇧ ⌥ ↑/↓` 选中的整行行上下移
+* `⇧ ⌘ ↑/↓` 更加智能的上下移动
+* `⌘ ⌥ t`   对选中代码自动生成环绕(if/try..catch/..)
+* `⌘ ⇧ u` 大小写转换
 
 ### 代码跳转
 * `⌘ ⌥ b` / `⌘ b` Go to declaration / Go to implementation(s)
@@ -94,7 +100,20 @@ changed descendants`
 * `⌘ y`  Open quick definition lookup
 * `⌥ ⌘ [` / `⌥ ⌘ ]` Move to code block start/end(我机器设置)
 * `⌘ ⇧ [` / `⌘ ⇧ ]` pre/next tab
+* `⌘ ⌥ ← /→` 在代码间前进后退
 
+### 代码查看
+* `⌘ + / ⌘ -` expand/collapse code block
+* `⌘ ⇧ + / ⌘ ⇧ -` expand /collapse all
+* `⌃ + j` class quick doc  
+* `⌃ h` class type hierarchy
+* `⌃ ⌥ h` Call hierarchy。常见用法，查看某个方法调用处
+
+### 格式化
+* rearranger 格式化代码，给你更精细的格式化控制，设置`settings → rearranger`，
+可用云盘同步,快捷键`⌘ ⌥ ⇧ r`
+* `settings → code style`调整`⌥ ⌘ l`格式化效果
+* `⌃ ⌥ o` 优化import,排除无用的import(optimize import)
 
 ### 视图切换
 
@@ -113,27 +132,12 @@ changed descendants`
 * `⌘ ⇧ o`  查找文件 (正则/大些字母缩略)
 * `⌘ ⌥ o`  查找文件内容(symbol)
 
-### 编辑代码
-
-* `⇧ ↩ `/ `⌘ ⌥ ↩ ` 下/上插入新行
-* `⌘ j`    必statements complemention更强大， [live template](http://ooxx.me/intellij-idea-live-template.orz)
-* `⌘ n`    生成代码/创建文件/生成get&setter
-* `⌥  ↩ `   调出出错提示处理方法
-* `⌘  c/v/x` 整行操作
-* `⇧ ⌘ v` 调出寄存中保存的最近赋值的内容
-* `⌘ /`       注释/取消注释
-* `⌃ o`     生成override方法
-* `⌃ i`     生成implement方方法(用⌥ + enter即可)
-* `⌘ ⌥ l`  格式化代码
-* `⇧ ⌥ ↑/↓` 选中的整行行上下移
-* `⇧ ⌘ ↑/↓` 更加智能的上下移动
-
 ### 重构  
-* `F6` 移动文件到其他地方
-* `F5` 拷贝文件到其他地方(类和xml都会相应变动)
+* `F5` 拷贝，只能是文件，到其他地方(类和xml都会相应变动)
+* `F6` 移动（文件/变量/域/方法...）
 * `⇧ F6`   改名
-* `⌘ F6`     修改方法签名
-* `⌘ ⌥ v`    extract vaiable
+* `⌘ F6`   修改方法签名(不常用，直接改代码就行)
+* `⌘ ⌥ v`  extract vaiable
 * `⌘ ⌥ p`  extract parameter
 * `⌘ ⌥ f`  extract filed
 * `⌘ ⌥ m`  extract method

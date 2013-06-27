@@ -2,8 +2,8 @@
 <html lang="en" xmlns:wb=“http://open.weibo.com/wb”>
   <head>
     <meta charset="utf-8">
-    <title>spring异常处理</title>
-    <meta name="description" content="spring异常处理">
+    <title>我的svn git常用命令及配置</title>
+    <meta name="description" content="svn,git,常用命令">
     <meta name="author" content="tiemei">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.3667443473640378" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.34203952941371896" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.657996690870491" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.3800315750292951" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.5676990121617588" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9871941031022927" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -52,82 +52,56 @@
 
       <div class="content">
         <div class="page-header">
-  <h1>spring异常处理 </h1>
+  <h1>我的svn git常用命令及配置 </h1>
 </div>
 
 <div class="row">
   <div class="span8">
-    <h2 id="toc_0">我经手的两个项目中异常处理如何做？</h2>
+    <p>参考:<br>
+<a href="http://blog.csdn.net/sunboy_2050/article/details/6187464">SVN常用命令</a>  </p>
 
-<p><strong>项目一</strong><br>
-  所有对外接口均返回json数据，现有的异常处理是实现spring容器提供的
-HandlerExceptionResolver，所有的异常均返回一个静态的错误页面。<br>
-<strong>项目二</strong><br>
-返回html也返回json数据，同样实现HandlerExceptionResolver，针对请求html
-的情况，返回错误页面；而针对请求Json数据的情况，返回一个json数据，并告诉
-调用方resultCode+resultMsg。  </p>
+<h2 id="toc_0">svn</h2>
 
-<p>显然项目二针对json数据设置resultcode的方法更合适  </p>
-
-<h2 id="toc_1">spring提供了异常处理方案？</h2>
-
-<p>首先，重温下servlet container中的异常处理如何做：<br>
-<strong>before servlet 3:</strong><br>
-我们用web.xml的error-page元素在error-code或exception-type两个粒度规定发生异常时
-应该返回哪个页面。错误页面中可显示部分动态内容：java.servlet.error.statuts_code
-和javax.servlet.error.message<br>
-<strong>serlet 3</strong>:<br>
-可以直接映射到一个path:<br>
-    &lt;error-page&gt; 
-      &lt;location&gt;/error&lt;/location&gt;
-    &lt;/error-page&gt;</p>
-
-<p>然后，你可以实现一个controller或者一个jsp页面来返回错误信息。不过你还是只能拿到
-java.servlet.error.statuts_code和javax.servlet.error.message等最基本的信息就是了。</p>
-
-<p>spring提供的常用方案是：  </p>
+<h3 id="toc_1">常用命令</h3>
 
 <ul>
-<li>实现HandlerExceptionResolver</li>
-<li>直接使用spring实现好的SimpleMappingExceptionResolver：定义exception class与error page的映射</li>
-<li>@ExceptionHandler在controller中定义（当前controller，父类中的会被继承）</li>
-<li>@ExceptionHandler在@ControllerAdvice class中定义(any controller)</li>
+<li><code>svn co remote-svn-path local-dir --username tiemei</code>签出</li>
+<li><code>svn cp base-svn-path new-svn-path -m &quot;commit log&quot;</code>新建分支</li>
+<li><code>svn diff -r m:n path</code> 比较两个版本文件差异</li>
+<li><code>svn diff -r m:n path |grep &quot;Index:&quot;</code> 比较两个版本间变化的文件</li>
+<li><code>svn info path</code> 列出某个path svn信息</li>
+<li><code>svn log path</code> 查看path提交log</li>
+<li><code>svn log -l4</code>  查看前四个提交log</li>
+<li><code>svn ls path</code>  列出某个路径下内容(远程)</li>
+<li><code>svn cat /path/to/file</code> 打印某个文件内容</li>
+<li><code>svn st path</code> 只输出状态有变化的文件</li>
+<li><code>svn st -v path</code> 列出所有文件详细状态信息</li>
+<li><code>svn add file/dir</code><code>svn ci m &quot;comment log&quot;</code> 添加文件，提交变动</li>
 </ul>
 
-<p>前两种方案会强制要求你返回一个ModelAndView对象，也就是只能定位到一个view。<br>
-如果需要对入参和返回值有更灵活的控制，用下面两种。比如，你不是需要返回一个view,
-而是希望直接往resp body中写东西。  </p>
+<h3 id="toc_2">配置</h3>
 
-<h2 id="toc_2">Standard Spring MVC Exceptions</h2>
+<h4 id="toc_3">排除</h4>
 
-<p>在spring处理request过程中可能跑出spring mvc定义的异常，用上面的第一第二种方案将异常映射到
-error page固然能处理掉。不过为了client更方便处理，你可能希望设置resp code。DefaultHandlerExceptionResolver
-正是做了这件事，它被自动注册了，无需使用者关心。<br>
-DefaultHandlerExceptionResolver设置了resp code，不过你可能希望自定义error view(试试这两种方式：ContentNeogitatingViewResolver,
-MappingJacksonJsonView)。同样的问题，你不仅需要控制error page，甚至希望自己动态生成resp body，用@ExceptionHandler方式
-可以拿到目的，不过可以尝试继承ResponseEntityExceptionHandler，因为它已经帮你做了很多。  </p>
+<p><strong>全局排除</strong><br>
+~/.subversion/conf文件中global-ignores<br>
+<strong>局部排除</strong><br>
+命令行执行:<code>[TargetFolder]&gt;svn propset svn:ignore *.suo .</code><br>
+或者直接写到文件.svnignore中，然后执行<code>[TargetFolder]&gt;svn propset svn:ignore -F ignore.txt</code>  </p>
 
-<h2 id="toc_3">@ResponseStatus</h2>
+<h2 id="toc_4">git</h2>
 
-<p>ResponseStatusExceptionResolver会将设置了@ResponseStatus的状态全部放到resp中.<br>
-默认DispatcherServlet已经注册了ResponseStatusExceptionResolver  </p>
-
-<h2 id="toc_4">总结</h2>
-
-<p>故项目二的也有可改进空间：<br>
-1. 返回的json数据还是通过渲染vm的方式，可以替换直接返回responseEntity
-2. 对其他异常的处理过于简单（也可能是业务需求即如此）
-3. 没有正确设置resp code</p>
+<p>待补充</p>
 
     <hr>
     <div class="pagination">
       <ul>
         <ul>
-            <li class="prev"><a href="/2013-05/auto-up-img-to-filikr-and-get-shareurl.html" title="markdown所用图片上传自动化脚本">&larr; Previous</a></li>
+            <li class="prev"><a href="/2013-06/my-shell-mannual.html" title="近一年来shell命令积累(随时更新)">&larr; Previous</a></li>
 
             <li><a href="/archive">Archive</a></li>
 
-            <li class="next"><a href="/2013-06/read-vim-help-doc.html" title="不设限的Vim，不设限的人生">Next &rarr;</a></li>
+            <li class="next disabled"><a>Next &rarr;</a>
         </ul>
       </ul>
     </div>
@@ -172,18 +146,20 @@ MappingJacksonJsonView)。同样的问题，你不仅需要控制error page，�
     </script>
 
     <h4>Published</h4>
-    <div class="date"><span>2013-05-19</span></div>
+    <div class="date"><span>2013-06-27</span></div>
     <br>
     <h4>Categories</h4>
     <ul class="tag_box">
       <li>
-        <a href="/categories#java-ref">java <span>2</span></a>
+        <a href="/categories#tool-ref">tool <span>3</span></a>
       </li>    </ul>
     <br>
     <h4>Tags</h4>
     <ul class="tag_box">
       <li>
-        <a href="/tags#spring-ref">spring <span>1</span></a>
+        <a href="/tags#svn-ref">svn <span>1</span></a>
+      </li>      <li>
+        <a href="/tags#git-ref">git <span>1</span></a>
       </li>    </ul>
   </div>
 </div>

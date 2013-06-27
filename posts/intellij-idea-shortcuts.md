@@ -87,6 +87,7 @@ changed descendants`
 * `⌘  c/v/x` 整行操作
 * `⇧ ⌘ v`    调出寄存中保存的最近赋值的内容
 * `⌘ /`      注释/取消注释
+* `⌘ ⌥ /`    块注释
 * `⌃ o`      生成override方法
 * `⌃ i`      生成implement方方法(用⌥ + enter即可)
 * `⇧ ⌥ ↑/↓` 选中的整行行上下移
@@ -109,6 +110,8 @@ changed descendants`
 * `⌃ + j` class quick doc  
 * `⌃ h` class type hierarchy
 * `⌃ ⌥ h` Call hierarchy。常见用法，查看某个方法调用处
+* `⌥ F7` find usages(filed/local var/method..)
+* `⌘ F7` 搜索对象在当前文件被引用地方
 
 ### 格式化
 * rearranger 格式化代码，给你更精细的格式化控制，设置`settings → rearranger`，
@@ -127,8 +130,6 @@ changed descendants`
 
 * `⌘ f`搜索，`⌘ r` 搜索替换
 * project中，`⌃ ⇧ f/r` 递归搜索/替换，`⌥  a`全部替换
-* `⌥  F7`   搜索对象被引用的地方
-* `⌘ F7`   搜索对象在当前文件被引用地方
 * `⌘ o`    查找类 （正则/大写字母缩略）
 * `⌘ ⇧ o`  查找文件 (正则/大些字母缩略)
 * `⌘ ⌥ o`  查找文件内容(symbol)

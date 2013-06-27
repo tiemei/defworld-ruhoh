@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.4499331868080063" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.35566198600809684" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6493723672892919" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.5165889580454176" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.23233035768515975" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7696808842588698" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -58,6 +58,37 @@
 <div class="row">
   <div class="span12">
     <h2>Latest Posts</h2>
+
+<div class="post">
+  <h3 class="title"><a href="/2013-06/svn-git-cmds.html">我的svn git常用命令及配置</a> <span class="date">2013-06-27</span></h3>
+
+  <p>参考:<br>
+<a href="http://blog.csdn.net/sunboy_2050/article/details/6187464">SVN常用命令</a>  </p>
+
+<h2 id="toc_0">svn</h2>
+
+<h3 id="toc_1">常用命令</h3>
+
+<ul>
+<li><code>svn co remote-svn-path local-dir --username tiemei</code>签出</li>
+<li><code>svn cp base-svn-path new-svn-path -m &quot;commit log&quot;</code>新建分支</li>
+<li><code>svn diff -r m:n path</code> 比较两个版本文件差异</li>
+<li><code>svn diff -r m:n path |grep &quot;Index:&quot;</code> 比较两个版本间变化的文件</li>
+<li><code>svn info path</code> 列出某个path svn信息</li>
+<li><code>svn log path</code> 查看path提交log</li>
+<li><code>svn log -l4</code>  查看前四个提交log</li>
+<li><code>svn ls path</code>  列出某个路径下内容(远程)</li>
+<li><code>svn cat /path/to/file</code> 打印某个文件内容</li>
+<li><code>svn st path</code> 只输出状态有变化的文件</li>
+<li><code>svn st -v path</code> 列出所有文件详细状态信息</li>
+<li><code>svn add file/dir</code><code>svn ci m &quot;comment log&quot;</code> 添加文件，提交变动</li>
+</ul>
+
+
+  <div class="more">
+    <a href="/2013-06/svn-git-cmds.html" class="btn">read more..</a>
+  </div>
+</div>
 
 <div class="post">
   <h3 class="title"><a href="/2013-06/my-shell-mannual.html">近一年来shell命令积累(随时更新)</a> <span class="date">2013-06-12</span></h3>

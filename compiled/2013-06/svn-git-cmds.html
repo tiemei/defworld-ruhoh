@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6790198342083341" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.4076455692721467" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7235126975598005" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6420744502431046" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.016986981158184977" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.2757247739173264" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -116,9 +116,43 @@
 <li><code>git diff working..broken</code> tag可以被用在HEAD出现的任何地方</li>
 </ul>
 
-<p>branches merget.. 待补充</p>
+<h3 id="toc_5">branche</h3>
 
-<h3 id="toc_5">配置</h3>
+<p><img src="http://farm8.staticflickr.com/7384/9150086081_dfe8ef4bce.jpg" alt="git branche">  </p>
+
+<ul>
+<li><code>git branche</code> 查看有几个分支，以及活动分支</li>
+<li><code>git branche &lt;name&gt; &lt;commit&gt;</code> commit指定新branche的起始点，默认最新一次commit</li>
+<li><code>git checkout &lt;branchname&gt;</code> 指定当前活动分支，与从Index同步文件命令意义不同</li>
+</ul>
+
+<p>在新分支上commit后，然后又切回master，状态如下图：<br>
+<img src="http://farm8.staticflickr.com/7350/9150130937_6908be5258.jpg" alt="git branche 2"><br>
+接着，你又在master分支上commit，状态变成:<br>
+<img src="http://farm6.staticflickr.com/5547/9152373240_ee693532ee.jpg" alt="git branche 3">  </p>
+
+<h3 id="toc_6">merging</h3>
+
+<p>你在新branche开发完毕，要将变动合并到master，你将执行<code>git merge newfeature</code>，如果没有冲突，最终状态如下图：<br>
+<img src="http://farm6.staticflickr.com/5529/9152407936_c8898f484e.jpg" alt="git merging"><br>
+如果发生冲突，你将看到这样提示：  </p>
+
+<pre><code>CONFLICT (content): Merge conflict in somefile.txt
+Automatic merge failed; fix conflicts and then commit the result.
+</code></pre>
+
+<p>你需要手动解决冲突，冲突的文件中冲突处类似下面格式：  </p>
+
+<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:somefile.txt
+this change was done in master
+=======
+this change was done in newfeature
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; newfeature:somefile.txt
+</code></pre>
+
+<p>改好后commit，你就可以删掉branche了<code>git branche -d newfeature</code>  </p>
+
+<h3 id="toc_7">配置</h3>
 
 <ul>
 <li><code>git config --global color.ui auto</code></li>

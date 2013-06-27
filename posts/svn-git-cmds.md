@@ -57,8 +57,33 @@ tags:
 * `git tag wokring 3720b35``git tag broken` 给某次commit加tag
 * `git diff working..broken` tag可以被用在HEAD出现的任何地方
 
+### branche
+![git branche](http://farm8.staticflickr.com/7384/9150086081_dfe8ef4bce.jpg)  
+
+* `git branche` 查看有几个分支，以及活动分支
+* `git branche <name> <commit>` commit指定新branche的起始点，默认最新一次commit
+* `git checkout <branchname>` 指定当前活动分支，与从Index同步文件命令意义不同
+
+在新分支上commit后，然后又切回master，状态如下图：  
+![git branche 2](http://farm8.staticflickr.com/7350/9150130937_6908be5258.jpg)  
+接着，你又在master分支上commit，状态变成:  
+![git branche 3](http://farm6.staticflickr.com/5547/9152373240_ee693532ee.jpg)  
   
-branches merget.. 待补充
+### merging
+你在新branche开发完毕，要将变动合并到master，你将执行`git merge newfeature`，如果没有冲突，最终状态如下图：  
+![git merging](http://farm6.staticflickr.com/5529/9152407936_c8898f484e.jpg)  
+如果发生冲突，你将看到这样提示：  
+
+    CONFLICT (content): Merge conflict in somefile.txt
+    Automatic merge failed; fix conflicts and then commit the result.
+你需要手动解决冲突，冲突的文件中冲突处类似下面格式：  
+
+    <<<<<<< HEAD:somefile.txt
+    this change was done in master
+    =======
+    this change was done in newfeature
+    >>>>>>> newfeature:somefile.txt
+改好后commit，你就可以删掉branche了`git branche -d newfeature`  
 
 ### 配置
 

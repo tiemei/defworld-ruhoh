@@ -18,6 +18,7 @@ tags: intellij
 (http://wiki.jetbrains.net/intellij/Creating_and_importing_Maven_projects)  
 [Intellij配置文件同步](http://willerce.com/post/intellij-idea-config-sync)  
 [Intellij IDEA常用设置](http://www.myexception.cn/program/1032108.html)
+[IntelliJ IDEA Q&A for Eclipse Users](http://www.jetbrains.com/idea/documentation/migration_faq.html)  
 
 本文快捷键仅适用于：  
 > Mac OS X 10.5+ keymap  
@@ -81,6 +82,7 @@ changed descendants`
 * `⇧ ↩ `/ `⌘ ⌥ ↩ ` 下/上插入新行
 * `⌘ j`    必statements complemention更强大， [live template](http://ooxx.me/intellij-idea-live-template.orz)
 * `⌘ n`    生成代码/创建文件/生成get&setter
+* `⌘ ⇧ t`  生成测试类，位于editor打开文件任何位置;`⌥ ↩ `位于editor class name上才有用
 * `⌥  ↩ `    调出出错提示处理方法
 * `⌘ d`      double整行、块
 * `⌘ ⌦ ` / `⌘ x` 删除一行
@@ -97,7 +99,7 @@ changed descendants`
 
 ### 代码跳转
 * `⌘ ⌥ b` / `⌘ b` Go to declaration / Go to implementation(s)
-* `⌃ ⇧ t` Go to type declaration
+* `⌃ ⇧ b` Go to type declaration
 * `⌘ u`  Go to super-method/super-class
 * `⌘ y`  Open quick definition lookup
 * `⌥ ⌘ [` / `⌥ ⌘ ]` Move to code block start/end(我机器设置)

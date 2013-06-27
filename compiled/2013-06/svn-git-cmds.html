@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.3800315750292951" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.5676990121617588" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9871941031022927" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6790198342083341" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.4076455692721467" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7235126975598005" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -91,7 +91,43 @@
 
 <h2 id="toc_4">git</h2>
 
-<p>待补充</p>
+<p><img src="http://farm4.staticflickr.com/3701/9147517685_85e9e01925.jpg" alt="git提交状态">  </p>
+
+<ul>
+<li><code>git add file/dir</code><code>git commit -m &#39;commit log&#39;</code>上图很形象的说明了git命令和文件所处状态的变化关系。</li>
+<li><code>git commit -a -m &quot;commit log&quot;</code> 将add和commit动作合并，不过只作用域变化的文件，对新增文件无效</li>
+<li><code>git log</code>查看commit历史 <code>git log --pretty=oneline --abbrev-commit</code>查看commit历史，简明格式</li>
+</ul>
+
+<p><img src="http://farm6.staticflickr.com/5331/9149824940_25f19bf055.jpg" alt="git回退">  </p>
+
+<ul>
+<li><code>git checkout file/dir</code> 用index中文件覆盖working tree中文件</li>
+<li><code>git reset HEAD file</code>   用commit中文件覆盖index中文件,HEAD为commit log前几位字符(唯一就行)</li>
+<li><code>git revert HEAD</code>       undo某次commit动作，你也可以undo更老些的commit</li>
+<li><code>git show HEAD</code>         show diff from one commmit compared to its parent</li>
+<li><code>git diff HEAD1..HEAD2</code> 两个commit之间的变化</li>
+</ul>
+
+<p><img src="http://farm8.staticflickr.com/7443/9149898002_3c3513af25.jpg" alt="git tag">  </p>
+
+<ul>
+<li><code>git tag wokring 3720b35</code><code>git tag broken</code> 给某次commit加tag</li>
+<li><code>git diff working..broken</code> tag可以被用在HEAD出现的任何地方</li>
+</ul>
+
+<p>branches merget.. 待补充</p>
+
+<h3 id="toc_5">配置</h3>
+
+<ul>
+<li><code>git config --global color.ui auto</code></li>
+<li><code>git config user.name &quot;Bob&quot;</code></li>
+<li><code>git config user.email &quot;bob@example.com&quot;</code></li>
+<li><code>git config --global user.name &quot;Bob&quot;</code></li>
+<li><code>git config --global user.email &quot;bob@example.com&quot;</code></li>
+<li>直接编辑.git/config</li>
+</ul>
 
     <hr>
     <div class="pagination">

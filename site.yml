@@ -8,8 +8,6 @@ author :
   feedburner : tiemei
 
 navigation :
-  - archive.html
-  - blogs/index.md
   - categories.html
   - tools/index.md
   

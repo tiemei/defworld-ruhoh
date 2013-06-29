@@ -2,6 +2,13 @@
 title: Home
 description:
 ---
+<div id="posts" class="fleft">
+{{# db.posts.collated }}
+  {{> posts_collate }}
+{{/ db.posts.collated }}
+</div>
+
+<!--
 <h3>新鲜出炉博客</h3>
 <ul>
 {{# posts_latest }}
@@ -9,12 +16,14 @@ description:
 {{/ posts_latest }}
 </ul>
 <br />
-<h3>关注的外链:</h3>
+-->
+<div id="other" class="fleft">
+<h2>关注的外链:</h2>
 <a href="http://hugozhu.myalert.info">Hugo Zhu/一粟</a><br />
 <a href="http://html5ify.com/">田永强/朴灵</a><br />
 <a href="http://linuxnote.net/">linuxnote</a>
 <br />
-<h3>whoami</h3>
+<h2>whoami</h2>
 <!-- github -->
 <iframe src="http://ghbtns.com/github-btn.html?user=tiemei&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="132" height="20"></iframe>
 <!-- twitter --->
@@ -26,4 +35,4 @@ description:
 <br />
 <!-- weibo -->
 <wb:follow-button uid="2388250330" type="red_1" width="67" height="24" ></wb:follow-button>
-
+</div>

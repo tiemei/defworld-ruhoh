@@ -83,9 +83,13 @@ html, body {
   color:#FFF;
 }
 
-
+.fleft {
+  float: left;
+}
 .fright {
   float: right;  
-  text-align: right;
-  letter-spacing: 0.1em;
+}
+
+#posts {
+  margin: 0 30px 0 0;
 }

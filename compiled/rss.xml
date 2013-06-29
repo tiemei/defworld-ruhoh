@@ -3,7 +3,7 @@
   <channel>
     <title>tiemei</title>
     <link>http://defworld.com</link>
-    <pubDate>2013-06-27 22:14:23 +0800</pubDate>
+    <pubDate>2013-06-29 09:53:17 +0800</pubDate>
     <item>
       <title>&#x6211;&#x7684;svn git&#x5E38;&#x7528;&#x547D;&#x4EE4;&#x53CA;&#x914D;&#x7F6E;</title>
       <link>http://defworld.com/2013-06/svn-git-cmds.html</link>
@@ -39,9 +39,9 @@
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.2520727085342027" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.2805843726944408" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9186115748824745" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.5206376301086725" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.5954410618829687" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.2540199105222245" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -62,10 +62,6 @@
         &lt;div class="container"&gt;
           &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
           &lt;ul class="nav"&gt;
-              
-                &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
-              
-                &lt;li&gt;&lt;a href="/blogs"&gt;Blogs&lt;/a&gt;&lt;/li&gt;
               
                 &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
               
@@ -335,9 +331,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.3073690364812115" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.3878724347058027" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8036177167768512" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.8150451547326022" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.5261251728804622" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.3954120447099684" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -358,10 +354,6 @@ clicky_site_ids.push(defworld.com);
         &lt;div class="container"&gt;
           &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
           &lt;ul class="nav"&gt;
-              
-                &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
-              
-                &lt;li&gt;&lt;a href="/blogs"&gt;Blogs&lt;/a&gt;&lt;/li&gt;
               
                 &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
               
@@ -787,9 +779,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9515018621822742" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.673436242306883" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4658381210257636" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7575388754492782" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.1963261173422589" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.39641752016171494" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -810,10 +802,6 @@ clicky_site_ids.push(defworld.com);
         &lt;div class="container"&gt;
           &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
           &lt;ul class="nav"&gt;
-              
-                &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
-              
-                &lt;li&gt;&lt;a href="/blogs"&gt;Blogs&lt;/a&gt;&lt;/li&gt;
               
                 &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
               
@@ -1083,235 +1071,6 @@ clicky_site_ids.push(defworld.com);
       <link>http://defworld.com/2013-05/build-your-blog-with-gor-and-pi.html</link>
       <pubDate>2013-05-12</pubDate>
       <description>&#x8FD9;&#x91CC;&#x662F;&#x63CF;&#x8FF0;&#x5185;&#x5BB9;</description>
-    </item>
-    <item>
-      <title>&#x4F60;&#x7684;&#x7B2C;&#x4E00;&#x7BC7;&#x535A;&#x5BA2;</title>
-      <link>http://defworld.com/2012/new-born.html</link>
-      <pubDate>2012-12-22</pubDate>
-      <description>&lt;!DOCTYPE html&gt;
-&lt;html lang="en" xmlns:wb=&#x201C;http://open.weibo.com/wb&#x201D;&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;&#x4F60;&#x7684;&#x7B2C;&#x4E00;&#x7BC7;&#x535A;&#x5BA2;&lt;/title&gt;
-    &lt;meta name="author" content="tiemei"&gt;
-
-    &lt;!-- Le HTML5 shim, for IE6-8 support of HTML elements --&gt;
-    &lt;!--[if lt IE 9]&gt;
-      &lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
-    &lt;![endif]--&gt;
-
-    &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9840351070150275" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.1376163974534227" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.1101777680618643" type="text/css" rel="stylesheet" media="all"&gt;
-
- 
-
-    &lt;!-- Le fav and touch icons --&gt;
-  &lt;!-- Update these with your own images
-    &lt;link rel="shortcut icon" href="images/favicon.ico"&gt;
-    &lt;link rel="apple-touch-icon" href="images/apple-touch-icon.png"&gt;
-    &lt;link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"&gt;
-    &lt;link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"&gt;
-  --&gt;
-  &lt;script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
-  &lt;/head&gt;
-
-  &lt;body&gt;
-
-    &lt;div class="navbar"&gt;
-      &lt;div class="navbar-inner"&gt;
-        &lt;div class="container"&gt;
-          &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
-          &lt;ul class="nav"&gt;
-              
-                &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
-              
-                &lt;li&gt;&lt;a href="/blogs"&gt;Blogs&lt;/a&gt;&lt;/li&gt;
-              
-                &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
-              
-                &lt;li&gt;&lt;a href="/tools"&gt;Tools&lt;/a&gt;&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class="container"&gt;
-
-      &lt;div class="content"&gt;
-        &lt;div class="page-header"&gt;
-  &lt;h1&gt;&#x4F60;&#x7684;&#x7B2C;&#x4E00;&#x7BC7;&#x535A;&#x5BA2; &lt;/h1&gt;
-&lt;/div&gt;
-
-&lt;div class="row"&gt;
-  &lt;div class="span8"&gt;
-    &lt;h1 id="toc_0"&gt;&#x611F;&#x8C22;&#x4F60;&#x4F7F;&#x7528;Gor&#x7F16;&#x5199;&#x535A;&#x5BA2;&lt;/h1&gt;
-
-&lt;h2 id="toc_1"&gt;&#x672C;&#x6587;&#x4F4D;&#x4E8E; posts/first-blog.md , &#x4F60;&#x53EF;&#x4EE5;&#x4EFB;&#x4F55;&#x5220;&#x6389;,&#x4FEE;&#x6539;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&lt;/h2&gt;
-
-&lt;p&gt;&#x6587;&#x4EF6;&#x5F00;&#x5934;&#x662F;&#x5F53;&#x524D;&#x6587;&#x7AE0;&#x7684;&#x5143;&#x6570;&#x636E;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;date&#x4E3A;&#x81EA;&#x52A8;&#x751F;&#x6210;, &#x5F53;&#x7136;,&#x4F60;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;,&#x8FD9;&#x662F;&#x4F60;&#x7684;&#x81EA;&#x7531;&lt;/li&gt;
-&lt;li&gt;permalink &#x53EF;&#x4EE5;&#x662F;&#x56FA;&#x5B9A;&#x5730;&#x5740;,&#x4E5F;&#x53EF;&#x4EE5;&#x7531;gor&#x4E3A;&#x4F60;&#x81EA;&#x52A8;&#x751F;&#x6210;&lt;/li&gt;
-&lt;li&gt;categories &#x5C31;&#x662F;&#x5206;&#x7C7B;, &#x53EF;&#x4EE5;&#x591A;&#x4E2A;&lt;/li&gt;
-&lt;li&gt;tags &#x540C;&#x7406;,&#x591A;&#x4E2A;&#x6807;&#x7B7E;&#x4E5F;&#x662F;&#x5F88;&#x5E38;&#x89C1;&#x7684;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&#x8BF7;&#x786E;&#x4FDD;&#x6587;&#x4EF6;&#x4F7F;&#x7528;UTF8 without BOM&#x7F16;&#x7801;&lt;/p&gt;
-
-&lt;h2 id="toc_2"&gt;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6267;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x8BED;&#x53E5;&#x6765;&#x65B0;&#x5EFA;&#x4E00;&#x7BC7;&#x535A;&#x5BA2;:&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;gor post &#x6587;&#x7AE0;&#x6807;&#x9898;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id="toc_3"&gt;&#x7F16;&#x8BD1;&#x4F60;&#x7684;&#x535A;&#x5BA2;,&#x5E76;&#x9884;&#x89C8;&#x4E4B;&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;gor compile #&#x7F16;&#x8BD1;
-gor http
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&#x7136;&#x540E;&#x6253;&#x5F00;&#x4F60;&#x7684;&#x6D4F;&#x89C8;&#x5668;,&#x8BBF;&#x95EE; &lt;a href="http://127.0.0.1:8080"&gt;http://127.0.0.1:8080&lt;/a&gt; &#x6765;&#x9884;&#x89C8;&lt;/p&gt;
-
-&lt;h2 id="toc_4"&gt;&#x4F60;&#x5C06;&#x4F7F;&#x7528;Markdown&#x6765;&#x7F16;&#x5199;&#x535A;&#x5BA2;&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href="http://wowubuntu.com/markdown/"&gt;Markdown &#x8BED;&#x6CD5;&#x4E2D;&#x6587;&#x7248;&lt;/a&gt; &#x80FD;&#x8BA9;&#x4F60;&#x5FEB;&#x901F;&#x5165;&#x95E8;&#x5176;&#x8BED;&#x6CD5;&lt;/p&gt;
-
-&lt;p&gt;&#x76F8;&#x4FE1;&lt;a href="http://markdownpad.com"&gt;MarkdownPad&lt;/a&gt;&#x6216;&lt;a href="http://code.google.com/p/liteide/"&gt;liteide&lt;/a&gt;&#x4F1A;&#x662F;&#x4F60;&#x7684;&#x7F16;&#x5199;&#x535A;&#x5BA2;&#x7684;&#x597D;&#x5E2E;&#x624B;&lt;/p&gt;
-
-&lt;h2 id="toc_5"&gt;&#x5982;&#x679C;&#x4F60;&#x6253;&#x7B97;&#x90E8;&#x7F72;&#x5230;github&#x7684;pages&#x4E0A;&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&#x7533;&#x8BF7;github&#x5E10;&#x6237;&lt;/li&gt;
-&lt;li&gt;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x5E93; username.github.com &#x5373;&#x4F60;&#x7684;&#x7528;&#x6237;&#x540D;&#x547D;&#x540D;&#x7684;&#x5730;&#x5740;&lt;/li&gt;
-&lt;li&gt;&#x5C06;compiled&#x76EE;&#x5F55;,&#x4F5C;&#x4E3A;&#x6839;&#x8DEF;&#x5F84;,&#x63D0;&#x4EA4;&#x4E0A;&#x53BB;github.com&#x4E0A;&lt;/li&gt;
-&lt;li&gt;&#x7A0D;&#x7B49;&#x51E0;&#x5206;&#x949F;, &#x4F60;&#x5373;&#x53EF;&#x901A;&#x8FC7; &lt;a href="http://username.github.com"&gt;http://username.github.com&lt;/a&gt; &#x8BBF;&#x95EE;&#x5230;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id="toc_6"&gt;&#x9644;&#x4E0A;git&#x6559;&#x7A0B; &lt;a href="http://gitbook.liuhui998.com/"&gt;GitBook&#x4E2D;&#x6587;&#x7248;&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;&#x4E00;&#x822C;&#x6765;&#x8BF4;,&#x4F60;&#x53EA;&#x9700;&#x8981;&#x51E0;&#x4E2A;&#x7B80;&#x5355;&#x7684;git&#x547D;&#x4EE4;&#x5C31;&#x8DB3;&#x4EE5;&#x5E94;&#x4ED8;&#x5927;&#x90E8;&#x5206;&#x9700;&#x6C42;(&#x4EC5;&#x793A;&#x4F8B;)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git clone git://github.com/wendal/wendal.net.git
-git add -A
-git commit -m &amp;quot;...&amp;quot;
-git pull
-git push
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id="toc_7"&gt;&#x7528;gor&#x7F16;&#x5199;&#x535A;&#x5BA2;&#x5C06;&#x4F1A;&#x662F;&#x4E00;&#x4EF6;&#x5F88;&#x5F00;&#x5FC3;&#x7684;&#x4E8B;,&#x5982;&#x679C;&#x6709;&#x4EFB;&#x4F55;&#x610F;&#x89C1;&#x6216;&#x5EFA;&#x8BAE;,&#x6B22;&#x8FCE;&#x5230; &lt;a href="http://github.com/wendal/gor"&gt;gor&#x7684;&#x5B98;&#x7F51;&lt;/a&gt; &#x63D0;&#x4EA4;issue&lt;/h2&gt;
-
-&lt;h1 id="toc_8"&gt;&#x795D;&#x4F60;&#x4F7F;&#x7528;&#x6109;&#x5FEB;&lt;/h1&gt;
-
-    &lt;hr&gt;
-    &lt;div class="pagination"&gt;
-      &lt;ul&gt;
-        &lt;ul&gt;
-            &lt;li class="prev disabled"&gt;&lt;a&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
-
-            &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
-
-            &lt;li class="next"&gt;&lt;a href="/2013-05/build-your-blog-with-gor-and-pi.html" title="&#x6811;&#x8393;&#x6D3E;&#x642D;&#x5EFA;&#x4E2A;&#x4EBA;&#x9759;&#x6001;&#x535A;&#x5BA2;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;hr&gt;
-    &lt;div id="disqus_thread"&gt;&lt;/div&gt;
-&lt;script&gt;
-    var disqus_developer = 1;
-    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-&lt;/script&gt;
-&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
-&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
-
-  &lt;/div&gt;
-  
-  &lt;div class="span4"&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-    (function(){
-       var _w = 90 , _h = 24;
-       var param = {
-       url:location.href,
-       type:'2',
-       count:'1', /**&#x662F;&#x5426;&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6570;&#xFF0C;1&#x663E;&#x793A;(&#x53EF;&#x9009;)*/
-       appkey:'', /**&#x60A8;&#x7533;&#x8BF7;&#x7684;&#x5E94;&#x7528;appkey,&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6765;&#x6E90;(&#x53EF;&#x9009;)*/
-       title:'', /**&#x5206;&#x4EAB;&#x7684;&#x6587;&#x5B57;&#x5185;&#x5BB9;(&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;title)*/
-       pic:'', /**&#x5206;&#x4EAB;&#x56FE;&#x7247;&#x7684;&#x8DEF;&#x5F84;(&#x53EF;&#x9009;)*/
-       ralateUid:'2388250330', /**&#x5173;&#x8054;&#x7528;&#x6237;&#x7684;UID&#xFF0C;&#x5206;&#x4EAB;&#x5FAE;&#x535A;&#x4F1A;@&#x8BE5;&#x7528;&#x6237;(&#x53EF;&#x9009;)*/
-       language:'zh_cn', /**&#x8BBE;&#x7F6E;&#x8BED;&#x8A00;&#xFF0C;zh_cn|zh_tw(&#x53EF;&#x9009;)*/
-       rnd:new Date().valueOf()
-     }
-     var temp = [];
-     for( var p in param ){
-     temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
-     }
-     document.write('&lt;iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&amp;') + '" width="'+ _w+'" height="'+_h+'"&gt;&lt;/iframe&gt;')
-     })()
-    &lt;/script&gt;
-
-    &lt;h4&gt;Published&lt;/h4&gt;
-    &lt;div class="date"&gt;&lt;span&gt;2012-12-22&lt;/span&gt;&lt;/div&gt;
-    &lt;br&gt;
-    &lt;h4&gt;Categories&lt;/h4&gt;
-    &lt;ul class="tag_box"&gt;
-      &lt;li&gt;
-        &lt;a href="/categories#tools-ref"&gt;tools &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
-      &lt;/li&gt;    &lt;/ul&gt;
-    &lt;br&gt;
-    &lt;h4&gt;Tags&lt;/h4&gt;
-    &lt;ul class="tag_box"&gt;
-      &lt;li&gt;
-        &lt;a href="/tags#Gor-ref"&gt;Gor &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
-      &lt;/li&gt;    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-      &lt;/div&gt;
-
-      &lt;footer&gt;
-        &lt;p&gt;&amp;copy; tiemei 2012 
-          with help from &lt;a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework"&gt;ruhoh&lt;/a&gt;
-          and &lt;a href="http://twitter.github.com/bootstrap/" target="_blank"&gt;Twitter Bootstrap&lt;/a&gt;
-        &lt;/p&gt;
-        &lt;p&gt;
-        &lt;script src="http://s9.cnzz.com/stat.php?id=5379369&amp;web_id=5379369&amp;online=1&amp;show=line" language="JavaScript"&gt;&lt;/script&gt;
-        &lt;/p&gt;
-      &lt;/footer&gt;
-
-    &lt;/div&gt; &lt;!-- /container --&gt;
-
-    &lt;!-- Google Prettify --&gt;
-&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-  var pres = document.getElementsByTagName("pre");
-  for (var i=0; i &lt; pres.length; ++i) {
-    pres[i].className = "prettyprint linenums";
-  }
-  prettyPrint();
-&lt;/script&gt;
-&lt;!-- end Google Prettify --&gt;
-    &lt;script&gt;
-var clicky_site_ids = clicky_site_ids || [];
-clicky_site_ids.push(defworld.com);
-(function() {
-  var s = document.createElement('script');
-  s.type = 'text/javascript';
-  s.async = true;
-  s.src = '//static.getclicky.com/js';
-  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
-})();
-&lt;/script&gt;
-&lt;noscript&gt;&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /&gt;&lt;/p&gt;&lt;/noscript&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</description>
     </item>
   </channel>
 </rss>

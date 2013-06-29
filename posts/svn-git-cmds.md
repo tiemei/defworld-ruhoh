@@ -31,8 +31,9 @@ tags:
 **全局排除**  
 ~/.subversion/conf文件中global-ignores  
 **局部排除**  
-命令行执行:`[TargetFolder]>svn propset svn:ignore *.suo .`  
-或者直接写到文件.svnignore中，然后执行`[TargetFolder]>svn propset svn:ignore -F ignore.txt`  
+* `svn ps svn:ignore ignore_pattern .` 设置当前目录排除ignore_file脱离版本控制
+* `svn ps svn:ignore -F .svnignore .` 指定文件.svnignore
+* `svn pe svn:ignore . --editor-cmd=vim` 用vim来编辑需排除的pattern列表，与.svnignore方式互斥
 
 ## git
 

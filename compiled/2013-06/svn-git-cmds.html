@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6420744502431046" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.016986981158184977" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.2757247739173264" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.2628519332937346" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.3852522685453239" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5661794600315121" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -35,10 +35,6 @@
         <div class="container">
           <a class="brand" href="/">tiemei</a>
           <ul class="nav">
-              
-                <li><a href="/archive">Archive</a></li>
-              
-                <li><a href="/blogs">Blogs</a></li>
               
                 <li><a href="/categories">Categories</a></li>
               
@@ -86,8 +82,9 @@
 <p><strong>全局排除</strong><br>
 ~/.subversion/conf文件中global-ignores<br>
 <strong>局部排除</strong><br>
-命令行执行:<code>[TargetFolder]&gt;svn propset svn:ignore *.suo .</code><br>
-或者直接写到文件.svnignore中，然后执行<code>[TargetFolder]&gt;svn propset svn:ignore -F ignore.txt</code>  </p>
+* <code>svn ps svn:ignore ignore_pattern .</code> 设置当前目录排除ignore_file脱离版本控制
+* <code>svn ps svn:ignore -F .svnignore .</code> 指定文件.svnignore
+* <code>svn pe svn:ignore . --editor-cmd=vim</code> 用vim来编辑需排除的pattern列表，与.svnignore方式互斥</p>
 
 <h2 id="toc_4">git</h2>
 

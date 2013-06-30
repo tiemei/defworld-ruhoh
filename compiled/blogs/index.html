@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.5937162874888519" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.2700634450487365" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.521329192546259" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.195813264098897" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.6269025298892907" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6136998552057693" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -54,6 +54,29 @@
 <div class="row">
   <div class="span12">
     <h2>Latest Posts</h2>
+
+<div class="post">
+  <h3 class="title"><a href="/2013-06/about-bashrc.html">.bashrc .bash_profile等文件区别</a> <span class="date">2013-06-28</span></h3>
+
+  <p><strong>/etc/profile</strong><br>
+全局，用户第一次登录执行一次<br>
+会从/etc/profile.d目录的配置文件中搜集shell的设置.</p>
+
+<p><strong>/etc/bashrc</strong><br>
+全局，bash shell配置，一般由/etc/profile调用  </p>
+
+<p><strong>~/.bash_profile</strong><br>
+似有，用户登录(ssh远程登陆/本地新开一个terminal)时执行一次
+一般会调用~/.bashrc  </p>
+
+<p><strong>~/.bashrc</strong><br>
+似有，每次执行bash命令时自动调用，或者非交互方式进入bash时运行  </p>
+
+
+  <div class="more">
+    <a href="/2013-06/about-bashrc.html" class="btn">read more..</a>
+  </div>
+</div>
 
 <div class="post">
   <h3 class="title"><a href="/2013-06/svn-git-cmds.html">我的svn git常用命令及配置</a> <span class="date">2013-06-27</span></h3>

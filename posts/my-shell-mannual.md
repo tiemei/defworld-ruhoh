@@ -2,7 +2,7 @@
 title: 近一年来shell命令积累(随时更新)
 date: '2013-06-12'
 description: shell
-categories: "shell"
+categories: "linux"
 tags: shell
 
 ---

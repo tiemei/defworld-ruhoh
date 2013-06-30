@@ -3,7 +3,13 @@
   <channel>
     <title>tiemei</title>
     <link>http://defworld.com</link>
-    <pubDate>2013-06-30 10:17:03 +0800</pubDate>
+    <pubDate>2013-06-30 12:26:59 +0800</pubDate>
+    <item>
+      <title>ssh&#x5BC6;&#x94A5;&#x81EA;&#x52A8;&#x767B;&#x9646;+ssh-agent&#x4F7F;&#x7528;+&#x5355;&#x673A;&#x591A;&#x4E2A;ssh&#x8D26;&#x53F7;</title>
+      <link>http://defworld.com/2013-06/ssh.html</link>
+      <pubDate>2013-06-30</pubDate>
+      <description>ssh</description>
+    </item>
     <item>
       <title>.bashrc .bash_profile&#x7B49;&#x6587;&#x4EF6;&#x533A;&#x522B;</title>
       <link>http://defworld.com/2013-06/about-bashrc.html</link>
@@ -45,9 +51,9 @@
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.8900734257908688" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.06636524894601559" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5041465661305491" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9377620519666047" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.2970506684836388" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.08708192827338013" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -337,9 +343,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.705431370873438" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.07015342189895457" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7089303753480141" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.42328839471358304" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.762698127631902" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8230099808955257" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -785,9 +791,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7305201915600638" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.08975027905314703" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.18157450911177775" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9141671589895833" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.04923514079991065" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7604950587903639" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 

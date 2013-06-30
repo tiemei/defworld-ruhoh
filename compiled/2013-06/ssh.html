@@ -2,7 +2,8 @@
 <html lang="en" xmlns:wb=“http://open.weibo.com/wb”>
   <head>
     <meta charset="utf-8">
-    <title>生活中多人购物一人付账算钱程序</title>
+    <title>ssh密钥自动登陆+ssh-agent使用+单机多个ssh账号</title>
+    <meta name="description" content="ssh">
     <meta name="author" content="tiemei">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -11,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.24129396516529789" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.15792979940313145" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7171642678244611" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.2561907894375274" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.10102408830023901" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6765076085639586" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -47,147 +48,66 @@
 
       <div class="content">
         <div class="page-header">
-  <h1>生活中多人购物一人付账算钱程序 </h1>
+  <h1>ssh密钥自动登陆+ssh-agent使用+单机多个ssh账号 </h1>
 </div>
 
 <div class="row">
   <div class="span8">
-    <p>几个朋友一起旅行或者购物吃个烧烤啥的，账总是一个人先付掉，AA的话支付宝
-的AA功能还行，不过如果其中的物品有的是甲的，有的是乙的，有的需要某几个
-人均摊，就麻烦了。<br>
-tiemei经常跟朋友出去shopping，回来算账就一堆乱麻，程序员嘛，喜欢偷懒，
-写个程序自算账，交给机器做，我就去享受买回来的好吃的了。  </p>
+    <p>参考：<br>
+<a href="http://www.lainme.com/doku.php/blog/2011/01/%E4%BD%BF%E7%94%A8ssh_config#%E7%94%9F%E6%88%90ssh%E8%AF%81%E4%B9%A6">使用SSH CONFIG</a><br>
+<a href="http://7056824.blog.51cto.com/69854/403669/">使用ssh公钥密钥自动登陆linux服务器</a>  </p>
 
-<p><strong>账单</strong>  </p>
+<h2 id="toc_0">生成ssh key</h2>
 
-<pre><code>6   jia   大号印刷背心袋
-8.6 wang  八宝茶
-14.6 all  咸鸭蛋
-4.9 jia  干柠檬
-2.7 all   鸡蛋面
-12.5 jia  酒
-9.9 all   馒头
-3.9 jia   酸奶
-15  all   刀切馒头
-4.9 all   鸡蛋面
-25.55 all  八宝米
-16.33 jia,wang 凉菜
-4.7  wang  陈皮
-3.3 jia    枣粽
-2.53  all  榨菜
-3.9  jia   肉粽
-6    wang  老爷爷的餐巾纸
------------------------
-140.9
+<p><code>ssh -t rsa</code><br>
+<code>ssh -t rsa -C &quot;jiadongkai@gmail.com&quot;</code> 注释用邮箱地址<br>
+将公钥追加到需要登录机器的~/.ssh/authorized<em>keys，如果无法登陆将~/.ssh/known</em>hosts
+对应行删掉  </p>
+
+<h2 id="toc_1">用ssh-agent省掉passphrase输入</h2>
+
+<ol>
+<li><p>准备ssh-agent需要的环境变量，选择下面的一种方法即可  </p>
+
+<pre><code>eval `ssh-agent` 只在当前登陆窗口生效
+echo &#39;eval `ssh-agent`&#39; &gt;&gt; /etc/profile 每次登陆生效
+</code></pre></li>
+<li><p>将ssh key对应的passphrase添加到ssh agent高速缓存中  </p>
+
+<pre><code>ssh-add ~/.ssh/private_key_name
+你可已查看缓存中内容
+</code></pre></li>
+<li><p>ssh-agent默认打开，你可以关掉<code>ssh-agent -k</code></p></li>
+</ol>
+
+<h2 id="toc_2">你有这些特殊需求嘛？ 多个ssh帐号、使用非标准端口</h2>
+
+<p>用ssh config解决，详见<code>man ssh_config</code><br>
+编辑<code>~/.ssh/config</code>：  </p>
+
+<pre><code>Host pi
+  HostName defworld.com
+  User pi
+  IdentityFile ~/.ssh/id_rsa
+
+Host github
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/gmail
 </code></pre>
 
-<p><strong>算账程序</strong>  </p>
-
-<pre><code class="ruby">#!/Users/jiadongkai/.rvm/rubies/ruby-2.0.0-p0/bin/ruby
-
-items = IO.readlines(&#39;wumeizhangdan&#39;)
-
-result = {}
-split=&quot;\t\t&quot;
-isPrices = false
-expectedPrices = 0
-realPrices = 0
-
-items.each do |item|
-
-  # 总价
-  if isPrices
-    expectedPrices = item.to_f
-    if realPrices != expectedPrices
-      puts &quot;总价计算出错，期望总价 #{expectedPrices}，实际总价#{realPrices}&quot;
-    end
-    break
-  end
-
-  # 总价前一行
-  if(item.start_with?(&quot;--&quot;))
-    isPrices = true
-    next
-  end
-
-  puts &quot;统计 #{item}&quot;
-  colums = item.split(/\s+/)
-  price = colums[0].to_f
-  who = colums[1]
-  name = colums[2]
-
-  # 几个人平摊一个商品
-  whos = who.split(&quot;,&quot;)
-  if whos.size &gt; 1 
-    ava_price = price / whos.size
-
-    whos.each do |who|
-      result[who] ||= [0, &#39;&#39;]
-      result[who][0] += ava_price
-      result[who][1] += &quot;#{ava_price}#{split}#{name}|总价#{price}\n&quot;
-    end
-
-    realPrices += price
-    next
-  end
-  result[who] ||= [0, &#39;&#39;]
-  result[who][0] += price
-  result[who][1] += &quot;#{price}#{split}#{name}\n&quot;
-
-  realPrices += price
-end
-
-f = File.new(&#39;zhangdanresult&#39;, &#39;w&#39;)
-result.each do |who, money_items|
-  f.write(&quot;#{money_items[1]}&quot;)
-  f.write(&quot;--------------------\n&quot;)
-  f.write(&quot;#{money_items[0]}#{split}#{who}\n&quot;)
-  f.write(&quot;++++++++++++++++++++\n&quot;)
-end
-</code></pre>
-
-<p>代码写的仓促，各位凑活看  </p>
-
-<p><strong>结果</strong>  </p>
-
-<pre><code>6.0     大号印刷背心袋
-4.9     干柠檬
-12.5        酒
-3.9     酸奶
-8.165       凉菜|总价16.33
-3.3     枣粽
-3.9     肉粽
---------------------
-42.66499999999999       jia
-++++++++++++++++++++
-8.6     八宝茶
-8.165       凉菜|总价16.33
-4.7     陈皮
-6.0     老爷爷的餐巾纸
---------------------
-27.465      wang
-++++++++++++++++++++
-14.6        咸鸭蛋
-2.7     鸡蛋面
-9.9     馒头
-15.0        刀切馒头
-4.9     鸡蛋面
-25.55       八宝米
-2.53        榨菜
---------------------
-75.18       all
-++++++++++++++++++++
-</code></pre>
+<p>任何使用<code>pi@defworld.com</code>的地方用<code>pi</code>代替，例如<code>ssh pi@defworld.com</code>用<code>ssh pi</code>代替，
+会自动查找指定的密钥<code>id_rsa</code>进行权限验证。于是，你可以单机保存多个密钥。  </p>
 
     <hr>
     <div class="pagination">
       <ul>
         <ul>
-            <li class="prev"><a href="/2013-06/read-vim-help-doc.html" title="不设限的Vim，不设限的人生">&larr; Previous</a></li>
+            <li class="prev"><a href="/2013-06/about-bashrc.html" title=".bashrc .bash_profile等文件区别">&larr; Previous</a></li>
 
             <li><a href="/archive">Archive</a></li>
 
-            <li class="next"><a href="/2013-06/intellij-idea-shortcuts.html" title="从eclipse迁移到intellijIDEA(OS x 10.5)">Next &rarr;</a></li>
+            <li class="next disabled"><a>Next &rarr;</a>
         </ul>
       </ul>
     </div>
@@ -232,12 +152,12 @@ end
     </script>
 
     <h4>Published</h4>
-    <div class="date"><span>2013-06-03</span></div>
+    <div class="date"><span>2013-06-30</span></div>
     <br>
     <h4>Categories</h4>
     <ul class="tag_box">
       <li>
-        <a href="/categories#funny-ref">funny <span>3</span></a>
+        <a href="/categories#linux-ref">linux <span>3</span></a>
       </li>    </ul>
     <br>
     <h4>Tags</h4>

@@ -60,6 +60,7 @@ tags: intellij
 changed descendants`
 * IDEA默认自动保存，无需手动`ctrl + s`
 * IDEA文件默认同步刷新到磁盘，无需手动刷新
+* 工程导入时忽略某些文件`settings → file types → ignore files and folders`
 
 
 ## 我的其他设置及快捷键

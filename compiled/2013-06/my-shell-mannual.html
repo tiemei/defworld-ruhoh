@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7803824494410396" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.2466543402651672" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8480159515432837" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.37720049950136914" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.03363698626232947" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6673741876048138" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -56,8 +56,6 @@
     <p>参考:<br>
 <a href="http://roclinux.cn/">linux命令五分钟系列博文，写的简洁易懂</a>  </p>
 
-<p>按序介绍以下命令：  </p>
-
 <ul>
 <li><a href="#awk">awk</a></li>
 <li><a href="#echo">echo</a></li>
@@ -84,32 +82,29 @@
 <li><p><a href="#man">man</a> </p></li>
 <li><p><a href="#who%20am%20i">who am i</a>- <a href="#wc">wc</a> 字符/字节/最长行字符数/行数 统计</p></li>
 <li><p><a href="#vim">vim</a> 字符替换</p></li>
-<li><p><a href="#wget">wget</a></p></li>
 <li><p><a href="#sort">sort</a></p></li>
-</ul>
-
-<h2 id="toc_0">- <a href="#ln">ln</a></h2>
-
-<ul>
-<li><a href="#sar">sar</a>  收集、汇报与存储CPU/IO..信息</li>
-</ul>
-
-<h2 id="toc_1">- <a href="#wget">wget</a></h2>
-
-<ul>
-<li><a href="#netstat">netstat</a> 和netstat说再见！官方都不维护了！</li>
-<li><a href="#ss">ss</a> Socket Statistics</li>
-<li><a href="#iproute2">iproute2</a> 于TCP/IP协议的流量控制工具套装,取代原来包含netstat的套装net-tools</li>
-<li><a href="#%E5%AE%9E%E6%97%B6%E8%A7%82%E5%AF%9F%E6%96%87%E4%BB%B6%E5%8F%98%E5%8C%96">实时观察文件变化</a></li>
-<li><a href="#ps">ps</a></li>
-<li><a href="#shuf">shuf</a> 打乱文本的行</li>
-<li><a href="#rpm">rpm</a> </li>
+<li><p><a href="#ln">ln</a></p></li>
+<li><p><a href="#sar">sar</a>  收集、汇报与存储CPU/IO..信息</p></li>
+<li><p><a href="#netstat">netstat</a> 和netstat说再见！官方都不维护了！</p></li>
+<li><p><a href="#ss">ss</a> Socket Statistics</p></li>
+<li><p><a href="#iproute2">iproute2</a> 于TCP/IP协议的流量控制工具套装,取代原来包含netstat的套装net-tools</p></li>
+<li><p><a href="#%E5%AE%9E%E6%97%B6%E8%A7%82%E5%AF%9F%E6%96%87%E4%BB%B6%E5%8F%98%E5%8C%96">实时观察文件变化</a></p></li>
+<li><p><a href="#ps">ps</a></p></li>
+<li><p><a href="#shuf">shuf</a> 打乱文本的行</p></li>
+<li><p><a href="#rpm">rpm</a> </p></li>
 <li><p><a href="#grep">grep</a></p></li>
 <li><p><a href="#script/scriptrelay">script/scriptrelay</a> 终端演示</p></li>
 <li><p>[pushd/popd]#(#pushd/popd) 目录压栈出栈</p></li>
 </ul>
 
-<h3 id="toc_2"><a id="awk"><font color="green">awk</font></a></h3>
+<h4 id="toc_0">http相关</h4>
+
+<ul>
+<li><a href="#wget">wget</a></li>
+<li><a href="#curl">curl</a></li>
+</ul>
+
+<h3 id="toc_1"><a id="awk"><font color="green">awk</font></a></h3>
 
 <p><a href="http://124.16.151.186/docs/linux/script/Awk-1index.shtml#12">入门一</a>_</p>
 
@@ -204,7 +199,7 @@ $5 ~ /root/ { print $3 } 匹配时才
 </code></pre></li>
 </ul>
 
-<h6 id="toc_3">四行合一行</h6>
+<h6 id="toc_2">四行合一行</h6>
 
 <pre><code>[code:1:bde308dcc7]cat filename
 111111111
@@ -222,7 +217,7 @@ awk &#39;{if (NR%4==0){print $0} else {printf&quot;%s &quot;,$0}}&#39; filename
 999999999
 </code></pre>
 
-<h6 id="toc_4">按特殊符号分隔 $NF表示最后一个匹配到的</h6>
+<h6 id="toc_3">按特殊符号分隔 $NF表示最后一个匹配到的</h6>
 
 <pre><code>    cat file1
 &gt; 111.222
@@ -232,22 +227,22 @@ cat file1 | awk -F &#39;.&#39; &#39;{printf &quot;%s %s&quot;,$1,$2}&#39;
 &gt; 3333 44
 </code></pre>
 
-<h6 id="toc_5">split内建命令</h6>
+<h6 id="toc_4">split内建命令</h6>
 
 <pre><code>awk &#39;BEGIN{begno=&quot;1,2,3&quot;;split(begno,str,&quot;,&quot;);print str[1],str[2],str[3]}&#39;
 &gt; 1 2 3
 </code></pre>
 
-<h6 id="toc_6">awk其他教程</h6>
+<h6 id="toc_5">awk其他教程</h6>
 
 <pre><code>[csdn博文](http://suo.iteye.com/blog/1319525)  
 </code></pre>
 
 <p><a href="http://124.16.151.186/docs/linux/script/Awk-1index.shtml">awk实例</a>  </p>
 
-<h3 id="toc_7"><a id="echo"><font color="green">echo</font></a></h3>
+<h3 id="toc_6"><a id="echo"><font color="green">echo</font></a></h3>
 
-<h6 id="toc_8">输出换行</h6>
+<h6 id="toc_7">输出换行</h6>
 
 <pre><code>echo &quot;line1\nline2&quot;
 &gt; line1\nline2
@@ -256,11 +251,11 @@ echo -e line1\n\line2
 &gt; line2
 </code></pre>
 
-<h3 id="toc_9"><a id="expect"><font color="green">expect</font></a></h3>
+<h3 id="toc_8"><a id="expect"><font color="green">expect</font></a></h3>
 
 <p><a href="http://en.wikipedia.org/wiki/Expect#Examples">wiki</a>  </p>
 
-<h3 id="toc_10"><a id="cut"><font color="green">cut</font></a></h3>
+<h3 id="toc_9"><a id="cut"><font color="green">cut</font></a></h3>
 
 <p><a href="http://roclinux.cn/?p=1328">网友博文：《cut命令》-linux命令五分钟系列之十九</a>  </p>
 
@@ -326,13 +321,13 @@ sed -n l tab_space.txt
 -d 选项多空格分隔符不支持
 </code></pre>
 
-<h3 id="toc_11"><a id="cat"><font color="green">cat</font></a></h3>
+<h3 id="toc_10"><a id="cat"><font color="green">cat</font></a></h3>
 
-<h6 id="toc_12">用cat合并文件技巧</h6>
+<h6 id="toc_11">用cat合并文件技巧</h6>
 
 <p><a href="http://www.ibm.com/developerworks/cn/linux/l-tip-prompt/l-tiptex2/">IBM Dev博文</a>  </p>
 
-<h3 id="toc_13"><a id="date"><font color="green">date</font></a></h3>
+<h3 id="toc_12"><a id="date"><font color="green">date</font></a></h3>
 
 <p><a href="http://xingfujie.blog.51cto.com/2791569/637223">参考</a>
 <code>date –I –d &#39;-n day&#39;</code>   (可以得到N天前的日期，格式为YYYY-MM-DD)
@@ -342,7 +337,7 @@ sed -n l tab_space.txt
 <code>date –d &#39;+n day&#39; &quot;+%Y%m%d&quot;</code>       (可以得到你天后的日期，格式为YYYYMMDD)<br>
 <code>date +%s.%N</code> (%s是秒，%N是纳秒，需要ms可以对输出做一个计算，基本可作为唯一字符戳)  </p>
 
-<h4 id="toc_14">时间戳格式化日期互转</h4>
+<h4 id="toc_13">时间戳格式化日期互转</h4>
 
 <ul>
 <li><code>date -d @1287331200  &quot;+%Y-%m-%d %M:%S&quot;</code></li>
@@ -354,13 +349,13 @@ sed -n l tab_space.txt
    date</em>new=<code>date -d @$s_new &quot;+%Y-%m-%d&quot;</code></p></li>
 </ul>
 
-<h3 id="toc_15"><a id="截取子串"><font color="green">截取子串</font></a></h3>
+<h3 id="toc_14"><a id="截取子串"><font color="green">截取子串</font></a></h3>
 
-<h3 id="toc_16"><a id="其他"><font color="green">其他</font></a></h3>
+<h3 id="toc_15"><a id="其他"><font color="green">其他</font></a></h3>
 
 <p><a href="http://blog.sina.com.cn/s/blog_69516b7f01015j34.html">linux下grep分析APACHE 服务器日志 命令集合</a>  </p>
 
-<h3 id="toc_17"><a id="find"><font color="green">find</font></a></h3>
+<h3 id="toc_16"><a id="find"><font color="green">find</font></a></h3>
 
 <p>分几个维度查找：<br>
 <code>find . -name file_name</code> # 文件名<br>
@@ -378,6 +373,13 @@ sed -n l tab_space.txt
                  # -size：表示文件大小，＋表示大于某个数，－表示小于某个数。c表示单位是字节，你可以将c换成k,M,G  </p>
 
 <p><code>find . -maxdepth 1 -name “*.c”</code>  # 不想深入子目录，只想在当前目录  </p>
+
+<h4 id="toc_17">递归修改目录、文件权限</h4>
+
+<p><code>find -type d -exec chmod 755 {} \;</code><br>
+<code>find -type d|xargs chmod 755</code><br>
+<code>find -not -type d -exec chmod 644 {} \;</code><br>
+<code>find -not -type d|xargs chmod 644</code>  </p>
 
 <h3 id="toc_18"><a id="service"><font color="green"><a href="http://roclinux.cn/?p=47">service</a></font></a></h3>
 
@@ -791,16 +793,12 @@ G表示将保持空间的内容追加到模式空间中内容的尾部
 </code></pre></li>
 </ul>
 
-<h3 id="toc_31"><a id="wget"><font color="green">wget</font></a></h3>
-
-<p><code>wget -c &quot;www.baidu.com&quot; -O reNameFile -o wget.log</code> 重命名，并输出运行日志  </p>
-
-<h3 id="toc_32"><a id="awk"><font color="green">awk</font></a></h3>
+<h3 id="toc_31"><a id="awk"><font color="green">awk</font></a></h3>
 
 <p><code>awk &#39;NR%2&#39; file</code> 提取奇数行
 <code>awk &#39;NR%2==0&#39; file</code> 提取偶数行  </p>
 
-<h3 id="toc_33"><a id="sort"><font color="green">sort</font></a></h3>
+<h3 id="toc_32"><a id="sort"><font color="green">sort</font></a></h3>
 
 <ul>
 <li><code>-u</code> 去除重复行</li>
@@ -832,7 +830,7 @@ pear:90:2.3
 </code></pre></li>
 </ul>
 
-<h4 id="toc_34"><code>-k</code>选项大作战</h4>
+<h4 id="toc_33"><code>-k</code>选项大作战</h4>
 
 <pre><code>$ cat facebook.txt
 google 110 5000
@@ -848,7 +846,7 @@ sohu 100 4500
 guge 50 3000
 </code></pre>
 
-<h6 id="toc_35">完整语法： <code>[ FStart [ .CStart ] ] [ Modifier ] [ , [ FEnd [ .CEnd ] ][ Modifier ] ]</code></h6>
+<h6 id="toc_34">完整语法： <code>[ FStart [ .CStart ] ] [ Modifier ] [ , [ FEnd [ .CEnd ] ][ Modifier ] ]</code></h6>
 
 <ul>
 <li>由<code>,</code>分成start/end两部分，end部分可省略</li>
@@ -872,7 +870,7 @@ sohu 100 4500
 guge 50 3000</p></li>
 </ul>
 
-<h6 id="toc_36">Modifier还可以包括：</h6>
+<h6 id="toc_35">Modifier还可以包括：</h6>
 
 <ul>
 <li>n</li>
@@ -897,7 +895,7 @@ sort -t &#39; &#39; -k 1,1 demo
 </code></pre></li>
 </ul>
 
-<h6 id="toc_37">-u -k 联合使用</h6>
+<h6 id="toc_36">-u -k 联合使用</h6>
 
 <p><font color="red">可以推测，某个域没法比较相等，从第一个域开始升序排序！！！</font></p>
 
@@ -934,12 +932,12 @@ google 110 5000
 <p><a href="http://roclinux.cn/?p=1472">参考原文</a><br>
 <a href="http://www.linuxso.com/command/sort.html">sort参数详解</a>  </p>
 
-<h3 id="toc_38"><a id="split"><font color="green">split</font></a></h3>
+<h3 id="toc_37"><a id="split"><font color="green">split</font></a></h3>
 
 <p><code>split -l 3 input_file prefix.</code> 3行拆分input_file,目标文件前缀prefix<br>
 <code>-b -k -m..</code>按大小拆分文件  </p>
 
-<h3 id="toc_39"><a id="ln"><font color="green">ln</font></a></h3>
+<h3 id="toc_38"><a id="ln"><font color="green">ln</font></a></h3>
 
 <p><a href="http://vbird.dic.ksu.edu.tw/linux_basic/0230filesystem.php">Linux ext2文件系统 / 硬链接软链接</a></p>
 
@@ -948,7 +946,7 @@ google 110 5000
 <li><code>ln -s srcfile/srcdir softlink</code> 软链接，实际是创建了新的文件softlink,该文件的block内容指向srcfile/srcdir的inode号码。如果你删除srcfile/srcdir，该softlink失效啦。</li>
 </ul>
 
-<h3 id="toc_40"><a id="paste"><font color="green">paste</font></a></h3>
+<h3 id="toc_39"><a id="paste"><font color="green">paste</font></a></h3>
 
 <pre><code>[rocrocket@rocrocket programming]$ cat p3.txt
 I
@@ -1036,16 +1034,16 @@ Element E3
 
 <p><a href="http://unstableme.blogspot.com/2009/01/linux-paste-command-good-examples-uses.html">待续</a></p>
 
-<h3 id="toc_41"><a id="sar"><font color="green">sar</font></a></h3>
+<h3 id="toc_40"><a id="sar"><font color="green">sar</font></a></h3>
 
-<h5 id="toc_42">CPU信息</h5>
+<h5 id="toc_41">CPU信息</h5>
 
 <ul>
 <li><code>sar 时间间隔 输出次数</code> 单位s,如果时间间隔0，输出从开机到现在为止的平均值；输出次数为0，永远输出下去。</li>
 <li><code>sar 5 6 -o sys_info</code>输出到那文件，不过格式没法cat，用<code>sar -f sys_info</code>看吧。-o没有filename，默认到var/log/saDD文件里，其中DD表示当天的日期数字</li>
 <li><p><code>sar -P ALL 1 2</code>试试多核，<code>sar -P 5 1 1</code>只看第六个核</p>
 
-<h5 id="toc_43">内存/网络/IO..信息呢？</h5>
+<h5 id="toc_42">内存/网络/IO..信息呢？</h5>
 
 <p>-b：报告I/O使用情况以及传输速率。（只适用于2.5及之前的内核，所以新内核有可能不支持这个选项）</p>
 
@@ -1088,7 +1086,7 @@ Element E3
 <p>-A 就相当于-bBcdqrRuvwWy -I SUM -n FULL -P ALL这么一堆选项了</p></li>
 </ul>
 
-<h5 id="toc_44">网络相关</h5>
+<h5 id="toc_43">网络相关</h5>
 
 <pre><code># sar命令使用-n选项可以汇报网络相关信息，可用的参数包括：DEV、EDEV、SOCK和FULL
 # 如果你使用DEV关键字，那么sar将汇报和网络设备相关的信息，如lo，eth0或eth1等，例如：
@@ -1144,7 +1142,7 @@ ip-frag：当前的IP分片的数目
 # 如果你使用FULL关键字，相当于上述DEV、EDEV和SOCK三者的综合
 </code></pre>
 
-<h5 id="toc_45">其他好玩的</h5>
+<h5 id="toc_44">其他好玩的</h5>
 
 <ul>
 <li>sar实时汇报机器性能情况 <code>sar -o monitor.res 间隔时间 运行次数 &gt;/dev/null 2&gt;&amp;1 &amp;</code></li>
@@ -1153,9 +1151,9 @@ ip-frag：当前的IP分片的数目
 
 <p><strong>或许你平时还在使用free,ifconfig或者top，从今以后，试试sar吧</strong></p>
 
-<h3 id="toc_46"><a id="wget"><font color="green">wget</font></a></h3>
+<h3 id="toc_45"><a id="wget"><font color="green">wget</font></a></h3>
 
-<h5 id="toc_47">wget是什么？</h5>
+<h5 id="toc_46">wget是什么？</h5>
 
 <ul>
 <li>支持HTTP、HTTPS和FTP协议的下载，其中也包括通过HTTP代理的下载<br></li>
@@ -1168,6 +1166,10 @@ ip-frag：当前的IP分片的数目
 <li><a href="http://roclinux.cn/?p=1542">还有好多呀</a></li>
 </ul>
 
+<h4 id="toc_47">demo</h4>
+
+<p><code>wget -c &quot;www.baidu.com&quot; -O reNameFile -o wget.log</code> 重命名，并输出运行日志  </p>
+
 <h5 id="toc_48"><a href="http://roclinux.cn/?p=1546">wget突破robots.txt限制</a></h5>
 
 <h5 id="toc_49"><a href="http://roclinux.cn/?p=2505">wget目录相关选项</a></h5>
@@ -1176,11 +1178,25 @@ ip-frag：当前的IP分片的数目
 
 <h5 id="toc_51"><a href="http://roclinux.cn/?p=2107">其他选项</a></h5>
 
-<h3 id="toc_52"><a id="netstat"><font color="green">netstat</font></a></h3>
+<h3 id="toc_52"><a id="curl"><font color="green">curl</font></a></h3>
+
+<ul>
+<li><code>curl http://defworld.com</code> GET获得一个页面内容</li>
+<li><code>curl -I http://defworld.com</code> 获得http head</li>
+<li><code>curl -v http://defworld.com</code> 打印http交互详细过程</li>
+<li>支持POST方式</li>
+<li><code>curl -F upload=@localfilename -F press=OK [URL]</code> 支持文件上传</li>
+<li><code>curl -u name:password www.secrets.com</code> 认证</li>
+<li><code>curl -A “Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)” [URL]</code> 模拟指定浏览器</li>
+<li><code>curl -D head_cookies http://bbs.it580.com</code> <code>curl -b head_cookies http://bbs.it580.com</code>保存并使用cookie</li>
+<li><code>curl -x proxy.test.org:80 http://bbs.it580.com</code> 使用代理访问</li>
+</ul>
+
+<h3 id="toc_53"><a id="netstat"><font color="green">netstat</font></a></h3>
 
 <p><img src="/Dropbox/notes/a/netstat_saygb.png" alt="替代netstat的命令"></p>
 
-<h3 id="toc_53"><a id="ss"><font color="green">ss</font></a></h3>
+<h3 id="toc_54"><a id="ss"><font color="green">ss</font></a></h3>
 
 <ul>
 <li>ss快不是一点点，尤其在sock连接很多，它利用到了TCP协议栈中tcp_diag</li>
@@ -1238,29 +1254,29 @@ ss -a
 如果只想查看UNIX sockets，那么使用-xa选项
 </code></pre>
 
-<h3 id="toc_54"><a id="iproute2"><font color="green">iproute2</font></a></h3>
+<h3 id="toc_55"><a id="iproute2"><font color="green">iproute2</font></a></h3>
 
 <p><img src="/Dropbox/notes/a/net-tool_ip.png" alt="iproute工具集替代掉net-tools工具集">
 <img src="/Dropbox/notes/a/iproute2.png" alt="iproute2工具集"></p>
 
-<h3 id="toc_55"><a id="实时观察文件变化"><font color="green">实时观察文件变化</font></a></h3>
+<h3 id="toc_56"><a id="实时观察文件变化"><font color="green">实时观察文件变化</font></a></h3>
 
 <p><a href="http://bbs.chinaunix.net/thread-1257647-1-1.html">一个帖子</a>
 - <code>watch -n 1 cat file.log</code> 实时观察cat file.log的最后几行结果</p>
 
-<h2 id="toc_56">- <code>tail -f file.log</code> 末尾几行变动</h2>
+<h2 id="toc_57">- <code>tail -f file.log</code> 末尾几行变动</h2>
 
-<h3 id="toc_57"><a id="ps"><font color="green">ps</font></a></h3>
+<h3 id="toc_58"><a id="ps"><font color="green">ps</font></a></h3>
 
 <p><code>ps -eLf | grep java | wc</code></p>
 
-<h3 id="toc_58"><a id="shuf"><font color="green">shuf</font></a></h3>
+<h3 id="toc_59"><a id="shuf"><font color="green">shuf</font></a></h3>
 
 <p>自己下载源码编译安装：<a href="http://mirror.yongbok.net/nongnu//shuffle/shuffle-0.9b.tar.gz">http://mirror.yongbok.net/nongnu//shuffle/shuffle-0.9b.tar.gz</a>  </p>
 
-<h3 id="toc_59"><a id="rpm"><font color="green">rpm</font></a></h3>
+<h3 id="toc_60"><a id="rpm"><font color="green">rpm</font></a></h3>
 
-<h3 id="toc_60"><a id="grep"><font color="green">grep</font></a></h3>
+<h3 id="toc_61"><a id="grep"><font color="green">grep</font></a></h3>
 
 <ul>
 <li><code>grep -n root /etc/passwd</code> 输出行号</li>
@@ -1276,7 +1292,7 @@ ss -a
 <li><code>grep &#39;\&lt;c...h\&gt;&#39;</code> 某个单词，c开头h结尾，中间还有三个字符</li>
 </ul>
 
-<h3 id="toc_61"><a id="script/scriptrelay"><font color="green">script/scriptrelay</font></a></h3>
+<h3 id="toc_62"><a id="script/scriptrelay"><font color="green">script/scriptrelay</font></a></h3>
 
 <ol>
 <li>open terminal 1 : $ <code>mkfifo fd1</code></li>
@@ -1286,7 +1302,7 @@ ss -a
 <li>exit in terminal 1 : $ <code>exit</code> </li>
 </ol>
 
-<h3 id="toc_62"><a id="pushd/popd"><font color="green">pushd/popd</font></a></h3>
+<h3 id="toc_63"><a id="pushd/popd"><font color="green">pushd/popd</font></a></h3>
 
 <ul>
 <li><code>dirs</code> 可现实当前目录，金丹目录堆栈只有一个目录时</li>

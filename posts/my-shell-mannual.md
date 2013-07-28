@@ -9,11 +9,11 @@ tags: shell
 参考:  
 [linux命令五分钟系列博文，写的简洁易懂](http://roclinux.cn/)  
 
-按序介绍以下命令：  
 
 - [awk](#awk)
 - [echo](#echo)
 - [expect](#expect) 对命令行提示输入自动输入，如密码验证
+  
 
 - [cut](#cut)      字节/字符/域（特殊字符分隔）的按行切割
 - [paste](#paste)  多文件按行连接/一个文件多行连接
@@ -23,6 +23,7 @@ tags: shell
 - [sed](#sed) stream editor,面向行处理，输出到标准输出
 - [awk](#awk)
   
+
 - [cat](#cat)
 - [tac](#tac) 逆向输出文件
 - [date](#date)
@@ -40,13 +41,13 @@ tags: shell
 - [man](#man) 
 - [who am i](#who am i)- [wc](#wc) 字符/字节/最长行字符数/行数 统计
 - [vim](#vim) 字符替换
-- [wget](#wget)
 - [sort](#sort)
 - [ln](#ln)
-- 
+  
+
 - [sar](#sar)  收集、汇报与存储CPU/IO..信息
-- [wget](#wget)
-- 
+  
+
 - [netstat](#netstat) 和netstat说再见！官方都不维护了！
 - [ss](#ss) Socket Statistics
 - [iproute2](#iproute2) 于TCP/IP协议的流量控制工具套装,取代原来包含netstat的套装net-tools
@@ -55,9 +56,15 @@ tags: shell
 - [shuf](#shuf) 打乱文本的行
 - [rpm](#rpm) 
 - [grep](#grep)
+  
 
 - [script/scriptrelay](#script/scriptrelay) 终端演示
 - [pushd/popd]#(#pushd/popd) 目录压栈出栈
+
+#### http相关
+
+- [wget](#wget)
+- [curl](#curl)
 
 ### <a id="awk"><font color="green">awk</font></a>
 
@@ -314,6 +321,14 @@ tags: shell
                  # -size：表示文件大小，＋表示大于某个数，－表示小于某个数。c表示单位是字节，你可以将c换成k,M,G  
 
 `find . -maxdepth 1 -name “*.c”`  # 不想深入子目录，只想在当前目录  
+  
+#### 递归修改目录、文件权限
+
+`find -type d -exec chmod 755 {} \;`  
+`find -type d|xargs chmod 755`  
+`find -not -type d -exec chmod 644 {} \;`  
+`find -not -type d|xargs chmod 644`  
+  
 
 ### <a id="service"><font color="green">[service](http://roclinux.cn/?p=47)</font></a>
 `service httpd start/stop/restart/reload`(重新载入配置)  
@@ -707,8 +722,6 @@ tab制表符，这个符号比较特殊，当使用-L时，制表符算7个字�
         将文件中每行出现‘72;’替换为‘72,next_val=0×11111111;’；接着，如果有@符号，则将本行宝贝到hold空间，做一个全局的替换，交换保持空间和模式空间内容，并将保持空间内容追加到模式空间结尾（增加了一行）
 
 
-###  <a id="wget"><font color="green">wget</font></a>
-`wget -c "www.baidu.com" -O reNameFile -o wget.log` 重命名，并输出运行日志  
 
 
 
@@ -1050,6 +1063,7 @@ tab制表符，这个符号比较特殊，当使用-L时，制表符算7个字�
 
 ### <a id="wget"><font color="green">wget</font></a>
 ##### wget是什么？
+
 - 支持HTTP、HTTPS和FTP协议的下载，其中也包括通过HTTP代理的下载  
 - wget能够跟踪HTML文件和XHTML文件,傻傻的去下载外链站点的内容
 - wget支持慢速网络下载和不稳定网络的下载。当因为网络不稳定而导致下载失败时，wget会重试直到把目标文件下载下来为止
@@ -1059,6 +1073,9 @@ tab制表符，这个符号比较特殊，当使用-L时，制表符算7个字�
 - 连续使用了多个短选项，且这些短选项不需要加参数，那么可以将他们组合在一起。比如-d -r -c可以写成-drc
 - [还有好多呀](http://roclinux.cn/?p=1542)
 
+#### demo
+`wget -c "www.baidu.com" -O reNameFile -o wget.log` 重命名，并输出运行日志  
+
 ##### [wget突破robots.txt限制](http://roclinux.cn/?p=1546)
 
 ##### [wget目录相关选项](http://roclinux.cn/?p=2505)
@@ -1066,6 +1083,18 @@ tab制表符，这个符号比较特殊，当使用-L时，制表符算7个字�
 ##### [大文件](http://roclinux.cn/?p=1561)
 
 ##### [其他选项](http://roclinux.cn/?p=2107)
+
+### <a id="curl"><font color="green">curl</font></a>
+
+* `curl http://defworld.com` GET获得一个页面内容
+* `curl -I http://defworld.com` 获得http head
+* `curl -v http://defworld.com` 打印http交互详细过程
+* 支持POST方式
+* `curl -F upload=@localfilename -F press=OK [URL]` 支持文件上传
+* `curl -u name:password www.secrets.com` 认证
+* `curl -A “Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)” [URL]` 模拟指定浏览器
+* `curl -D head_cookies http://bbs.it580.com` `curl -b head_cookies http://bbs.it580.com`保存并使用cookie
+* `curl -x proxy.test.org:80 http://bbs.it580.com` 使用代理访问
 
 
 ### <a id="netstat"><font color="green">netstat</font></a>

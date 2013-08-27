@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.8795795628662847" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.21969818578340405" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5561183627796769" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.027628527200377673" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.5455452280442256" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7093696417407738" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -54,30 +54,6 @@
 <div class="row">
   <div class="span12">
     <h2>Latest Posts</h2>
-
-<div class="post">
-  <h3 class="title"><a href="/2013-07/english-words.html">英语单词积累</a> <span class="date">2013-07-28</span></h3>
-
-  <ul>
-<li><code>semicolon</code> 分号<code>comma</code>逗号 <code>colon</code>冒号</li>
-<li><code>inherit</code>继承 <code>polymorphic</code>多态</li>
-</ul>
-
-
-  <div class="more">
-    <a href="/2013-07/english-words.html" class="btn">read more..</a>
-  </div>
-</div>
-
-<div class="post">
-  <h3 class="title"><a href="/2013-07/http-1-1-note.html">Http 1 1 Note</a> <span class="date">2013-07-28</span></h3>
-
-  
-
-  <div class="more">
-    <a href="/2013-07/http-1-1-note.html" class="btn">read more..</a>
-  </div>
-</div>
 
 <div class="post">
   <h3 class="title"><a href="/2013-06/ssh.html">ssh密钥自动登陆+ssh-agent使用+单机多个ssh账号</a> <span class="date">2013-06-30</span></h3>
@@ -151,6 +127,7 @@
 <li><code>svn st path</code> 只输出状态有变化的文件</li>
 <li><code>svn st -v path</code> 列出所有文件详细状态信息</li>
 <li><code>svn add file/dir</code><code>svn ci m &quot;comment log&quot;</code> 添加文件，提交变动</li>
+<li><code>svn rm path/file</code> 移除某个分支/文件</li>
 </ul>
 
 
@@ -293,6 +270,60 @@ HandlerExceptionResolver，所有的异常均返回一个静态的错误页面�
 
   <div class="more">
     <a href="/2013-05/spring-3-exception-handling.html" class="btn">read more..</a>
+  </div>
+</div>
+
+<div class="post">
+  <h3 class="title"><a href="/2013-05/auto-up-img-to-filikr-and-get-shareurl.html">markdown所用图片上传自动化脚本</a> <span class="date">2013-05-18</span></h3>
+
+  <h2 id="toc_0">我在做一件什么事?</h2>
+
+<p>我在写markdown笔记时，有些本地图片需要嵌入，而上传并获取外链实在是一个繁琐的
+过程。这明显是可以自动化掉的过程。<br>
+更进一步，图片上传和获取外链自动化掉，但还需要手动拷贝替换makrdown中的图片链接，这个过程亦可自动化掉。</p>
+
+<h2 id="toc_1">思路</h2>
+
+<p>调用<a href="http://flikr.com/">flickr</a>将图片上传并获取外链</p>
+
+<h2 id="toc_2">操作步骤</h2>
+
+<h3 id="toc_3">flickr授权验证</h3>
+
+<p>我写了一个工具，方便拿到flickr授权后的access<em>token &amp; access</em>secret, <a href="/tools">here</a><br>
+或者你写个脚本来拿，类似下面我用ruby实现的这段：  </p>
+
+
+  <div class="more">
+    <a href="/2013-05/auto-up-img-to-filikr-and-get-shareurl.html" class="btn">read more..</a>
+  </div>
+</div>
+
+<div class="post">
+  <h3 class="title"><a href="/2013-05/a-little-things-abount-java-language.html">java语言基础细节</a> <span class="date">2013-05-18</span></h3>
+
+  <p>2011年的笔记，当时是在看《细说 Java》，算是一个入门书。<br>
+虽然基础，但是平时工作中并不一定注意到这些细节，现在这些零碎的东西都整理起来。<br>
+只挑选目前看还有些价值的  </p>
+
+<h2 id="toc_0">java基本数据类型</h2>
+
+<p>基本数据类型由低到高排序：</p>
+
+<pre><code>byte(1) short(2) ---&gt;
+                     int(4) long(8) float(4) double(8)
+        char (2) ---&gt;
+boolean(1)
+</code></pre>
+
+<p>由低到高隐式转换，高到底必须显示申明，因为数据会失真。<br>
+char是无符号类型，所以char short<br>
+boolean不能和其他类型进行相互转换<br>
+必要时使用BigInteger &amp; BigDecimal  </p>
+
+
+  <div class="more">
+    <a href="/2013-05/a-little-things-abount-java-language.html" class="btn">read more..</a>
   </div>
 </div>
 

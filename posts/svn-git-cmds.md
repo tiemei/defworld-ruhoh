@@ -25,6 +25,7 @@ tags:
 * `svn st path` 只输出状态有变化的文件
 * `svn st -v path` 列出所有文件详细状态信息
 * `svn add file/dir``svn ci m "comment log"` 添加文件，提交变动
+* `svn rm path/file` 移除某个分支/文件
 
 ### 配置
 #### 排除

@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.027628527200377673" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.5455452280442256" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7093696417407738" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9650519650142061" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.7937214275302757" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.646659487356012" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -54,6 +54,37 @@
 <div class="row">
   <div class="span12">
     <h2>Latest Posts</h2>
+
+<div class="post">
+  <h3 class="title"><a href="/2013-08/jdk-tools.html">jdk自带工具</a> <span class="date">2013-08-30</span></h3>
+
+  <h1 id="toc_0">javah</h1>
+
+<h2 id="toc_1">JNI示例</h2>
+
+<p>参考:<a href="https://blogs.oracle.com/moonocean/entry/a_simple_example_of_jni">JNI example</a>  </p>
+
+<ol>
+<li>写一个java类，生命navtive方法</li>
+<li>调用javah生成头文件</li>
+<li>写c代码，生成库文件</li>
+<li><code>java -Djava.library.path=&lt;path_of_native_lib&gt; JNIFoo</code>会默认先载入头文件，
+然后按指定的路径查找库文件</li>
+</ol>
+
+<h1 id="toc_2">jmap(Java Memory Map)</h1>
+
+<p>参考:<a href="http://blog.csdn.net/fenglibing/article/details/6411953">jmap</a>  </p>
+
+<h2 id="toc_3">jmap -histo pid</h2>
+
+<p><img src="http://farm8.staticflickr.com/7346/9627329472_b28eba137c.jpg" alt="jmap output"></p>
+
+
+  <div class="more">
+    <a href="/2013-08/jdk-tools.html" class="btn">read more..</a>
+  </div>
+</div>
 
 <div class="post">
   <h3 class="title"><a href="/2013-06/ssh.html">ssh密钥自动登陆+ssh-agent使用+单机多个ssh账号</a> <span class="date">2013-06-30</span></h3>
@@ -296,34 +327,6 @@ HandlerExceptionResolver，所有的异常均返回一个静态的错误页面�
 
   <div class="more">
     <a href="/2013-05/auto-up-img-to-filikr-and-get-shareurl.html" class="btn">read more..</a>
-  </div>
-</div>
-
-<div class="post">
-  <h3 class="title"><a href="/2013-05/a-little-things-abount-java-language.html">java语言基础细节</a> <span class="date">2013-05-18</span></h3>
-
-  <p>2011年的笔记，当时是在看《细说 Java》，算是一个入门书。<br>
-虽然基础，但是平时工作中并不一定注意到这些细节，现在这些零碎的东西都整理起来。<br>
-只挑选目前看还有些价值的  </p>
-
-<h2 id="toc_0">java基本数据类型</h2>
-
-<p>基本数据类型由低到高排序：</p>
-
-<pre><code>byte(1) short(2) ---&gt;
-                     int(4) long(8) float(4) double(8)
-        char (2) ---&gt;
-boolean(1)
-</code></pre>
-
-<p>由低到高隐式转换，高到底必须显示申明，因为数据会失真。<br>
-char是无符号类型，所以char short<br>
-boolean不能和其他类型进行相互转换<br>
-必要时使用BigInteger &amp; BigDecimal  </p>
-
-
-  <div class="more">
-    <a href="/2013-05/a-little-things-abount-java-language.html" class="btn">read more..</a>
   </div>
 </div>
 

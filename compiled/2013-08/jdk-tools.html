@@ -2,7 +2,7 @@
 <html lang="en" xmlns:wb=“http://open.weibo.com/wb”>
   <head>
     <meta charset="utf-8">
-    <title>生活中多人购物一人付账算钱程序</title>
+    <title>jdk自带工具</title>
     <meta name="author" content="tiemei">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -11,9 +11,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.8416597840847144" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.4710574144745834" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.39777267672663075" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.0770542649349728" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.6696597506842137" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8948985538185937" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -47,147 +47,110 @@
 
       <div class="content">
         <div class="page-header">
-  <h1>生活中多人购物一人付账算钱程序 </h1>
+  <h1>jdk自带工具 </h1>
 </div>
 
 <div class="row">
   <div class="span8">
-    <p>几个朋友一起旅行或者购物吃个烧烤啥的，账总是一个人先付掉，AA的话支付宝
-的AA功能还行，不过如果其中的物品有的是甲的，有的是乙的，有的需要某几个
-人均摊，就麻烦了。<br>
-tiemei经常跟朋友出去shopping，回来算账就一堆乱麻，程序员嘛，喜欢偷懒，
-写个程序自算账，交给机器做，我就去享受买回来的好吃的了。  </p>
+    <h1 id="toc_0">javah</h1>
 
-<p><strong>账单</strong>  </p>
+<h2 id="toc_1">JNI示例</h2>
 
-<pre><code>6   jia   大号印刷背心袋
-8.6 wang  八宝茶
-14.6 all  咸鸭蛋
-4.9 jia  干柠檬
-2.7 all   鸡蛋面
-12.5 jia  酒
-9.9 all   馒头
-3.9 jia   酸奶
-15  all   刀切馒头
-4.9 all   鸡蛋面
-25.55 all  八宝米
-16.33 jia,wang 凉菜
-4.7  wang  陈皮
-3.3 jia    枣粽
-2.53  all  榨菜
-3.9  jia   肉粽
-6    wang  老爷爷的餐巾纸
------------------------
-140.9
+<p>参考:<a href="https://blogs.oracle.com/moonocean/entry/a_simple_example_of_jni">JNI example</a>  </p>
+
+<ol>
+<li>写一个java类，生命navtive方法</li>
+<li>调用javah生成头文件</li>
+<li>写c代码，生成库文件</li>
+<li><code>java -Djava.library.path=&lt;path_of_native_lib&gt; JNIFoo</code>会默认先载入头文件，
+然后按指定的路径查找库文件</li>
+</ol>
+
+<h1 id="toc_2">jmap(Java Memory Map)</h1>
+
+<p>参考:<a href="http://blog.csdn.net/fenglibing/article/details/6411953">jmap</a>  </p>
+
+<h2 id="toc_3">jmap -histo pid</h2>
+
+<p><img src="http://farm8.staticflickr.com/7346/9627329472_b28eba137c.jpg" alt="jmap output"></p>
+
+<pre><code>B代表byte
+C代表char
+D代表double
+F代表float
+I代表int
+J代表long
+Z代表boolean
+前边有[代表数组，[I 就相当于int[]
 </code></pre>
 
-<p><strong>算账程序</strong>  </p>
+<h2 id="toc_4">jmap -heap pid</h2>
 
-<pre><code class="ruby">#!/Users/jiadongkai/.rvm/rubies/ruby-2.0.0-p0/bin/ruby
+<p>查看JVM初始化内存分配，以及各代详细的内存使用</p>
 
-items = IO.readlines(&#39;wumeizhangdan&#39;)
+<h2 id="toc_5">产生heap dump文件</h2>
 
-result = {}
-split=&quot;\t\t&quot;
-isPrices = false
-expectedPrices = 0
-realPrices = 0
+<ul>
+<li><code>jmap -heap:format=b pid</code> JDK1.5</li>
+<li><code>jmap -dump:live,format=b,file=xxx pid</code> JDK1.6</li>
+</ul>
 
-items.each do |item|
+<h2 id="toc_6">jmap -permstat pid</h2>
 
-  # 总价
-  if isPrices
-    expectedPrices = item.to_f
-    if realPrices != expectedPrices
-      puts &quot;总价计算出错，期望总价 #{expectedPrices}，实际总价#{realPrices}&quot;
-    end
-    break
-  end
+<p>打印一些持久代上的内存使用状态</p>
 
-  # 总价前一行
-  if(item.start_with?(&quot;--&quot;))
-    isPrices = true
-    next
-  end
+<h1 id="toc_7">jstack</h1>
 
-  puts &quot;统计 #{item}&quot;
-  colums = item.split(/\s+/)
-  price = colums[0].to_f
-  who = colums[1]
-  name = colums[2]
+<ul>
+<li><code>pstree -p pid</code> 查看某个进程的进程数</li>
+<li><code>top -H</code> 线程维度查看</li>
+<li><code>ps -eLf | grep java | wc</code> 查看java线程数</li>
+<li><code>ps -Lf 24551</code>查看某个进程所有线程</li>
+<li><code>ps mp pid -o THREAD,tid</code> 查看某个进程下各线程的运行状态</li>
+<li><code>netstat -anp |grep port</code> 查看占用某个端口的进程</li>
+</ul>
 
-  # 几个人平摊一个商品
-  whos = who.split(&quot;,&quot;)
-  if whos.size &gt; 1 
-    ava_price = price / whos.size
+<h2 id="toc_8">结果分析</h2>
 
-    whos.each do |who|
-      result[who] ||= [0, &#39;&#39;]
-      result[who][0] += ava_price
-      result[who][1] += &quot;#{ava_price}#{split}#{name}|总价#{price}\n&quot;
-    end
+<p><a href="http://iamzhongyong.iteye.com/blog/1441285">cankao</a><br>
+可以分析到：  </p>
 
-    realPrices += price
-    next
-  end
-  result[who] ||= [0, &#39;&#39;]
-  result[who][0] += price
-  result[who][1] += &quot;#{price}#{split}#{name}\n&quot;
+<ol>
+<li>死锁：看到线程已获得哪个锁，在等待哪个锁</li>
+<li>程序运行慢：查看waiting状态的几个线程在干嘛</li>
+<li>cpu占用特别高的线程在干什么
 
-  realPrices += price
-end
+<ol>
+<li>某个进程占用cpu/mem较高，用ps查看改进程各线程运行状态</li>
+<li>用jstack查看改线程的调用堆栈，定位问题</li>
+</ol></li>
+</ol>
 
-f = File.new(&#39;zhangdanresult&#39;, &#39;w&#39;)
-result.each do |who, money_items|
-  f.write(&quot;#{money_items[1]}&quot;)
-  f.write(&quot;--------------------\n&quot;)
-  f.write(&quot;#{money_items[0]}#{split}#{who}\n&quot;)
-  f.write(&quot;++++++++++++++++++++\n&quot;)
-end
+<p>一个例子:  </p>
+
+<pre><code>&quot;main&quot; prio=10 tid=0x0000000040c75800 nid=0x5fe8 runnable [0x0000000040209000]
+&quot;xxx&quot; - 线程名 
+prio  - 优先级 
+tid   - 线程id(jmm中内存规范中地址) 
+nid   - 是linux下的线程id  
+runnable - 线程状态
+&quot;main&quot; 主线程，后面接了daemon未守护线程
+&quot;http-bio-8080-exec-xxx&quot; http 8080 端口bloked io 线程
 </code></pre>
 
-<p>代码写的仓促，各位凑活看  </p>
+<h2 id="toc_9">JVM pid文件</h2>
 
-<p><strong>结果</strong>  </p>
-
-<pre><code>6.0     大号印刷背心袋
-4.9     干柠檬
-12.5        酒
-3.9     酸奶
-8.165       凉菜|总价16.33
-3.3     枣粽
-3.9     肉粽
---------------------
-42.66499999999999       jia
-++++++++++++++++++++
-8.6     八宝茶
-8.165       凉菜|总价16.33
-4.7     陈皮
-6.0     老爷爷的餐巾纸
---------------------
-27.465      wang
-++++++++++++++++++++
-14.6        咸鸭蛋
-2.7     鸡蛋面
-9.9     馒头
-15.0        刀切馒头
-4.9     鸡蛋面
-25.55       八宝米
-2.53        榨菜
---------------------
-75.18       all
-++++++++++++++++++++
-</code></pre>
+<p>jvm运行时会生成一个目录hsperfdata<em>$USER(linux默认在/tmp/hsperfdata</em>$USER)，存放Pid文件(/etc/cron.daily/tmpwatch会240h移除这个目录)。jstack等工具读取这个文件获取pid。（<a href="http://windows9834.blog.163.com/blog/static/273450042012919101435608/">参考</a>）从Java 6 update 21 ~ 24，会优先<code>-Djava.io.tmpdir</code>，这样jstack等文件可可能找不到pid文件。</p>
 
     <hr>
     <div class="pagination">
       <ul>
         <ul>
-            <li class="prev"><a href="/2013-06/read-vim-help-doc.html" title="不设限的Vim，不设限的人生">&larr; Previous</a></li>
+            <li class="prev"><a href="/2013-06/ssh.html" title="ssh密钥自动登陆+ssh-agent使用+单机多个ssh账号">&larr; Previous</a></li>
 
             <li><a href="/archive">Archive</a></li>
 
-            <li class="next"><a href="/2013-06/intellij-idea-shortcuts.html" title="从eclipse迁移到intellijIDEA(OS x 10.5)">Next &rarr;</a></li>
+            <li class="next disabled"><a>Next &rarr;</a>
         </ul>
       </ul>
     </div>
@@ -232,12 +195,12 @@ end
     </script>
 
     <h4>Published</h4>
-    <div class="date"><span>2013-06-03</span></div>
+    <div class="date"><span>2013-08-30</span></div>
     <br>
     <h4>Categories</h4>
     <ul class="tag_box">
       <li>
-        <a href="/categories#funny-ref">funny <span>3</span></a>
+        <a href="/categories#java-ref">java <span>3</span></a>
       </li>    </ul>
     <br>
     <h4>Tags</h4>

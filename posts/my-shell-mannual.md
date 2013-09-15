@@ -60,6 +60,7 @@ tags: shell
 
 - [script/scriptrelay](#script/scriptrelay) 终端演示
 - [pushd/popd]#(#pushd/popd) 目录压栈出栈
+- [touch](#touch)
 
 #### http相关
 
@@ -1182,6 +1183,7 @@ tab制表符，这个符号比较特殊，当使用-L时，制表符算7个字�
 - `grep -w 'PATH' file` 有某个独立的单词，当然前后都是空格啦
 - `grep [yf] file` 包行y或f
 - `grep '\<c...h\>'` 某个单词，c开头h结尾，中间还有三个字符
+- `grep -E 'AAA|BBB' urfile` -E用egrep的方式解释正则pattern
 
 ### <a id="script/scriptrelay"><font color="green">script/scriptrelay</font></a>
 1. open terminal 1 : $ `mkfifo fd1`
@@ -1196,4 +1198,5 @@ tab制表符，这个符号比较特殊，当使用-L时，制表符算7个字�
 - `pushd +3` 迅速切换到#3目录,此时目录堆栈的顺序会变化
 - `popd +3` 弹出并跳转到该目录
 
-
+### <a id="touch"><font color="green">touch</font></a>
+`touch -t [[CC]YY]MMDDhhmm[.SS] file`

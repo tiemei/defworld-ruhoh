@@ -20,7 +20,8 @@ tags:
 * `svn info path` 列出某个path svn信息
 * `svn log path` 查看path提交log
 * `svn log -l4`  查看前四个提交log
-* `svn ls path`  列出某个路径下内容(远程)
+* `svn ls path`  列出某个路径下内容(与远程交互)
+* `svn mkdir path` 远程增加某个path
 * `svn cat /path/to/file` 打印某个文件内容
 * `svn st path` 只输出状态有变化的文件
 * `svn st -v path` 列出所有文件详细状态信息
@@ -37,6 +38,11 @@ tags:
 * `svn pe svn:ignore . --editor-cmd=vim` 用vim来编辑需排除的pattern列表，与.svnignore方式互斥
 
 ## git
+
+* `git remote add origin remote-url` 将本地仓库与远程仓库remote-url绑定，可以绑定多个。一般用origin，因为git clone默认设置origin
+* `git push -u origin master` 提交到别名为origin的远程仓库的master分支
+* `git remote -v` 列出本地绑定的所有远程仓库
+  
 
 ![git提交状态](http://farm4.staticflickr.com/3701/9147517685_85e9e01925.jpg)  
 

@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.032191301080068846" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.14208811349831163" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.009821084059201124" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.2308415761110978" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.3535376474839821" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9209829634290466" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -95,6 +95,7 @@
 <li><p><a href="#grep">grep</a></p></li>
 <li><p><a href="#script/scriptrelay">script/scriptrelay</a> 终端演示</p></li>
 <li><p>[pushd/popd]#(#pushd/popd) 目录压栈出栈</p></li>
+<li><p><a href="#touch">touch</a></p></li>
 </ul>
 
 <h4 id="toc_0">http相关</h4>
@@ -1290,6 +1291,7 @@ ss -a
 <li><code>grep -w &#39;PATH&#39; file</code> 有某个独立的单词，当然前后都是空格啦</li>
 <li><code>grep [yf] file</code> 包行y或f</li>
 <li><code>grep &#39;\&lt;c...h\&gt;&#39;</code> 某个单词，c开头h结尾，中间还有三个字符</li>
+<li><code>grep -E &#39;AAA|BBB&#39; urfile</code> -E用egrep的方式解释正则pattern</li>
 </ul>
 
 <h3 id="toc_62"><a id="script/scriptrelay"><font color="green">script/scriptrelay</font></a></h3>
@@ -1310,6 +1312,10 @@ ss -a
 <li><code>pushd +3</code> 迅速切换到#3目录,此时目录堆栈的顺序会变化</li>
 <li><code>popd +3</code> 弹出并跳转到该目录</li>
 </ul>
+
+<h3 id="toc_64"><a id="touch"><font color="green">touch</font></a></h3>
+
+<p><code>touch -t [[CC]YY]MMDDhhmm[.SS] file</code></p>
 
     <hr>
     <div class="pagination">

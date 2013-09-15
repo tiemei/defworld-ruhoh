@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9650519650142061" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.7937214275302757" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.646659487356012" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.2715392080826293" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.6705997638704918" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5420360862807712" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -56,6 +56,25 @@
     <h2>Latest Posts</h2>
 
 <div class="post">
+  <h3 class="title"><a href="/2013-09/maven-cmd.html">常用maven命令</a> <span class="date">2013-09-12</span></h3>
+
+  <h2 id="toc_0">剪裁反应堆</h2>
+
+<ul>
+<li>构建指定几个模块<code>mvn clean install -pl account-email,account-persist</code> </li>
+<li>构建指定模块及其依赖<code>mvn clean install -pl account-email -am</code></li>
+<li>构建指定模块及依赖它的模块<code>mvn clean install -pl account-email -amd</code></li>
+<li>在完整的反应对顺序上指定从哪个模块开始构建<code>mvn clean install -rf account-email</code></li>
+<li>在<code>-pl -am / -pl -amd</code>基础上还能用<code>-rf</code>再次剪裁</li>
+</ul>
+
+
+  <div class="more">
+    <a href="/2013-09/maven-cmd.html" class="btn">read more..</a>
+  </div>
+</div>
+
+<div class="post">
   <h3 class="title"><a href="/2013-08/jdk-tools.html">jdk自带工具</a> <span class="date">2013-08-30</span></h3>
 
   <h1 id="toc_0">javah</h1>
@@ -83,6 +102,33 @@
 
   <div class="more">
     <a href="/2013-08/jdk-tools.html" class="btn">read more..</a>
+  </div>
+</div>
+
+<div class="post">
+  <h3 class="title"><a href="/2013-08/java-locks.html">java锁笔记</a> <span class="date">2013-08-30</span></h3>
+
+  <h1 id="toc_0">线程通信</h1>
+
+<p>通信遇到的问题包括：  </p>
+
+<ol>
+<li>共享对象：需要做同步处理</li>
+<li>忙等待：循环等待另一个线程发来信号，可sleep</li>
+<li><p>wait(),notify()</p>
+
+<pre><code>1. 遇到mobj.wait()，让线程进入非运行状态，直到另一个线程mobj.nitify
+2. 这几个方法必须在获得mobj锁的前提下调用，否则IllegalMonitorStateException
+3. 一个线程调用了wait()，即释放mobj上的锁
+4. 一旦一个线程被唤醒，不能立刻就退出wait()的方法调用，直到调用
+notify()的线程退出了它自己的同步块。因此，多个线程被notifyAll唤醒，只有一个
+线程可以最终退出wait()方法，因为必须获得mobj的锁
+</code></pre></li>
+</ol>
+
+
+  <div class="more">
+    <a href="/2013-08/java-locks.html" class="btn">read more..</a>
   </div>
 </div>
 
@@ -153,7 +199,8 @@
 <li><code>svn info path</code> 列出某个path svn信息</li>
 <li><code>svn log path</code> 查看path提交log</li>
 <li><code>svn log -l4</code>  查看前四个提交log</li>
-<li><code>svn ls path</code>  列出某个路径下内容(远程)</li>
+<li><code>svn ls path</code>  列出某个路径下内容(与远程交互)</li>
+<li><code>svn mkdir path</code> 远程增加某个path</li>
 <li><code>svn cat /path/to/file</code> 打印某个文件内容</li>
 <li><code>svn st path</code> 只输出状态有变化的文件</li>
 <li><code>svn st -v path</code> 列出所有文件详细状态信息</li>
@@ -278,55 +325,6 @@ J  删除当前行末的换行符
 
   <div class="more">
     <a href="/2013-06/read-vim-help-doc.html" class="btn">read more..</a>
-  </div>
-</div>
-
-<div class="post">
-  <h3 class="title"><a href="/2013-05/spring-3-exception-handling.html">spring异常处理</a> <span class="date">2013-05-19</span></h3>
-
-  <h2 id="toc_0">我经手的两个项目中异常处理如何做？</h2>
-
-<p><strong>项目一</strong><br>
-  所有对外接口均返回json数据，现有的异常处理是实现spring容器提供的
-HandlerExceptionResolver，所有的异常均返回一个静态的错误页面。<br>
-<strong>项目二</strong><br>
-返回html也返回json数据，同样实现HandlerExceptionResolver，针对请求html
-的情况，返回错误页面；而针对请求Json数据的情况，返回一个json数据，并告诉
-调用方resultCode+resultMsg。  </p>
-
-<p>显然项目二针对json数据设置resultcode的方法更合适  </p>
-
-<h2 id="toc_1">spring提供了异常处理方案？</h2>
-
-
-  <div class="more">
-    <a href="/2013-05/spring-3-exception-handling.html" class="btn">read more..</a>
-  </div>
-</div>
-
-<div class="post">
-  <h3 class="title"><a href="/2013-05/auto-up-img-to-filikr-and-get-shareurl.html">markdown所用图片上传自动化脚本</a> <span class="date">2013-05-18</span></h3>
-
-  <h2 id="toc_0">我在做一件什么事?</h2>
-
-<p>我在写markdown笔记时，有些本地图片需要嵌入，而上传并获取外链实在是一个繁琐的
-过程。这明显是可以自动化掉的过程。<br>
-更进一步，图片上传和获取外链自动化掉，但还需要手动拷贝替换makrdown中的图片链接，这个过程亦可自动化掉。</p>
-
-<h2 id="toc_1">思路</h2>
-
-<p>调用<a href="http://flikr.com/">flickr</a>将图片上传并获取外链</p>
-
-<h2 id="toc_2">操作步骤</h2>
-
-<h3 id="toc_3">flickr授权验证</h3>
-
-<p>我写了一个工具，方便拿到flickr授权后的access<em>token &amp; access</em>secret, <a href="/tools">here</a><br>
-或者你写个脚本来拿，类似下面我用ruby实现的这段：  </p>
-
-
-  <div class="more">
-    <a href="/2013-05/auto-up-img-to-filikr-and-get-shareurl.html" class="btn">read more..</a>
   </div>
 </div>
 

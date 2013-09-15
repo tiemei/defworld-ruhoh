@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.68210947833577" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.36196548939137163" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.3953328300815334" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.907759010100945" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.7250905196156061" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9366324338258615" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -68,7 +68,8 @@
 <li><code>svn info path</code> 列出某个path svn信息</li>
 <li><code>svn log path</code> 查看path提交log</li>
 <li><code>svn log -l4</code>  查看前四个提交log</li>
-<li><code>svn ls path</code>  列出某个路径下内容(远程)</li>
+<li><code>svn ls path</code>  列出某个路径下内容(与远程交互)</li>
+<li><code>svn mkdir path</code> 远程增加某个path</li>
 <li><code>svn cat /path/to/file</code> 打印某个文件内容</li>
 <li><code>svn st path</code> 只输出状态有变化的文件</li>
 <li><code>svn st -v path</code> 列出所有文件详细状态信息</li>
@@ -88,6 +89,12 @@
 * <code>svn pe svn:ignore . --editor-cmd=vim</code> 用vim来编辑需排除的pattern列表，与.svnignore方式互斥</p>
 
 <h2 id="toc_4">git</h2>
+
+<ul>
+<li><code>git remote add origin remote-url</code> 将本地仓库与远程仓库remote-url绑定，可以绑定多个。一般用origin，因为git clone默认设置origin</li>
+<li><code>git push -u origin master</code> 提交到别名为origin的远程仓库的master分支</li>
+<li><code>git remote -v</code> 列出本地绑定的所有远程仓库</li>
+</ul>
 
 <p><img src="http://farm4.staticflickr.com/3701/9147517685_85e9e01925.jpg" alt="git提交状态">  </p>
 
@@ -219,7 +226,7 @@ this change was done in newfeature
     <h4>Categories</h4>
     <ul class="tag_box">
       <li>
-        <a href="/categories#tool-ref">tool <span>3</span></a>
+        <a href="/categories#tool-ref">tool <span>4</span></a>
       </li>    </ul>
     <br>
     <h4>Tags</h4>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:wb=“http://open.weibo.com/wb”>
+  <head>
+    <meta charset="utf-8">
+    <title>JVM——类加载器，初始化</title>
+    <meta name="description" content="java">
+    <meta name="author" content="tiemei">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.4232283807440341" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.6759282870032853" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.40933468444120424" type="text/css" rel="stylesheet" media="all">
+
+ 
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">tiemei</a>
+          <ul class="nav">
+              
+                <li><a href="/categories">Categories</a></li>
+              
+                <li><a href="/tools">Tools</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        <div class="page-header">
+  <h1>JVM——类加载器，初始化 </h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+    <h1 id="toc_0">类加载器</h1>
+
+<h2 id="toc_1">“双亲”委派</h2>
+
+<ol>
+<li><p>类加载器使用“双亲委派”模型。
+<img src="http://farm4.staticflickr.com/3705/9757201665_47321648aa.jpg" alt="classloaders"></p></li>
+<li><p>可以自己写一个类编辑打成Jar包放到<code>$JAVA_HOME/jre/lib/ext</code>目录，再写一个启动类，
+打印出加载所写类的classloader，发现是extclassloader。但是放到<code>$JAVA_HOME/jre/lib</code>
+目录并不会被加载</p></li>
+<li><p>被加载的类唯一标识是类路径+类加载器id.</p></li>
+</ol>
+
+<h2 id="toc_2">线程类加载器</h2>
+
+<p>首先介绍一个概念：<strong>当前类加载器</strong>，指当前方法方法所在类的加载器。<code>Class.forName(String)</code>
+<code>Class.getResource(String)</code><code>X.class</code>都是用的当前类加载器。<br>
+这是原有的“双亲委派”模型就不能解决问题了。例如JNDI的核心类在JRE的rt.jar中，而这些核心类
+需要加载第三方厂商的JNDI实现，加载时的类加载器默认是“当前类加载器”，即<code>Bootstrap class loader</code>，
+显然是加载不到这些实现类的。这时，<strong>线程类加载器</strong>就起作用了。让JNDI核心类的加载使用线程
+上下文类加载器，打破“双亲委托”限定的向上代理机制。<br>
+虽然下“线程类加载器”解决了某些特殊问题，但它也存在不足。除非所有线程使用同一个线程上下文类
+加载器，否则它们的数据共享成为问题。并且，缺省规则为使用当前类加载器，有些代码你又没法控制，
+这个问题变得更加复杂。  </p>
+
+<pre><code>J2SE中常见类加载场景：
+→ JNDI使用线程上下文类加载器
+→ Class.getResource()和Class.forName()使用当前类加载器
+→ JAXP使用上下文类加载器
+→ Java.unit.ResourceBundle使用调用者的当前类加载器
+→ URL协议处理器使用java.protocol.handler.pkgs系统属性并只使用系统类加载器
+→ Java序列化API缺省使用调用者当前的类加载器.
+</code></pre>
+
+<h2 id="toc_3">JVM类加载体系初始化过程</h2>
+
+<p><img src="http://farm3.staticflickr.com/2812/9758702554_fdd089dd36.jpg" alt="JVM classloader init">  </p>
+
+<ul>
+<li><p>载入方式</p>
+
+<pre><code>→ pre-loading 预先载入，未避免以后多次IO操作，JRE预先载入一些基础类，主要是rt.jar里
+→ load-on-demand，按需载入
+</code></pre></li>
+</ul>
+
+<p>可用<code>java –verbos:class Main</code>查看加载详细过程  </p>
+
+<ul>
+<li><p>Static 何时执行</p>
+
+<pre><code>→ forName(String)执行，而ClassLoader.loadClass并不会执行，forName(String,false,ClassLoader)也不会执行
+→ 载入class时没有执行static块，则在第一次实例化时执行
+</code></pre></li>
+<li><p>隐式加载/显示加载</p>
+
+<pre><code>→ 显示加载：用forName方法显示指定要加载哪个类
+→ 隐式加载：new方法实例化时，JVM隐式帮忙做加载，并执行静态代码快
+</code></pre></li>
+</ul>
+
+<h1 id="toc_4">tomcat中类加载器</h1>
+
+<p>除了J2SE已经有的最基础的类加载器，tomcat类加载还有以下几种：  </p>
+
+<ol>
+<li>Catalina类加载器：对Tomcat服务器内核可见,对Web应用程序不可见。
+tomcat内核线程上下文加载器就是它。
+加载目录<code>server/classes和server/lib</code></li>
+<li>Common类加载器：Tomcat内核和每个Web应用程序都可以看见。
+加载未知<code>common/class</code><code>common/lib</code>，例如servlet.jar</li>
+<li>Shared类加载器：只对所有Web应用程序有效,对Tomcat不可见。
+加载位置：<code>share/classes</code><code>share/lib</code></li>
+<li>Webapp类加载器：只对当前Web应用程序有效。
+每个web应用程序的上下文类加载器就是它。
+加载位置：<code>WEB-INF/classes</code><code>WEB-INF/lib</code></li>
+</ol>
+
+<h2 id="toc_5">tomcat类加载顺序</h2>
+
+<ol>
+<li>查看缓存中之前有没加载过</li>
+<li>没有，委托给system classloader加载，走“双亲委派”那套</li>
+<li>2加载不到，某些类会尝试用”shared类加载器“，其他用“webapp类加载器”加载</li>
+<li>3搞不定，向上委派</li>
+</ol>
+
+<p>整个过程如图：<br>
+<img src="http://farm4.staticflickr.com/3777/9758884752_bac5a4b3b7.jpg" alt="tomcat class loader"></p>
+
+<h2 id="toc_6">tomcat最新版本</h2>
+
+<p>Tomcat 6之后classloader 稍微有些改动了，去掉了server 和 shared, 都由common classloader 来载入了</p>
+
+<p>参考:<br>
+<a href="http://blog.csdn.net/vernonzheng/article/details/8461380"> 深入JVM系列（三）之类加载、类加载器、双亲委派机制与常见问题</a><br>
+<a href="http://ieroot.com/2013/05/01/932.html">ClassLoader类加载器</a><br>
+<a href="http://www.goldendoc.org/2010/12/tomcat_classloader/">Tomcat ClassLoader机制介绍</a><br>
+<a href="http://www.blogjava.net/William/archive/2006/08/25/65804.html">深入探讨Java的类加载机制</a>  </p>
+
+    <hr>
+    <div class="pagination">
+      <ul>
+        <ul>
+            <li class="prev"><a href="/2013-09/maven-cmd.html" title="常用maven命令">&larr; Previous</a></li>
+
+            <li><a href="/archive">Archive</a></li>
+
+            <li class="next disabled"><a>Next &rarr;</a>
+        </ul>
+      </ul>
+    </div>
+    <hr>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  </div>
+  
+  <div class="span4">
+    <script type="text/javascript" charset="utf-8">
+    (function(){
+       var _w = 90 , _h = 24;
+       var param = {
+       url:location.href,
+       type:'2',
+       count:'1', /**是否显示分享数，1显示(可选)*/
+       appkey:'', /**您申请的应用appkey,显示分享来源(可选)*/
+       title:'', /**分享的文字内容(可选，默认为所在页面的title)*/
+       pic:'', /**分享图片的路径(可选)*/
+       ralateUid:'2388250330', /**关联用户的UID，分享微博会@该用户(可选)*/
+       language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
+       rnd:new Date().valueOf()
+     }
+     var temp = [];
+     for( var p in param ){
+     temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+     }
+     document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
+     })()
+    </script>
+
+    <h4>Published</h4>
+    <div class="date"><span>2013-09-15</span></div>
+    <br>
+    <h4>Categories</h4>
+    <ul class="tag_box">
+    </ul>
+    <br>
+    <h4>Tags</h4>
+    <ul class="tag_box">
+    </ul>
+  </div>
+</div>
+
+      </div>
+
+      <footer>
+        <p>&copy; tiemei 2012 
+          with help from <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">ruhoh</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+        <p>
+        <script src="http://s9.cnzz.com/stat.php?id=5379369&web_id=5379369&online=1&show=line" language="JavaScript"></script>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Google Prettify -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+<script>
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i < pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+</script>
+<!-- end Google Prettify -->
+    <script>
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(defworld.com);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /></p></noscript>
+  </body>
+</html>

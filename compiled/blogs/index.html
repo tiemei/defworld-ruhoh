@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.2715392080826293" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.6705997638704918" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5420360862807712" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.2196404056841419" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.08876114603789476" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6858153355032861" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -56,6 +56,40 @@
     <h2>Latest Posts</h2>
 
 <div class="post">
+  <h3 class="title"><a href="/2013-09/jvm-class-loader-and-init.html">JVM——类加载器，初始化</a> <span class="date">2013-09-15</span></h3>
+
+  <h1 id="toc_0">类加载器</h1>
+
+<h2 id="toc_1">“双亲”委派</h2>
+
+<ol>
+<li><p>类加载器使用“双亲委派”模型。
+<img src="http://farm4.staticflickr.com/3705/9757201665_47321648aa.jpg" alt="classloaders"></p></li>
+<li><p>可以自己写一个类编辑打成Jar包放到<code>$JAVA_HOME/jre/lib/ext</code>目录，再写一个启动类，
+打印出加载所写类的classloader，发现是extclassloader。但是放到<code>$JAVA_HOME/jre/lib</code>
+目录并不会被加载</p></li>
+<li><p>被加载的类唯一标识是类路径+类加载器id.</p></li>
+</ol>
+
+<h2 id="toc_2">线程类加载器</h2>
+
+<p>首先介绍一个概念：<strong>当前类加载器</strong>，指当前方法方法所在类的加载器。<code>Class.forName(String)</code>
+<code>Class.getResource(String)</code><code>X.class</code>都是用的当前类加载器。<br>
+这是原有的“双亲委派”模型就不能解决问题了。例如JNDI的核心类在JRE的rt.jar中，而这些核心类
+需要加载第三方厂商的JNDI实现，加载时的类加载器默认是“当前类加载器”，即<code>Bootstrap class loader</code>，
+显然是加载不到这些实现类的。这时，<strong>线程类加载器</strong>就起作用了。让JNDI核心类的加载使用线程
+上下文类加载器，打破“双亲委托”限定的向上代理机制。<br>
+虽然下“线程类加载器”解决了某些特殊问题，但它也存在不足。除非所有线程使用同一个线程上下文类
+加载器，否则它们的数据共享成为问题。并且，缺省规则为使用当前类加载器，有些代码你又没法控制，
+这个问题变得更加复杂。  </p>
+
+
+  <div class="more">
+    <a href="/2013-09/jvm-class-loader-and-init.html" class="btn">read more..</a>
+  </div>
+</div>
+
+<div class="post">
   <h3 class="title"><a href="/2013-09/maven-cmd.html">常用maven命令</a> <span class="date">2013-09-12</span></h3>
 
   <h2 id="toc_0">剪裁反应堆</h2>
@@ -71,6 +105,33 @@
 
   <div class="more">
     <a href="/2013-09/maven-cmd.html" class="btn">read more..</a>
+  </div>
+</div>
+
+<div class="post">
+  <h3 class="title"><a href="/2013-08/java-locks.html">java锁笔记</a> <span class="date">2013-08-30</span></h3>
+
+  <h1 id="toc_0">线程通信</h1>
+
+<p>通信遇到的问题包括：  </p>
+
+<ol>
+<li>共享对象：需要做同步处理</li>
+<li>忙等待：循环等待另一个线程发来信号，可sleep</li>
+<li><p>wait(),notify()</p>
+
+<pre><code>1. 遇到mobj.wait()，让线程进入非运行状态，直到另一个线程mobj.nitify
+2. 这几个方法必须在获得mobj锁的前提下调用，否则IllegalMonitorStateException
+3. 一个线程调用了wait()，即释放mobj上的锁
+4. 一旦一个线程被唤醒，不能立刻就退出wait()的方法调用，直到调用
+notify()的线程退出了它自己的同步块。因此，多个线程被notifyAll唤醒，只有一个
+线程可以最终退出wait()方法，因为必须获得mobj的锁
+</code></pre></li>
+</ol>
+
+
+  <div class="more">
+    <a href="/2013-08/java-locks.html" class="btn">read more..</a>
   </div>
 </div>
 
@@ -102,33 +163,6 @@
 
   <div class="more">
     <a href="/2013-08/jdk-tools.html" class="btn">read more..</a>
-  </div>
-</div>
-
-<div class="post">
-  <h3 class="title"><a href="/2013-08/java-locks.html">java锁笔记</a> <span class="date">2013-08-30</span></h3>
-
-  <h1 id="toc_0">线程通信</h1>
-
-<p>通信遇到的问题包括：  </p>
-
-<ol>
-<li>共享对象：需要做同步处理</li>
-<li>忙等待：循环等待另一个线程发来信号，可sleep</li>
-<li><p>wait(),notify()</p>
-
-<pre><code>1. 遇到mobj.wait()，让线程进入非运行状态，直到另一个线程mobj.nitify
-2. 这几个方法必须在获得mobj锁的前提下调用，否则IllegalMonitorStateException
-3. 一个线程调用了wait()，即释放mobj上的锁
-4. 一旦一个线程被唤醒，不能立刻就退出wait()的方法调用，直到调用
-notify()的线程退出了它自己的同步块。因此，多个线程被notifyAll唤醒，只有一个
-线程可以最终退出wait()方法，因为必须获得mobj的锁
-</code></pre></li>
-</ol>
-
-
-  <div class="more">
-    <a href="/2013-08/java-locks.html" class="btn">read more..</a>
   </div>
 </div>
 
@@ -296,35 +330,6 @@ tiemei经常跟朋友出去shopping，回来算账就一堆乱麻，程序员嘛
 
   <div class="more">
     <a href="/2013-06/zhangdan.html" class="btn">read more..</a>
-  </div>
-</div>
-
-<div class="post">
-  <h3 class="title"><a href="/2013-06/read-vim-help-doc.html">不设限的Vim，不设限的人生</a> <span class="date">2013-06-01</span></h3>
-
-  <p>这篇是自己阅读vim help doc的一些笔记<br>
-我对编辑器之争的态度是:  </p>
-
-<blockquote>
-<p>eclipse这样强大方便的编辑器固然需要，但vim是很好的补充。个人
-不准备用sublime text 2这样的神器，毕竟精力有限，专心吃透vim已经
-够，并且可以做的很好。  </p>
-</blockquote>
-
-<h2 id="toc_0">usr_02 Vim初步</h2>
-
-<ul>
-<li><p>normal mode</p>
-
-<pre><code>x  删除单个字符
-dd 删除一行
-J  删除当前行末的换行符
-</code></pre></li>
-</ul>
-
-
-  <div class="more">
-    <a href="/2013-06/read-vim-help-doc.html" class="btn">read more..</a>
   </div>
 </div>
 

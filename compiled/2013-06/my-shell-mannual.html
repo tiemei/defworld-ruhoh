@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.18498693306984404" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.44391082064601894" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.07343209649171156" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.1243110170638414" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.9648545246270238" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5424706987610417" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -93,6 +93,7 @@
 <li><p><a href="#shuf">shuf</a> 打乱文本的行</p></li>
 <li><p><a href="#rpm">rpm</a> </p></li>
 <li><p><a href="#grep">grep</a></p></li>
+<li><p><a href="#screen">screen</a></p></li>
 <li><p><a href="#script/scriptrelay">script/scriptrelay</a> 终端演示</p></li>
 <li><p>[pushd/popd]#(#pushd/popd) 目录压栈出栈</p></li>
 <li><p><a href="#touch">touch</a></p></li>
@@ -1317,6 +1318,27 @@ ss -a
 
 <p><code>touch -t [[CC]YY]MMDDhhmm[.SS] file</code></p>
 
+<h3 id="toc_65"><a id="screen"><font color="green">screen</font></a></h3>
+
+<p><a href="http://www.ibm.com/developerworks/cn/linux/l-cn-screen/">参考1</a><br>
+<a href="http://serverfault.com/questions/155851/run-gnu-screen-from-script">参考2</a>  </p>
+
+<ul>
+<li><code>screen -S name</code> 创建一个screen session，并命名name</li>
+<li><code>screen -r name</code> 重新进入screen session</li>
+<li><code>screen -ls</code> 列出所有screen session</li>
+<li><code>screen -wipe</code>清扫无法连接的session</li>
+<li><code>screen -d -m -S name</code> 创建一个开始就处于断开模式的session</li>
+<li><code>screen -S name -X zombie qr</code> 设置cmd结束时，screen窗口不直接退出</li>
+<li><code>screen -S name -X exec cmd</code> 在id为name的screen session的编号为0的窗口执行命令cmd</li>
+<li><code>screen -S name -X screen cmd</code> 在session中新建一个窗口并执行cmd</li>
+<li><code>C-a d</code> 退出screen session</li>
+<li><code>C-a c</code> 创建一个新的shell床阔并切换到该窗口</li>
+<li><code>C-a w</code> 显示所有窗口列表</li>
+<li><code>C-a k</code> 杀掉当前窗口</li>
+<li><code>C-a p</code><code>C-a n</code> 前一个窗口，后一个窗口 </li>
+</ul>
+
     <hr>
     <div class="pagination">
       <ul>
@@ -1375,7 +1397,7 @@ ss -a
     <h4>Categories</h4>
     <ul class="tag_box">
       <li>
-        <a href="/categories#linux-ref">linux <span>3</span></a>
+        <a href="/categories#linux-ref">linux <span>4</span></a>
       </li>    </ul>
     <br>
     <h4>Tags</h4>

@@ -56,6 +56,7 @@ tags: shell
 - [shuf](#shuf) 打乱文本的行
 - [rpm](#rpm) 
 - [grep](#grep)
+- [screen](#screen)
   
 
 - [script/scriptrelay](#script/scriptrelay) 终端演示
@@ -1200,3 +1201,22 @@ tab制表符，这个符号比较特殊，当使用-L时，制表符算7个字�
 
 ### <a id="touch"><font color="green">touch</font></a>
 `touch -t [[CC]YY]MMDDhhmm[.SS] file`
+
+### <a id="screen"><font color="green">screen</font></a>
+[参考1](http://www.ibm.com/developerworks/cn/linux/l-cn-screen/)  
+[参考2](http://serverfault.com/questions/155851/run-gnu-screen-from-script)  
+
+* `screen -S name` 创建一个screen session，并命名name
+* `screen -r name` 重新进入screen session
+* `screen -ls` 列出所有screen session
+* `screen -wipe`清扫无法连接的session
+* `screen -d -m -S name` 创建一个开始就处于断开模式的session
+* `screen -S name -X zombie qr` 设置cmd结束时，screen窗口不直接退出
+* `screen -S name -X exec cmd` 在id为name的screen session的编号为0的窗口执行命令cmd
+* `screen -S name -X screen cmd` 在session中新建一个窗口并执行cmd
+* `C-a d` 退出screen session
+* `C-a c` 创建一个新的shell床阔并切换到该窗口
+* `C-a w` 显示所有窗口列表
+* `C-a k` 杀掉当前窗口
+* `C-a p``C-a n` 前一个窗口，后一个窗口 
+

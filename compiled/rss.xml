@@ -3,12 +3,615 @@
   <channel>
     <title>tiemei</title>
     <link>http://defworld.com</link>
-    <pubDate>2013-09-15 21:27:34 +0800</pubDate>
+    <pubDate>2013-10-17 08:16:33 +0800</pubDate>
+    <item>
+      <title>linux&#x57FA;&#x7840;&#x2014;&#x2014;&#x6587;&#x4EF6;&#x7C7B;&#x578B;</title>
+      <link>http://defworld.com/2013-10/linux-file-type.html</link>
+      <pubDate>2013-10-10</pubDate>
+      <description>linux file type</description>
+    </item>
+    <item>
+      <title>&#x95EE;&#x9898;&#x6392;&#x67E5;&#x6280;&#x80FD;&#x2014;&#x2014;cpu iowait&#x9AD8;</title>
+      <link>http://defworld.com/2013-09/troubleshoot-problems-high-cpu-iowait.html</link>
+      <pubDate>2013-09-17</pubDate>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang="en" xmlns:wb=&#x201C;http://open.weibo.com/wb&#x201D;&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;&#x95EE;&#x9898;&#x6392;&#x67E5;&#x6280;&#x80FD;&#x2014;&#x2014;cpu iowait&#x9AD8;&lt;/title&gt;
+    &lt;meta name="author" content="tiemei"&gt;
+
+    &lt;!-- Le HTML5 shim, for IE6-8 support of HTML elements --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+
+    &lt;!-- Le styles --&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6172298613087436" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.8953724606198573" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6228451514537825" type="text/css" rel="stylesheet" media="all"&gt;
+
+ 
+
+    &lt;!-- Le fav and touch icons --&gt;
+  &lt;!-- Update these with your own images
+    &lt;link rel="shortcut icon" href="images/favicon.ico"&gt;
+    &lt;link rel="apple-touch-icon" href="images/apple-touch-icon.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"&gt;
+  --&gt;
+  &lt;script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+    &lt;div class="navbar"&gt;
+      &lt;div class="navbar-inner"&gt;
+        &lt;div class="container"&gt;
+          &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
+          &lt;ul class="nav"&gt;
+              
+                &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
+              
+                &lt;li&gt;&lt;a href="/tools"&gt;Tools&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="container"&gt;
+
+      &lt;div class="content"&gt;
+        &lt;div class="page-header"&gt;
+  &lt;h1&gt;&#x95EE;&#x9898;&#x6392;&#x67E5;&#x6280;&#x80FD;&#x2014;&#x2014;cpu iowait&#x9AD8; &lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="span8"&gt;
+    
+    &lt;hr&gt;
+    &lt;div class="pagination"&gt;
+      &lt;ul&gt;
+        &lt;ul&gt;
+            &lt;li class="prev"&gt;&lt;a href="/2013-09/read-tomcat-source-conf-files.html" title="tomcat&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li class="next"&gt;&lt;a href="/2013-10/linux-file-type.html" title="linux&#x57FA;&#x7840;&#x2014;&#x2014;&#x6587;&#x4EF6;&#x7C7B;&#x578B;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;div id="disqus_thread"&gt;&lt;/div&gt;
+&lt;script&gt;
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+
+  &lt;/div&gt;
+  
+  &lt;div class="span4"&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+    (function(){
+       var _w = 90 , _h = 24;
+       var param = {
+       url:location.href,
+       type:'2',
+       count:'1', /**&#x662F;&#x5426;&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6570;&#xFF0C;1&#x663E;&#x793A;(&#x53EF;&#x9009;)*/
+       appkey:'', /**&#x60A8;&#x7533;&#x8BF7;&#x7684;&#x5E94;&#x7528;appkey,&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6765;&#x6E90;(&#x53EF;&#x9009;)*/
+       title:'', /**&#x5206;&#x4EAB;&#x7684;&#x6587;&#x5B57;&#x5185;&#x5BB9;(&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;title)*/
+       pic:'', /**&#x5206;&#x4EAB;&#x56FE;&#x7247;&#x7684;&#x8DEF;&#x5F84;(&#x53EF;&#x9009;)*/
+       ralateUid:'2388250330', /**&#x5173;&#x8054;&#x7528;&#x6237;&#x7684;UID&#xFF0C;&#x5206;&#x4EAB;&#x5FAE;&#x535A;&#x4F1A;@&#x8BE5;&#x7528;&#x6237;(&#x53EF;&#x9009;)*/
+       language:'zh_cn', /**&#x8BBE;&#x7F6E;&#x8BED;&#x8A00;&#xFF0C;zh_cn|zh_tw(&#x53EF;&#x9009;)*/
+       rnd:new Date().valueOf()
+     }
+     var temp = [];
+     for( var p in param ){
+     temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+     }
+     document.write('&lt;iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&amp;') + '" width="'+ _w+'" height="'+_h+'"&gt;&lt;/iframe&gt;')
+     })()
+    &lt;/script&gt;
+
+    &lt;h4&gt;Published&lt;/h4&gt;
+    &lt;div class="date"&gt;&lt;span&gt;2013-09-17&lt;/span&gt;&lt;/div&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Categories&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+      &lt;li&gt;
+        &lt;a href="/categories#troubleshoot problems-ref"&gt;troubleshoot problems &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;    &lt;/ul&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Tags&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+
+      &lt;footer&gt;
+        &lt;p&gt;&amp;copy; tiemei 2012 
+          with help from &lt;a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework"&gt;ruhoh&lt;/a&gt;
+          and &lt;a href="http://twitter.github.com/bootstrap/" target="_blank"&gt;Twitter Bootstrap&lt;/a&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+        &lt;script src="http://s9.cnzz.com/stat.php?id=5379369&amp;web_id=5379369&amp;online=1&amp;show=line" language="JavaScript"&gt;&lt;/script&gt;
+        &lt;/p&gt;
+      &lt;/footer&gt;
+
+    &lt;/div&gt; &lt;!-- /container --&gt;
+
+    &lt;!-- Google Prettify --&gt;
+&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i &lt; pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+&lt;/script&gt;
+&lt;!-- end Google Prettify --&gt;
+    &lt;script&gt;
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(defworld.com);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+&lt;/script&gt;
+&lt;noscript&gt;&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /&gt;&lt;/p&gt;&lt;/noscript&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
+    <item>
+      <title>tomcat&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</title>
+      <link>http://defworld.com/2013-09/read-tomcat-source-conf-files.html</link>
+      <pubDate>2013-09-15</pubDate>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang="en" xmlns:wb=&#x201C;http://open.weibo.com/wb&#x201D;&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;tomcat&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&lt;/title&gt;
+    &lt;meta name="author" content="tiemei"&gt;
+
+    &lt;!-- Le HTML5 shim, for IE6-8 support of HTML elements --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+
+    &lt;!-- Le styles --&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6948553806076512" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.9008852005355303" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7281326750740256" type="text/css" rel="stylesheet" media="all"&gt;
+
+ 
+
+    &lt;!-- Le fav and touch icons --&gt;
+  &lt;!-- Update these with your own images
+    &lt;link rel="shortcut icon" href="images/favicon.ico"&gt;
+    &lt;link rel="apple-touch-icon" href="images/apple-touch-icon.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"&gt;
+  --&gt;
+  &lt;script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+    &lt;div class="navbar"&gt;
+      &lt;div class="navbar-inner"&gt;
+        &lt;div class="container"&gt;
+          &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
+          &lt;ul class="nav"&gt;
+              
+                &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
+              
+                &lt;li&gt;&lt;a href="/tools"&gt;Tools&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="container"&gt;
+
+      &lt;div class="content"&gt;
+        &lt;div class="page-header"&gt;
+  &lt;h1&gt;tomcat&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6; &lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="span8"&gt;
+    &lt;p&gt;&#x53C2;&#x8003;&#xFF1A;&lt;br&gt;
+&lt;a href="http://book.51cto.com/art/200811/97600.htm"&gt;3.3.4 &#x914D;&#x7F6E;Tomcat&#x7684;&#x5143;&#x7D20;&lt;/a&gt;  &lt;/p&gt;
+
+    &lt;hr&gt;
+    &lt;div class="pagination"&gt;
+      &lt;ul&gt;
+        &lt;ul&gt;
+            &lt;li class="prev"&gt;&lt;a href="/2013-09/jvm-class-loader-and-init.html" title="JVM&#x2014;&#x2014;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF0C;&#x521D;&#x59CB;&#x5316;"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li class="next"&gt;&lt;a href="/2013-09/troubleshoot-problems-high-cpu-iowait.html" title="&#x95EE;&#x9898;&#x6392;&#x67E5;&#x6280;&#x80FD;&#x2014;&#x2014;cpu iowait&#x9AD8;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;div id="disqus_thread"&gt;&lt;/div&gt;
+&lt;script&gt;
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+
+  &lt;/div&gt;
+  
+  &lt;div class="span4"&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+    (function(){
+       var _w = 90 , _h = 24;
+       var param = {
+       url:location.href,
+       type:'2',
+       count:'1', /**&#x662F;&#x5426;&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6570;&#xFF0C;1&#x663E;&#x793A;(&#x53EF;&#x9009;)*/
+       appkey:'', /**&#x60A8;&#x7533;&#x8BF7;&#x7684;&#x5E94;&#x7528;appkey,&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6765;&#x6E90;(&#x53EF;&#x9009;)*/
+       title:'', /**&#x5206;&#x4EAB;&#x7684;&#x6587;&#x5B57;&#x5185;&#x5BB9;(&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;title)*/
+       pic:'', /**&#x5206;&#x4EAB;&#x56FE;&#x7247;&#x7684;&#x8DEF;&#x5F84;(&#x53EF;&#x9009;)*/
+       ralateUid:'2388250330', /**&#x5173;&#x8054;&#x7528;&#x6237;&#x7684;UID&#xFF0C;&#x5206;&#x4EAB;&#x5FAE;&#x535A;&#x4F1A;@&#x8BE5;&#x7528;&#x6237;(&#x53EF;&#x9009;)*/
+       language:'zh_cn', /**&#x8BBE;&#x7F6E;&#x8BED;&#x8A00;&#xFF0C;zh_cn|zh_tw(&#x53EF;&#x9009;)*/
+       rnd:new Date().valueOf()
+     }
+     var temp = [];
+     for( var p in param ){
+     temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+     }
+     document.write('&lt;iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&amp;') + '" width="'+ _w+'" height="'+_h+'"&gt;&lt;/iframe&gt;')
+     })()
+    &lt;/script&gt;
+
+    &lt;h4&gt;Published&lt;/h4&gt;
+    &lt;div class="date"&gt;&lt;span&gt;2013-09-15&lt;/span&gt;&lt;/div&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Categories&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+      &lt;li&gt;
+        &lt;a href="/categories#java-ref"&gt;java &lt;span&gt;6&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;    &lt;/ul&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Tags&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+
+      &lt;footer&gt;
+        &lt;p&gt;&amp;copy; tiemei 2012 
+          with help from &lt;a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework"&gt;ruhoh&lt;/a&gt;
+          and &lt;a href="http://twitter.github.com/bootstrap/" target="_blank"&gt;Twitter Bootstrap&lt;/a&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+        &lt;script src="http://s9.cnzz.com/stat.php?id=5379369&amp;web_id=5379369&amp;online=1&amp;show=line" language="JavaScript"&gt;&lt;/script&gt;
+        &lt;/p&gt;
+      &lt;/footer&gt;
+
+    &lt;/div&gt; &lt;!-- /container --&gt;
+
+    &lt;!-- Google Prettify --&gt;
+&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i &lt; pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+&lt;/script&gt;
+&lt;!-- end Google Prettify --&gt;
+    &lt;script&gt;
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(defworld.com);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+&lt;/script&gt;
+&lt;noscript&gt;&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /&gt;&lt;/p&gt;&lt;/noscript&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
     <item>
       <title>JVM&#x2014;&#x2014;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF0C;&#x521D;&#x59CB;&#x5316;</title>
       <link>http://defworld.com/2013-09/jvm-class-loader-and-init.html</link>
       <pubDate>2013-09-15</pubDate>
-      <description>java</description>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang="en" xmlns:wb=&#x201C;http://open.weibo.com/wb&#x201D;&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;JVM&#x2014;&#x2014;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF0C;&#x521D;&#x59CB;&#x5316;&lt;/title&gt;
+    &lt;meta name="author" content="tiemei"&gt;
+
+    &lt;!-- Le HTML5 shim, for IE6-8 support of HTML elements --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+
+    &lt;!-- Le styles --&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.33639852431085515" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.8044221977835408" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.3757416467063033" type="text/css" rel="stylesheet" media="all"&gt;
+
+ 
+
+    &lt;!-- Le fav and touch icons --&gt;
+  &lt;!-- Update these with your own images
+    &lt;link rel="shortcut icon" href="images/favicon.ico"&gt;
+    &lt;link rel="apple-touch-icon" href="images/apple-touch-icon.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"&gt;
+  --&gt;
+  &lt;script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+    &lt;div class="navbar"&gt;
+      &lt;div class="navbar-inner"&gt;
+        &lt;div class="container"&gt;
+          &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
+          &lt;ul class="nav"&gt;
+              
+                &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
+              
+                &lt;li&gt;&lt;a href="/tools"&gt;Tools&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="container"&gt;
+
+      &lt;div class="content"&gt;
+        &lt;div class="page-header"&gt;
+  &lt;h1&gt;JVM&#x2014;&#x2014;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF0C;&#x521D;&#x59CB;&#x5316; &lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="span8"&gt;
+    &lt;h1 id="toc_0"&gt;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&lt;/h1&gt;
+
+&lt;h2 id="toc_1"&gt;&#x201C;&#x53CC;&#x4EB2;&#x201D;&#x59D4;&#x6D3E;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x4F7F;&#x7528;&#x201C;&#x53CC;&#x4EB2;&#x59D4;&#x6D3E;&#x201D;&#x6A21;&#x578B;&#x3002;
+&lt;img src="http://farm4.staticflickr.com/3705/9757201665_47321648aa.jpg" alt="classloaders"&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x5199;&#x4E00;&#x4E2A;&#x7C7B;&#x7F16;&#x8F91;&#x6253;&#x6210;Jar&#x5305;&#x653E;&#x5230;&lt;code&gt;$JAVA_HOME/jre/lib/ext&lt;/code&gt;&#x76EE;&#x5F55;&#xFF0C;&#x518D;&#x5199;&#x4E00;&#x4E2A;&#x542F;&#x52A8;&#x7C7B;&#xFF0C;
+&#x6253;&#x5370;&#x51FA;&#x52A0;&#x8F7D;&#x6240;&#x5199;&#x7C7B;&#x7684;classloader&#xFF0C;&#x53D1;&#x73B0;&#x662F;extclassloader&#x3002;&#x4F46;&#x662F;&#x653E;&#x5230;&lt;code&gt;$JAVA_HOME/jre/lib&lt;/code&gt;
+&#x76EE;&#x5F55;&#x5E76;&#x4E0D;&#x4F1A;&#x88AB;&#x52A0;&#x8F7D;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&#x88AB;&#x52A0;&#x8F7D;&#x7684;&#x7C7B;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x662F;&#x7C7B;&#x8DEF;&#x5F84;+&#x7C7B;&#x52A0;&#x8F7D;&#x5668;id.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id="toc_2"&gt;&#x7EBF;&#x7A0B;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&lt;/h2&gt;
+
+&lt;p&gt;&#x9996;&#x5148;&#x4ECB;&#x7ECD;&#x4E00;&#x4E2A;&#x6982;&#x5FF5;&#xFF1A;&lt;strong&gt;&#x5F53;&#x524D;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&lt;/strong&gt;&#xFF0C;&#x6307;&#x5F53;&#x524D;&#x65B9;&#x6CD5;&#x65B9;&#x6CD5;&#x6240;&#x5728;&#x7C7B;&#x7684;&#x52A0;&#x8F7D;&#x5668;&#x3002;&lt;code&gt;Class.forName(String)&lt;/code&gt;
+&lt;code&gt;Class.getResource(String)&lt;/code&gt;&lt;code&gt;X.class&lt;/code&gt;&#x90FD;&#x662F;&#x7528;&#x7684;&#x5F53;&#x524D;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x3002;&lt;br&gt;
+&#x8FD9;&#x662F;&#x539F;&#x6709;&#x7684;&#x201C;&#x53CC;&#x4EB2;&#x59D4;&#x6D3E;&#x201D;&#x6A21;&#x578B;&#x5C31;&#x4E0D;&#x80FD;&#x89E3;&#x51B3;&#x95EE;&#x9898;&#x4E86;&#x3002;&#x4F8B;&#x5982;JNDI&#x7684;&#x6838;&#x5FC3;&#x7C7B;&#x5728;JRE&#x7684;rt.jar&#x4E2D;&#xFF0C;&#x800C;&#x8FD9;&#x4E9B;&#x6838;&#x5FC3;&#x7C7B;
+&#x9700;&#x8981;&#x52A0;&#x8F7D;&#x7B2C;&#x4E09;&#x65B9;&#x5382;&#x5546;&#x7684;JNDI&#x5B9E;&#x73B0;&#xFF0C;&#x52A0;&#x8F7D;&#x65F6;&#x7684;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x9ED8;&#x8BA4;&#x662F;&#x201C;&#x5F53;&#x524D;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x201D;&#xFF0C;&#x5373;&lt;code&gt;Bootstrap class loader&lt;/code&gt;&#xFF0C;
+&#x663E;&#x7136;&#x662F;&#x52A0;&#x8F7D;&#x4E0D;&#x5230;&#x8FD9;&#x4E9B;&#x5B9E;&#x73B0;&#x7C7B;&#x7684;&#x3002;&#x8FD9;&#x65F6;&#xFF0C;&lt;strong&gt;&#x7EBF;&#x7A0B;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&lt;/strong&gt;&#x5C31;&#x8D77;&#x4F5C;&#x7528;&#x4E86;&#x3002;&#x8BA9;JNDI&#x6838;&#x5FC3;&#x7C7B;&#x7684;&#x52A0;&#x8F7D;&#x4F7F;&#x7528;&#x7EBF;&#x7A0B;
+&#x4E0A;&#x4E0B;&#x6587;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF0C;&#x6253;&#x7834;&#x201C;&#x53CC;&#x4EB2;&#x59D4;&#x6258;&#x201D;&#x9650;&#x5B9A;&#x7684;&#x5411;&#x4E0A;&#x4EE3;&#x7406;&#x673A;&#x5236;&#x3002;&lt;br&gt;
+&#x867D;&#x7136;&#x4E0B;&#x201C;&#x7EBF;&#x7A0B;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x201D;&#x89E3;&#x51B3;&#x4E86;&#x67D0;&#x4E9B;&#x7279;&#x6B8A;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x5B83;&#x4E5F;&#x5B58;&#x5728;&#x4E0D;&#x8DB3;&#x3002;&#x9664;&#x975E;&#x6240;&#x6709;&#x7EBF;&#x7A0B;&#x4F7F;&#x7528;&#x540C;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x4E0A;&#x4E0B;&#x6587;&#x7C7B;
+&#x52A0;&#x8F7D;&#x5668;&#xFF0C;&#x5426;&#x5219;&#x5B83;&#x4EEC;&#x7684;&#x6570;&#x636E;&#x5171;&#x4EAB;&#x6210;&#x4E3A;&#x95EE;&#x9898;&#x3002;&#x5E76;&#x4E14;&#xFF0C;&#x7F3A;&#x7701;&#x89C4;&#x5219;&#x4E3A;&#x4F7F;&#x7528;&#x5F53;&#x524D;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF0C;&#x6709;&#x4E9B;&#x4EE3;&#x7801;&#x4F60;&#x53C8;&#x6CA1;&#x6CD5;&#x63A7;&#x5236;&#xFF0C;
+&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x53D8;&#x5F97;&#x66F4;&#x52A0;&#x590D;&#x6742;&#x3002;  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;J2SE&#x4E2D;&#x5E38;&#x89C1;&#x7C7B;&#x52A0;&#x8F7D;&#x573A;&#x666F;&#xFF1A;
+&#x2192; JNDI&#x4F7F;&#x7528;&#x7EBF;&#x7A0B;&#x4E0A;&#x4E0B;&#x6587;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;
+&#x2192; Class.getResource()&#x548C;Class.forName()&#x4F7F;&#x7528;&#x5F53;&#x524D;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;
+&#x2192; JAXP&#x4F7F;&#x7528;&#x4E0A;&#x4E0B;&#x6587;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;
+&#x2192; Java.unit.ResourceBundle&#x4F7F;&#x7528;&#x8C03;&#x7528;&#x8005;&#x7684;&#x5F53;&#x524D;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;
+&#x2192; URL&#x534F;&#x8BAE;&#x5904;&#x7406;&#x5668;&#x4F7F;&#x7528;java.protocol.handler.pkgs&#x7CFB;&#x7EDF;&#x5C5E;&#x6027;&#x5E76;&#x53EA;&#x4F7F;&#x7528;&#x7CFB;&#x7EDF;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;
+&#x2192; Java&#x5E8F;&#x5217;&#x5316;API&#x7F3A;&#x7701;&#x4F7F;&#x7528;&#x8C03;&#x7528;&#x8005;&#x5F53;&#x524D;&#x7684;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id="toc_3"&gt;JVM&#x7C7B;&#x52A0;&#x8F7D;&#x4F53;&#x7CFB;&#x521D;&#x59CB;&#x5316;&#x8FC7;&#x7A0B;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src="http://farm3.staticflickr.com/2812/9758702554_fdd089dd36.jpg" alt="JVM classloader init"&gt;  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&#x8F7D;&#x5165;&#x65B9;&#x5F0F;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&#x2192; pre-loading &#x9884;&#x5148;&#x8F7D;&#x5165;&#xFF0C;&#x672A;&#x907F;&#x514D;&#x4EE5;&#x540E;&#x591A;&#x6B21;IO&#x64CD;&#x4F5C;&#xFF0C;JRE&#x9884;&#x5148;&#x8F7D;&#x5165;&#x4E00;&#x4E9B;&#x57FA;&#x7840;&#x7C7B;&#xFF0C;&#x4E3B;&#x8981;&#x662F;rt.jar&#x91CC;
+&#x2192; load-on-demand&#xFF0C;&#x6309;&#x9700;&#x8F7D;&#x5165;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&#x53EF;&#x7528;&lt;code&gt;java &#x2013;verbos:class Main&lt;/code&gt;&#x67E5;&#x770B;&#x52A0;&#x8F7D;&#x8BE6;&#x7EC6;&#x8FC7;&#x7A0B;  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Static &#x4F55;&#x65F6;&#x6267;&#x884C;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&#x2192; forName(String)&#x6267;&#x884C;&#xFF0C;&#x800C;ClassLoader.loadClass&#x5E76;&#x4E0D;&#x4F1A;&#x6267;&#x884C;&#xFF0C;forName(String,false,ClassLoader)&#x4E5F;&#x4E0D;&#x4F1A;&#x6267;&#x884C;
+&#x2192; &#x8F7D;&#x5165;class&#x65F6;&#x6CA1;&#x6709;&#x6267;&#x884C;static&#x5757;&#xFF0C;&#x5219;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x5B9E;&#x4F8B;&#x5316;&#x65F6;&#x6267;&#x884C;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&#x9690;&#x5F0F;&#x52A0;&#x8F7D;/&#x663E;&#x793A;&#x52A0;&#x8F7D;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&#x2192; &#x663E;&#x793A;&#x52A0;&#x8F7D;&#xFF1A;&#x7528;forName&#x65B9;&#x6CD5;&#x663E;&#x793A;&#x6307;&#x5B9A;&#x8981;&#x52A0;&#x8F7D;&#x54EA;&#x4E2A;&#x7C7B;
+&#x2192; &#x9690;&#x5F0F;&#x52A0;&#x8F7D;&#xFF1A;new&#x65B9;&#x6CD5;&#x5B9E;&#x4F8B;&#x5316;&#x65F6;&#xFF0C;JVM&#x9690;&#x5F0F;&#x5E2E;&#x5FD9;&#x505A;&#x52A0;&#x8F7D;&#xFF0C;&#x5E76;&#x6267;&#x884C;&#x9759;&#x6001;&#x4EE3;&#x7801;&#x5FEB;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id="toc_4"&gt;tomcat&#x4E2D;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&lt;/h1&gt;
+
+&lt;p&gt;&#x9664;&#x4E86;J2SE&#x5DF2;&#x7ECF;&#x6709;&#x7684;&#x6700;&#x57FA;&#x7840;&#x7684;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF0C;tomcat&#x7C7B;&#x52A0;&#x8F7D;&#x8FD8;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#xFF1A;  &lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Catalina&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF1A;&#x5BF9;Tomcat&#x670D;&#x52A1;&#x5668;&#x5185;&#x6838;&#x53EF;&#x89C1;,&#x5BF9;Web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E0D;&#x53EF;&#x89C1;&#x3002;
+tomcat&#x5185;&#x6838;&#x7EBF;&#x7A0B;&#x4E0A;&#x4E0B;&#x6587;&#x52A0;&#x8F7D;&#x5668;&#x5C31;&#x662F;&#x5B83;&#x3002;
+&#x52A0;&#x8F7D;&#x76EE;&#x5F55;&lt;code&gt;server/classes&#x548C;server/lib&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Common&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF1A;Tomcat&#x5185;&#x6838;&#x548C;&#x6BCF;&#x4E2A;Web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x90FD;&#x53EF;&#x4EE5;&#x770B;&#x89C1;&#x3002;
+&#x52A0;&#x8F7D;&#x672A;&#x77E5;&lt;code&gt;common/class&lt;/code&gt;&lt;code&gt;common/lib&lt;/code&gt;&#xFF0C;&#x4F8B;&#x5982;servlet.jar&lt;/li&gt;
+&lt;li&gt;Shared&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF1A;&#x53EA;&#x5BF9;&#x6240;&#x6709;Web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6709;&#x6548;,&#x5BF9;Tomcat&#x4E0D;&#x53EF;&#x89C1;&#x3002;
+&#x52A0;&#x8F7D;&#x4F4D;&#x7F6E;&#xFF1A;&lt;code&gt;share/classes&lt;/code&gt;&lt;code&gt;share/lib&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Webapp&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF1A;&#x53EA;&#x5BF9;&#x5F53;&#x524D;Web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6709;&#x6548;&#x3002;
+&#x6BCF;&#x4E2A;web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x5C31;&#x662F;&#x5B83;&#x3002;
+&#x52A0;&#x8F7D;&#x4F4D;&#x7F6E;&#xFF1A;&lt;code&gt;WEB-INF/classes&lt;/code&gt;&lt;code&gt;WEB-INF/lib&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id="toc_5"&gt;tomcat&#x7C7B;&#x52A0;&#x8F7D;&#x987A;&#x5E8F;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&#x67E5;&#x770B;&#x7F13;&#x5B58;&#x4E2D;&#x4E4B;&#x524D;&#x6709;&#x6CA1;&#x52A0;&#x8F7D;&#x8FC7;&lt;/li&gt;
+&lt;li&gt;&#x6CA1;&#x6709;&#xFF0C;&#x59D4;&#x6258;&#x7ED9;system classloader&#x52A0;&#x8F7D;&#xFF0C;&#x8D70;&#x201C;&#x53CC;&#x4EB2;&#x59D4;&#x6D3E;&#x201D;&#x90A3;&#x5957;&lt;/li&gt;
+&lt;li&gt;2&#x52A0;&#x8F7D;&#x4E0D;&#x5230;&#xFF0C;&#x67D0;&#x4E9B;&#x7C7B;&#x4F1A;&#x5C1D;&#x8BD5;&#x7528;&#x201D;shared&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x201C;&#xFF0C;&#x5176;&#x4ED6;&#x7528;&#x201C;webapp&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x201D;&#x52A0;&#x8F7D;&lt;/li&gt;
+&lt;li&gt;3&#x641E;&#x4E0D;&#x5B9A;&#xFF0C;&#x5411;&#x4E0A;&#x59D4;&#x6D3E;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&#x6574;&#x4E2A;&#x8FC7;&#x7A0B;&#x5982;&#x56FE;&#xFF1A;&lt;br&gt;
+&lt;img src="http://farm4.staticflickr.com/3777/9758884752_bac5a4b3b7.jpg" alt="tomcat class loader"&gt;&lt;/p&gt;
+
+&lt;h2 id="toc_6"&gt;tomcat&#x6700;&#x65B0;&#x7248;&#x672C;&lt;/h2&gt;
+
+&lt;p&gt;Tomcat 6&#x4E4B;&#x540E;classloader &#x7A0D;&#x5FAE;&#x6709;&#x4E9B;&#x6539;&#x52A8;&#x4E86;&#xFF0C;&#x53BB;&#x6389;&#x4E86;server &#x548C; shared, &#x90FD;&#x7531;common classloader &#x6765;&#x8F7D;&#x5165;&#x4E86;&lt;/p&gt;
+
+&lt;h1 id="toc_7"&gt;&#x521D;&#x59CB;&#x5316;&lt;/h1&gt;
+
+&lt;p&gt;&#x5F85;&#x8865;&#x5145;&lt;/p&gt;
+
+&lt;p&gt;&#x53C2;&#x8003;:&lt;br&gt;
+&lt;a href="http://blog.csdn.net/vernonzheng/article/details/8461380"&gt; &#x6DF1;&#x5165;JVM&#x7CFB;&#x5217;&#xFF08;&#x4E09;&#xFF09;&#x4E4B;&#x7C7B;&#x52A0;&#x8F7D;&#x3001;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x3001;&#x53CC;&#x4EB2;&#x59D4;&#x6D3E;&#x673A;&#x5236;&#x4E0E;&#x5E38;&#x89C1;&#x95EE;&#x9898;&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://ieroot.com/2013/05/01/932.html"&gt;ClassLoader&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://www.goldendoc.org/2010/12/tomcat_classloader/"&gt;Tomcat ClassLoader&#x673A;&#x5236;&#x4ECB;&#x7ECD;&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://www.blogjava.net/William/archive/2006/08/25/65804.html"&gt;&#x6DF1;&#x5165;&#x63A2;&#x8BA8;Java&#x7684;&#x7C7B;&#x52A0;&#x8F7D;&#x673A;&#x5236;&lt;/a&gt;  &lt;/p&gt;
+
+    &lt;hr&gt;
+    &lt;div class="pagination"&gt;
+      &lt;ul&gt;
+        &lt;ul&gt;
+            &lt;li class="prev"&gt;&lt;a href="/2013-09/maven-cmd.html" title="&#x5E38;&#x7528;maven&#x547D;&#x4EE4;"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li class="next"&gt;&lt;a href="/2013-09/read-tomcat-source-conf-files.html" title="tomcat&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;div id="disqus_thread"&gt;&lt;/div&gt;
+&lt;script&gt;
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+
+  &lt;/div&gt;
+  
+  &lt;div class="span4"&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+    (function(){
+       var _w = 90 , _h = 24;
+       var param = {
+       url:location.href,
+       type:'2',
+       count:'1', /**&#x662F;&#x5426;&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6570;&#xFF0C;1&#x663E;&#x793A;(&#x53EF;&#x9009;)*/
+       appkey:'', /**&#x60A8;&#x7533;&#x8BF7;&#x7684;&#x5E94;&#x7528;appkey,&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6765;&#x6E90;(&#x53EF;&#x9009;)*/
+       title:'', /**&#x5206;&#x4EAB;&#x7684;&#x6587;&#x5B57;&#x5185;&#x5BB9;(&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;title)*/
+       pic:'', /**&#x5206;&#x4EAB;&#x56FE;&#x7247;&#x7684;&#x8DEF;&#x5F84;(&#x53EF;&#x9009;)*/
+       ralateUid:'2388250330', /**&#x5173;&#x8054;&#x7528;&#x6237;&#x7684;UID&#xFF0C;&#x5206;&#x4EAB;&#x5FAE;&#x535A;&#x4F1A;@&#x8BE5;&#x7528;&#x6237;(&#x53EF;&#x9009;)*/
+       language:'zh_cn', /**&#x8BBE;&#x7F6E;&#x8BED;&#x8A00;&#xFF0C;zh_cn|zh_tw(&#x53EF;&#x9009;)*/
+       rnd:new Date().valueOf()
+     }
+     var temp = [];
+     for( var p in param ){
+     temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+     }
+     document.write('&lt;iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&amp;') + '" width="'+ _w+'" height="'+_h+'"&gt;&lt;/iframe&gt;')
+     })()
+    &lt;/script&gt;
+
+    &lt;h4&gt;Published&lt;/h4&gt;
+    &lt;div class="date"&gt;&lt;span&gt;2013-09-15&lt;/span&gt;&lt;/div&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Categories&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+      &lt;li&gt;
+        &lt;a href="/categories#java-ref"&gt;java &lt;span&gt;6&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;    &lt;/ul&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Tags&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+
+      &lt;footer&gt;
+        &lt;p&gt;&amp;copy; tiemei 2012 
+          with help from &lt;a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework"&gt;ruhoh&lt;/a&gt;
+          and &lt;a href="http://twitter.github.com/bootstrap/" target="_blank"&gt;Twitter Bootstrap&lt;/a&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+        &lt;script src="http://s9.cnzz.com/stat.php?id=5379369&amp;web_id=5379369&amp;online=1&amp;show=line" language="JavaScript"&gt;&lt;/script&gt;
+        &lt;/p&gt;
+      &lt;/footer&gt;
+
+    &lt;/div&gt; &lt;!-- /container --&gt;
+
+    &lt;!-- Google Prettify --&gt;
+&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i &lt; pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+&lt;/script&gt;
+&lt;!-- end Google Prettify --&gt;
+    &lt;script&gt;
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(defworld.com);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+&lt;/script&gt;
+&lt;noscript&gt;&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /&gt;&lt;/p&gt;&lt;/noscript&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</description>
     </item>
     <item>
       <title>&#x5E38;&#x7528;maven&#x547D;&#x4EE4;</title>
@@ -33,9 +636,9 @@
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.5009338093750212" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.7071337840588019" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.29665547119752234" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6058688844506425" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.9003342911351132" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4211376333566814" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -179,7 +782,7 @@ notify()&#x7684;&#x7EBF;&#x7A0B;&#x9000;&#x51FA;&#x4E86;&#x5B83;&#x81EA;&#x5DF1;
     &lt;h4&gt;Categories&lt;/h4&gt;
     &lt;ul class="tag_box"&gt;
       &lt;li&gt;
-        &lt;a href="/categories#java-ref"&gt;java &lt;span&gt;4&lt;/span&gt;&lt;/a&gt;
+        &lt;a href="/categories#java-ref"&gt;java &lt;span&gt;6&lt;/span&gt;&lt;/a&gt;
       &lt;/li&gt;    &lt;/ul&gt;
     &lt;br&gt;
     &lt;h4&gt;Tags&lt;/h4&gt;
@@ -245,9 +848,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.8355411146982336" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.8219085977393813" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8307790907512359" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6285959215854758" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.7701000038609715" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.09876704697021588" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -434,7 +1037,7 @@ runnable - &#x7EBF;&#x7A0B;&#x72B6;&#x6001;
     &lt;h4&gt;Categories&lt;/h4&gt;
     &lt;ul class="tag_box"&gt;
       &lt;li&gt;
-        &lt;a href="/categories#java-ref"&gt;java &lt;span&gt;4&lt;/span&gt;&lt;/a&gt;
+        &lt;a href="/categories#java-ref"&gt;java &lt;span&gt;6&lt;/span&gt;&lt;/a&gt;
       &lt;/li&gt;    &lt;/ul&gt;
     &lt;br&gt;
     &lt;h4&gt;Tags&lt;/h4&gt;
@@ -530,9 +1133,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.5379240866490901" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.2864393549312304" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7444345366680635" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.4703900912212806" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.128167513243724" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.23393213687380288" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -822,9 +1425,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.8585442735091715" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.7297621921044276" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6464707246686081" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.10901688520347519" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.3137571187387591" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.45243439750320524" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1270,9 +1873,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.2723384528306555" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.34228780401396064" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9922574956612668" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.48707896403847706" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.006324718922205874" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7755907225595606" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 

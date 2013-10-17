@@ -69,6 +69,7 @@ tags:
 ![git branche](http://farm8.staticflickr.com/7384/9150086081_dfe8ef4bce.jpg)  
 
 * `git branche` 查看有几个分支，以及活动分支
+* `git branch -r` 列出服务器仓库所有分支
 * `git branche <name> <commit>` commit指定新branche的起始点，默认最新一次commit
 * `git checkout <branchname>` 指定当前活动分支，与从Index同步文件命令意义不同
 

@@ -2,7 +2,7 @@
 <html lang="en" xmlns:wb=“http://open.weibo.com/wb”>
   <head>
     <meta charset="utf-8">
-    <title>java锁笔记</title>
+    <title>问题排查技能——cpu iowait高</title>
     <meta name="author" content="tiemei">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -11,9 +11,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.04450844370180973" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.14635863262193483" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4054855377176315" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.05128982215572775" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.9754454565764566" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.31007648603174287" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -47,67 +47,21 @@
 
       <div class="content">
         <div class="page-header">
-  <h1>java锁笔记 </h1>
+  <h1>问题排查技能——cpu iowait高 </h1>
 </div>
 
 <div class="row">
   <div class="span8">
-    <h1 id="toc_0">线程通信</h1>
-
-<p>通信遇到的问题包括：  </p>
-
-<ol>
-<li>共享对象：需要做同步处理</li>
-<li>忙等待：循环等待另一个线程发来信号，可sleep</li>
-<li><p>wait(),notify()</p>
-
-<pre><code>1. 遇到mobj.wait()，让线程进入非运行状态，直到另一个线程mobj.nitify
-2. 这几个方法必须在获得mobj锁的前提下调用，否则IllegalMonitorStateException
-3. 一个线程调用了wait()，即释放mobj上的锁
-4. 一旦一个线程被唤醒，不能立刻就退出wait()的方法调用，直到调用
-notify()的线程退出了它自己的同步块。因此，多个线程被notifyAll唤醒，只有一个
-线程可以最终退出wait()方法，因为必须获得mobj的锁
-</code></pre></li>
-<li><p>丢失的信号（Missed Signal）</p>
-
-<pre><code>线程A先调用了mobj.notify()，线程B后调用mobj.wait()，通知信号发送过了就被丢弃，
-线程B就可能永远不能醒来。
-这就需要一个额外的变量来保存‘是否被通知过’的信息。
-</code></pre></li>
-<li><p>假唤醒（spurious wakeups）</p>
-
-<pre><code>没有调用过notify()和notifyAll()的情况下醒来，原因未知
-需要加个自旋锁，即将wait()方法放到while循环中
-</code></pre></li>
-<li><p>不要在字符串常量或全局对象中调用wait()。mobj与信号常量不是一一对应。</p></li>
-</ol>
-
-<p>mobj: 管程 (英语：Monitors，也称为监视器)  </p>
-
-<h1 id="toc_1">锁</h1>
-
-<p>锁由synchronized实现，有以下几个特性:  </p>
-
-<ol>
-<li>同一时刻只能有一个线程穿过临界区，进入同步块</li>
-<li>锁的可重入性：synchronized同步块可重入，相应也有可重入锁</li>
-<li>锁的公平性：多个线程不断竞争访问相同的synchronized同步块，可能存在某个
-线程一直竞争不到。</li>
-</ol>
-
-<p><strong>参考</strong>:<br>
-<a href="http://ifeve.com/locks/">Java中的锁</a><br>
-<a href="http://ifeve.com/thread-signaling/">线程通信</a>  </p>
-
+    
     <hr>
     <div class="pagination">
       <ul>
         <ul>
-            <li class="prev"><a href="/2013-08/jdk-tools.html" title="jdk自带工具">&larr; Previous</a></li>
+            <li class="prev"><a href="/2013-09/read-tomcat-source-conf-files.html" title="tomcat的配置文件">&larr; Previous</a></li>
 
             <li><a href="/archive">Archive</a></li>
 
-            <li class="next"><a href="/2013-09/maven-cmd.html" title="常用maven命令">Next &rarr;</a></li>
+            <li class="next"><a href="/2013-10/linux-file-type.html" title="linux基础——文件类型">Next &rarr;</a></li>
         </ul>
       </ul>
     </div>
@@ -152,12 +106,12 @@ notify()的线程退出了它自己的同步块。因此，多个线程被notify
     </script>
 
     <h4>Published</h4>
-    <div class="date"><span>2013-08-30</span></div>
+    <div class="date"><span>2013-09-17</span></div>
     <br>
     <h4>Categories</h4>
     <ul class="tag_box">
       <li>
-        <a href="/categories#java-ref">java <span>6</span></a>
+        <a href="/categories#troubleshoot problems-ref">troubleshoot problems <span>1</span></a>
       </li>    </ul>
     <br>
     <h4>Tags</h4>

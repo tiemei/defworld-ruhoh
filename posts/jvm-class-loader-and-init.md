@@ -1,8 +1,8 @@
 ---
 title: JVM——类加载器，初始化
 date: '2013-09-15'
-description: 'java'
-categories:
+description: 
+categories: 'java'
 ---
 
 # 类加载器
@@ -84,6 +84,9 @@ tomcat内核线程上下文加载器就是它。
 
 ## tomcat最新版本
 Tomcat 6之后classloader 稍微有些改动了，去掉了server 和 shared, 都由common classloader 来载入了
+
+# 初始化
+待补充
 
 参考:  
 [ 深入JVM系列（三）之类加载、类加载器、双亲委派机制与常见问题](http://blog.csdn.net/vernonzheng/article/details/8461380)  

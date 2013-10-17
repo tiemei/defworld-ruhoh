@@ -3,6 +3,8 @@ title: tomcat的配置文件
 date: '2013-09-15'
 description:
 categories: 'java'
+
+type: draft
 ---
 
 

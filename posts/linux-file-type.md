@@ -3,6 +3,8 @@ title: linux基础——文件类型
 date: '2013-10-10'
 description: linux file type
 categories: 'linux'
+
+type: draft
 ---
 
 <table border="1">

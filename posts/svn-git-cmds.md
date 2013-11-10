@@ -10,11 +10,15 @@ tags:
 ---
 参考:  
 [SVN常用命令](http://blog.csdn.net/sunboy_2050/article/details/6187464)  
+[svn diff](http://www.subversion.org.cn/svnbook/1.4/svn.ref.svn.c.diff.html)  
 
 ## svn 
 ### 常用命令
 * `svn co remote-svn-path local-dir --username tiemei`签出
 * `svn cp base-svn-path new-svn-path -m "commit log"`新建分支
+* `svn diff -r m path/file` 比较工作拷贝和某个版本的区别
+* `svn diff -c m path/file` 查看某个版本修改的内容
+* `svn diff --diff-cmd /usr/bin/diff -x "-i -b" COMMITTERS` 指定外部diff程序 
 * `svn diff -r m:n path` 比较两个版本文件差异
 * `svn diff -r m:n path |grep "Index:"` 比较两个版本间变化的文件
 * `svn info path` 列出某个path svn信息

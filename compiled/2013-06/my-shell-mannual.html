@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7554892918286037" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.45532924906624095" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8296907658461442" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.2325138434593298" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.8805110657599168" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8855505488408469" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -576,7 +576,8 @@ who 当前登录的所有用户<br>
 
 <h3 id="toc_29"><a id="vim"><font color="green">vim</font></a></h3>
 
-<p><code>s/abc/xyz/</code> 光标所在行第一项替换<br>
+<p><code>sed -n &#39;/\sat\s/!p&#39;</code> !p打印取反<br>
+<code>s/abc/xyz/</code> 光标所在行第一项替换<br>
 <code>s/abc/xyz/g</code> 光标所在行所有项替换<br>
 <code>1,$s/abc/xyz/g</code> 第一行到最后一样替换，<code>.</code>表示当前行<br>
 <code>:s#http://roclinux\.cn/index\.php#http://www\.sohu\.com#</code> 间隔符号用#，!也行<br>
@@ -1333,7 +1334,7 @@ ss -a
 <li><code>screen -S name -X exec cmd</code> 在id为name的screen session的编号为0的窗口执行命令cmd</li>
 <li><code>screen -S name -X screen cmd</code> 在session中新建一个窗口并执行cmd</li>
 <li><code>C-a d</code> 退出screen session</li>
-<li><code>C-a c</code> 创建一个新的shell床阔并切换到该窗口</li>
+<li><code>C-a c</code> 创建一个新的shell窗口并切换到该窗口</li>
 <li><code>C-a w</code> 显示所有窗口列表</li>
 <li><code>C-a k</code> 杀掉当前窗口</li>
 <li><code>C-a p</code><code>C-a n</code> 前一个窗口，后一个窗口 </li>
@@ -1397,7 +1398,7 @@ ss -a
     <h4>Categories</h4>
     <ul class="tag_box">
       <li>
-        <a href="/categories#linux-ref">linux <span>3</span></a>
+        <a href="/categories#linux-ref">linux <span>4</span></a>
       </li>    </ul>
     <br>
     <h4>Tags</h4>

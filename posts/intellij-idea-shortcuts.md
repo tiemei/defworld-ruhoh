@@ -61,6 +61,7 @@ changed descendants`
 * IDEA默认自动保存，无需手动`ctrl + s`
 * IDEA文件默认同步刷新到磁盘，无需手动刷新
 * 工程导入时忽略某些文件`settings → file types → ignore files and folders`
+* 关联源码或doc`⌘ ;`到project structure界面，`SDK → Sourcepath`将下载的src.zip关联进来即可
 
 
 ## 我的其他设置及快捷键

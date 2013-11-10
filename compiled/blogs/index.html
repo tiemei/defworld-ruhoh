@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.3134391300892927" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.9724171680380287" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7537469487582704" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.11288900003857238" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.725474411967955" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8586224672891365" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -54,6 +54,35 @@
 <div class="row">
   <div class="span12">
     <h2>Latest Posts</h2>
+
+<div class="post">
+  <h3 class="title"><a href="/2013-11/linux-software-install.html">谈谈Unix-like上软件安装那些事</a> <span class="date">2013-11-10</span></h3>
+
+  <h2 id="toc_0">Linux和Mac OS X</h2>
+
+<p>在大学刚听说linux时候，被一堆名词唬住了：CentOS,Ubuntu,RedHat等。我一开始用
+Fedora13一直用到Fedora15，使用过程中遇到多次诡异问题，最后都定位到是Fedora发行
+版的bug，变忍痛弃之。相对，使用率更高的Ubuntu成为我的第二选择，因为使用率高，出现
+问题也能从网上获得更多帮助。从今年3月份开始，换成了现在的os x系统。<br>
+如此多的选择，常常让入门者无所适从。<br>
+linux发行版分为主要的三个分支：RedHat、Slackware和Debian，每一个分支都拥有一个
+最具代表性的商业服务器级的发行版，它们是：RedHat Enterpries Linux，简称RHEL、
+SUSE LinuxEnterprise，简称SUSE，和Ubuntu Server，简称Ubuntu。有分支的区分，是因为
+后来的各种发行版是在这几个最初版本上修改而来的，虽然某些发行版实际上已经跟最初的
+版本相差甚远了。很多大型互联网公司会选择REHL，因为它对kvm的支持。但REHL收费，除非
+你自己下它的源码编译，不过CentOS就是REHL源码编译过来的，所以，直接上CentOS就好。<br>
+那现在苹果机器搭载的os x系统处在什么位置呢？<code>Mac OS</code>基于Mach内核，这个内核的出现也是
+为了弥补Unix的某些局限和不足，对Unix系统下的程序的直接移植也做到了较好的兼容性。<code>mac os x</code>
+是一次内核层面的改造，核心名为<code>Darwin</code>，以<code>FreeBSD</code>源码和<code>Mach</code>微内核为基础。于是可知现在
+我们使用的<code>Mac os x</code>衍生自<code>BSD</code>分支，而linux于1991被<code>Linus Benedict Torvalds</code>编写时，<code>386BSD</code>
+还没有发布。如果真的要追溯linux和<code>mac os x</code>的血缘关系，恐怕要更远了。所以，如果你觉得
+用惯了Ubuntu，换成Mac机有一些不习惯，那是不可避免的了。  </p>
+
+
+  <div class="more">
+    <a href="/2013-11/linux-software-install.html" class="btn">read more..</a>
+  </div>
+</div>
 
 <div class="post">
   <h3 class="title"><a href="/2013-09/jvm-class-loader-and-init.html">JVM——类加载器，初始化</a> <span class="date">2013-09-15</span></h3>
@@ -101,6 +130,14 @@
 <li>在完整的反应对顺序上指定从哪个模块开始构建<code>mvn clean install -rf account-email</code></li>
 <li>在<code>-pl -am / -pl -amd</code>基础上还能用<code>-rf</code>再次剪裁</li>
 </ul>
+
+<h2 id="toc_1">常用命令</h2>
+
+<p>新建一个空白工程  </p>
+
+<pre><code>mvn archetype:create -DgroupId=com.tiemei -DartifactId=p1 -DpackageName=com.tiemei.p1
+建web工程加-DarchetypeArtifactId=maven-archetype-webapp
+</code></pre>
 
 
   <div class="more">
@@ -178,7 +215,8 @@ notify()的线程退出了它自己的同步块。因此，多个线程被notify
 <p><code>ssh -t rsa</code><br>
 <code>ssh -t rsa -C &quot;jiadongkai@gmail.com&quot;</code> 注释用邮箱地址<br>
 将公钥追加到需要登录机器的~/.ssh/authorized<em>keys，如果无法登陆将~/.ssh/known</em>hosts
-对应行删掉  </p>
+对应行删掉<br>
+注意需要保证authorized_keys文件只有当前用户有写权限  </p>
 
 <h2 id="toc_1">用ssh-agent省掉passphrase输入</h2>
 
@@ -219,7 +257,8 @@ notify()的线程退出了它自己的同步块。因此，多个线程被notify
   <h3 class="title"><a href="/2013-06/svn-git-cmds.html">我的svn git常用命令及配置</a> <span class="date">2013-06-27</span></h3>
 
   <p>参考:<br>
-<a href="http://blog.csdn.net/sunboy_2050/article/details/6187464">SVN常用命令</a>  </p>
+<a href="http://blog.csdn.net/sunboy_2050/article/details/6187464">SVN常用命令</a><br>
+<a href="http://www.subversion.org.cn/svnbook/1.4/svn.ref.svn.c.diff.html">svn diff</a>  </p>
 
 <h2 id="toc_0">svn</h2>
 
@@ -228,6 +267,9 @@ notify()的线程退出了它自己的同步块。因此，多个线程被notify
 <ul>
 <li><code>svn co remote-svn-path local-dir --username tiemei</code>签出</li>
 <li><code>svn cp base-svn-path new-svn-path -m &quot;commit log&quot;</code>新建分支</li>
+<li><code>svn diff -r m path/file</code> 比较工作拷贝和某个版本的区别</li>
+<li><code>svn diff -c m path/file</code> 查看某个版本修改的内容</li>
+<li><code>svn diff --diff-cmd /usr/bin/diff -x &quot;-i -b&quot; COMMITTERS</code> 指定外部diff程序 </li>
 <li><code>svn diff -r m:n path</code> 比较两个版本文件差异</li>
 <li><code>svn diff -r m:n path |grep &quot;Index:&quot;</code> 比较两个版本间变化的文件</li>
 <li><code>svn info path</code> 列出某个path svn信息</li>
@@ -292,44 +334,6 @@ notify()的线程退出了它自己的同步块。因此，多个线程被notify
 
   <div class="more">
     <a href="/2013-06/intellij-idea-shortcuts.html" class="btn">read more..</a>
-  </div>
-</div>
-
-<div class="post">
-  <h3 class="title"><a href="/2013-06/zhangdan.html">生活中多人购物一人付账算钱程序</a> <span class="date">2013-06-03</span></h3>
-
-  <p>几个朋友一起旅行或者购物吃个烧烤啥的，账总是一个人先付掉，AA的话支付宝
-的AA功能还行，不过如果其中的物品有的是甲的，有的是乙的，有的需要某几个
-人均摊，就麻烦了。<br>
-tiemei经常跟朋友出去shopping，回来算账就一堆乱麻，程序员嘛，喜欢偷懒，
-写个程序自算账，交给机器做，我就去享受买回来的好吃的了。  </p>
-
-<p><strong>账单</strong>  </p>
-
-<pre><code>6   jia   大号印刷背心袋
-8.6 wang  八宝茶
-14.6 all  咸鸭蛋
-4.9 jia  干柠檬
-2.7 all   鸡蛋面
-12.5 jia  酒
-9.9 all   馒头
-3.9 jia   酸奶
-15  all   刀切馒头
-4.9 all   鸡蛋面
-25.55 all  八宝米
-16.33 jia,wang 凉菜
-4.7  wang  陈皮
-3.3 jia    枣粽
-2.53  all  榨菜
-3.9  jia   肉粽
-6    wang  老爷爷的餐巾纸
------------------------
-140.9
-</code></pre>
-
-
-  <div class="more">
-    <a href="/2013-06/zhangdan.html" class="btn">read more..</a>
   </div>
 </div>
 

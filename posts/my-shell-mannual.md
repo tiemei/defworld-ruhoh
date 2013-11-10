@@ -517,6 +517,7 @@ who 当前登录的所有用户
 tab制表符，这个符号比较特殊，当使用-L时，制表符算7个字符（这要依据一个制表符的长度而定，在我的系统中一个制表符算7个空格长度）。而当使用-w时，制表符和空格没有两样，都作为字的间隔来看待。当用-c时，一个制表符也就算一个字符  
 
 ### <a id="vim"><font color="green">vim</font></a>
+`sed -n '/\sat\s/!p'` !p打印取反  
 `s/abc/xyz/` 光标所在行第一项替换  
 `s/abc/xyz/g` 光标所在行所有项替换  
 `1,$s/abc/xyz/g` 第一行到最后一样替换，`.`表示当前行  
@@ -1215,7 +1216,7 @@ tab制表符，这个符号比较特殊，当使用-L时，制表符算7个字�
 * `screen -S name -X exec cmd` 在id为name的screen session的编号为0的窗口执行命令cmd
 * `screen -S name -X screen cmd` 在session中新建一个窗口并执行cmd
 * `C-a d` 退出screen session
-* `C-a c` 创建一个新的shell床阔并切换到该窗口
+* `C-a c` 创建一个新的shell窗口并切换到该窗口
 * `C-a w` 显示所有窗口列表
 * `C-a k` 杀掉当前窗口
 * `C-a p``C-a n` 前一个窗口，后一个窗口 

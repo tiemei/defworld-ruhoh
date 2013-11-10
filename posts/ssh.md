@@ -13,6 +13,7 @@ categories: 'linux'
 `ssh -t rsa -C "jiadongkai@gmail.com"` 注释用邮箱地址  
 将公钥追加到需要登录机器的~/.ssh/authorized_keys，如果无法登陆将~/.ssh/known_hosts
 对应行删掉  
+注意需要保证authorized_keys文件只有当前用户有写权限  
 
 ## 用ssh-agent省掉passphrase输入
 1. 准备ssh-agent需要的环境变量，选择下面的一种方法即可  

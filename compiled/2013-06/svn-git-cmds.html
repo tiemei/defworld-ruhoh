@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7955752860168499" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.7776211642825099" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6378433241881337" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.5072098279811512" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.37207741335734434" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.37888030126848193" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -54,7 +54,8 @@
 <div class="row">
   <div class="span8">
     <p>参考:<br>
-<a href="http://blog.csdn.net/sunboy_2050/article/details/6187464">SVN常用命令</a>  </p>
+<a href="http://blog.csdn.net/sunboy_2050/article/details/6187464">SVN常用命令</a><br>
+<a href="http://www.subversion.org.cn/svnbook/1.4/svn.ref.svn.c.diff.html">svn diff</a>  </p>
 
 <h2 id="toc_0">svn</h2>
 
@@ -63,6 +64,9 @@
 <ul>
 <li><code>svn co remote-svn-path local-dir --username tiemei</code>签出</li>
 <li><code>svn cp base-svn-path new-svn-path -m &quot;commit log&quot;</code>新建分支</li>
+<li><code>svn diff -r m path/file</code> 比较工作拷贝和某个版本的区别</li>
+<li><code>svn diff -c m path/file</code> 查看某个版本修改的内容</li>
+<li><code>svn diff --diff-cmd /usr/bin/diff -x &quot;-i -b&quot; COMMITTERS</code> 指定外部diff程序 </li>
 <li><code>svn diff -r m:n path</code> 比较两个版本文件差异</li>
 <li><code>svn diff -r m:n path |grep &quot;Index:&quot;</code> 比较两个版本间变化的文件</li>
 <li><code>svn info path</code> 列出某个path svn信息</li>

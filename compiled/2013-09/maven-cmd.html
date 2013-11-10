@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9649085342063023" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.9113645384298182" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8814504826188593" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.28929873148941077" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.6569290175837152" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9097163063936643" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -62,6 +62,31 @@
 <li>在完整的反应对顺序上指定从哪个模块开始构建<code>mvn clean install -rf account-email</code></li>
 <li>在<code>-pl -am / -pl -amd</code>基础上还能用<code>-rf</code>再次剪裁</li>
 </ul>
+
+<h2 id="toc_1">常用命令</h2>
+
+<p>新建一个空白工程  </p>
+
+<pre><code>mvn archetype:create -DgroupId=com.tiemei -DartifactId=p1 -DpackageName=com.tiemei.p1
+建web工程加-DarchetypeArtifactId=maven-archetype-webapp
+</code></pre>
+
+<p>下载依赖源码  </p>
+
+<pre><code>mvn dependency:sources
+mvn eclipse:eclipse -DdownloadSources=true
+</code></pre>
+
+<p>查看依赖树  </p>
+
+<pre><code>mvn dependency:tree
+</code></pre>
+
+<h2 id="toc_2">常用插件</h2>
+
+<p>maven-compiler-plugin<br>
+1. maven2.1 默认用jdk 1.3来编译，这个版本不支持注解，compiler插件可以制定jdk版本为1.6
+2. windows平台默认GBK编码，如果工程编码为utf-8，需要再compiler插件中指定</p>
 
     <hr>
     <div class="pagination">

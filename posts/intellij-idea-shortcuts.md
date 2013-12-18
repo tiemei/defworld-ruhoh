@@ -79,6 +79,7 @@ changed descendants`
 * `⌘ ⇧ w`   自定义,close all
 * `F2 / ⇧ F2` next/preview highlighting syntax problem
 * `settings → file types`设定文件后缀与文件类型的对应关系
+* `⇧ ⌘ A` to find any action inside the IDE user find action
 
 ### 编辑代码
 

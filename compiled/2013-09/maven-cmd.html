@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.28929873148941077" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.6569290175837152" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9097163063936643" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6751522868295639" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.18758636794181915" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.05359013984123606" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -80,6 +80,12 @@ mvn eclipse:eclipse -DdownloadSources=true
 <p>查看依赖树  </p>
 
 <pre><code>mvn dependency:tree
+</code></pre>
+
+<p>发布</p>
+
+<pre><code>mvn clean source:jar javadoc:jar deploy 同时发布源码和doc文档
+mvn clean deploy 只发布calss jar包
 </code></pre>
 
 <h2 id="toc_2">常用插件</h2>

@@ -30,6 +30,11 @@ tags:
 
     mvn dependency:tree
 
+发布
+
+    mvn clean source:jar javadoc:jar deploy 同时发布源码和doc文档
+    mvn clean deploy 只发布calss jar包
+
 ## 常用插件
 maven-compiler-plugin  
 1. maven2.1 默认用jdk 1.3来编译，这个版本不支持注解，compiler插件可以制定jdk版本为1.6

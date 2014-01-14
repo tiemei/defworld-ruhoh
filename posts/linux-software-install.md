@@ -65,6 +65,47 @@ SRPM在编译时会用到一些目录，以CentOS为例：
 我么可以从SRPM开始安装软件（`--rebuid/--recompile`），可以从从源码开始安装软件。  
 我们将准备好的源码放到SOURCES目录，将spec文件放到SPECS目录，然后运行rpmbuild命令即可将源码打包成rpm。  
 
+## 常用命令
+
+参考:  
+[软件安装： RPM, SRPM 与 YUM 功能](http://vbird.dic.ksu.edu.tw/linux_basic/0520rpm_and_srpm_2.php)  
+
+### rpm
+
+**安装**  
+  
+* `rpm -ivh  rpm -ivh rp-pppoe-3.5-32.1.i386.rpm/http://website.name/path/pkgname.rpm`从本地或远程安装rpm包，
+相关信息会写入`/var/lib/rpm/`目录
+* `--replacefiles`强制覆盖本地已存在文件
+* `--replacepkgs`强制替换已经安装过的rpm包
+* `--force`上面两个的综合
+* `--test` 不真的安装，检测是否有依赖问题
+* `--justdb` 由於 RPM 数据库破损或者是某些缘故产生错误时，可使用这个选项来升级软件在数据库内的相关资讯。
+* `--nosignature`  想要略过数码签章的检查时
+* `--prefix 新路径`
+
+**升级**  
+  
+* `rpm -Uvh rpm-pkg` 已有这个软件，升级它，没有就装上。`rpm -Fvh rpm-pkg`已有这个软件升级它，没有不装
+
+**查询**  
+  
+* `rpm -q t-p4p-lego_qa` 查看某软件是否已安装
+* `rpm -qa` 列出所有已安装软件
+* `rpm -qi t-p4p-lego_qa` 列出该软件的详细资讯 (information)，包含开发商、版本与说明等
+* `rpm -ql t-p4p-lego_qa` 列出该软件所有的文件与目录所在完整档名 (list)
+* `-qc` 列出该软件的所有配置档 (找出在 /etc/ 底下的档名而已) 
+* `-qd` 列出该软件的所有说明档 (找出与 man 有关的文件而已)
+* `-qR` 列出与该软件有关的相依软件所含的文件 (Required 的意思)
+* `-qf` 后面接的文件名称，找出该文件属於哪一个已安装的软件
+* `-qp[icdlR]` 不是到已安装文件里找，而是指定一个本地rpm包查找(p 是 package 的意思)
+
+**其他**  
+  
+* `rpm -e t-p4p-lego_qa` 需要按依赖从上往下移除
+* `rpm --rebuilddb` 如果`/var/lib/rpm/`受损坏，用它恢复
+
+
 参考:  
 [wiki-mac_os](http://zh.wikipedia.org/wiki/Mac_OS)  
 [wiki-mac_os_x](http://zh.wikipedia.org/wiki/OS_X)  

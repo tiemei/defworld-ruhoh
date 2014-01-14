@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9676282987213721" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.7333820936443434" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9394614511119955" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6212117370037125" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.9545256177852943" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4933756590952306" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -282,6 +282,8 @@ notify()的线程退出了它自己的同步块。因此，多个线程被notify
 <li><code>svn st -v path</code> 列出所有文件详细状态信息</li>
 <li><code>svn add file/dir</code><code>svn ci m &quot;comment log&quot;</code> 添加文件，提交变动</li>
 <li><code>svn rm path/file</code> 移除某个分支/文件</li>
+<li><code>svn merge URL local_dir/url</code>合并分支，先将原分支cm，然后merge到本地新开发分支，
+或者merge到远程svn新分支</li>
 </ul>
 
 

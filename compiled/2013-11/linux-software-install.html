@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.16054051823698778" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.7805416797300508" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6146865151525234" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6150671958548684" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.37160622534454524" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.2829776099582417" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -117,6 +117,54 @@ yum相比rpm，解决了软件之间依赖问题。它集中收集rpm包内部�
 
 <p>我么可以从SRPM开始安装软件（<code>--rebuid/--recompile</code>），可以从从源码开始安装软件。<br>
 我们将准备好的源码放到SOURCES目录，将spec文件放到SPECS目录，然后运行rpmbuild命令即可将源码打包成rpm。  </p>
+
+<h2 id="toc_5">常用命令</h2>
+
+<p>参考:<br>
+<a href="http://vbird.dic.ksu.edu.tw/linux_basic/0520rpm_and_srpm_2.php">软件安装： RPM, SRPM 与 YUM 功能</a>  </p>
+
+<h3 id="toc_6">rpm</h3>
+
+<p><strong>安装</strong>  </p>
+
+<ul>
+<li><code>rpm -ivh  rpm -ivh rp-pppoe-3.5-32.1.i386.rpm/http://website.name/path/pkgname.rpm</code>从本地或远程安装rpm包，
+相关信息会写入<code>/var/lib/rpm/</code>目录</li>
+<li><code>--replacefiles</code>强制覆盖本地已存在文件</li>
+<li><code>--replacepkgs</code>强制替换已经安装过的rpm包</li>
+<li><code>--force</code>上面两个的综合</li>
+<li><code>--test</code> 不真的安装，检测是否有依赖问题</li>
+<li><code>--justdb</code> 由於 RPM 数据库破损或者是某些缘故产生错误时，可使用这个选项来升级软件在数据库内的相关资讯。</li>
+<li><code>--nosignature</code>  想要略过数码签章的检查时</li>
+<li><code>--prefix 新路径</code></li>
+</ul>
+
+<p><strong>升级</strong>  </p>
+
+<ul>
+<li><code>rpm -Uvh rpm-pkg</code> 已有这个软件，升级它，没有就装上。<code>rpm -Fvh rpm-pkg</code>已有这个软件升级它，没有不装</li>
+</ul>
+
+<p><strong>查询</strong>  </p>
+
+<ul>
+<li><code>rpm -q t-p4p-lego_qa</code> 查看某软件是否已安装</li>
+<li><code>rpm -qa</code> 列出所有已安装软件</li>
+<li><code>rpm -qi t-p4p-lego_qa</code> 列出该软件的详细资讯 (information)，包含开发商、版本与说明等</li>
+<li><code>rpm -ql t-p4p-lego_qa</code> 列出该软件所有的文件与目录所在完整档名 (list)</li>
+<li><code>-qc</code> 列出该软件的所有配置档 (找出在 /etc/ 底下的档名而已) </li>
+<li><code>-qd</code> 列出该软件的所有说明档 (找出与 man 有关的文件而已)</li>
+<li><code>-qR</code> 列出与该软件有关的相依软件所含的文件 (Required 的意思)</li>
+<li><code>-qf</code> 后面接的文件名称，找出该文件属於哪一个已安装的软件</li>
+<li><code>-qp[icdlR]</code> 不是到已安装文件里找，而是指定一个本地rpm包查找(p 是 package 的意思)</li>
+</ul>
+
+<p><strong>其他</strong>  </p>
+
+<ul>
+<li><code>rpm -e t-p4p-lego_qa</code> 需要按依赖从上往下移除</li>
+<li><code>rpm --rebuilddb</code> 如果<code>/var/lib/rpm/</code>受损坏，用它恢复</li>
+</ul>
 
 <p>参考:<br>
 <a href="http://zh.wikipedia.org/wiki/Mac_OS">wiki-mac_os</a><br>

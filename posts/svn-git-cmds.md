@@ -31,6 +31,8 @@ tags:
 * `svn st -v path` 列出所有文件详细状态信息
 * `svn add file/dir``svn ci m "comment log"` 添加文件，提交变动
 * `svn rm path/file` 移除某个分支/文件
+* `svn merge URL local_dir/url`合并分支，先将原分支cm，然后merge到本地新开发分支，
+或者merge到远程svn新分支
 
 ### 配置
 #### 排除
@@ -42,6 +44,8 @@ tags:
 * `svn pe svn:ignore . --editor-cmd=vim` 用vim来编辑需排除的pattern列表，与.svnignore方式互斥
 
 ## git
+
+[Git 分支 - 何谓分支](http://git-scm.com/book/zh/Git-%E5%88%86%E6%94%AF-%E4%BD%95%E8%B0%93%E5%88%86%E6%94%AF)  
 
 * `git remote add origin remote-url` 将本地仓库与远程仓库remote-url绑定，可以绑定多个。一般用origin，因为git clone默认设置origin
 * `git push -u origin master` 提交到别名为origin的远程仓库的master分支

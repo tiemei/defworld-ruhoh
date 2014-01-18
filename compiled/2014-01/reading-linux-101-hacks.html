@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:wb=“http://open.weibo.com/wb”>
+  <head>
+    <meta charset="utf-8">
+    <title>《linux 101 hacks》笔记</title>
+    <meta name="author" content="tiemei">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7797796283547165" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.2390378971419378" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.019196268964658203" type="text/css" rel="stylesheet" media="all">
+
+ 
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">tiemei</a>
+          <ul class="nav">
+              
+                <li><a href="/categories">Categories</a></li>
+              
+                <li><a href="/tools">Tools</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        <div class="page-header">
+  <h1>《linux 101 hacks》笔记 </h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+    <h2 id="toc_0">cd</h2>
+
+<p><strong>CDPATH</strong>  </p>
+
+<p>默认<code>cd logs</code>进入当前目录的logs目录，设置了这个变量，优先进入这个变量
+指向的目录的下对应的文件夹。可用冒号分隔指定多个。  </p>
+
+<p><strong>返回多级上级目录</strong>  </p>
+
+<pre><code>~/.bashrc
+
+alias ..=&#39;cd ..&#39;
+alias ..2=&#39;cd ../..&#39;
+alias ..3=&#39;cd ../../..&#39;
+
+或者这种方式：
+
+alias ..=&#39;cd ..&#39;
+alias ...=&#39;cd ...&#39;
+
+或者
+
+alias cd...=&quot;cd ../..&quot;
+
+等等方式
+</code></pre>
+
+<p><strong>创建目录并进入该目录</strong>  </p>
+
+<pre><code>function mkdircd () { mkdir -p &quot;$@&quot; &amp;&amp; eval cd &quot;\&quot;\$$#\&quot;&quot;; }
+</code></pre>
+
+<p><code>$@</code>所有参数，<code>$#</code>mkdircd函数传入的参数长度，例如mkdircd hello，
+eval将$1这个字符串解释为变量值hello  </p>
+
+<p><strong>cd -</strong> 在最近访问的两个目录间切换  </p>
+
+<p><strong>目录堆栈</strong>  </p>
+
+<pre><code>* dirs:显示目录栈
+* pushd:将目录压入目录栈 
+* popd:将目录弹出目录栈
+</code></pre>
+
+<p><strong>智能纠正cd命令错误目录名</strong>  </p>
+
+<p><code>shopt –s cdspell</code></p>
+
+<h2 id="toc_1">其他</h2>
+
+<p><strong>grep</strong>  </p>
+
+<ul>
+<li><code>grep -ri str dir</code> 在目录dir的所有子目录超找包含字符str的内容的地方</li>
+<li><code>grep -ril str dir</code> 只显示文件名</li>
+</ul>
+
+<p><strong>find</strong>  </p>
+
+<ul>
+<li><code>find / -type f -size +100M</code> 找到/目录下大于100M的文件</li>
+<li><code>find . -mtime +60</code> 最近60天没有被修改过的文件</li>
+<li><code>find . –mtime -2</code>  最近2天被修改过的文件</li>
+<li><p>删除 </p>
+
+<pre><code> find / -type f -name *.tar.gz -size +100M -exec ls -l {} \;
+ find / -type f -name *.tar.gz -size +100M -exec rm -f {} \;
+</code></pre></li>
+<li><p>打包</p>
+
+<pre><code> find /home/jsmith -type f -mtime +60 | xargs tar -cvf /tmp/`date &#39;+%d%m%Y&#39;_archive.tar`
+</code></pre></li>
+</ul>
+
+<p><strong>join</strong>  </p>
+
+<p>合并两个文件，按相同列。</p>
+
+<p><strong>xargs</strong>  </p>
+
+<p>将一个命令的输出传递给下一个命令的输入  </p>
+
+<ul>
+<li><code>cat url-list.txt | xargs wget –c</code></li>
+<li><code>find /etc -name &quot;*.conf&quot; | xargs ls –l</code></li>
+</ul>
+
+<p><strong>uniq</strong>  </p>
+
+<ul>
+<li><code>sort namesd.txt | uniq –cd</code> -c显示出个数，-d只列出重复项</li>
+</ul>
+
+<p><strong>ac</strong>  </p>
+
+<ul>
+<li><code>ac -d</code> 按天显示登陆主机时间</li>
+<li><code>ac -p</code> 显示所有用户的时间</li>
+<li><code>ac -d jiadongkai</code> 指定用户时间</li>
+</ul>
+
+<p><strong>提示符</strong>  </p>
+
+<ul>
+<li><code>PS1=”\u@\h \w&gt;&quot;</code> \u用户 \h主机名 \w当前目录</li>
+<li><code>PS2=&quot;continue-&gt; &quot;</code> 多行命令的默认提示符&gt;修改为continue-&gt; </li>
+<li><code>PS3=&quot;Select a day (1-4): &quot;</code>select命令的默认提示符号</li>
+</ul>
+
+<p><img src="http://farm8.staticflickr.com/7331/12007421406_6031688bca.jpg" alt="PS3">  </p>
+
+<ul>
+<li><code>PS4=&#39;$0.$LINENO+ &#39;</code> 改变调试脚本(直接加上<code>set -xv</code>/<code>bash -xv script</code>)时的默认前缀，$0当前脚本的名字，$LINENO当前行号</li>
+<li><code>PROMPT_COMMAND=&quot;date +%k:%m:%S&quot;</code> Bash 在显示 PS1 之前先执行 PROMPT_COMMAND 定义的内容</li>
+<li>可以在提示符中显示任何命令的输出</li>
+</ul>
+
+<p><strong>提示符颜色</strong>  </p>
+
+<ul>
+<li><code>export PS1=&quot;\e[0;34m\u@\h \w&gt; \e[m &quot;</code> 改变提示符的前景颜色为亮蓝色</li>
+<li><code>export PS1=&quot;\e[0;34m\e[47m\u@\h \w&gt; \e[m &quot;</code>定制前景色和背景色</li>
+<li>可使用tput更加丰富颜色展示</li>
+<li>已有的 PS1 变量可使用</li>
+</ul>
+
+<p><strong>压缩</strong>  </p>
+
+<p>略过  </p>
+
+<p><strong>history</strong>  </p>
+
+<ul>
+<li><code>export HISTTIMEFORMAT=&#39;%F %T &#39;</code> history显示时间戳</li>
+<li><code>ctrl + r</code>搜索历史命令</li>
+<li><code>!n</code> 执行history中第几条命令</li>
+<li><code>!ps</code>执行最近的已ps开头的历史命令</li>
+<li>历史命令默认保存在.bash_history，用HISTFILE改变</li>
+<li>自动去除重复历史命令</li>
+</ul>
+
+<p><strong>fdisk</strong> 管理分区<br>
+<strong>mke2fsk</strong> 管理文件系统<br>
+略  </p>
+
+<p><strong>crontab</strong>  </p>
+
+<p><img src="http://farm3.staticflickr.com/2838/12008804724_a300fcfbe1.jpg" alt="crontab">  </p>
+
+<ul>
+<li><code>1,2,3,4</code><code>1-4</code> 每一项可以指定多个值，两种写法相同</li>
+<li><code>*/5 * * * *</code> 每隔5分钟</li>
+<li><code>crontab file</code> 用file替代当前的crontab内容</li>
+<li><code>echo &quot;5 * * * * touch ni&quot; | crontab -</code> 替换crontab内容</li>
+</ul>
+
+<p><strong>.bash..</strong>  </p>
+
+<ul>
+<li>执行顺序:</li>
+</ul>
+
+<p><img src="http://farm4.staticflickr.com/3803/12013970874_ff612e3f50.jpg" alt="bash执行顺序">  </p>
+
+<p>/etc/bashrc在/etc/profile中被调用，~/.bashrc在~/.bash_profile中被调用。</p>
+
+<p><img src="http://farm6.staticflickr.com/5498/12014506206_8f06f37a46.jpg" alt="非登录bash执行顺序">  </p>
+
+<p><strong>echo</strong>  </p>
+
+<ul>
+<li><code>echo 1 \; 2</code> 输出<code>1 ; 2</code></li>
+<li>单引号按字符原意输出</li>
+<li><p>双引号变量会被解释</p>
+
+<pre><code>除了以下字符,双引号会去除所有字符的特殊含义
+$ 参数替换
+` 后引号
+\$ 美元符号
+\&quot; 双引号
+\\ 插入反斜杠
+</code></pre></li>
+</ul>
+
+<p><strong>从文件中读取指定域</strong>  </p>
+
+<p><img src="http://farm6.staticflickr.com/5541/12014671226_006e3e3ca2.jpg" alt="while读取文件指定域">  </p>
+
+<p><strong>top</strong>  </p>
+
+<p>显示进程的绝对路径按c  </p>
+
+<p><strong>ps</strong>  </p>
+
+<ul>
+<li><code>ps axuf</code>/<code>ps –ejH</code>/<code>pstree</code> 显示进程树</li>
+<li><code>ps U oracle</code>查看指定用户进程</li>
+</ul>
+
+<p><strong>lsof</strong>列出系统中所有打开的文件  </p>
+
+<ul>
+<li><code>lsof -u user</code> 查看指定用户打开的文件</li>
+<li><code>lsof file</code> 查看使用文件的所有用户</li>
+</ul>
+
+<p><strong>nice</strong>  </p>
+
+<p>程的 nice 值决定进程需要多少处理器时间。nice 值的取值范围是是:-20 到 20。一
+个具有-20 的 nice 值的进程有很高的优先级<br>
+<code>renice</code>可以给正在运行的进程设置调度优先级  </p>
+
+<p><strong>tee</strong>  </p>
+
+<ul>
+<li><code>ls | tee file</code> 同时将输出写入标准输出和文件，</li>
+<li><code>crontab -l | tee crontab-backup.txt | sed &#39;s/old/new/&#39; | crontab –</code></li>
+<li><code>ls | tee -a file</code> 默认覆盖文件改成追加</li>
+<li><code>ls | tee f1 f2 f3</code> 写入多个文件</li>
+</ul>
+
+<h2 id="toc_2">系统监控命令系列</h2>
+
+<p>待续</p>
+
+    <hr>
+    <div class="pagination">
+      <ul>
+        <ul>
+            <li class="prev"><a href="/2013-11/linux-software-install.html" title="谈谈Unix-like上软件安装那些事">&larr; Previous</a></li>
+
+            <li><a href="/archive">Archive</a></li>
+
+            <li class="next disabled"><a>Next &rarr;</a>
+        </ul>
+      </ul>
+    </div>
+    <hr>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  </div>
+  
+  <div class="span4">
+    <script type="text/javascript" charset="utf-8">
+    (function(){
+       var _w = 90 , _h = 24;
+       var param = {
+       url:location.href,
+       type:'2',
+       count:'1', /**是否显示分享数，1显示(可选)*/
+       appkey:'', /**您申请的应用appkey,显示分享来源(可选)*/
+       title:'', /**分享的文字内容(可选，默认为所在页面的title)*/
+       pic:'', /**分享图片的路径(可选)*/
+       ralateUid:'2388250330', /**关联用户的UID，分享微博会@该用户(可选)*/
+       language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
+       rnd:new Date().valueOf()
+     }
+     var temp = [];
+     for( var p in param ){
+     temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+     }
+     document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
+     })()
+    </script>
+
+    <h4>Published</h4>
+    <div class="date"><span>2014-01-18</span></div>
+    <br>
+    <h4>Categories</h4>
+    <ul class="tag_box">
+      <li>
+        <a href="/categories#reading notes-ref">reading notes <span>1</span></a>
+      </li>    </ul>
+    <br>
+    <h4>Tags</h4>
+    <ul class="tag_box">
+    </ul>
+  </div>
+</div>
+
+      </div>
+
+      <footer>
+        <p>&copy; tiemei 2012 
+          with help from <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">ruhoh</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+        <p>
+        <script src="http://s9.cnzz.com/stat.php?id=5379369&web_id=5379369&online=1&show=line" language="JavaScript"></script>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Google Prettify -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+<script>
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i < pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+</script>
+<!-- end Google Prettify -->
+    <script>
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(defworld.com);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /></p></noscript>
+  </body>
+</html>

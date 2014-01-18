@@ -3,7 +3,397 @@
   <channel>
     <title>tiemei</title>
     <link>http://defworld.com</link>
-    <pubDate>2014-01-14 19:57:36 +0800</pubDate>
+    <pubDate>2014-01-19 01:20:45 +0800</pubDate>
+    <item>
+      <title>&#x300A;linux 101 hacks&#x300B;&#x7B14;&#x8BB0;</title>
+      <link>http://defworld.com/2014-01/reading-linux-101-hacks.html</link>
+      <pubDate>2014-01-18</pubDate>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang="en" xmlns:wb=&#x201C;http://open.weibo.com/wb&#x201D;&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;&#x300A;linux 101 hacks&#x300B;&#x7B14;&#x8BB0;&lt;/title&gt;
+    &lt;meta name="author" content="tiemei"&gt;
+
+    &lt;!-- Le HTML5 shim, for IE6-8 support of HTML elements --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+
+    &lt;!-- Le styles --&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.07235196238218666" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.5854876352604907" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4272923013101576" type="text/css" rel="stylesheet" media="all"&gt;
+
+ 
+
+    &lt;!-- Le fav and touch icons --&gt;
+  &lt;!-- Update these with your own images
+    &lt;link rel="shortcut icon" href="images/favicon.ico"&gt;
+    &lt;link rel="apple-touch-icon" href="images/apple-touch-icon.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"&gt;
+  --&gt;
+  &lt;script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+    &lt;div class="navbar"&gt;
+      &lt;div class="navbar-inner"&gt;
+        &lt;div class="container"&gt;
+          &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
+          &lt;ul class="nav"&gt;
+              
+                &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
+              
+                &lt;li&gt;&lt;a href="/tools"&gt;Tools&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="container"&gt;
+
+      &lt;div class="content"&gt;
+        &lt;div class="page-header"&gt;
+  &lt;h1&gt;&#x300A;linux 101 hacks&#x300B;&#x7B14;&#x8BB0; &lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="span8"&gt;
+    &lt;h2 id="toc_0"&gt;cd&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;CDPATH&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;p&gt;&#x9ED8;&#x8BA4;&lt;code&gt;cd logs&lt;/code&gt;&#x8FDB;&#x5165;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x7684;logs&#x76EE;&#x5F55;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E86;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x4F18;&#x5148;&#x8FDB;&#x5165;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;
+&#x6307;&#x5411;&#x7684;&#x76EE;&#x5F55;&#x7684;&#x4E0B;&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x3002;&#x53EF;&#x7528;&#x5192;&#x53F7;&#x5206;&#x9694;&#x6307;&#x5B9A;&#x591A;&#x4E2A;&#x3002;  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&#x8FD4;&#x56DE;&#x591A;&#x7EA7;&#x4E0A;&#x7EA7;&#x76EE;&#x5F55;&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;~/.bashrc
+
+alias ..=&amp;#39;cd ..&amp;#39;
+alias ..2=&amp;#39;cd ../..&amp;#39;
+alias ..3=&amp;#39;cd ../../..&amp;#39;
+
+&#x6216;&#x8005;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;
+
+alias ..=&amp;#39;cd ..&amp;#39;
+alias ...=&amp;#39;cd ...&amp;#39;
+
+&#x6216;&#x8005;
+
+alias cd...=&amp;quot;cd ../..&amp;quot;
+
+&#x7B49;&#x7B49;&#x65B9;&#x5F0F;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;&#x521B;&#x5EFA;&#x76EE;&#x5F55;&#x5E76;&#x8FDB;&#x5165;&#x8BE5;&#x76EE;&#x5F55;&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function mkdircd () { mkdir -p &amp;quot;$@&amp;quot; &amp;amp;&amp;amp; eval cd &amp;quot;\&amp;quot;\$$#\&amp;quot;&amp;quot;; }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;$@&lt;/code&gt;&#x6240;&#x6709;&#x53C2;&#x6570;&#xFF0C;&lt;code&gt;$#&lt;/code&gt;mkdircd&#x51FD;&#x6570;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x957F;&#x5EA6;&#xFF0C;&#x4F8B;&#x5982;mkdircd hello&#xFF0C;
+eval&#x5C06;$1&#x8FD9;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x89E3;&#x91CA;&#x4E3A;&#x53D8;&#x91CF;&#x503C;hello  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;cd -&lt;/strong&gt; &#x5728;&#x6700;&#x8FD1;&#x8BBF;&#x95EE;&#x7684;&#x4E24;&#x4E2A;&#x76EE;&#x5F55;&#x95F4;&#x5207;&#x6362;  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&#x76EE;&#x5F55;&#x5806;&#x6808;&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;* dirs:&#x663E;&#x793A;&#x76EE;&#x5F55;&#x6808;
+* pushd:&#x5C06;&#x76EE;&#x5F55;&#x538B;&#x5165;&#x76EE;&#x5F55;&#x6808; 
+* popd:&#x5C06;&#x76EE;&#x5F55;&#x5F39;&#x51FA;&#x76EE;&#x5F55;&#x6808;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;&#x667A;&#x80FD;&#x7EA0;&#x6B63;cd&#x547D;&#x4EE4;&#x9519;&#x8BEF;&#x76EE;&#x5F55;&#x540D;&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;shopt &#x2013;s cdspell&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id="toc_1"&gt;&#x5176;&#x4ED6;&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;grep&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;grep -ri str dir&lt;/code&gt; &#x5728;&#x76EE;&#x5F55;dir&#x7684;&#x6240;&#x6709;&#x5B50;&#x76EE;&#x5F55;&#x8D85;&#x627E;&#x5305;&#x542B;&#x5B57;&#x7B26;str&#x7684;&#x5185;&#x5BB9;&#x7684;&#x5730;&#x65B9;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;grep -ril str dir&lt;/code&gt; &#x53EA;&#x663E;&#x793A;&#x6587;&#x4EF6;&#x540D;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;find&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;find / -type f -size +100M&lt;/code&gt; &#x627E;&#x5230;/&#x76EE;&#x5F55;&#x4E0B;&#x5927;&#x4E8E;100M&#x7684;&#x6587;&#x4EF6;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;find . -mtime +60&lt;/code&gt; &#x6700;&#x8FD1;60&#x5929;&#x6CA1;&#x6709;&#x88AB;&#x4FEE;&#x6539;&#x8FC7;&#x7684;&#x6587;&#x4EF6;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;find . &#x2013;mtime -2&lt;/code&gt;  &#x6700;&#x8FD1;2&#x5929;&#x88AB;&#x4FEE;&#x6539;&#x8FC7;&#x7684;&#x6587;&#x4EF6;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&#x5220;&#x9664; &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; find / -type f -name *.tar.gz -size +100M -exec ls -l {} \;
+ find / -type f -name *.tar.gz -size +100M -exec rm -f {} \;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&#x6253;&#x5305;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; find /home/jsmith -type f -mtime +60 | xargs tar -cvf /tmp/`date &amp;#39;+%d%m%Y&amp;#39;_archive.tar`
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;join&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;p&gt;&#x5408;&#x5E76;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x6309;&#x76F8;&#x540C;&#x5217;&#x3002;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;xargs&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;p&gt;&#x5C06;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x7684;&#x8F93;&#x51FA;&#x4F20;&#x9012;&#x7ED9;&#x4E0B;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x7684;&#x8F93;&#x5165;  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cat url-list.txt | xargs wget &#x2013;c&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;find /etc -name &amp;quot;*.conf&amp;quot; | xargs ls &#x2013;l&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;uniq&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sort namesd.txt | uniq &#x2013;cd&lt;/code&gt; -c&#x663E;&#x793A;&#x51FA;&#x4E2A;&#x6570;&#xFF0C;-d&#x53EA;&#x5217;&#x51FA;&#x91CD;&#x590D;&#x9879;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;ac&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ac -d&lt;/code&gt; &#x6309;&#x5929;&#x663E;&#x793A;&#x767B;&#x9646;&#x4E3B;&#x673A;&#x65F6;&#x95F4;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ac -p&lt;/code&gt; &#x663E;&#x793A;&#x6240;&#x6709;&#x7528;&#x6237;&#x7684;&#x65F6;&#x95F4;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ac -d jiadongkai&lt;/code&gt; &#x6307;&#x5B9A;&#x7528;&#x6237;&#x65F6;&#x95F4;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&#x63D0;&#x793A;&#x7B26;&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;PS1=&#x201D;\u@\h \w&amp;gt;&amp;quot;&lt;/code&gt; \u&#x7528;&#x6237; \h&#x4E3B;&#x673A;&#x540D; \w&#x5F53;&#x524D;&#x76EE;&#x5F55;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;PS2=&amp;quot;continue-&amp;gt; &amp;quot;&lt;/code&gt; &#x591A;&#x884C;&#x547D;&#x4EE4;&#x7684;&#x9ED8;&#x8BA4;&#x63D0;&#x793A;&#x7B26;&amp;gt;&#x4FEE;&#x6539;&#x4E3A;continue-&amp;gt; &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;PS3=&amp;quot;Select a day (1-4): &amp;quot;&lt;/code&gt;select&#x547D;&#x4EE4;&#x7684;&#x9ED8;&#x8BA4;&#x63D0;&#x793A;&#x7B26;&#x53F7;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src="http://farm8.staticflickr.com/7331/12007421406_6031688bca.jpg" alt="PS3"&gt;  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;PS4=&amp;#39;$0.$LINENO+ &amp;#39;&lt;/code&gt; &#x6539;&#x53D8;&#x8C03;&#x8BD5;&#x811A;&#x672C;(&#x76F4;&#x63A5;&#x52A0;&#x4E0A;&lt;code&gt;set -xv&lt;/code&gt;/&lt;code&gt;bash -xv script&lt;/code&gt;)&#x65F6;&#x7684;&#x9ED8;&#x8BA4;&#x524D;&#x7F00;&#xFF0C;$0&#x5F53;&#x524D;&#x811A;&#x672C;&#x7684;&#x540D;&#x5B57;&#xFF0C;$LINENO&#x5F53;&#x524D;&#x884C;&#x53F7;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;PROMPT_COMMAND=&amp;quot;date +%k:%m:%S&amp;quot;&lt;/code&gt; Bash &#x5728;&#x663E;&#x793A; PS1 &#x4E4B;&#x524D;&#x5148;&#x6267;&#x884C; PROMPT_COMMAND &#x5B9A;&#x4E49;&#x7684;&#x5185;&#x5BB9;&lt;/li&gt;
+&lt;li&gt;&#x53EF;&#x4EE5;&#x5728;&#x63D0;&#x793A;&#x7B26;&#x4E2D;&#x663E;&#x793A;&#x4EFB;&#x4F55;&#x547D;&#x4EE4;&#x7684;&#x8F93;&#x51FA;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&#x63D0;&#x793A;&#x7B26;&#x989C;&#x8272;&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;export PS1=&amp;quot;\e[0;34m\u@\h \w&amp;gt; \e[m &amp;quot;&lt;/code&gt; &#x6539;&#x53D8;&#x63D0;&#x793A;&#x7B26;&#x7684;&#x524D;&#x666F;&#x989C;&#x8272;&#x4E3A;&#x4EAE;&#x84DD;&#x8272;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;export PS1=&amp;quot;\e[0;34m\e[47m\u@\h \w&amp;gt; \e[m &amp;quot;&lt;/code&gt;&#x5B9A;&#x5236;&#x524D;&#x666F;&#x8272;&#x548C;&#x80CC;&#x666F;&#x8272;&lt;/li&gt;
+&lt;li&gt;&#x53EF;&#x4F7F;&#x7528;tput&#x66F4;&#x52A0;&#x4E30;&#x5BCC;&#x989C;&#x8272;&#x5C55;&#x793A;&lt;/li&gt;
+&lt;li&gt;&#x5DF2;&#x6709;&#x7684; PS1 &#x53D8;&#x91CF;&#x53EF;&#x4F7F;&#x7528;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&#x538B;&#x7F29;&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;p&gt;&#x7565;&#x8FC7;  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;history&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;export HISTTIMEFORMAT=&amp;#39;%F %T &amp;#39;&lt;/code&gt; history&#x663E;&#x793A;&#x65F6;&#x95F4;&#x6233;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ctrl + r&lt;/code&gt;&#x641C;&#x7D22;&#x5386;&#x53F2;&#x547D;&#x4EE4;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;!n&lt;/code&gt; &#x6267;&#x884C;history&#x4E2D;&#x7B2C;&#x51E0;&#x6761;&#x547D;&#x4EE4;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;!ps&lt;/code&gt;&#x6267;&#x884C;&#x6700;&#x8FD1;&#x7684;&#x5DF2;ps&#x5F00;&#x5934;&#x7684;&#x5386;&#x53F2;&#x547D;&#x4EE4;&lt;/li&gt;
+&lt;li&gt;&#x5386;&#x53F2;&#x547D;&#x4EE4;&#x9ED8;&#x8BA4;&#x4FDD;&#x5B58;&#x5728;.bash_history&#xFF0C;&#x7528;HISTFILE&#x6539;&#x53D8;&lt;/li&gt;
+&lt;li&gt;&#x81EA;&#x52A8;&#x53BB;&#x9664;&#x91CD;&#x590D;&#x5386;&#x53F2;&#x547D;&#x4EE4;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;fdisk&lt;/strong&gt; &#x7BA1;&#x7406;&#x5206;&#x533A;&lt;br&gt;
+&lt;strong&gt;mke2fsk&lt;/strong&gt; &#x7BA1;&#x7406;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&lt;br&gt;
+&#x7565;  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;crontab&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://farm3.staticflickr.com/2838/12008804724_a300fcfbe1.jpg" alt="crontab"&gt;  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;1,2,3,4&lt;/code&gt;&lt;code&gt;1-4&lt;/code&gt; &#x6BCF;&#x4E00;&#x9879;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x591A;&#x4E2A;&#x503C;&#xFF0C;&#x4E24;&#x79CD;&#x5199;&#x6CD5;&#x76F8;&#x540C;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;*/5 * * * *&lt;/code&gt; &#x6BCF;&#x9694;5&#x5206;&#x949F;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;crontab file&lt;/code&gt; &#x7528;file&#x66FF;&#x4EE3;&#x5F53;&#x524D;&#x7684;crontab&#x5185;&#x5BB9;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;echo &amp;quot;5 * * * * touch ni&amp;quot; | crontab -&lt;/code&gt; &#x66FF;&#x6362;crontab&#x5185;&#x5BB9;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;.bash..&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&#x6267;&#x884C;&#x987A;&#x5E8F;:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src="http://farm4.staticflickr.com/3803/12013970874_ff612e3f50.jpg" alt="bash&#x6267;&#x884C;&#x987A;&#x5E8F;"&gt;  &lt;/p&gt;
+
+&lt;p&gt;/etc/bashrc&#x5728;/etc/profile&#x4E2D;&#x88AB;&#x8C03;&#x7528;&#xFF0C;~/.bashrc&#x5728;~/.bash_profile&#x4E2D;&#x88AB;&#x8C03;&#x7528;&#x3002;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://farm6.staticflickr.com/5498/12014506206_8f06f37a46.jpg" alt="&#x975E;&#x767B;&#x5F55;bash&#x6267;&#x884C;&#x987A;&#x5E8F;"&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;echo&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;echo 1 \; 2&lt;/code&gt; &#x8F93;&#x51FA;&lt;code&gt;1 ; 2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&#x5355;&#x5F15;&#x53F7;&#x6309;&#x5B57;&#x7B26;&#x539F;&#x610F;&#x8F93;&#x51FA;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&#x53CC;&#x5F15;&#x53F7;&#x53D8;&#x91CF;&#x4F1A;&#x88AB;&#x89E3;&#x91CA;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&#x9664;&#x4E86;&#x4EE5;&#x4E0B;&#x5B57;&#x7B26;,&#x53CC;&#x5F15;&#x53F7;&#x4F1A;&#x53BB;&#x9664;&#x6240;&#x6709;&#x5B57;&#x7B26;&#x7684;&#x7279;&#x6B8A;&#x542B;&#x4E49;
+$ &#x53C2;&#x6570;&#x66FF;&#x6362;
+` &#x540E;&#x5F15;&#x53F7;
+\$ &#x7F8E;&#x5143;&#x7B26;&#x53F7;
+\&amp;quot; &#x53CC;&#x5F15;&#x53F7;
+\\ &#x63D2;&#x5165;&#x53CD;&#x659C;&#x6760;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&#x4ECE;&#x6587;&#x4EF6;&#x4E2D;&#x8BFB;&#x53D6;&#x6307;&#x5B9A;&#x57DF;&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://farm6.staticflickr.com/5541/12014671226_006e3e3ca2.jpg" alt="while&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x6307;&#x5B9A;&#x57DF;"&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;top&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;p&gt;&#x663E;&#x793A;&#x8FDB;&#x7A0B;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x6309;c  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ps&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ps axuf&lt;/code&gt;/&lt;code&gt;ps &#x2013;ejH&lt;/code&gt;/&lt;code&gt;pstree&lt;/code&gt; &#x663E;&#x793A;&#x8FDB;&#x7A0B;&#x6811;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ps U oracle&lt;/code&gt;&#x67E5;&#x770B;&#x6307;&#x5B9A;&#x7528;&#x6237;&#x8FDB;&#x7A0B;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;lsof&lt;/strong&gt;&#x5217;&#x51FA;&#x7CFB;&#x7EDF;&#x4E2D;&#x6240;&#x6709;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;lsof -u user&lt;/code&gt; &#x67E5;&#x770B;&#x6307;&#x5B9A;&#x7528;&#x6237;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lsof file&lt;/code&gt; &#x67E5;&#x770B;&#x4F7F;&#x7528;&#x6587;&#x4EF6;&#x7684;&#x6240;&#x6709;&#x7528;&#x6237;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;nice&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;p&gt;&#x7A0B;&#x7684; nice &#x503C;&#x51B3;&#x5B9A;&#x8FDB;&#x7A0B;&#x9700;&#x8981;&#x591A;&#x5C11;&#x5904;&#x7406;&#x5668;&#x65F6;&#x95F4;&#x3002;nice &#x503C;&#x7684;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x662F;&#x662F;:-20 &#x5230; 20&#x3002;&#x4E00;
+&#x4E2A;&#x5177;&#x6709;-20 &#x7684; nice &#x503C;&#x7684;&#x8FDB;&#x7A0B;&#x6709;&#x5F88;&#x9AD8;&#x7684;&#x4F18;&#x5148;&#x7EA7;&lt;br&gt;
+&lt;code&gt;renice&lt;/code&gt;&#x53EF;&#x4EE5;&#x7ED9;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x8FDB;&#x7A0B;&#x8BBE;&#x7F6E;&#x8C03;&#x5EA6;&#x4F18;&#x5148;&#x7EA7;  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;tee&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ls | tee file&lt;/code&gt; &#x540C;&#x65F6;&#x5C06;&#x8F93;&#x51FA;&#x5199;&#x5165;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x548C;&#x6587;&#x4EF6;&#xFF0C;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;crontab -l | tee crontab-backup.txt | sed &amp;#39;s/old/new/&amp;#39; | crontab &#x2013;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ls | tee -a file&lt;/code&gt; &#x9ED8;&#x8BA4;&#x8986;&#x76D6;&#x6587;&#x4EF6;&#x6539;&#x6210;&#x8FFD;&#x52A0;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ls | tee f1 f2 f3&lt;/code&gt; &#x5199;&#x5165;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="toc_2"&gt;&#x7CFB;&#x7EDF;&#x76D1;&#x63A7;&#x547D;&#x4EE4;&#x7CFB;&#x5217;&lt;/h2&gt;
+
+&lt;p&gt;&#x5F85;&#x7EED;&lt;/p&gt;
+
+    &lt;hr&gt;
+    &lt;div class="pagination"&gt;
+      &lt;ul&gt;
+        &lt;ul&gt;
+            &lt;li class="prev"&gt;&lt;a href="/2013-11/linux-software-install.html" title="&#x8C08;&#x8C08;Unix-like&#x4E0A;&#x8F6F;&#x4EF6;&#x5B89;&#x88C5;&#x90A3;&#x4E9B;&#x4E8B;"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li class="next disabled"&gt;&lt;a&gt;Next &amp;rarr;&lt;/a&gt;
+        &lt;/ul&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;div id="disqus_thread"&gt;&lt;/div&gt;
+&lt;script&gt;
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+
+  &lt;/div&gt;
+  
+  &lt;div class="span4"&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+    (function(){
+       var _w = 90 , _h = 24;
+       var param = {
+       url:location.href,
+       type:'2',
+       count:'1', /**&#x662F;&#x5426;&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6570;&#xFF0C;1&#x663E;&#x793A;(&#x53EF;&#x9009;)*/
+       appkey:'', /**&#x60A8;&#x7533;&#x8BF7;&#x7684;&#x5E94;&#x7528;appkey,&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6765;&#x6E90;(&#x53EF;&#x9009;)*/
+       title:'', /**&#x5206;&#x4EAB;&#x7684;&#x6587;&#x5B57;&#x5185;&#x5BB9;(&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;title)*/
+       pic:'', /**&#x5206;&#x4EAB;&#x56FE;&#x7247;&#x7684;&#x8DEF;&#x5F84;(&#x53EF;&#x9009;)*/
+       ralateUid:'2388250330', /**&#x5173;&#x8054;&#x7528;&#x6237;&#x7684;UID&#xFF0C;&#x5206;&#x4EAB;&#x5FAE;&#x535A;&#x4F1A;@&#x8BE5;&#x7528;&#x6237;(&#x53EF;&#x9009;)*/
+       language:'zh_cn', /**&#x8BBE;&#x7F6E;&#x8BED;&#x8A00;&#xFF0C;zh_cn|zh_tw(&#x53EF;&#x9009;)*/
+       rnd:new Date().valueOf()
+     }
+     var temp = [];
+     for( var p in param ){
+     temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+     }
+     document.write('&lt;iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&amp;') + '" width="'+ _w+'" height="'+_h+'"&gt;&lt;/iframe&gt;')
+     })()
+    &lt;/script&gt;
+
+    &lt;h4&gt;Published&lt;/h4&gt;
+    &lt;div class="date"&gt;&lt;span&gt;2014-01-18&lt;/span&gt;&lt;/div&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Categories&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+      &lt;li&gt;
+        &lt;a href="/categories#reading notes-ref"&gt;reading notes &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;    &lt;/ul&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Tags&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+
+      &lt;footer&gt;
+        &lt;p&gt;&amp;copy; tiemei 2012 
+          with help from &lt;a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework"&gt;ruhoh&lt;/a&gt;
+          and &lt;a href="http://twitter.github.com/bootstrap/" target="_blank"&gt;Twitter Bootstrap&lt;/a&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+        &lt;script src="http://s9.cnzz.com/stat.php?id=5379369&amp;web_id=5379369&amp;online=1&amp;show=line" language="JavaScript"&gt;&lt;/script&gt;
+        &lt;/p&gt;
+      &lt;/footer&gt;
+
+    &lt;/div&gt; &lt;!-- /container --&gt;
+
+    &lt;!-- Google Prettify --&gt;
+&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i &lt; pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+&lt;/script&gt;
+&lt;!-- end Google Prettify --&gt;
+    &lt;script&gt;
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(defworld.com);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+&lt;/script&gt;
+&lt;noscript&gt;&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /&gt;&lt;/p&gt;&lt;/noscript&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
     <item>
       <title>&#x8C08;&#x8C08;Unix-like&#x4E0A;&#x8F6F;&#x4EF6;&#x5B89;&#x88C5;&#x90A3;&#x4E9B;&#x4E8B;</title>
       <link>http://defworld.com/2013-11/linux-software-install.html</link>
@@ -27,9 +417,9 @@
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.10026689575166137" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.8329348821927659" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9856326527790649" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.20477081038748235" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.6176481655402737" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.12147779507702594" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -286,218 +676,6 @@ clicky_site_ids.push(defworld.com);
       <description>maven, &#x547D;&#x4EE4;</description>
     </item>
     <item>
-      <title>java&#x9501;&#x7B14;&#x8BB0;</title>
-      <link>http://defworld.com/2013-08/java-locks.html</link>
-      <pubDate>2013-08-30</pubDate>
-      <description>&lt;!DOCTYPE html&gt;
-&lt;html lang="en" xmlns:wb=&#x201C;http://open.weibo.com/wb&#x201D;&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;java&#x9501;&#x7B14;&#x8BB0;&lt;/title&gt;
-    &lt;meta name="author" content="tiemei"&gt;
-
-    &lt;!-- Le HTML5 shim, for IE6-8 support of HTML elements --&gt;
-    &lt;!--[if lt IE 9]&gt;
-      &lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
-    &lt;![endif]--&gt;
-
-    &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.48875233511120286" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.22887715357459726" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8536454516701332" type="text/css" rel="stylesheet" media="all"&gt;
-
- 
-
-    &lt;!-- Le fav and touch icons --&gt;
-  &lt;!-- Update these with your own images
-    &lt;link rel="shortcut icon" href="images/favicon.ico"&gt;
-    &lt;link rel="apple-touch-icon" href="images/apple-touch-icon.png"&gt;
-    &lt;link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"&gt;
-    &lt;link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"&gt;
-  --&gt;
-  &lt;script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
-  &lt;/head&gt;
-
-  &lt;body&gt;
-
-    &lt;div class="navbar"&gt;
-      &lt;div class="navbar-inner"&gt;
-        &lt;div class="container"&gt;
-          &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
-          &lt;ul class="nav"&gt;
-              
-                &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
-              
-                &lt;li&gt;&lt;a href="/tools"&gt;Tools&lt;/a&gt;&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class="container"&gt;
-
-      &lt;div class="content"&gt;
-        &lt;div class="page-header"&gt;
-  &lt;h1&gt;java&#x9501;&#x7B14;&#x8BB0; &lt;/h1&gt;
-&lt;/div&gt;
-
-&lt;div class="row"&gt;
-  &lt;div class="span8"&gt;
-    &lt;h1 id="toc_0"&gt;&#x7EBF;&#x7A0B;&#x901A;&#x4FE1;&lt;/h1&gt;
-
-&lt;p&gt;&#x901A;&#x4FE1;&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;&#x5305;&#x62EC;&#xFF1A;  &lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&#x5171;&#x4EAB;&#x5BF9;&#x8C61;&#xFF1A;&#x9700;&#x8981;&#x505A;&#x540C;&#x6B65;&#x5904;&#x7406;&lt;/li&gt;
-&lt;li&gt;&#x5FD9;&#x7B49;&#x5F85;&#xFF1A;&#x5FAA;&#x73AF;&#x7B49;&#x5F85;&#x53E6;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x53D1;&#x6765;&#x4FE1;&#x53F7;&#xFF0C;&#x53EF;sleep&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;wait(),notify()&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;1. &#x9047;&#x5230;mobj.wait()&#xFF0C;&#x8BA9;&#x7EBF;&#x7A0B;&#x8FDB;&#x5165;&#x975E;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#xFF0C;&#x76F4;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;mobj.nitify
-2. &#x8FD9;&#x51E0;&#x4E2A;&#x65B9;&#x6CD5;&#x5FC5;&#x987B;&#x5728;&#x83B7;&#x5F97;mobj&#x9501;&#x7684;&#x524D;&#x63D0;&#x4E0B;&#x8C03;&#x7528;&#xFF0C;&#x5426;&#x5219;IllegalMonitorStateException
-3. &#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x8C03;&#x7528;&#x4E86;wait()&#xFF0C;&#x5373;&#x91CA;&#x653E;mobj&#x4E0A;&#x7684;&#x9501;
-4. &#x4E00;&#x65E6;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x88AB;&#x5524;&#x9192;&#xFF0C;&#x4E0D;&#x80FD;&#x7ACB;&#x523B;&#x5C31;&#x9000;&#x51FA;wait()&#x7684;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#xFF0C;&#x76F4;&#x5230;&#x8C03;&#x7528;
-notify()&#x7684;&#x7EBF;&#x7A0B;&#x9000;&#x51FA;&#x4E86;&#x5B83;&#x81EA;&#x5DF1;&#x7684;&#x540C;&#x6B65;&#x5757;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x88AB;notifyAll&#x5524;&#x9192;&#xFF0C;&#x53EA;&#x6709;&#x4E00;&#x4E2A;
-&#x7EBF;&#x7A0B;&#x53EF;&#x4EE5;&#x6700;&#x7EC8;&#x9000;&#x51FA;wait()&#x65B9;&#x6CD5;&#xFF0C;&#x56E0;&#x4E3A;&#x5FC5;&#x987B;&#x83B7;&#x5F97;mobj&#x7684;&#x9501;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&#x4E22;&#x5931;&#x7684;&#x4FE1;&#x53F7;&#xFF08;Missed Signal&#xFF09;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&#x7EBF;&#x7A0B;A&#x5148;&#x8C03;&#x7528;&#x4E86;mobj.notify()&#xFF0C;&#x7EBF;&#x7A0B;B&#x540E;&#x8C03;&#x7528;mobj.wait()&#xFF0C;&#x901A;&#x77E5;&#x4FE1;&#x53F7;&#x53D1;&#x9001;&#x8FC7;&#x4E86;&#x5C31;&#x88AB;&#x4E22;&#x5F03;&#xFF0C;
-&#x7EBF;&#x7A0B;B&#x5C31;&#x53EF;&#x80FD;&#x6C38;&#x8FDC;&#x4E0D;&#x80FD;&#x9192;&#x6765;&#x3002;
-&#x8FD9;&#x5C31;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x989D;&#x5916;&#x7684;&#x53D8;&#x91CF;&#x6765;&#x4FDD;&#x5B58;&#x2018;&#x662F;&#x5426;&#x88AB;&#x901A;&#x77E5;&#x8FC7;&#x2019;&#x7684;&#x4FE1;&#x606F;&#x3002;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&#x5047;&#x5524;&#x9192;&#xFF08;spurious wakeups&#xFF09;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&#x6CA1;&#x6709;&#x8C03;&#x7528;&#x8FC7;notify()&#x548C;notifyAll()&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x9192;&#x6765;&#xFF0C;&#x539F;&#x56E0;&#x672A;&#x77E5;
-&#x9700;&#x8981;&#x52A0;&#x4E2A;&#x81EA;&#x65CB;&#x9501;&#xFF0C;&#x5373;&#x5C06;wait()&#x65B9;&#x6CD5;&#x653E;&#x5230;while&#x5FAA;&#x73AF;&#x4E2D;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&#x4E0D;&#x8981;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x5E38;&#x91CF;&#x6216;&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#x4E2D;&#x8C03;&#x7528;wait()&#x3002;mobj&#x4E0E;&#x4FE1;&#x53F7;&#x5E38;&#x91CF;&#x4E0D;&#x662F;&#x4E00;&#x4E00;&#x5BF9;&#x5E94;&#x3002;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;mobj: &#x7BA1;&#x7A0B; (&#x82F1;&#x8BED;&#xFF1A;Monitors&#xFF0C;&#x4E5F;&#x79F0;&#x4E3A;&#x76D1;&#x89C6;&#x5668;)  &lt;/p&gt;
-
-&lt;h1 id="toc_1"&gt;&#x9501;&lt;/h1&gt;
-
-&lt;p&gt;&#x9501;&#x7531;synchronized&#x5B9E;&#x73B0;&#xFF0C;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x7279;&#x6027;:  &lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&#x540C;&#x4E00;&#x65F6;&#x523B;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x7A7F;&#x8FC7;&#x4E34;&#x754C;&#x533A;&#xFF0C;&#x8FDB;&#x5165;&#x540C;&#x6B65;&#x5757;&lt;/li&gt;
-&lt;li&gt;&#x9501;&#x7684;&#x53EF;&#x91CD;&#x5165;&#x6027;&#xFF1A;synchronized&#x540C;&#x6B65;&#x5757;&#x53EF;&#x91CD;&#x5165;&#xFF0C;&#x76F8;&#x5E94;&#x4E5F;&#x6709;&#x53EF;&#x91CD;&#x5165;&#x9501;&lt;/li&gt;
-&lt;li&gt;&#x9501;&#x7684;&#x516C;&#x5E73;&#x6027;&#xFF1A;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x4E0D;&#x65AD;&#x7ADE;&#x4E89;&#x8BBF;&#x95EE;&#x76F8;&#x540C;&#x7684;synchronized&#x540C;&#x6B65;&#x5757;&#xFF0C;&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x67D0;&#x4E2A;
-&#x7EBF;&#x7A0B;&#x4E00;&#x76F4;&#x7ADE;&#x4E89;&#x4E0D;&#x5230;&#x3002;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;&#x53C2;&#x8003;&lt;/strong&gt;:&lt;br&gt;
-&lt;a href="http://ifeve.com/locks/"&gt;Java&#x4E2D;&#x7684;&#x9501;&lt;/a&gt;&lt;br&gt;
-&lt;a href="http://ifeve.com/thread-signaling/"&gt;&#x7EBF;&#x7A0B;&#x901A;&#x4FE1;&lt;/a&gt;  &lt;/p&gt;
-
-    &lt;hr&gt;
-    &lt;div class="pagination"&gt;
-      &lt;ul&gt;
-        &lt;ul&gt;
-            &lt;li class="prev"&gt;&lt;a href="/2013-08/jdk-tools.html" title="jdk&#x81EA;&#x5E26;&#x5DE5;&#x5177;"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
-
-            &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
-
-            &lt;li class="next"&gt;&lt;a href="/2013-09/maven-cmd.html" title="&#x5E38;&#x7528;maven&#x547D;&#x4EE4;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;hr&gt;
-    &lt;div id="disqus_thread"&gt;&lt;/div&gt;
-&lt;script&gt;
-    var disqus_developer = 1;
-    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-&lt;/script&gt;
-&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
-&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
-
-  &lt;/div&gt;
-  
-  &lt;div class="span4"&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-    (function(){
-       var _w = 90 , _h = 24;
-       var param = {
-       url:location.href,
-       type:'2',
-       count:'1', /**&#x662F;&#x5426;&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6570;&#xFF0C;1&#x663E;&#x793A;(&#x53EF;&#x9009;)*/
-       appkey:'', /**&#x60A8;&#x7533;&#x8BF7;&#x7684;&#x5E94;&#x7528;appkey,&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6765;&#x6E90;(&#x53EF;&#x9009;)*/
-       title:'', /**&#x5206;&#x4EAB;&#x7684;&#x6587;&#x5B57;&#x5185;&#x5BB9;(&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;title)*/
-       pic:'', /**&#x5206;&#x4EAB;&#x56FE;&#x7247;&#x7684;&#x8DEF;&#x5F84;(&#x53EF;&#x9009;)*/
-       ralateUid:'2388250330', /**&#x5173;&#x8054;&#x7528;&#x6237;&#x7684;UID&#xFF0C;&#x5206;&#x4EAB;&#x5FAE;&#x535A;&#x4F1A;@&#x8BE5;&#x7528;&#x6237;(&#x53EF;&#x9009;)*/
-       language:'zh_cn', /**&#x8BBE;&#x7F6E;&#x8BED;&#x8A00;&#xFF0C;zh_cn|zh_tw(&#x53EF;&#x9009;)*/
-       rnd:new Date().valueOf()
-     }
-     var temp = [];
-     for( var p in param ){
-     temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
-     }
-     document.write('&lt;iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&amp;') + '" width="'+ _w+'" height="'+_h+'"&gt;&lt;/iframe&gt;')
-     })()
-    &lt;/script&gt;
-
-    &lt;h4&gt;Published&lt;/h4&gt;
-    &lt;div class="date"&gt;&lt;span&gt;2013-08-30&lt;/span&gt;&lt;/div&gt;
-    &lt;br&gt;
-    &lt;h4&gt;Categories&lt;/h4&gt;
-    &lt;ul class="tag_box"&gt;
-      &lt;li&gt;
-        &lt;a href="/categories#java-ref"&gt;java &lt;span&gt;5&lt;/span&gt;&lt;/a&gt;
-      &lt;/li&gt;    &lt;/ul&gt;
-    &lt;br&gt;
-    &lt;h4&gt;Tags&lt;/h4&gt;
-    &lt;ul class="tag_box"&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-      &lt;/div&gt;
-
-      &lt;footer&gt;
-        &lt;p&gt;&amp;copy; tiemei 2012 
-          with help from &lt;a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework"&gt;ruhoh&lt;/a&gt;
-          and &lt;a href="http://twitter.github.com/bootstrap/" target="_blank"&gt;Twitter Bootstrap&lt;/a&gt;
-        &lt;/p&gt;
-        &lt;p&gt;
-        &lt;script src="http://s9.cnzz.com/stat.php?id=5379369&amp;web_id=5379369&amp;online=1&amp;show=line" language="JavaScript"&gt;&lt;/script&gt;
-        &lt;/p&gt;
-      &lt;/footer&gt;
-
-    &lt;/div&gt; &lt;!-- /container --&gt;
-
-    &lt;!-- Google Prettify --&gt;
-&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-  var pres = document.getElementsByTagName("pre");
-  for (var i=0; i &lt; pres.length; ++i) {
-    pres[i].className = "prettyprint linenums";
-  }
-  prettyPrint();
-&lt;/script&gt;
-&lt;!-- end Google Prettify --&gt;
-    &lt;script&gt;
-var clicky_site_ids = clicky_site_ids || [];
-clicky_site_ids.push(defworld.com);
-(function() {
-  var s = document.createElement('script');
-  s.type = 'text/javascript';
-  s.async = true;
-  s.src = '//static.getclicky.com/js';
-  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
-})();
-&lt;/script&gt;
-&lt;noscript&gt;&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /&gt;&lt;/p&gt;&lt;/noscript&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</description>
-    </item>
-    <item>
       <title>jdk&#x81EA;&#x5E26;&#x5DE5;&#x5177;</title>
       <link>http://defworld.com/2013-08/jdk-tools.html</link>
       <pubDate>2013-08-30</pubDate>
@@ -514,9 +692,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.38259132131941975" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.66703805949527" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8060519706465326" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.3533404460954739" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.6303080285407211" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.20824319740879293" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -649,11 +827,223 @@ runnable - &#x7EBF;&#x7A0B;&#x72B6;&#x6001;
     &lt;div class="pagination"&gt;
       &lt;ul&gt;
         &lt;ul&gt;
+            &lt;li class="prev"&gt;&lt;a href="/2013-08/java-locks.html" title="java&#x9501;&#x7B14;&#x8BB0;"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li class="next"&gt;&lt;a href="/2013-09/maven-cmd.html" title="&#x5E38;&#x7528;maven&#x547D;&#x4EE4;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;div id="disqus_thread"&gt;&lt;/div&gt;
+&lt;script&gt;
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+
+  &lt;/div&gt;
+  
+  &lt;div class="span4"&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+    (function(){
+       var _w = 90 , _h = 24;
+       var param = {
+       url:location.href,
+       type:'2',
+       count:'1', /**&#x662F;&#x5426;&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6570;&#xFF0C;1&#x663E;&#x793A;(&#x53EF;&#x9009;)*/
+       appkey:'', /**&#x60A8;&#x7533;&#x8BF7;&#x7684;&#x5E94;&#x7528;appkey,&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6765;&#x6E90;(&#x53EF;&#x9009;)*/
+       title:'', /**&#x5206;&#x4EAB;&#x7684;&#x6587;&#x5B57;&#x5185;&#x5BB9;(&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;title)*/
+       pic:'', /**&#x5206;&#x4EAB;&#x56FE;&#x7247;&#x7684;&#x8DEF;&#x5F84;(&#x53EF;&#x9009;)*/
+       ralateUid:'2388250330', /**&#x5173;&#x8054;&#x7528;&#x6237;&#x7684;UID&#xFF0C;&#x5206;&#x4EAB;&#x5FAE;&#x535A;&#x4F1A;@&#x8BE5;&#x7528;&#x6237;(&#x53EF;&#x9009;)*/
+       language:'zh_cn', /**&#x8BBE;&#x7F6E;&#x8BED;&#x8A00;&#xFF0C;zh_cn|zh_tw(&#x53EF;&#x9009;)*/
+       rnd:new Date().valueOf()
+     }
+     var temp = [];
+     for( var p in param ){
+     temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+     }
+     document.write('&lt;iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&amp;') + '" width="'+ _w+'" height="'+_h+'"&gt;&lt;/iframe&gt;')
+     })()
+    &lt;/script&gt;
+
+    &lt;h4&gt;Published&lt;/h4&gt;
+    &lt;div class="date"&gt;&lt;span&gt;2013-08-30&lt;/span&gt;&lt;/div&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Categories&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+      &lt;li&gt;
+        &lt;a href="/categories#java-ref"&gt;java &lt;span&gt;5&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;    &lt;/ul&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Tags&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+
+      &lt;footer&gt;
+        &lt;p&gt;&amp;copy; tiemei 2012 
+          with help from &lt;a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework"&gt;ruhoh&lt;/a&gt;
+          and &lt;a href="http://twitter.github.com/bootstrap/" target="_blank"&gt;Twitter Bootstrap&lt;/a&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+        &lt;script src="http://s9.cnzz.com/stat.php?id=5379369&amp;web_id=5379369&amp;online=1&amp;show=line" language="JavaScript"&gt;&lt;/script&gt;
+        &lt;/p&gt;
+      &lt;/footer&gt;
+
+    &lt;/div&gt; &lt;!-- /container --&gt;
+
+    &lt;!-- Google Prettify --&gt;
+&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i &lt; pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+&lt;/script&gt;
+&lt;!-- end Google Prettify --&gt;
+    &lt;script&gt;
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(defworld.com);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+&lt;/script&gt;
+&lt;noscript&gt;&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /&gt;&lt;/p&gt;&lt;/noscript&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
+    <item>
+      <title>java&#x9501;&#x7B14;&#x8BB0;</title>
+      <link>http://defworld.com/2013-08/java-locks.html</link>
+      <pubDate>2013-08-30</pubDate>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang="en" xmlns:wb=&#x201C;http://open.weibo.com/wb&#x201D;&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;java&#x9501;&#x7B14;&#x8BB0;&lt;/title&gt;
+    &lt;meta name="author" content="tiemei"&gt;
+
+    &lt;!-- Le HTML5 shim, for IE6-8 support of HTML elements --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+
+    &lt;!-- Le styles --&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.08927262866257435" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.4503175495754649" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.48073332531480406" type="text/css" rel="stylesheet" media="all"&gt;
+
+ 
+
+    &lt;!-- Le fav and touch icons --&gt;
+  &lt;!-- Update these with your own images
+    &lt;link rel="shortcut icon" href="images/favicon.ico"&gt;
+    &lt;link rel="apple-touch-icon" href="images/apple-touch-icon.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"&gt;
+  --&gt;
+  &lt;script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+    &lt;div class="navbar"&gt;
+      &lt;div class="navbar-inner"&gt;
+        &lt;div class="container"&gt;
+          &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
+          &lt;ul class="nav"&gt;
+              
+                &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
+              
+                &lt;li&gt;&lt;a href="/tools"&gt;Tools&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="container"&gt;
+
+      &lt;div class="content"&gt;
+        &lt;div class="page-header"&gt;
+  &lt;h1&gt;java&#x9501;&#x7B14;&#x8BB0; &lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="span8"&gt;
+    &lt;h1 id="toc_0"&gt;&#x7EBF;&#x7A0B;&#x901A;&#x4FE1;&lt;/h1&gt;
+
+&lt;p&gt;&#x901A;&#x4FE1;&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;&#x5305;&#x62EC;&#xFF1A;  &lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&#x5171;&#x4EAB;&#x5BF9;&#x8C61;&#xFF1A;&#x9700;&#x8981;&#x505A;&#x540C;&#x6B65;&#x5904;&#x7406;&lt;/li&gt;
+&lt;li&gt;&#x5FD9;&#x7B49;&#x5F85;&#xFF1A;&#x5FAA;&#x73AF;&#x7B49;&#x5F85;&#x53E6;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x53D1;&#x6765;&#x4FE1;&#x53F7;&#xFF0C;&#x53EF;sleep&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;wait(),notify()&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;1. &#x9047;&#x5230;mobj.wait()&#xFF0C;&#x8BA9;&#x7EBF;&#x7A0B;&#x8FDB;&#x5165;&#x975E;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#xFF0C;&#x76F4;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;mobj.nitify
+2. &#x8FD9;&#x51E0;&#x4E2A;&#x65B9;&#x6CD5;&#x5FC5;&#x987B;&#x5728;&#x83B7;&#x5F97;mobj&#x9501;&#x7684;&#x524D;&#x63D0;&#x4E0B;&#x8C03;&#x7528;&#xFF0C;&#x5426;&#x5219;IllegalMonitorStateException
+3. &#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x8C03;&#x7528;&#x4E86;wait()&#xFF0C;&#x5373;&#x91CA;&#x653E;mobj&#x4E0A;&#x7684;&#x9501;
+4. &#x4E00;&#x65E6;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x88AB;&#x5524;&#x9192;&#xFF0C;&#x4E0D;&#x80FD;&#x7ACB;&#x523B;&#x5C31;&#x9000;&#x51FA;wait()&#x7684;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#xFF0C;&#x76F4;&#x5230;&#x8C03;&#x7528;
+notify()&#x7684;&#x7EBF;&#x7A0B;&#x9000;&#x51FA;&#x4E86;&#x5B83;&#x81EA;&#x5DF1;&#x7684;&#x540C;&#x6B65;&#x5757;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x88AB;notifyAll&#x5524;&#x9192;&#xFF0C;&#x53EA;&#x6709;&#x4E00;&#x4E2A;
+&#x7EBF;&#x7A0B;&#x53EF;&#x4EE5;&#x6700;&#x7EC8;&#x9000;&#x51FA;wait()&#x65B9;&#x6CD5;&#xFF0C;&#x56E0;&#x4E3A;&#x5FC5;&#x987B;&#x83B7;&#x5F97;mobj&#x7684;&#x9501;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&#x4E22;&#x5931;&#x7684;&#x4FE1;&#x53F7;&#xFF08;Missed Signal&#xFF09;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&#x7EBF;&#x7A0B;A&#x5148;&#x8C03;&#x7528;&#x4E86;mobj.notify()&#xFF0C;&#x7EBF;&#x7A0B;B&#x540E;&#x8C03;&#x7528;mobj.wait()&#xFF0C;&#x901A;&#x77E5;&#x4FE1;&#x53F7;&#x53D1;&#x9001;&#x8FC7;&#x4E86;&#x5C31;&#x88AB;&#x4E22;&#x5F03;&#xFF0C;
+&#x7EBF;&#x7A0B;B&#x5C31;&#x53EF;&#x80FD;&#x6C38;&#x8FDC;&#x4E0D;&#x80FD;&#x9192;&#x6765;&#x3002;
+&#x8FD9;&#x5C31;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x989D;&#x5916;&#x7684;&#x53D8;&#x91CF;&#x6765;&#x4FDD;&#x5B58;&#x2018;&#x662F;&#x5426;&#x88AB;&#x901A;&#x77E5;&#x8FC7;&#x2019;&#x7684;&#x4FE1;&#x606F;&#x3002;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&#x5047;&#x5524;&#x9192;&#xFF08;spurious wakeups&#xFF09;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&#x6CA1;&#x6709;&#x8C03;&#x7528;&#x8FC7;notify()&#x548C;notifyAll()&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x9192;&#x6765;&#xFF0C;&#x539F;&#x56E0;&#x672A;&#x77E5;
+&#x9700;&#x8981;&#x52A0;&#x4E2A;&#x81EA;&#x65CB;&#x9501;&#xFF0C;&#x5373;&#x5C06;wait()&#x65B9;&#x6CD5;&#x653E;&#x5230;while&#x5FAA;&#x73AF;&#x4E2D;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&#x4E0D;&#x8981;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x5E38;&#x91CF;&#x6216;&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#x4E2D;&#x8C03;&#x7528;wait()&#x3002;mobj&#x4E0E;&#x4FE1;&#x53F7;&#x5E38;&#x91CF;&#x4E0D;&#x662F;&#x4E00;&#x4E00;&#x5BF9;&#x5E94;&#x3002;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;mobj: &#x7BA1;&#x7A0B; (&#x82F1;&#x8BED;&#xFF1A;Monitors&#xFF0C;&#x4E5F;&#x79F0;&#x4E3A;&#x76D1;&#x89C6;&#x5668;)  &lt;/p&gt;
+
+&lt;h1 id="toc_1"&gt;&#x9501;&lt;/h1&gt;
+
+&lt;p&gt;&#x9501;&#x7531;synchronized&#x5B9E;&#x73B0;&#xFF0C;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x7279;&#x6027;:  &lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&#x540C;&#x4E00;&#x65F6;&#x523B;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x7A7F;&#x8FC7;&#x4E34;&#x754C;&#x533A;&#xFF0C;&#x8FDB;&#x5165;&#x540C;&#x6B65;&#x5757;&lt;/li&gt;
+&lt;li&gt;&#x9501;&#x7684;&#x53EF;&#x91CD;&#x5165;&#x6027;&#xFF1A;synchronized&#x540C;&#x6B65;&#x5757;&#x53EF;&#x91CD;&#x5165;&#xFF0C;&#x76F8;&#x5E94;&#x4E5F;&#x6709;&#x53EF;&#x91CD;&#x5165;&#x9501;&lt;/li&gt;
+&lt;li&gt;&#x9501;&#x7684;&#x516C;&#x5E73;&#x6027;&#xFF1A;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x4E0D;&#x65AD;&#x7ADE;&#x4E89;&#x8BBF;&#x95EE;&#x76F8;&#x540C;&#x7684;synchronized&#x540C;&#x6B65;&#x5757;&#xFF0C;&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x67D0;&#x4E2A;
+&#x7EBF;&#x7A0B;&#x4E00;&#x76F4;&#x7ADE;&#x4E89;&#x4E0D;&#x5230;&#x3002;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;&#x53C2;&#x8003;&lt;/strong&gt;:&lt;br&gt;
+&lt;a href="http://ifeve.com/locks/"&gt;Java&#x4E2D;&#x7684;&#x9501;&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://ifeve.com/thread-signaling/"&gt;&#x7EBF;&#x7A0B;&#x901A;&#x4FE1;&lt;/a&gt;  &lt;/p&gt;
+
+    &lt;hr&gt;
+    &lt;div class="pagination"&gt;
+      &lt;ul&gt;
+        &lt;ul&gt;
             &lt;li class="prev"&gt;&lt;a href="/2013-06/ssh.html" title="ssh&#x5BC6;&#x94A5;&#x81EA;&#x52A8;&#x767B;&#x9646;+ssh-agent&#x4F7F;&#x7528;+&#x5355;&#x673A;&#x591A;&#x4E2A;ssh&#x8D26;&#x53F7;"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
 
             &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
 
-            &lt;li class="next"&gt;&lt;a href="/2013-08/java-locks.html" title="java&#x9501;&#x7B14;&#x8BB0;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="next"&gt;&lt;a href="/2013-08/jdk-tools.html" title="jdk&#x81EA;&#x5E26;&#x5DE5;&#x5177;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
@@ -799,9 +1189,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.3593068300718425" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.010344042430477818" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.1976979459970254" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.1854121032243471" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.2306578917166645" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.1353377076828559" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1091,9 +1481,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.41373780531922033" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.46860043060044887" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.722953345271642" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.46567783870335056" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.4076825847135199" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7327810738952182" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1539,9 +1929,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.8951444294755738" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.9856658088726089" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9813682524560614" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.909601430144176" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.9324660445179107" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7556089432590763" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 

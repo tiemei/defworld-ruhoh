@@ -22,6 +22,7 @@ tags: shell
 - [split](#split) 按行/大小拆分文件
 - [sed](#sed) stream editor,面向行处理，输出到标准输出
 - [awk](#awk)
+- [xargs](#xargs)
   
 
 - [cat](#cat)
@@ -331,6 +332,28 @@ tags: shell
 `find -not -type d -exec chmod 644 {} \;`  
 `find -not -type d|xargs chmod 644`  
   
+
+### <a id="xargs"><font color="green">xargs</font></a>
+
+[关于xargs，你可能不知道的](http://heikezhi.com/yuanyi/things-you-didnt-know-about-xargs)  
+[Xargs by example](http://sidvind.com/wiki/Xargs_by_example)  
+[一个例子，找到所有txt结尾文件并在文件中间插入特殊字符](http://stackoverflow.com/questions/10803296/modifying-replace-string-in-xargs)  
+
+* 默认从管道传递过来的值是放在命令最后的
+* If utility is omitted, echo(1) is used
+* `-I``find . -name "*" | xargs -I {} cp {} /home/ads` -I将管道传递过来的输出作为参数，用符号{}代替
+* `-J`用法和`-I`有些区别
+* `-n`如果要执行的命令只接收两个参数，`echo {0..9} | xargs -n 2`
+* `-L`将多个非空白行合并成后接命令的一次参数输出，与`-n`冲突，同时出现以最后一个为准
+* `-t`展示将要被执行的命令
+* `-s`最终执行的命令的字符最大长度
+* `-R`最大用于替换的-I指定的replstr数据，例如`echo {1..10} | xargs -I {} -n 1 -R 1 echo {} {}`
+只替换echo后前一个{}
+* find + xargs 常用来批量处理文件，不过文件名或者目录有空格会出现问题，因为xargs会按照空格来
+划分输入，给find加上`-print0`选项告诉find使用NUL(\0)来分割结果，同时给xargs加上`-0`
+* `-P`并行调用例如`time echo {1..5} | xargs -n 1 -P 5 sleep`
+* `-p`交互确认当前某个命令是否执行
+
 
 ### <a id="service"><font color="green">[service](http://roclinux.cn/?p=47)</font></a>
 `service httpd start/stop/restart/reload`(重新载入配置)  
@@ -1220,4 +1243,6 @@ tab制表符，这个符号比较特殊，当使用-L时，制表符算7个字�
 * `C-a w` 显示所有窗口列表
 * `C-a k` 杀掉当前窗口
 * `C-a p``C-a n` 前一个窗口，后一个窗口 
+
+
 

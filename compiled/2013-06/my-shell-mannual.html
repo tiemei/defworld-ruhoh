@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.5274950981922828" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.855151391209608" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8342358767294107" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.4231759582931177" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.2719215844754168" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8297406577916008" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -65,6 +65,7 @@
 <li><p><a href="#split">split</a> 按行/大小拆分文件</p></li>
 <li><p><a href="#sed">sed</a> stream editor,面向行处理，输出到标准输出</p></li>
 <li><p><a href="#awk">awk</a></p></li>
+<li><p><a href="#xargs">xargs</a></p></li>
 <li><p><a href="#cat">cat</a></p></li>
 <li><p><a href="#tac">tac</a> 逆向输出文件</p></li>
 <li><p><a href="#date">date</a></p></li>
@@ -383,13 +384,36 @@ sed -n l tab_space.txt
 <code>find -not -type d -exec chmod 644 {} \;</code><br>
 <code>find -not -type d|xargs chmod 644</code>  </p>
 
-<h3 id="toc_18"><a id="service"><font color="green"><a href="http://roclinux.cn/?p=47">service</a></font></a></h3>
+<h3 id="toc_18"><a id="xargs"><font color="green">xargs</font></a></h3>
+
+<p><a href="http://heikezhi.com/yuanyi/things-you-didnt-know-about-xargs">关于xargs，你可能不知道的</a><br>
+<a href="http://sidvind.com/wiki/Xargs_by_example">Xargs by example</a><br>
+<a href="http://stackoverflow.com/questions/10803296/modifying-replace-string-in-xargs">一个例子，找到所有txt结尾文件并在文件中间插入特殊字符</a>  </p>
+
+<ul>
+<li>默认从管道传递过来的值是放在命令最后的</li>
+<li>If utility is omitted, echo(1) is used</li>
+<li><code>-I</code><code>find . -name &quot;*&quot; | xargs -I {} cp {} /home/ads</code> -I将管道传递过来的输出作为参数，用符号{}代替</li>
+<li><code>-J</code>用法和<code>-I</code>有些区别</li>
+<li><code>-n</code>如果要执行的命令只接收两个参数，<code>echo {0..9} | xargs -n 2</code></li>
+<li><code>-L</code>将多个非空白行合并成后接命令的一次参数输出，与<code>-n</code>冲突，同时出现以最后一个为准</li>
+<li><code>-t</code>展示将要被执行的命令</li>
+<li><code>-s</code>最终执行的命令的字符最大长度</li>
+<li><code>-R</code>最大用于替换的-I指定的replstr数据，例如<code>echo {1..10} | xargs -I {} -n 1 -R 1 echo {} {}</code>
+只替换echo后前一个{}</li>
+<li>find + xargs 常用来批量处理文件，不过文件名或者目录有空格会出现问题，因为xargs会按照空格来
+划分输入，给find加上<code>-print0</code>选项告诉find使用NUL(\0)来分割结果，同时给xargs加上<code>-0</code></li>
+<li><code>-P</code>并行调用例如<code>time echo {1..5} | xargs -n 1 -P 5 sleep</code></li>
+<li><code>-p</code>交互确认当前某个命令是否执行</li>
+</ul>
+
+<h3 id="toc_19"><a id="service"><font color="green"><a href="http://roclinux.cn/?p=47">service</a></font></a></h3>
 
 <p><code>service httpd start/stop/restart/reload</code>(重新载入配置)<br>
 位于/sbin目录下，一脚本命令，动作是去/etc/init.d目录下寻找相应服务。<br>
 不是所有发行版都提供  </p>
 
-<h3 id="toc_19"><a id="du"><font color="green">du</font></a></h3>
+<h3 id="toc_20"><a id="du"><font color="green">du</font></a></h3>
 
 <p><code>du -h .</code> # 当年前目录下所有目录以及子目录的大小
 <code>du -ch abc | tail -n 1</code> # 只想看abc目录大小，-c 表示最后计算出所有目录大小之和<br>
@@ -399,7 +423,7 @@ sed -n l tab_space.txt
 <code>du -h -exclude=&#39;*xyz*&#39;</code> # 不包含xyz字符串的目录<br>
 <code>du -0h abc</code> # -0不换行，直接输出下一个  </p>
 
-<h3 id="toc_20"><a id="chkconfig"><font color="green">chkconfig</font></a></h3>
+<h3 id="toc_21"><a id="chkconfig"><font color="green">chkconfig</font></a></h3>
 
 <p># 增加一个服务步骤<br>
 - 服务脚本放在/etc/ini.d/下<br>
@@ -415,7 +439,7 @@ sed -n l tab_space.txt
                     # 3 有网络连接的多用户命令行模式；4 不可用；5 带图形界面的多用户模式；6 重新启动<br>
 <code>chkconfig -del sevicename</code> # 删除  </p>
 
-<h3 id="toc_21"><a id="uname"><font color="green">uname</font></a></h3>
+<h3 id="toc_22"><a id="uname"><font color="green">uname</font></a></h3>
 
 <p><code>uname -a</code> 打印所有系统信息<br>
 <code>uname -s</code> 打印内核名称<br>
@@ -429,7 +453,7 @@ sed -n l tab_space.txt
 <li><code>cat /etc/issue</code></li>
 </ul>
 
-<h3 id="toc_22"><a id="tr"><font color="green">tr</font></a></h3>
+<h3 id="toc_23"><a id="tr"><font color="green">tr</font></a></h3>
 
 <p><code>cat filename | tr u n</code>  将u替换为n<br>
 <code>cat filename | tr -d abc</code> 将所有a/b/c字符删去<br>
@@ -441,7 +465,7 @@ sed -n l tab_space.txt
 <code>[:graph:]</code> 表示所有可打印字符，但不包括空格<br>
 <code>[:print:]</code> 表示所有可打印字符，包括空格  </p>
 
-<h3 id="toc_23"><a id="压缩和解压"><font color="green">压缩和解压</font></a></h3>
+<h3 id="toc_24"><a id="压缩和解压"><font color="green">压缩和解压</font></a></h3>
 
 <p><strong>RAR</strong><br>
 去下面的网站下载一个RAR命令<br>
@@ -507,20 +531,20 @@ bunzip2/bzip2<br>
 <p>tar它只是一个打包的命令。tar.gz与tar.bz2都是在tar命令中调用了别的压缩命令实现了一个压缩的功能，实际是实行一个先打包后压缩的过程，而且，tar.gz与tar.bz2只是一个公认的一个通行后缀而已，并不是一种压缩格式（真正实现压缩的是gzip与bzip2，这是后话。），tar.gz在很多时候，也会被简写成tgz。<br>
 如果你在fedora下工作，你会发现bunzip2是bzip2的一个符 号连接。但bunzip2和bzip2的功能却正好相反。bzip2是用来压缩文件的（当然如果使用特殊函数也是可以用来解压，用选项-d可以实现），而 bunzip2是用来解压文件的（相当于bzip2 -d）。类比，还有zip和unzip、gzip和gunzip、compress和uncompress。  </p>
 
-<h3 id="toc_24"><a id="shutdown"><font color="green">shutdown</font></a></h3>
+<h3 id="toc_25"><a id="shutdown"><font color="green">shutdown</font></a></h3>
 
 <p><code>shutdown -h 23:00</code><br>
 <code>shutdown -h +15</code><br>
 <code>shutdown -k now &quot;Server would shutdown in 15mins.&quot;</code> 吓唬一下  </p>
 
-<h3 id="toc_25"><a id="chsh"><font color="green">chsh</font></a></h3>
+<h3 id="toc_26"><a id="chsh"><font color="green">chsh</font></a></h3>
 
 <p><code>chsh -l</code> 当前机器安装了那些shell<br>
 <code>cat /etc/shells</code> 同上<br>
 <code>echo $SHELL</code> 正在使用的shell<br>
 <code>chsh -s /bin/zsh</code> 修改当前shell，重启shell窗口生效，修改的效果是改了文本文本文件,<code>cat /etc/passwd | grep ^tiemei</code>  </p>
 
-<h3 id="toc_26"><a id="man"><font color="green">man</font></a></h3>
+<h3 id="toc_27"><a id="man"><font color="green">man</font></a></h3>
 
 <p>用man查看帮助信息，同名的情况，需要引入分类：  </p>
 
@@ -540,7 +564,7 @@ bunzip2/bzip2<br>
 <code>makewhatis</code> 重新建立man数据库<br>
 <code>man -k roc</code> 等效于 <code>apropos</code>(一个脚本文件) ,像搜索引擎一样，给一个关键字列出所有相关信息  </p>
 
-<h3 id="toc_27"><a id="who am i"><font color="green">who am i</font></a></h3>
+<h3 id="toc_28"><a id="who am i"><font color="green">who am i</font></a></h3>
 
 <p>whoami 当前操作用户,即有效用户=euid(effective user id)<br>
 who am i 等效 who -m 登录用户，即linux术语里的实际用户=uid(user id)<br>
@@ -549,7 +573,7 @@ who 当前登录的所有用户<br>
 <a href="http://hi.baidu.com/xinbao125/item/0efe5d9a728cdb88581461eb">用标准IO实现linux的who命令</a>
 <a href="http://hi.baidu.com/xinbao125/item/a521ac313f3779159cc65eeb">实现linux的whoami命令</a>  </p>
 
-<h3 id="toc_28"><a id="wc"><font color="green">wc</font></a></h3>
+<h3 id="toc_29"><a id="wc"><font color="green">wc</font></a></h3>
 
 <pre><code>[rocrocket@rocrocket programming]$ cat wc1.txt
 1 2
@@ -574,7 +598,7 @@ who 当前登录的所有用户<br>
 
 <p>tab制表符，这个符号比较特殊，当使用-L时，制表符算7个字符（这要依据一个制表符的长度而定，在我的系统中一个制表符算7个空格长度）。而当使用-w时，制表符和空格没有两样，都作为字的间隔来看待。当用-c时，一个制表符也就算一个字符  </p>
 
-<h3 id="toc_29"><a id="vim"><font color="green">vim</font></a></h3>
+<h3 id="toc_30"><a id="vim"><font color="green">vim</font></a></h3>
 
 <p><code>sed -n &#39;/\sat\s/!p&#39;</code> !p打印取反<br>
 <code>s/abc/xyz/</code> 光标所在行第一项替换<br>
@@ -589,7 +613,7 @@ who 当前登录的所有用户<br>
 
 <p><code>n&gt;&gt;</code> <code>n&lt;&lt;</code> 多行缩进，或进入v模式按&gt;/&lt;  </p>
 
-<h3 id="toc_30"><a id="sed"><font color="green">sed</font></a></h3>
+<h3 id="toc_31"><a id="sed"><font color="green">sed</font></a></h3>
 
 <p>按行处理，读一行到零食缓冲区（模式空间，pattern space）,处理完输出到屏幕。<br>
 <code>sed cmd file</code> 命令格式  </p>
@@ -796,12 +820,12 @@ G表示将保持空间的内容追加到模式空间中内容的尾部
 </code></pre></li>
 </ul>
 
-<h3 id="toc_31"><a id="awk"><font color="green">awk</font></a></h3>
+<h3 id="toc_32"><a id="awk"><font color="green">awk</font></a></h3>
 
 <p><code>awk &#39;NR%2&#39; file</code> 提取奇数行
 <code>awk &#39;NR%2==0&#39; file</code> 提取偶数行  </p>
 
-<h3 id="toc_32"><a id="sort"><font color="green">sort</font></a></h3>
+<h3 id="toc_33"><a id="sort"><font color="green">sort</font></a></h3>
 
 <ul>
 <li><code>-u</code> 去除重复行</li>
@@ -833,7 +857,7 @@ pear:90:2.3
 </code></pre></li>
 </ul>
 
-<h4 id="toc_33"><code>-k</code>选项大作战</h4>
+<h4 id="toc_34"><code>-k</code>选项大作战</h4>
 
 <pre><code>$ cat facebook.txt
 google 110 5000
@@ -849,7 +873,7 @@ sohu 100 4500
 guge 50 3000
 </code></pre>
 
-<h6 id="toc_34">完整语法： <code>[ FStart [ .CStart ] ] [ Modifier ] [ , [ FEnd [ .CEnd ] ][ Modifier ] ]</code></h6>
+<h6 id="toc_35">完整语法： <code>[ FStart [ .CStart ] ] [ Modifier ] [ , [ FEnd [ .CEnd ] ][ Modifier ] ]</code></h6>
 
 <ul>
 <li>由<code>,</code>分成start/end两部分，end部分可省略</li>
@@ -873,7 +897,7 @@ sohu 100 4500
 guge 50 3000</p></li>
 </ul>
 
-<h6 id="toc_35">Modifier还可以包括：</h6>
+<h6 id="toc_36">Modifier还可以包括：</h6>
 
 <ul>
 <li>n</li>
@@ -898,7 +922,7 @@ sort -t &#39; &#39; -k 1,1 demo
 </code></pre></li>
 </ul>
 
-<h6 id="toc_36">-u -k 联合使用</h6>
+<h6 id="toc_37">-u -k 联合使用</h6>
 
 <p><font color="red">可以推测，某个域没法比较相等，从第一个域开始升序排序！！！</font></p>
 
@@ -935,12 +959,12 @@ google 110 5000
 <p><a href="http://roclinux.cn/?p=1472">参考原文</a><br>
 <a href="http://www.linuxso.com/command/sort.html">sort参数详解</a>  </p>
 
-<h3 id="toc_37"><a id="split"><font color="green">split</font></a></h3>
+<h3 id="toc_38"><a id="split"><font color="green">split</font></a></h3>
 
 <p><code>split -l 3 input_file prefix.</code> 3行拆分input_file,目标文件前缀prefix<br>
 <code>-b -k -m..</code>按大小拆分文件  </p>
 
-<h3 id="toc_38"><a id="ln"><font color="green">ln</font></a></h3>
+<h3 id="toc_39"><a id="ln"><font color="green">ln</font></a></h3>
 
 <p><a href="http://vbird.dic.ksu.edu.tw/linux_basic/0230filesystem.php">Linux ext2文件系统 / 硬链接软链接</a></p>
 
@@ -949,7 +973,7 @@ google 110 5000
 <li><code>ln -s srcfile/srcdir softlink</code> 软链接，实际是创建了新的文件softlink,该文件的block内容指向srcfile/srcdir的inode号码。如果你删除srcfile/srcdir，该softlink失效啦。</li>
 </ul>
 
-<h3 id="toc_39"><a id="paste"><font color="green">paste</font></a></h3>
+<h3 id="toc_40"><a id="paste"><font color="green">paste</font></a></h3>
 
 <pre><code>[rocrocket@rocrocket programming]$ cat p3.txt
 I
@@ -1037,16 +1061,16 @@ Element E3
 
 <p><a href="http://unstableme.blogspot.com/2009/01/linux-paste-command-good-examples-uses.html">待续</a></p>
 
-<h3 id="toc_40"><a id="sar"><font color="green">sar</font></a></h3>
+<h3 id="toc_41"><a id="sar"><font color="green">sar</font></a></h3>
 
-<h5 id="toc_41">CPU信息</h5>
+<h5 id="toc_42">CPU信息</h5>
 
 <ul>
 <li><code>sar 时间间隔 输出次数</code> 单位s,如果时间间隔0，输出从开机到现在为止的平均值；输出次数为0，永远输出下去。</li>
 <li><code>sar 5 6 -o sys_info</code>输出到那文件，不过格式没法cat，用<code>sar -f sys_info</code>看吧。-o没有filename，默认到var/log/saDD文件里，其中DD表示当天的日期数字</li>
 <li><p><code>sar -P ALL 1 2</code>试试多核，<code>sar -P 5 1 1</code>只看第六个核</p>
 
-<h5 id="toc_42">内存/网络/IO..信息呢？</h5>
+<h5 id="toc_43">内存/网络/IO..信息呢？</h5>
 
 <p>-b：报告I/O使用情况以及传输速率。（只适用于2.5及之前的内核，所以新内核有可能不支持这个选项）</p>
 
@@ -1089,7 +1113,7 @@ Element E3
 <p>-A 就相当于-bBcdqrRuvwWy -I SUM -n FULL -P ALL这么一堆选项了</p></li>
 </ul>
 
-<h5 id="toc_43">网络相关</h5>
+<h5 id="toc_44">网络相关</h5>
 
 <pre><code># sar命令使用-n选项可以汇报网络相关信息，可用的参数包括：DEV、EDEV、SOCK和FULL
 # 如果你使用DEV关键字，那么sar将汇报和网络设备相关的信息，如lo，eth0或eth1等，例如：
@@ -1145,7 +1169,7 @@ ip-frag：当前的IP分片的数目
 # 如果你使用FULL关键字，相当于上述DEV、EDEV和SOCK三者的综合
 </code></pre>
 
-<h5 id="toc_44">其他好玩的</h5>
+<h5 id="toc_45">其他好玩的</h5>
 
 <ul>
 <li>sar实时汇报机器性能情况 <code>sar -o monitor.res 间隔时间 运行次数 &gt;/dev/null 2&gt;&amp;1 &amp;</code></li>
@@ -1154,9 +1178,9 @@ ip-frag：当前的IP分片的数目
 
 <p><strong>或许你平时还在使用free,ifconfig或者top，从今以后，试试sar吧</strong></p>
 
-<h3 id="toc_45"><a id="wget"><font color="green">wget</font></a></h3>
+<h3 id="toc_46"><a id="wget"><font color="green">wget</font></a></h3>
 
-<h5 id="toc_46">wget是什么？</h5>
+<h5 id="toc_47">wget是什么？</h5>
 
 <ul>
 <li>支持HTTP、HTTPS和FTP协议的下载，其中也包括通过HTTP代理的下载<br></li>
@@ -1169,19 +1193,19 @@ ip-frag：当前的IP分片的数目
 <li><a href="http://roclinux.cn/?p=1542">还有好多呀</a></li>
 </ul>
 
-<h4 id="toc_47">demo</h4>
+<h4 id="toc_48">demo</h4>
 
 <p><code>wget -c &quot;www.baidu.com&quot; -O reNameFile -o wget.log</code> 重命名，并输出运行日志  </p>
 
-<h5 id="toc_48"><a href="http://roclinux.cn/?p=1546">wget突破robots.txt限制</a></h5>
+<h5 id="toc_49"><a href="http://roclinux.cn/?p=1546">wget突破robots.txt限制</a></h5>
 
-<h5 id="toc_49"><a href="http://roclinux.cn/?p=2505">wget目录相关选项</a></h5>
+<h5 id="toc_50"><a href="http://roclinux.cn/?p=2505">wget目录相关选项</a></h5>
 
-<h5 id="toc_50"><a href="http://roclinux.cn/?p=1561">大文件</a></h5>
+<h5 id="toc_51"><a href="http://roclinux.cn/?p=1561">大文件</a></h5>
 
-<h5 id="toc_51"><a href="http://roclinux.cn/?p=2107">其他选项</a></h5>
+<h5 id="toc_52"><a href="http://roclinux.cn/?p=2107">其他选项</a></h5>
 
-<h3 id="toc_52"><a id="curl"><font color="green">curl</font></a></h3>
+<h3 id="toc_53"><a id="curl"><font color="green">curl</font></a></h3>
 
 <ul>
 <li><code>curl http://defworld.com</code> GET获得一个页面内容</li>
@@ -1195,11 +1219,11 @@ ip-frag：当前的IP分片的数目
 <li><code>curl -x proxy.test.org:80 http://bbs.it580.com</code> 使用代理访问</li>
 </ul>
 
-<h3 id="toc_53"><a id="netstat"><font color="green">netstat</font></a></h3>
+<h3 id="toc_54"><a id="netstat"><font color="green">netstat</font></a></h3>
 
 <p><img src="/Dropbox/notes/a/netstat_saygb.png" alt="替代netstat的命令"></p>
 
-<h3 id="toc_54"><a id="ss"><font color="green">ss</font></a></h3>
+<h3 id="toc_55"><a id="ss"><font color="green">ss</font></a></h3>
 
 <ul>
 <li>ss快不是一点点，尤其在sock连接很多，它利用到了TCP协议栈中tcp_diag</li>
@@ -1257,29 +1281,29 @@ ss -a
 如果只想查看UNIX sockets，那么使用-xa选项
 </code></pre>
 
-<h3 id="toc_55"><a id="iproute2"><font color="green">iproute2</font></a></h3>
+<h3 id="toc_56"><a id="iproute2"><font color="green">iproute2</font></a></h3>
 
 <p><img src="/Dropbox/notes/a/net-tool_ip.png" alt="iproute工具集替代掉net-tools工具集">
 <img src="/Dropbox/notes/a/iproute2.png" alt="iproute2工具集"></p>
 
-<h3 id="toc_56"><a id="实时观察文件变化"><font color="green">实时观察文件变化</font></a></h3>
+<h3 id="toc_57"><a id="实时观察文件变化"><font color="green">实时观察文件变化</font></a></h3>
 
 <p><a href="http://bbs.chinaunix.net/thread-1257647-1-1.html">一个帖子</a>
 - <code>watch -n 1 cat file.log</code> 实时观察cat file.log的最后几行结果</p>
 
-<h2 id="toc_57">- <code>tail -f file.log</code> 末尾几行变动</h2>
+<h2 id="toc_58">- <code>tail -f file.log</code> 末尾几行变动</h2>
 
-<h3 id="toc_58"><a id="ps"><font color="green">ps</font></a></h3>
+<h3 id="toc_59"><a id="ps"><font color="green">ps</font></a></h3>
 
 <p><code>ps -eLf | grep java | wc</code></p>
 
-<h3 id="toc_59"><a id="shuf"><font color="green">shuf</font></a></h3>
+<h3 id="toc_60"><a id="shuf"><font color="green">shuf</font></a></h3>
 
 <p>自己下载源码编译安装：<a href="http://mirror.yongbok.net/nongnu//shuffle/shuffle-0.9b.tar.gz">http://mirror.yongbok.net/nongnu//shuffle/shuffle-0.9b.tar.gz</a>  </p>
 
-<h3 id="toc_60"><a id="rpm"><font color="green">rpm</font></a></h3>
+<h3 id="toc_61"><a id="rpm"><font color="green">rpm</font></a></h3>
 
-<h3 id="toc_61"><a id="grep"><font color="green">grep</font></a></h3>
+<h3 id="toc_62"><a id="grep"><font color="green">grep</font></a></h3>
 
 <ul>
 <li><code>grep -n root /etc/passwd</code> 输出行号</li>
@@ -1296,7 +1320,7 @@ ss -a
 <li><code>grep -E &#39;AAA|BBB&#39; urfile</code> -E用egrep的方式解释正则pattern</li>
 </ul>
 
-<h3 id="toc_62"><a id="script/scriptrelay"><font color="green">script/scriptrelay</font></a></h3>
+<h3 id="toc_63"><a id="script/scriptrelay"><font color="green">script/scriptrelay</font></a></h3>
 
 <ol>
 <li>open terminal 1 : $ <code>mkfifo fd1</code></li>
@@ -1306,7 +1330,7 @@ ss -a
 <li>exit in terminal 1 : $ <code>exit</code> </li>
 </ol>
 
-<h3 id="toc_63"><a id="pushd/popd"><font color="green">pushd/popd</font></a></h3>
+<h3 id="toc_64"><a id="pushd/popd"><font color="green">pushd/popd</font></a></h3>
 
 <ul>
 <li><code>dirs</code> 可现实当前目录，金丹目录堆栈只有一个目录时</li>
@@ -1315,11 +1339,11 @@ ss -a
 <li><code>popd +3</code> 弹出并跳转到该目录</li>
 </ul>
 
-<h3 id="toc_64"><a id="touch"><font color="green">touch</font></a></h3>
+<h3 id="toc_65"><a id="touch"><font color="green">touch</font></a></h3>
 
 <p><code>touch -t [[CC]YY]MMDDhhmm[.SS] file</code></p>
 
-<h3 id="toc_65"><a id="screen"><font color="green">screen</font></a></h3>
+<h3 id="toc_66"><a id="screen"><font color="green">screen</font></a></h3>
 
 <p><a href="http://www.ibm.com/developerworks/cn/linux/l-cn-screen/">参考1</a><br>
 <a href="http://serverfault.com/questions/155851/run-gnu-screen-from-script">参考2</a>  </p>

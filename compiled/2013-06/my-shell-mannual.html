@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.4231759582931177" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.2719215844754168" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8297406577916008" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7104991625328083" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.11344791981966751" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.34137151491879103" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -405,6 +405,7 @@ sed -n l tab_space.txt
 划分输入，给find加上<code>-print0</code>选项告诉find使用NUL(\0)来分割结果，同时给xargs加上<code>-0</code></li>
 <li><code>-P</code>并行调用例如<code>time echo {1..5} | xargs -n 1 -P 5 sleep</code></li>
 <li><code>-p</code>交互确认当前某个命令是否执行</li>
+<li><code>ls / |xargs -I% sh -c &#39;n=%;echo &quot;[$n]&quot;&#39;</code> 使用sh -c执行复杂的处理</li>
 </ul>
 
 <h3 id="toc_19"><a id="service"><font color="green"><a href="http://roclinux.cn/?p=47">service</a></font></a></h3>
@@ -619,6 +620,8 @@ who 当前登录的所有用户<br>
 <code>sed cmd file</code> 命令格式  </p>
 
 <ul>
+<li><code>sed -i &quot;.bak&quot; &#39;s/abc/ac/g&#39; file</code> 直接在文件中替换字符串。.bak为备份文件名，为&quot;&quot;时不会备份。mac
+下必须加上&quot;&quot;，linux下可省略。</li>
 <li><p><code>/2/d</code> 删除含有字符&#39;2&#39;的行</p>
 
 <pre><code>[rocrocket@rocrocket programming]$ cat roc.txt

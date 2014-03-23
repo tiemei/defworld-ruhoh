@@ -353,6 +353,7 @@ tags: shell
 划分输入，给find加上`-print0`选项告诉find使用NUL(\0)来分割结果，同时给xargs加上`-0`
 * `-P`并行调用例如`time echo {1..5} | xargs -n 1 -P 5 sleep`
 * `-p`交互确认当前某个命令是否执行
+* `ls / |xargs -I% sh -c 'n=%;echo "[$n]"'` 使用sh -c执行复杂的处理
 
 
 ### <a id="service"><font color="green">[service](http://roclinux.cn/?p=47)</font></a>
@@ -557,6 +558,8 @@ tab制表符，这个符号比较特殊，当使用-L时，制表符算7个字�
 按行处理，读一行到零食缓冲区（模式空间，pattern space）,处理完输出到屏幕。  
 `sed cmd file` 命令格式  
 
+- `sed -i ".bak" 's/abc/ac/g' file` 直接在文件中替换字符串。.bak为备份文件名，为""时不会备份。mac
+下必须加上""，linux下可省略。
 - `/2/d` 删除含有字符'2'的行
 
         [rocrocket@rocrocket programming]$ cat roc.txt

@@ -73,6 +73,7 @@ tags: shell
 
 [入门一](http://124.16.151.186/docs/linux/script/Awk-1index.shtml#12)_
 
+- 
 - awk '{ print }' file # 对每一行都执行{}内的命令
 - $0表示整行，$1...表示第几几个字段，分割符可制定-F ':'
 - '{ print $1 " " $3 }' 这样才会在两个字段间插入空格

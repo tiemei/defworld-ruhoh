@@ -131,6 +131,7 @@ changed descendants`
 * `⌃  ⇥ `(plugin → Switch) 打开的文件切换
 * `⌘ e`  列出最近查看的额文件列表+视图
 * `⇧ ⌘  e` 最近修改的文件
+* `⌥ F1` 调出视图切换界面（可切换到finder）
 
 ### 搜索
 

@@ -65,7 +65,7 @@ Nicholas[《Node.js and the new web front-end》](http://www.nczonline.net/blog/
         {
           "page_layout": 1,
           "page_module1": [
-            "http://odin.re.taobao.com/data1?keyword={{url.key}}&nickname={{cookie.tracknick}}&pid=44_4444",
+            "http://odin.re.taobao.com/data1?keyword={url.key}&nickname={cookie.tracknick}&pid=44_4444",
             "http://odin.re.taobao.com/data2?keyword={{url.key}}&nickname={{cookie.tracknick}}&pid=44_4444",
           ],
           "page_module2": [

@@ -66,15 +66,15 @@ Nicholas[《Node.js and the new web front-end》](http://www.nczonline.net/blog/
           "page_layout": 1,
           "page_module1": [
             "http://odin.re.taobao.com/data1?keyword={url.key}&nickname={cookie.tracknick}&pid=44_4444",
-            "http://odin.re.taobao.com/data2?keyword={{url.key}}&nickname={{cookie.tracknick}}&pid=44_4444",
+            "http://odin.re.taobao.com/data2?keyword={url.key}&nickname={cookie.tracknick}&pid=44_4444",
           ],
           "page_module2": [
-            "http://odin.re.taobao.com/data1?keyword={{url.key}}&nickname={{cookie.tracknick}}&pid=44_4444",
+            "http://odin.re.taobao.com/data2?keyword={url.key}&nickname={cookie.tracknick}&pid=44_4444",
           ]
         }
 
 
-一个页面静态的部分包括html框架，css控制，js控制，都在page_layout里，动态数据获取通过返回的数据接口获取。注意`keyword={{url.key}}`代表Node.js需要从请求参数解析出key参数替换进去。cookie也类似。不过这段逻辑是统一的也不会很复杂。  
+一个页面静态的部分包括html框架，css控制，js控制，都在page_layout里，动态数据获取通过返回的数据接口获取。注意`keyword={url.key}`代表Node.js需要从请求参数解析出key参数替换进去。cookie也类似。不过这段逻辑是统一的也不会很复杂。  
   
 上面返回格式中，都是http协议的数据api，也不仅限于http。哪几个api直接Node.js请求数据渲染，哪几个由页面ajax异步请求数据，完全交给前端工程师控制了，也就是通过page_layout id能找到那段决定如何使用这些page_module的数据接口的代码就可以了。  
   

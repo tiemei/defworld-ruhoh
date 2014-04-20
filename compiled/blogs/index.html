@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.8821137849688163" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.3981895819143675" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5264923108251612" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.8711106319666593" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.1304713865445073" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.183356023432386" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -54,6 +54,41 @@
 <div class="row">
   <div class="span12">
     <h2>Latest Posts</h2>
+
+<div class="post">
+  <h3 class="title"><a href="/2014-04/node-js-and-division-of-work.html">Node.js与前后端分离</a> <span class="date">2014-04-20</span></h3>
+
+  <p>撇下Node.js社区的红火，异步I/O的相比阻塞I/O的好处，也不谈回调嵌套是否反人类，Node.js是否在“羞辱”后端程序员，我想借着这篇文字理一下Node.js在我们广告页面中能否提高合作效率和迭代速度。  </p>
+
+<h3 id="toc_0">过去和现状</h3>
+
+<p>我们团队维护直通车、外投外、无线等多条产品线的二跳页面，且正在接入一跳广告位。  </p>
+
+<p>2012年我刚来团队的时候，说的简单点，主要做的事情无非就是从广告引擎、其他数据源获取数据，展示到页面上。因为公司技术环境的原因，最开始选择了webx+velocity模板，由前端工程师写静态的html页面，java工程师拿过来，把其中的动态部分用vm模板语言重写一遍，再从后端数据源把数据拿过来，几乎不会对数据进行更多的逻辑加工。加上页面几乎没有用户输入部分，基本上交互都集中在纯js/css动态效果，ajax异步数据请求和展现（没有数据输入）。  </p>
+
+<p>可以看到这样的合作模式里，前端/后端工程师的分工是非常明确和解耦的，当然前端同学也能在这样的模式下积累可重用的js组件提交效率。但，随着粗放式增长的瓶颈，加上内部流程的制约，这样的迭代方式遇到了问题？首先，经常性的页面局部调整一般只能在下周的发布日才能完成；一次无法尝试过多版本，因为开发html改成动态模版和测试都需要资源；重复的页面模块开发；后端工程师一直在干重复枯燥的劳动，没有精力去思考如何做到流程的自动化、数据可反馈、统一解决方案的问题；当然还有多终端时代的挑战。  </p>
+
+<p>我们做的第一次尝试，“组件化”平台，我认为实际上是做到页面搭建过程的模型化，也就是说用一种统一的模型来描述页面的逻辑，进而用线上可动态改变的配置文件来描述这个模型。显然，在后端工程师的角度，我们不再是写写数据接口，写写页面模版了，我们面对统一的页面模型，进行配置的统一生成和解析。这里可以简单说下这个模型，基于广告页面的实际业务场景，我们把页面切分成几个独立的块，每块用“动态模版+数据源配置+样式js”的方式描述，块之间的js,css依赖通过css class命名规范进行解耦，块之间的数据依赖（这样的依赖极少）通过配置上的数据传递来解决。  </p>
+
+<p>“组件化”平台的配置化的统一模型尝试是突破性的，后端开发终于从将html改写成动态模版这样的无聊的工作中解脱了，我们也似乎看到一点平台化的统一解决方案的影子。但，因为这个配置化的模型还是过于复杂了，生成模型配置的管理系统，提供出来的配置界面(<code>http://moc.taobao.org/</code>)过于复杂，也注定了它只能给开发自己玩玩。更大的问题是，<strong>前端工程师需要写后端动态模板</strong>，调试是个大问题呀！前端们用node.js+velocity.js搭了一个调试平台，然后再用约定的接口数据格式，自己定义一些mock数据调试。这样的方式勉强可以跑通，但前端开发完页面的动的模块后，需要后端工程师在配置系统配置上数据接口和模块之间的依赖关系，然后再将模块代码上传到后端渲染系统，然后才能看到真正的动态页面长什么样。这样的合作方式，我们做出来的页面已经覆盖到淘客、直通车、外投外、淘星云等多个页面，流量也上千万了。如此多的依赖，和前端对最终运行环境的无法感知，带来不少坎坷和诡异的问题。  </p>
+
+<h3 id="toc_1">“组件化”方案中前后端到底哪里耦合</h3>
+
+<p>首先再反思下，我们现有的前后端解耦手段：  </p>
+
+<ol>
+<li>数据接口输出预先约定好</li>
+<li>Node.js + velocity.js 搭建前端开发调试环境</li>
+<li>前端控制动态模版的编写和css/js的控制</li>
+<li>后端控制数据接口入参的控制，数据接口的准备，页面模块间依赖的配置，
+最终配置的解析和渲染输出</li>
+</ol>
+
+
+  <div class="more">
+    <a href="/2014-04/node-js-and-division-of-work.html" class="btn">read more..</a>
+  </div>
+</div>
 
 <div class="post">
   <h3 class="title"><a href="/2014-01/reading-linux-101-hacks.html">《linux 101 hacks》笔记</a> <span class="date">2014-01-18</span></h3>
@@ -173,6 +208,33 @@ SUSE LinuxEnterprise，简称SUSE，和Ubuntu Server，简称Ubuntu。有分支�
 </div>
 
 <div class="post">
+  <h3 class="title"><a href="/2013-08/java-locks.html">java锁笔记</a> <span class="date">2013-08-30</span></h3>
+
+  <h1 id="toc_0">线程通信</h1>
+
+<p>通信遇到的问题包括：  </p>
+
+<ol>
+<li>共享对象：需要做同步处理</li>
+<li>忙等待：循环等待另一个线程发来信号，可sleep</li>
+<li><p>wait(),notify()</p>
+
+<pre><code>1. 遇到mobj.wait()，让线程进入非运行状态，直到另一个线程mobj.nitify
+2. 这几个方法必须在获得mobj锁的前提下调用，否则IllegalMonitorStateException
+3. 一个线程调用了wait()，即释放mobj上的锁
+4. 一旦一个线程被唤醒，不能立刻就退出wait()的方法调用，直到调用
+notify()的线程退出了它自己的同步块。因此，多个线程被notifyAll唤醒，只有一个
+线程可以最终退出wait()方法，因为必须获得mobj的锁
+</code></pre></li>
+</ol>
+
+
+  <div class="more">
+    <a href="/2013-08/java-locks.html" class="btn">read more..</a>
+  </div>
+</div>
+
+<div class="post">
   <h3 class="title"><a href="/2013-08/jdk-tools.html">jdk自带工具</a> <span class="date">2013-08-30</span></h3>
 
   <h1 id="toc_0">javah</h1>
@@ -200,33 +262,6 @@ SUSE LinuxEnterprise，简称SUSE，和Ubuntu Server，简称Ubuntu。有分支�
 
   <div class="more">
     <a href="/2013-08/jdk-tools.html" class="btn">read more..</a>
-  </div>
-</div>
-
-<div class="post">
-  <h3 class="title"><a href="/2013-08/java-locks.html">java锁笔记</a> <span class="date">2013-08-30</span></h3>
-
-  <h1 id="toc_0">线程通信</h1>
-
-<p>通信遇到的问题包括：  </p>
-
-<ol>
-<li>共享对象：需要做同步处理</li>
-<li>忙等待：循环等待另一个线程发来信号，可sleep</li>
-<li><p>wait(),notify()</p>
-
-<pre><code>1. 遇到mobj.wait()，让线程进入非运行状态，直到另一个线程mobj.nitify
-2. 这几个方法必须在获得mobj锁的前提下调用，否则IllegalMonitorStateException
-3. 一个线程调用了wait()，即释放mobj上的锁
-4. 一旦一个线程被唤醒，不能立刻就退出wait()的方法调用，直到调用
-notify()的线程退出了它自己的同步块。因此，多个线程被notifyAll唤醒，只有一个
-线程可以最终退出wait()方法，因为必须获得mobj的锁
-</code></pre></li>
-</ol>
-
-
-  <div class="more">
-    <a href="/2013-08/java-locks.html" class="btn">read more..</a>
   </div>
 </div>
 
@@ -316,30 +351,6 @@ notify()的线程退出了它自己的同步块。因此，多个线程被notify
 
   <div class="more">
     <a href="/2013-06/svn-git-cmds.html" class="btn">read more..</a>
-  </div>
-</div>
-
-<div class="post">
-  <h3 class="title"><a href="/2013-06/my-shell-mannual.html">近一年来shell命令积累(随时更新)</a> <span class="date">2013-06-12</span></h3>
-
-  <p>参考:<br>
-<a href="http://roclinux.cn/">linux命令五分钟系列博文，写的简洁易懂</a>  </p>
-
-<ul>
-<li><a href="#awk">awk</a></li>
-<li><a href="#echo">echo</a></li>
-<li><p><a href="#expect">expect</a> 对命令行提示输入自动输入，如密码验证</p></li>
-<li><p><a href="#cut">cut</a>      字节/字符/域（特殊字符分隔）的按行切割</p></li>
-<li><p><a href="#paste">paste</a>  多文件按行连接/一个文件多行连接</p></li>
-<li><p><a href="#split">split</a> 按行/大小拆分文件</p></li>
-<li><p><a href="#sed">sed</a> stream editor,面向行处理，输出到标准输出</p></li>
-<li><p><a href="#awk">awk</a></p></li>
-<li><p><a href="#xargs">xargs</a></p></li>
-</ul>
-
-
-  <div class="more">
-    <a href="/2013-06/my-shell-mannual.html" class="btn">read more..</a>
   </div>
 </div>
 

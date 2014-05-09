@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9992342357755788" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.1904047655513924" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.05350953796704794" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.47280769840925274" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.32503733194582596" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8299099424572395" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -54,6 +54,33 @@
 <div class="row">
   <div class="span12">
     <h2>Latest Posts</h2>
+
+<div class="post">
+  <h3 class="title"><a href="/2014-05/my-sublime-text-3-shortcuts.html">我的Sublime Text快捷键</a> <span class="date">2014-05-09</span></h3>
+
+  <h3 id="toc_0">select</h3>
+
+<ul>
+<li><code>Ctrl+Command+G</code> find all <code>Escape</code> cancle</li>
+</ul>
+
+<h3 id="toc_1">line</h3>
+
+<ul>
+<li><code>⇧ ⌘ D</code> duplicate line</li>
+<li><code>⌃ ⇧ K</code> delete line</li>
+<li><code>⌃ ⌘ ↑</code>  <code>⌃ ⌘ ↓</code> swap line</li>
+<li><code>⌘ ]</code> <code>⌘ [</code> line indent / unindent</li>
+<li><code>⌘ ↩</code> insert line after</li>
+<li><code>⇧ ⌘ ↩</code> insert line before</li>
+<li><code>⌃ K</code>  <code>⌘ ⌦</code> delete to end / beginning</li>
+</ul>
+
+
+  <div class="more">
+    <a href="/2014-05/my-sublime-text-3-shortcuts.html" class="btn">read more..</a>
+  </div>
+</div>
 
 <div class="post">
   <h3 class="title"><a href="/2014-04/node-js-and-division-of-work.html">Node.js前后端分离在广告页面中的思考</a> <span class="date">2014-04-20</span></h3>
@@ -312,45 +339,6 @@ notify()的线程退出了它自己的同步块。因此，多个线程被notify
 
   <div class="more">
     <a href="/2013-06/about-bashrc.html" class="btn">read more..</a>
-  </div>
-</div>
-
-<div class="post">
-  <h3 class="title"><a href="/2013-06/svn-git-cmds.html">我的svn git常用命令及配置</a> <span class="date">2013-06-27</span></h3>
-
-  <p>参考:<br>
-<a href="http://blog.csdn.net/sunboy_2050/article/details/6187464">SVN常用命令</a><br>
-<a href="http://www.subversion.org.cn/svnbook/1.4/svn.ref.svn.c.diff.html">svn diff</a>  </p>
-
-<h2 id="toc_0">svn</h2>
-
-<h3 id="toc_1">常用命令</h3>
-
-<ul>
-<li><code>svn co remote-svn-path local-dir --username tiemei</code>签出</li>
-<li><code>svn cp base-svn-path new-svn-path -m &quot;commit log&quot;</code>新建分支</li>
-<li><code>svn diff -r m path/file</code> 比较工作拷贝和某个版本的区别</li>
-<li><code>svn diff -c m path/file</code> 查看某个版本修改的内容</li>
-<li><code>svn diff --diff-cmd /usr/bin/diff -x &quot;-i -b&quot; COMMITTERS</code> 指定外部diff程序 </li>
-<li><code>svn diff -r m:n path</code> 比较两个版本文件差异</li>
-<li><code>svn diff -r m:n path |grep &quot;Index:&quot;</code> 比较两个版本间变化的文件</li>
-<li><code>svn info path</code> 列出某个path svn信息</li>
-<li><code>svn log path</code> 查看path提交log</li>
-<li><code>svn log -l4</code>  查看前四个提交log</li>
-<li><code>svn ls path</code>  列出某个路径下内容(与远程交互)</li>
-<li><code>svn mkdir path</code> 远程增加某个path</li>
-<li><code>svn cat /path/to/file</code> 打印某个文件内容</li>
-<li><code>svn st path</code> 只输出状态有变化的文件</li>
-<li><code>svn st -v path</code> 列出所有文件详细状态信息</li>
-<li><code>svn add file/dir</code><code>svn ci m &quot;comment log&quot;</code> 添加文件，提交变动</li>
-<li><code>svn rm path/file</code> 移除某个分支/文件</li>
-<li><code>svn merge URL local_dir/url</code>合并分支，先将原分支cm，然后merge到本地新开发分支，
-或者merge到远程svn新分支</li>
-</ul>
-
-
-  <div class="more">
-    <a href="/2013-06/svn-git-cmds.html" class="btn">read more..</a>
   </div>
 </div>
 

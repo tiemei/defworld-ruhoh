@@ -8,6 +8,7 @@ categories: 'java'
 ### select 
 
 * `Ctrl+Command+G` find all `Escape` cancle
+* `⌃ ⇧ ↑` `⌃ ⇧ ↓` column select 。需要先把系统的shortcuts绑定去掉
 
 ### line
 
@@ -45,5 +46,13 @@ categories: 'java'
 * `⌃ ⇧ -` jump forward
 * `⌃ G` go to line
 
+### panes & view
 
+* `⌥ ⌘ 2/3/4` two/three/four column (vertical) panes
+* `⇧ ⌥ ⌘ 2/3/4` two/three/four row (horizontal) panes 
+* `⌘ K, ⌘ B` toggle the sidebar
+
+### package
+
+* `⌘ ⇧ P` 调出package control
 

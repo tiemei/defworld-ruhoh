@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.5972327053854707" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.6632282700612494" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8204541272335454" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.8040974669556931" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.8617254652209729" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8707140906025324" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -56,12 +56,44 @@
     <h2>Latest Posts</h2>
 
 <div class="post">
+  <h3 class="title"><a href="/2014-06/notes-c.html">C语言入门笔记</a> <span class="date">2014-06-05</span></h3>
+
+  <h3 id="toc_0">C语言的指针是什么？</h3>
+
+<ul>
+<li>指针中保存的是指向某个内存对象的地址<br></li>
+<li><code>&amp;</code>取地址，<code>int *p</code>指向int类型的指针p，<code>*p</code>p指向的对象</li>
+</ul>
+
+<h3 id="toc_1">C语言的结构体是什么？</h3>
+
+<ul>
+<li>结构体将多个数据捆绑在一起使用</li>
+</ul>
+
+<p><strong>类型定义（typedef）</strong>  </p>
+
+<ul>
+<li>用来建立新的数据类型名</li>
+<li><code>typedef int Length</code>类型Length将与int完全相同</li>
+</ul>
+
+<pre><code class="C">typedef struct tnode *Treeptr;
+</code></pre>
+
+
+  <div class="more">
+    <a href="/2014-06/notes-c.html" class="btn">read more..</a>
+  </div>
+</div>
+
+<div class="post">
   <h3 class="title"><a href="/2014-05/my-sublime-text-3-shortcuts.html">我的Sublime Text快捷键</a> <span class="date">2014-05-09</span></h3>
 
   <h3 id="toc_0">select</h3>
 
 <ul>
-<li><code>Ctrl+Command+G</code> find all <code>Escape</code> cancle</li>
+<li><code>⌃+⌘ +G</code> find all <code>Escape</code> cancle</li>
 <li><code>⌃ ⇧ ↑</code> <code>⌃ ⇧ ↓</code> column select 。需要先把系统的shortcuts绑定去掉</li>
 </ul>
 
@@ -317,29 +349,6 @@ notify()的线程退出了它自己的同步块。因此，多个线程被notify
 
   <div class="more">
     <a href="/2013-06/ssh.html" class="btn">read more..</a>
-  </div>
-</div>
-
-<div class="post">
-  <h3 class="title"><a href="/2013-06/about-bashrc.html">.bashrc .bash_profile等文件区别</a> <span class="date">2013-06-28</span></h3>
-
-  <p><strong>/etc/profile</strong><br>
-全局，用户第一次登录执行一次<br>
-会从/etc/profile.d目录的配置文件中搜集shell的设置.</p>
-
-<p><strong>/etc/bashrc</strong><br>
-全局，bash shell配置，一般由/etc/profile调用  </p>
-
-<p><strong>~/.bash_profile</strong><br>
-似有，用户登录(ssh远程登陆/本地新开一个terminal)时执行一次
-一般会调用~/.bashrc  </p>
-
-<p><strong>~/.bashrc</strong><br>
-似有，每次执行bash命令时自动调用，或者非交互方式进入bash时运行  </p>
-
-
-  <div class="more">
-    <a href="/2013-06/about-bashrc.html" class="btn">read more..</a>
   </div>
 </div>
 

@@ -2,12 +2,12 @@
 title: 我的Sublime Text快捷键
 date: '2014-05-09'
 description:
-categories: 'java'
+categories: 'tool'
 ---
 
 ### select 
 
-* `Ctrl+Command+G` find all `Escape` cancle
+* `⌃+⌘ +G` find all `Escape` cancle
 * `⌃ ⇧ ↑` `⌃ ⇧ ↓` column select 。需要先把系统的shortcuts绑定去掉
 
 ### line

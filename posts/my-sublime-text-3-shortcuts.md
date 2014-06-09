@@ -56,3 +56,12 @@ categories: 'tool'
 
 * `⌘ ⇧ P` 调出package control
 
+### 格式化
+
+key bindings:  
+`single_line`表示不仅作用于当前行，作用于整个文本。  
+```json
+[
+  { "keys": ["ctrl+shift+f"], "command": "reindent", "args": {"single_line": false}}
+]
+```

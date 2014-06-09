@@ -11,9 +11,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.14322476587466015" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.4823893029961439" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.3585819258173458" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.42199095275034726" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.17194058505849585" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.13339288806518446" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -52,7 +52,9 @@
 
 <div class="row">
   <div class="span8">
-    <ol>
+    <h1 id="toc_0">debug node.js</h1>
+
+<ol>
 <li><code>sudo npm install -g node-inspector</code></li>
 <li><code>node-debug xxx.js</code></li>
 <li>set breakpoints</li>
@@ -77,6 +79,38 @@
 <li>可通过console查看当前断点下上下文状态</li>
 <li>Pause on exception 可选择打开或关闭</li>
 <li>可打开左侧源码窗口，保持两边窗口的同步</li>
+</ul>
+
+<h1 id="toc_1">run node.js</h1>
+
+<h2 id="toc_2">用<a href="https://github.com/fgnass/node-dev">node-dev</a>做文件热加载</h2>
+
+<p><strong>准备工作</strong>  </p>
+
+<pre><code class="bash">npm install -g node-dev
+# 你也可以选择Growl or libnotify，osX可以内置的提醒器
+sudo gem install terminal-notifier
+</code></pre>
+
+<p><strong>开始吧</strong>  </p>
+
+<p><code>node-dev foo.js</code><br>
+可用两个选项：  </p>
+
+<ul>
+<li><code>--no-deps</code> Watch only the project&#39;s own files and linked modules (via <code>npm link</code>)</li>
+<li><code>--all-deps</code> Watch the whole dependency tree</li>
+</ul>
+
+<p>By default node-dev will watch all first-level dependencies, i.e. the ones in the project&#39;s node_modulesfolder.  </p>
+
+<p><strong>其他</strong>  </p>
+
+<ul>
+<li>CoffeeScript这样的翻译成js的语言也可以用这个工具</li>
+<li>还有其他高级配置项可供选择</li>
+<li>如果子进程需要重启，会发一个<code>SIGTERM</code>信号，如果你的代码没有处理这些
+信号，<code>process.exit(0)</code>就会被强行调用</li>
 </ul>
 
 <p>参考：<br>

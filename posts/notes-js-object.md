@@ -323,6 +323,7 @@ function Person(name, age) {
 # js对象继承
 
 由于函数没有签名，在ECMAScript中无法实现接口继承，只支持实现继承，主要是依靠原型链来实现的。  
+
 ```js
 function SuperType() {
     this.property = true;
@@ -397,21 +398,113 @@ SuperType.prototype.sayName = function() {
 
 function SubType(name, age) {
     // 继承属性
-    SuperType.call(this, name);
+    SuperType.call(this, name); // 第二次调用SupertType()。这里创建的name，colors属性会屏蔽第一次创建的属性
     this.age = age;
 }
 
 // 继承方法
-SubType.prototype = new SuperType();
+SubType.prototype = new SuperType(); // 第一调用SupterType()
 // 自定义方法
 SubType.prototype.sayAge = function() {
     alert(this.age);
 };
 ```
 
+缺点：  
+
+* 无论什么情况下，都会调用两次超类型构造函数
+
 **原型式继承**  
 
-待续
+思路是，借助原型可以基于已有对象创建新对象，同时不必因此创建自定义类型。  
+
+```js
+// 新对象持有一个指向o的原型指针，因此新对象能访问到o的所有属性和方法
+function objecct(o) {
+    function F() {};
+    F.prototype = o;
+    return new F();
+}
+
+var person = {
+    name: 'tiemei',
+    friends: ['Su', 'Wang']
+};
+
+// anotherPerson实例持有一个原型指针指向person对象
+var anotherPerson = object(person); 
+```
+
+ECMAScript5通过新增`Object.create()`方法规范了原型式继承。  
+
+```js
+// 接上一个例子
+// 等价于上面的object方法
+var anotherPerson = Object.create(person); 
+
+// 第二个参数与Object.defineProperties()方法第二个参数格式相同
+var yeAnotherPerson = Object.create(person, {
+    name: {
+        value: "Greg"
+    }
+});
+
+```
+
+**寄生式继承**  
+
+创建一个用于封装继承过程的函数。  
+
+```js
+function createAnother(original) {
+    var clone = object(orginal); // object()不是必须的，任何能返回新对象的函数都适用于此模式
+
+    clone.sayHi = function() {};
+    return clone;
+}
+
+var person = {};
+var anotherPerson = createAnother(person);
+another.sayHi();
+```
+
+缺点：  
+
+* 与构造函数模式类似，做不到函数的复用
+
+**寄生组合式继承**  
+
+`最理想的继承方式`。为了解决组合继承的缺点，出现了寄生组合式继承。借用构造函数来继承属性，通过原型链混成形式来继承方法。思路是，不必为了指定子类型的原型而调用超类型的构造函数，我们所需的无非就是超类型原型的一个副本而已。  
+
+```js
+// 
+function inheritPrototype(subType, superType) {
+    var prototype = object(superType.prototype);
+    prototype.constructor = subType;
+    subType.prototype = prototype;
+}
+
+function SuperType(name) {
+    this.name = name;
+}
+SuperType.prototype.sayName = function() {};
+
+function SubType(name, age) {
+    SuperType.call(this, name);
+
+    this.age = age;
+}
+
+inheritPrototype(SubType, SuperType);
+
+SubType.prototype.sayAge = function() {
+    // ...
+};
+```
+
+优点：  
+
+* 只调用了一次SuperType构造函数，因此避免了在SubType.prototype上创建不必要的多余的属性。  
 
 # js闭包
 

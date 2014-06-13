@@ -2,7 +2,8 @@
 <html lang="en" xmlns:wb=“http://open.weibo.com/wb”>
   <head>
     <meta charset="utf-8">
-    <title>jdk自带工具</title>
+    <title>js入门笔记</title>
+    <meta name="description" content="nodes javascript">
     <meta name="author" content="tiemei">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -11,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.16330091879389252" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.6538421800865054" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.45393851852417055" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7827702921729655" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.7718604192897625" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9530035526576714" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -47,110 +48,145 @@
 
       <div class="content">
         <div class="page-header">
-  <h1>jdk自带工具 </h1>
+  <h1>js入门笔记 </h1>
 </div>
 
 <div class="row">
   <div class="span8">
-    <h1 id="toc_0">javah</h1>
-
-<h2 id="toc_1">JNI示例</h2>
-
-<p>参考:<a href="https://blogs.oracle.com/moonocean/entry/a_simple_example_of_jni">JNI example</a>  </p>
-
-<ol>
-<li>写一个java类，生命navtive方法</li>
-<li>调用javah生成头文件</li>
-<li>写c代码，生成库文件</li>
-<li><code>java -Djava.library.path=&lt;path_of_native_lib&gt; JNIFoo</code>会默认先载入头文件，
-然后按指定的路径查找库文件</li>
-</ol>
-
-<h1 id="toc_2">jmap(Java Memory Map)</h1>
-
-<p>参考:<a href="http://blog.csdn.net/fenglibing/article/details/6411953">jmap</a>  </p>
-
-<h2 id="toc_3">jmap -histo pid</h2>
-
-<p><img src="http://farm8.staticflickr.com/7346/9627329472_b28eba137c.jpg" alt="jmap output"></p>
-
-<pre><code>B代表byte
-C代表char
-D代表double
-F代表float
-I代表int
-J代表long
-Z代表boolean
-前边有[代表数组，[I 就相当于int[]
-</code></pre>
-
-<h2 id="toc_4">jmap -heap pid</h2>
-
-<p>查看JVM初始化内存分配，以及各代详细的内存使用</p>
-
-<h2 id="toc_5">产生heap dump文件</h2>
+    <h1 id="toc_0">js函数有啥特点</h1>
 
 <ul>
-<li><code>jmap -heap:format=b pid</code> JDK1.5</li>
-<li><code>jmap -dump:live,format=b,file=xxx pid</code> JDK1.6</li>
+<li>函数的参数实际上在内部是用一个数组表示的，在函数体内可以通过<code>arguments</code>对象访问。arguments只是跟数组类型可以通过方括号访问每一个元素，实际不是Array实例</li>
+<li>函数定义的参数与实际传递的参数没有个数相等的限制，不像Java语言会编译校验这个</li>
+<li>因为函数参数是由包含另零个或多个值的数组来表示的，没有函数签名，故<code>没有重载</code></li>
 </ul>
 
-<h2 id="toc_6">jmap -permstat pid</h2>
-
-<p>打印一些持久代上的内存使用状态</p>
-
-<h1 id="toc_7">jstack</h1>
+<h1 id="toc_1">js基本类型和引用类型</h1>
 
 <ul>
-<li><code>pstree -p pid</code> 查看某个进程的进程数</li>
-<li><code>top -H</code> 线程维度查看</li>
-<li><code>ps -eLf | grep java | wc</code> 查看java线程数</li>
-<li><code>ps -Lf 24551</code>查看某个进程所有线程</li>
-<li><code>ps mp pid -o THREAD,tid</code> 查看某个进程下各线程的运行状态</li>
-<li><code>netstat -anp |grep port</code> 查看占用某个端口的进程</li>
+<li><code>基本数据类型</code>：Undefined 、 Null 、 Boolean 、 Number 、 String</li>
+<li>不能给基本数据类型添加属性，添加以后访问也是undifined</li>
+<li>因为String在js不同于其他语言是基本类型，所以赋值的时候会将值拷贝一份</li>
 </ul>
 
-<h2 id="toc_8">结果分析</h2>
+<h3 id="toc_2">检测类型</h3>
 
-<p><a href="http://iamzhongyong.iteye.com/blog/1441285">cankao</a><br>
-可以分析到：  </p>
+<p><strong><code>typeof</code>区分是基本类型还是应用类型</strong>  </p>
 
-<ol>
-<li>死锁：看到线程已获得哪个锁，在等待哪个锁</li>
-<li>程序运行慢：查看waiting状态的几个线程在干嘛</li>
-<li>cpu占用特别高的线程在干什么
+<pre><code class="js">var s = &#39;Nicholas&#39;;
+var b = true;
+var i = 22;
+var u;
+var n = null;
+var o = new Object();
 
-<ol>
-<li>某个进程占用cpu/mem较高，用ps查看改进程各线程运行状态</li>
-<li>用jstack查看改线程的调用堆栈，定位问题</li>
-</ol></li>
-</ol>
-
-<p>一个例子:  </p>
-
-<pre><code>&quot;main&quot; prio=10 tid=0x0000000040c75800 nid=0x5fe8 runnable [0x0000000040209000]
-&quot;xxx&quot; - 线程名 
-prio  - 优先级 
-tid   - 线程id(jmm中内存规范中地址) 
-nid   - 是linux下的线程id  
-runnable - 线程状态
-&quot;main&quot; 主线程，后面接了daemon未守护线程
-&quot;http-bio-8080-exec-xxx&quot; http 8080 端口bloked io 线程
+alert(typeof s); // string
+alert(typeof i); // number
+alert(typeof b); // boolean
+alert(typeof u); // undefined
+alert(typeof n); // object
+alert(typeof o); // object
 </code></pre>
 
-<h2 id="toc_9">JVM pid文件</h2>
+<p><strong><code>instanceof</code>检测对象是啥基本类型</strong> </p>
 
-<p>jvm运行时会生成一个目录hsperfdata<em>$USER(linux默认在/tmp/hsperfdata</em>$USER)，存放Pid文件(/etc/cron.daily/tmpwatch会240h移除这个目录)。jstack等工具读取这个文件获取pid。（<a href="http://windows9834.blog.163.com/blog/static/273450042012919101435608/">参考</a>）从Java 6 update 21 ~ 24，会优先<code>-Djava.io.tmpdir</code>，这样jstack等文件可可能找不到pid文件。</p>
+<ul>
+<li>所有引用类型都是Object的实例</li>
+<li>对基本类型使用都会返回false</li>
+</ul>
+
+<p>函数也是对象。  </p>
+
+<h3 id="toc_3">基本包装类型Boolean Number String</h3>
+
+<p>不建议在代码中使用包装类型。<br>
+之所以基本类型上有方法可以访问，是因为执行的瞬间后台创建了一个包装类型，例如：  </p>
+
+<pre><code class="js">var s1 = &#39;some text&#39;;
+var s2 = s1.substring(2);
+
+// 上面的实际上再后台是这么运行的
+
+var s1 = new String(&#39;some text&#39;);
+var s2 = s1.substring(2);
+s1 = null; // 使用new操作符创建的引用类型实例作用域内一直存在，而这里只是存在于一行代码的执行瞬间
+</code></pre>
+
+<ol>
+<li>创建String类型的一个实例</li>
+<li>在实例上调用指定的方法</li>
+<li>销毁这个实例</li>
+</ol>
+
+<pre><code class="js">// 两种创建包装类型的方式
+
+var obj = new Object(&#39;some text&#39;);
+
+// 等价于
+
+var str = new String(&#39;some text&#39;);
+</code></pre>
+
+<pre><code>// 转型函数与包装类型
+
+var value = &#39;25&#39;;
+var number = Number(value); // 转型函数
+alert(typeof number); // &#39;number&#39;
+
+var obj = new Number(value); // 构造函数
+alert(typeof obj); // &#39;object&#39;
+
+</code></pre>
+
+<p><strong>布尔表达式中所有对象都会被转换成true</strong>  </p>
+
+<pre><code class="js">var falseObj = new Boolean(false);
+var result = falseObj &amp;&amp; true;
+alert(result); // true
+</code></pre>
+
+<h1 id="toc_4">js执行环境及作用域</h1>
+
+<h2 id="toc_5">执行环境与作用域链</h2>
+
+<p>每个<code>执行环境</code>都有一个与之关联的<strong>变量对象（variable object）</strong>，环境中定义的所有变量和函数都保存在这个对象中，虽然我们编写的代码无法访问这个对象，但解析器在处理数据时会在后台使用它。  </p>
+
+<ul>
+<li>每个函数有自己的执行环境</li>
+<li>代码在一个环境中执行时，会创建变量对象的一个<code>作用域链（scope chain）</code>，超找对象也按此链形成一个优先级</li>
+</ul>
+
+<p><strong>延长作用域链</strong>  </p>
+
+<pre><code class="js">function buildUrl() {
+    var qs = &#39;?debug=true&#39;;
+
+    with(location) {
+        var url = herf + qs; // herf实际上是location.herf
+    }
+
+    return url;
+}
+</code></pre>
+
+<p><code>try-catch</code>的catch块也是类似  </p>
+
+<p><strong>没有块级作用域</strong>  </p>
+
+<ul>
+<li>所有控制语句的代码块内部声明的变量都会逸出到外部，不同于Java语言。<br></li>
+<li>函数中的声明的var变量作用域仅限于函数内部</li>
+</ul>
 
     <hr>
     <div class="pagination">
       <ul>
         <ul>
-            <li class="prev"><a href="/2013-08/java-locks.html" title="java锁笔记">&larr; Previous</a></li>
+            <li class="prev"><a href="/2014-06/st3-debug-node-js.html" title="run &amp; debug node.js">&larr; Previous</a></li>
 
             <li><a href="/archive">Archive</a></li>
 
-            <li class="next"><a href="/2013-09/maven-cmd.html" title="常用maven命令">Next &rarr;</a></li>
+            <li class="next"><a href="/2014-06/notes-js-object.html" title="Notes Js Object">Next &rarr;</a></li>
         </ul>
       </ul>
     </div>
@@ -195,12 +231,12 @@ runnable - 线程状态
     </script>
 
     <h4>Published</h4>
-    <div class="date"><span>2013-08-30</span></div>
+    <div class="date"><span>2014-06-13</span></div>
     <br>
     <h4>Categories</h4>
     <ul class="tag_box">
       <li>
-        <a href="/categories#java-ref">java <span>6</span></a>
+        <a href="/categories#Node.js-ref">Node.js <span>3</span></a>
       </li>    </ul>
     <br>
     <h4>Tags</h4>

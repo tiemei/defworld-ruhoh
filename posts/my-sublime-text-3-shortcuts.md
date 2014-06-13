@@ -19,6 +19,7 @@ categories: 'tool'
 * `⌘ ↩ ` insert line after
 * `⇧ ⌘ ↩` insert line before
 * `⌃ K`  `⌘ ⌦ ` delete to end / beginning
+* `⌃ a` go to line head `⌃ e` go to line end
 
 ### comment
 

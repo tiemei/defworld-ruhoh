@@ -3,7 +3,177 @@
   <channel>
     <title>tiemei</title>
     <link>http://defworld.com</link>
-    <pubDate>2014-06-09 18:22:50 +0800</pubDate>
+    <pubDate>2014-06-13 11:23:54 +0800</pubDate>
+    <item>
+      <title>Notes Js Object</title>
+      <link>http://defworld.com/2014-06/notes-js-object.html</link>
+      <pubDate>2014-06-13</pubDate>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang="en" xmlns:wb=&#x201C;http://open.weibo.com/wb&#x201D;&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Notes Js Object&lt;/title&gt;
+    &lt;meta name="author" content="tiemei"&gt;
+
+    &lt;!-- Le HTML5 shim, for IE6-8 support of HTML elements --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+
+    &lt;!-- Le styles --&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.4178422731350765" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.2246716768672672" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.1368789036308089" type="text/css" rel="stylesheet" media="all"&gt;
+
+ 
+
+    &lt;!-- Le fav and touch icons --&gt;
+  &lt;!-- Update these with your own images
+    &lt;link rel="shortcut icon" href="images/favicon.ico"&gt;
+    &lt;link rel="apple-touch-icon" href="images/apple-touch-icon.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"&gt;
+  --&gt;
+  &lt;script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+    &lt;div class="navbar"&gt;
+      &lt;div class="navbar-inner"&gt;
+        &lt;div class="container"&gt;
+          &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
+          &lt;ul class="nav"&gt;
+              
+                &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
+              
+                &lt;li&gt;&lt;a href="/tools"&gt;Tools&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="container"&gt;
+
+      &lt;div class="content"&gt;
+        &lt;div class="page-header"&gt;
+  &lt;h1&gt;Notes Js Object &lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="span8"&gt;
+    
+    &lt;hr&gt;
+    &lt;div class="pagination"&gt;
+      &lt;ul&gt;
+        &lt;ul&gt;
+            &lt;li class="prev"&gt;&lt;a href="/2014-06/notes-js.html" title="js&#x5165;&#x95E8;&#x7B14;&#x8BB0;"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li class="next disabled"&gt;&lt;a&gt;Next &amp;rarr;&lt;/a&gt;
+        &lt;/ul&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;div id="disqus_thread"&gt;&lt;/div&gt;
+&lt;script&gt;
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+
+  &lt;/div&gt;
+  
+  &lt;div class="span4"&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+    (function(){
+       var _w = 90 , _h = 24;
+       var param = {
+       url:location.href,
+       type:'2',
+       count:'1', /**&#x662F;&#x5426;&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6570;&#xFF0C;1&#x663E;&#x793A;(&#x53EF;&#x9009;)*/
+       appkey:'', /**&#x60A8;&#x7533;&#x8BF7;&#x7684;&#x5E94;&#x7528;appkey,&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6765;&#x6E90;(&#x53EF;&#x9009;)*/
+       title:'', /**&#x5206;&#x4EAB;&#x7684;&#x6587;&#x5B57;&#x5185;&#x5BB9;(&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;title)*/
+       pic:'', /**&#x5206;&#x4EAB;&#x56FE;&#x7247;&#x7684;&#x8DEF;&#x5F84;(&#x53EF;&#x9009;)*/
+       ralateUid:'2388250330', /**&#x5173;&#x8054;&#x7528;&#x6237;&#x7684;UID&#xFF0C;&#x5206;&#x4EAB;&#x5FAE;&#x535A;&#x4F1A;@&#x8BE5;&#x7528;&#x6237;(&#x53EF;&#x9009;)*/
+       language:'zh_cn', /**&#x8BBE;&#x7F6E;&#x8BED;&#x8A00;&#xFF0C;zh_cn|zh_tw(&#x53EF;&#x9009;)*/
+       rnd:new Date().valueOf()
+     }
+     var temp = [];
+     for( var p in param ){
+     temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+     }
+     document.write('&lt;iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&amp;') + '" width="'+ _w+'" height="'+_h+'"&gt;&lt;/iframe&gt;')
+     })()
+    &lt;/script&gt;
+
+    &lt;h4&gt;Published&lt;/h4&gt;
+    &lt;div class="date"&gt;&lt;span&gt;2014-06-13&lt;/span&gt;&lt;/div&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Categories&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+    &lt;/ul&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Tags&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+
+      &lt;footer&gt;
+        &lt;p&gt;&amp;copy; tiemei 2012 
+          with help from &lt;a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework"&gt;ruhoh&lt;/a&gt;
+          and &lt;a href="http://twitter.github.com/bootstrap/" target="_blank"&gt;Twitter Bootstrap&lt;/a&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+        &lt;script src="http://s9.cnzz.com/stat.php?id=5379369&amp;web_id=5379369&amp;online=1&amp;show=line" language="JavaScript"&gt;&lt;/script&gt;
+        &lt;/p&gt;
+      &lt;/footer&gt;
+
+    &lt;/div&gt; &lt;!-- /container --&gt;
+
+    &lt;!-- Google Prettify --&gt;
+&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i &lt; pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+&lt;/script&gt;
+&lt;!-- end Google Prettify --&gt;
+    &lt;script&gt;
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(defworld.com);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+&lt;/script&gt;
+&lt;noscript&gt;&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /&gt;&lt;/p&gt;&lt;/noscript&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
+    <item>
+      <title>js&#x5165;&#x95E8;&#x7B14;&#x8BB0;</title>
+      <link>http://defworld.com/2014-06/notes-js.html</link>
+      <pubDate>2014-06-13</pubDate>
+      <description>nodes javascript</description>
+    </item>
     <item>
       <title>run &amp; debug node.js</title>
       <link>http://defworld.com/2014-06/st3-debug-node-js.html</link>
@@ -21,9 +191,9 @@
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7585581733185075" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.4743427727904669" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.891359946589295" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.5451268875202605" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.512580194347881" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.3915260341231427" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -135,7 +305,7 @@ sudo gem install terminal-notifier
 
             &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
 
-            &lt;li class="next disabled"&gt;&lt;a&gt;Next &amp;rarr;&lt;/a&gt;
+            &lt;li class="next"&gt;&lt;a href="/2014-06/notes-js.html" title="js&#x5165;&#x95E8;&#x7B14;&#x8BB0;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
@@ -185,7 +355,7 @@ sudo gem install terminal-notifier
     &lt;h4&gt;Categories&lt;/h4&gt;
     &lt;ul class="tag_box"&gt;
       &lt;li&gt;
-        &lt;a href="/categories#Node.js-ref"&gt;Node.js &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;
+        &lt;a href="/categories#Node.js-ref"&gt;Node.js &lt;span&gt;3&lt;/span&gt;&lt;/a&gt;
       &lt;/li&gt;    &lt;/ul&gt;
     &lt;br&gt;
     &lt;h4&gt;Tags&lt;/h4&gt;
@@ -251,9 +421,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.2882018063630618" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.16355098062935813" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5962839833930955" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.4277255693726686" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.0770844573418914" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.19579983655561717" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -495,9 +665,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.4718106116036642" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.620165079834459" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.10328873083815437" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.3957901474814731" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.1495605640634189" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.09953488178362524" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -553,6 +723,7 @@ clicky_site_ids.push(defworld.com);
 &lt;li&gt;&lt;code&gt;&#x2318; &#x21A9;&lt;/code&gt; insert line after&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&#x21E7; &#x2318; &#x21A9;&lt;/code&gt; insert line before&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&#x2303; K&lt;/code&gt;  &lt;code&gt;&#x2318; &#x2326;&lt;/code&gt; delete to end / beginning&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#x2303; a&lt;/code&gt; go to line head &lt;code&gt;&#x2303; e&lt;/code&gt; go to line end&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id="toc_2"&gt;comment&lt;/h3&gt;
@@ -743,9 +914,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.1505400295478202" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.6215850675488285" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7156282634675171" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9862012261786409" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.529991374073869" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5395310929627934" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1139,9 +1310,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9420737392844526" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.6031890882749813" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7453397539952277" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9483865839811266" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.2677325736479853" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.21290148838077572" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1398,218 +1569,6 @@ clicky_site_ids.push(defworld.com);
       <description>maven, &#x547D;&#x4EE4;</description>
     </item>
     <item>
-      <title>java&#x9501;&#x7B14;&#x8BB0;</title>
-      <link>http://defworld.com/2013-08/java-locks.html</link>
-      <pubDate>2013-08-30</pubDate>
-      <description>&lt;!DOCTYPE html&gt;
-&lt;html lang="en" xmlns:wb=&#x201C;http://open.weibo.com/wb&#x201D;&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;java&#x9501;&#x7B14;&#x8BB0;&lt;/title&gt;
-    &lt;meta name="author" content="tiemei"&gt;
-
-    &lt;!-- Le HTML5 shim, for IE6-8 support of HTML elements --&gt;
-    &lt;!--[if lt IE 9]&gt;
-      &lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
-    &lt;![endif]--&gt;
-
-    &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.2626065082439919" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.4416233100815168" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.11645067183730018" type="text/css" rel="stylesheet" media="all"&gt;
-
- 
-
-    &lt;!-- Le fav and touch icons --&gt;
-  &lt;!-- Update these with your own images
-    &lt;link rel="shortcut icon" href="images/favicon.ico"&gt;
-    &lt;link rel="apple-touch-icon" href="images/apple-touch-icon.png"&gt;
-    &lt;link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"&gt;
-    &lt;link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"&gt;
-  --&gt;
-  &lt;script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
-  &lt;/head&gt;
-
-  &lt;body&gt;
-
-    &lt;div class="navbar"&gt;
-      &lt;div class="navbar-inner"&gt;
-        &lt;div class="container"&gt;
-          &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
-          &lt;ul class="nav"&gt;
-              
-                &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
-              
-                &lt;li&gt;&lt;a href="/tools"&gt;Tools&lt;/a&gt;&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class="container"&gt;
-
-      &lt;div class="content"&gt;
-        &lt;div class="page-header"&gt;
-  &lt;h1&gt;java&#x9501;&#x7B14;&#x8BB0; &lt;/h1&gt;
-&lt;/div&gt;
-
-&lt;div class="row"&gt;
-  &lt;div class="span8"&gt;
-    &lt;h1 id="toc_0"&gt;&#x7EBF;&#x7A0B;&#x901A;&#x4FE1;&lt;/h1&gt;
-
-&lt;p&gt;&#x901A;&#x4FE1;&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;&#x5305;&#x62EC;&#xFF1A;  &lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&#x5171;&#x4EAB;&#x5BF9;&#x8C61;&#xFF1A;&#x9700;&#x8981;&#x505A;&#x540C;&#x6B65;&#x5904;&#x7406;&lt;/li&gt;
-&lt;li&gt;&#x5FD9;&#x7B49;&#x5F85;&#xFF1A;&#x5FAA;&#x73AF;&#x7B49;&#x5F85;&#x53E6;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x53D1;&#x6765;&#x4FE1;&#x53F7;&#xFF0C;&#x53EF;sleep&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;wait(),notify()&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;1. &#x9047;&#x5230;mobj.wait()&#xFF0C;&#x8BA9;&#x7EBF;&#x7A0B;&#x8FDB;&#x5165;&#x975E;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#xFF0C;&#x76F4;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;mobj.nitify
-2. &#x8FD9;&#x51E0;&#x4E2A;&#x65B9;&#x6CD5;&#x5FC5;&#x987B;&#x5728;&#x83B7;&#x5F97;mobj&#x9501;&#x7684;&#x524D;&#x63D0;&#x4E0B;&#x8C03;&#x7528;&#xFF0C;&#x5426;&#x5219;IllegalMonitorStateException
-3. &#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x8C03;&#x7528;&#x4E86;wait()&#xFF0C;&#x5373;&#x91CA;&#x653E;mobj&#x4E0A;&#x7684;&#x9501;
-4. &#x4E00;&#x65E6;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x88AB;&#x5524;&#x9192;&#xFF0C;&#x4E0D;&#x80FD;&#x7ACB;&#x523B;&#x5C31;&#x9000;&#x51FA;wait()&#x7684;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#xFF0C;&#x76F4;&#x5230;&#x8C03;&#x7528;
-notify()&#x7684;&#x7EBF;&#x7A0B;&#x9000;&#x51FA;&#x4E86;&#x5B83;&#x81EA;&#x5DF1;&#x7684;&#x540C;&#x6B65;&#x5757;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x88AB;notifyAll&#x5524;&#x9192;&#xFF0C;&#x53EA;&#x6709;&#x4E00;&#x4E2A;
-&#x7EBF;&#x7A0B;&#x53EF;&#x4EE5;&#x6700;&#x7EC8;&#x9000;&#x51FA;wait()&#x65B9;&#x6CD5;&#xFF0C;&#x56E0;&#x4E3A;&#x5FC5;&#x987B;&#x83B7;&#x5F97;mobj&#x7684;&#x9501;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&#x4E22;&#x5931;&#x7684;&#x4FE1;&#x53F7;&#xFF08;Missed Signal&#xFF09;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&#x7EBF;&#x7A0B;A&#x5148;&#x8C03;&#x7528;&#x4E86;mobj.notify()&#xFF0C;&#x7EBF;&#x7A0B;B&#x540E;&#x8C03;&#x7528;mobj.wait()&#xFF0C;&#x901A;&#x77E5;&#x4FE1;&#x53F7;&#x53D1;&#x9001;&#x8FC7;&#x4E86;&#x5C31;&#x88AB;&#x4E22;&#x5F03;&#xFF0C;
-&#x7EBF;&#x7A0B;B&#x5C31;&#x53EF;&#x80FD;&#x6C38;&#x8FDC;&#x4E0D;&#x80FD;&#x9192;&#x6765;&#x3002;
-&#x8FD9;&#x5C31;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x989D;&#x5916;&#x7684;&#x53D8;&#x91CF;&#x6765;&#x4FDD;&#x5B58;&#x2018;&#x662F;&#x5426;&#x88AB;&#x901A;&#x77E5;&#x8FC7;&#x2019;&#x7684;&#x4FE1;&#x606F;&#x3002;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&#x5047;&#x5524;&#x9192;&#xFF08;spurious wakeups&#xFF09;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&#x6CA1;&#x6709;&#x8C03;&#x7528;&#x8FC7;notify()&#x548C;notifyAll()&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x9192;&#x6765;&#xFF0C;&#x539F;&#x56E0;&#x672A;&#x77E5;
-&#x9700;&#x8981;&#x52A0;&#x4E2A;&#x81EA;&#x65CB;&#x9501;&#xFF0C;&#x5373;&#x5C06;wait()&#x65B9;&#x6CD5;&#x653E;&#x5230;while&#x5FAA;&#x73AF;&#x4E2D;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&#x4E0D;&#x8981;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x5E38;&#x91CF;&#x6216;&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#x4E2D;&#x8C03;&#x7528;wait()&#x3002;mobj&#x4E0E;&#x4FE1;&#x53F7;&#x5E38;&#x91CF;&#x4E0D;&#x662F;&#x4E00;&#x4E00;&#x5BF9;&#x5E94;&#x3002;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;mobj: &#x7BA1;&#x7A0B; (&#x82F1;&#x8BED;&#xFF1A;Monitors&#xFF0C;&#x4E5F;&#x79F0;&#x4E3A;&#x76D1;&#x89C6;&#x5668;)  &lt;/p&gt;
-
-&lt;h1 id="toc_1"&gt;&#x9501;&lt;/h1&gt;
-
-&lt;p&gt;&#x9501;&#x7531;synchronized&#x5B9E;&#x73B0;&#xFF0C;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x7279;&#x6027;:  &lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&#x540C;&#x4E00;&#x65F6;&#x523B;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x7A7F;&#x8FC7;&#x4E34;&#x754C;&#x533A;&#xFF0C;&#x8FDB;&#x5165;&#x540C;&#x6B65;&#x5757;&lt;/li&gt;
-&lt;li&gt;&#x9501;&#x7684;&#x53EF;&#x91CD;&#x5165;&#x6027;&#xFF1A;synchronized&#x540C;&#x6B65;&#x5757;&#x53EF;&#x91CD;&#x5165;&#xFF0C;&#x76F8;&#x5E94;&#x4E5F;&#x6709;&#x53EF;&#x91CD;&#x5165;&#x9501;&lt;/li&gt;
-&lt;li&gt;&#x9501;&#x7684;&#x516C;&#x5E73;&#x6027;&#xFF1A;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x4E0D;&#x65AD;&#x7ADE;&#x4E89;&#x8BBF;&#x95EE;&#x76F8;&#x540C;&#x7684;synchronized&#x540C;&#x6B65;&#x5757;&#xFF0C;&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x67D0;&#x4E2A;
-&#x7EBF;&#x7A0B;&#x4E00;&#x76F4;&#x7ADE;&#x4E89;&#x4E0D;&#x5230;&#x3002;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;&#x53C2;&#x8003;&lt;/strong&gt;:&lt;br&gt;
-&lt;a href="http://ifeve.com/locks/"&gt;Java&#x4E2D;&#x7684;&#x9501;&lt;/a&gt;&lt;br&gt;
-&lt;a href="http://ifeve.com/thread-signaling/"&gt;&#x7EBF;&#x7A0B;&#x901A;&#x4FE1;&lt;/a&gt;  &lt;/p&gt;
-
-    &lt;hr&gt;
-    &lt;div class="pagination"&gt;
-      &lt;ul&gt;
-        &lt;ul&gt;
-            &lt;li class="prev"&gt;&lt;a href="/2013-08/jdk-tools.html" title="jdk&#x81EA;&#x5E26;&#x5DE5;&#x5177;"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
-
-            &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
-
-            &lt;li class="next"&gt;&lt;a href="/2013-09/maven-cmd.html" title="&#x5E38;&#x7528;maven&#x547D;&#x4EE4;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;hr&gt;
-    &lt;div id="disqus_thread"&gt;&lt;/div&gt;
-&lt;script&gt;
-    var disqus_developer = 1;
-    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-&lt;/script&gt;
-&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
-&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
-
-  &lt;/div&gt;
-  
-  &lt;div class="span4"&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-    (function(){
-       var _w = 90 , _h = 24;
-       var param = {
-       url:location.href,
-       type:'2',
-       count:'1', /**&#x662F;&#x5426;&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6570;&#xFF0C;1&#x663E;&#x793A;(&#x53EF;&#x9009;)*/
-       appkey:'', /**&#x60A8;&#x7533;&#x8BF7;&#x7684;&#x5E94;&#x7528;appkey,&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6765;&#x6E90;(&#x53EF;&#x9009;)*/
-       title:'', /**&#x5206;&#x4EAB;&#x7684;&#x6587;&#x5B57;&#x5185;&#x5BB9;(&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;title)*/
-       pic:'', /**&#x5206;&#x4EAB;&#x56FE;&#x7247;&#x7684;&#x8DEF;&#x5F84;(&#x53EF;&#x9009;)*/
-       ralateUid:'2388250330', /**&#x5173;&#x8054;&#x7528;&#x6237;&#x7684;UID&#xFF0C;&#x5206;&#x4EAB;&#x5FAE;&#x535A;&#x4F1A;@&#x8BE5;&#x7528;&#x6237;(&#x53EF;&#x9009;)*/
-       language:'zh_cn', /**&#x8BBE;&#x7F6E;&#x8BED;&#x8A00;&#xFF0C;zh_cn|zh_tw(&#x53EF;&#x9009;)*/
-       rnd:new Date().valueOf()
-     }
-     var temp = [];
-     for( var p in param ){
-     temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
-     }
-     document.write('&lt;iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&amp;') + '" width="'+ _w+'" height="'+_h+'"&gt;&lt;/iframe&gt;')
-     })()
-    &lt;/script&gt;
-
-    &lt;h4&gt;Published&lt;/h4&gt;
-    &lt;div class="date"&gt;&lt;span&gt;2013-08-30&lt;/span&gt;&lt;/div&gt;
-    &lt;br&gt;
-    &lt;h4&gt;Categories&lt;/h4&gt;
-    &lt;ul class="tag_box"&gt;
-      &lt;li&gt;
-        &lt;a href="/categories#java-ref"&gt;java &lt;span&gt;6&lt;/span&gt;&lt;/a&gt;
-      &lt;/li&gt;    &lt;/ul&gt;
-    &lt;br&gt;
-    &lt;h4&gt;Tags&lt;/h4&gt;
-    &lt;ul class="tag_box"&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-      &lt;/div&gt;
-
-      &lt;footer&gt;
-        &lt;p&gt;&amp;copy; tiemei 2012 
-          with help from &lt;a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework"&gt;ruhoh&lt;/a&gt;
-          and &lt;a href="http://twitter.github.com/bootstrap/" target="_blank"&gt;Twitter Bootstrap&lt;/a&gt;
-        &lt;/p&gt;
-        &lt;p&gt;
-        &lt;script src="http://s9.cnzz.com/stat.php?id=5379369&amp;web_id=5379369&amp;online=1&amp;show=line" language="JavaScript"&gt;&lt;/script&gt;
-        &lt;/p&gt;
-      &lt;/footer&gt;
-
-    &lt;/div&gt; &lt;!-- /container --&gt;
-
-    &lt;!-- Google Prettify --&gt;
-&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-  var pres = document.getElementsByTagName("pre");
-  for (var i=0; i &lt; pres.length; ++i) {
-    pres[i].className = "prettyprint linenums";
-  }
-  prettyPrint();
-&lt;/script&gt;
-&lt;!-- end Google Prettify --&gt;
-    &lt;script&gt;
-var clicky_site_ids = clicky_site_ids || [];
-clicky_site_ids.push(defworld.com);
-(function() {
-  var s = document.createElement('script');
-  s.type = 'text/javascript';
-  s.async = true;
-  s.src = '//static.getclicky.com/js';
-  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
-})();
-&lt;/script&gt;
-&lt;noscript&gt;&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /&gt;&lt;/p&gt;&lt;/noscript&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</description>
-    </item>
-    <item>
       <title>jdk&#x81EA;&#x5E26;&#x5DE5;&#x5177;</title>
       <link>http://defworld.com/2013-08/jdk-tools.html</link>
       <pubDate>2013-08-30</pubDate>
@@ -1626,9 +1585,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9450018552969806" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.22551698256992603" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8690758066163387" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.198540759094744" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.16417979936888338" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8819772825173589" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1761,11 +1720,223 @@ runnable - &#x7EBF;&#x7A0B;&#x72B6;&#x6001;
     &lt;div class="pagination"&gt;
       &lt;ul&gt;
         &lt;ul&gt;
+            &lt;li class="prev"&gt;&lt;a href="/2013-08/java-locks.html" title="java&#x9501;&#x7B14;&#x8BB0;"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li class="next"&gt;&lt;a href="/2013-09/maven-cmd.html" title="&#x5E38;&#x7528;maven&#x547D;&#x4EE4;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;div id="disqus_thread"&gt;&lt;/div&gt;
+&lt;script&gt;
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+
+  &lt;/div&gt;
+  
+  &lt;div class="span4"&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+    (function(){
+       var _w = 90 , _h = 24;
+       var param = {
+       url:location.href,
+       type:'2',
+       count:'1', /**&#x662F;&#x5426;&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6570;&#xFF0C;1&#x663E;&#x793A;(&#x53EF;&#x9009;)*/
+       appkey:'', /**&#x60A8;&#x7533;&#x8BF7;&#x7684;&#x5E94;&#x7528;appkey,&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6765;&#x6E90;(&#x53EF;&#x9009;)*/
+       title:'', /**&#x5206;&#x4EAB;&#x7684;&#x6587;&#x5B57;&#x5185;&#x5BB9;(&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;title)*/
+       pic:'', /**&#x5206;&#x4EAB;&#x56FE;&#x7247;&#x7684;&#x8DEF;&#x5F84;(&#x53EF;&#x9009;)*/
+       ralateUid:'2388250330', /**&#x5173;&#x8054;&#x7528;&#x6237;&#x7684;UID&#xFF0C;&#x5206;&#x4EAB;&#x5FAE;&#x535A;&#x4F1A;@&#x8BE5;&#x7528;&#x6237;(&#x53EF;&#x9009;)*/
+       language:'zh_cn', /**&#x8BBE;&#x7F6E;&#x8BED;&#x8A00;&#xFF0C;zh_cn|zh_tw(&#x53EF;&#x9009;)*/
+       rnd:new Date().valueOf()
+     }
+     var temp = [];
+     for( var p in param ){
+     temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+     }
+     document.write('&lt;iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&amp;') + '" width="'+ _w+'" height="'+_h+'"&gt;&lt;/iframe&gt;')
+     })()
+    &lt;/script&gt;
+
+    &lt;h4&gt;Published&lt;/h4&gt;
+    &lt;div class="date"&gt;&lt;span&gt;2013-08-30&lt;/span&gt;&lt;/div&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Categories&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+      &lt;li&gt;
+        &lt;a href="/categories#java-ref"&gt;java &lt;span&gt;6&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;    &lt;/ul&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Tags&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+
+      &lt;footer&gt;
+        &lt;p&gt;&amp;copy; tiemei 2012 
+          with help from &lt;a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework"&gt;ruhoh&lt;/a&gt;
+          and &lt;a href="http://twitter.github.com/bootstrap/" target="_blank"&gt;Twitter Bootstrap&lt;/a&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+        &lt;script src="http://s9.cnzz.com/stat.php?id=5379369&amp;web_id=5379369&amp;online=1&amp;show=line" language="JavaScript"&gt;&lt;/script&gt;
+        &lt;/p&gt;
+      &lt;/footer&gt;
+
+    &lt;/div&gt; &lt;!-- /container --&gt;
+
+    &lt;!-- Google Prettify --&gt;
+&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i &lt; pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+&lt;/script&gt;
+&lt;!-- end Google Prettify --&gt;
+    &lt;script&gt;
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(defworld.com);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+&lt;/script&gt;
+&lt;noscript&gt;&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /&gt;&lt;/p&gt;&lt;/noscript&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
+    <item>
+      <title>java&#x9501;&#x7B14;&#x8BB0;</title>
+      <link>http://defworld.com/2013-08/java-locks.html</link>
+      <pubDate>2013-08-30</pubDate>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang="en" xmlns:wb=&#x201C;http://open.weibo.com/wb&#x201D;&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;java&#x9501;&#x7B14;&#x8BB0;&lt;/title&gt;
+    &lt;meta name="author" content="tiemei"&gt;
+
+    &lt;!-- Le HTML5 shim, for IE6-8 support of HTML elements --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+
+    &lt;!-- Le styles --&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.8398976623588423" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.07459743838327137" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.48294543305194504" type="text/css" rel="stylesheet" media="all"&gt;
+
+ 
+
+    &lt;!-- Le fav and touch icons --&gt;
+  &lt;!-- Update these with your own images
+    &lt;link rel="shortcut icon" href="images/favicon.ico"&gt;
+    &lt;link rel="apple-touch-icon" href="images/apple-touch-icon.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"&gt;
+  --&gt;
+  &lt;script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+    &lt;div class="navbar"&gt;
+      &lt;div class="navbar-inner"&gt;
+        &lt;div class="container"&gt;
+          &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
+          &lt;ul class="nav"&gt;
+              
+                &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
+              
+                &lt;li&gt;&lt;a href="/tools"&gt;Tools&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="container"&gt;
+
+      &lt;div class="content"&gt;
+        &lt;div class="page-header"&gt;
+  &lt;h1&gt;java&#x9501;&#x7B14;&#x8BB0; &lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="span8"&gt;
+    &lt;h1 id="toc_0"&gt;&#x7EBF;&#x7A0B;&#x901A;&#x4FE1;&lt;/h1&gt;
+
+&lt;p&gt;&#x901A;&#x4FE1;&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;&#x5305;&#x62EC;&#xFF1A;  &lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&#x5171;&#x4EAB;&#x5BF9;&#x8C61;&#xFF1A;&#x9700;&#x8981;&#x505A;&#x540C;&#x6B65;&#x5904;&#x7406;&lt;/li&gt;
+&lt;li&gt;&#x5FD9;&#x7B49;&#x5F85;&#xFF1A;&#x5FAA;&#x73AF;&#x7B49;&#x5F85;&#x53E6;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x53D1;&#x6765;&#x4FE1;&#x53F7;&#xFF0C;&#x53EF;sleep&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;wait(),notify()&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;1. &#x9047;&#x5230;mobj.wait()&#xFF0C;&#x8BA9;&#x7EBF;&#x7A0B;&#x8FDB;&#x5165;&#x975E;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#xFF0C;&#x76F4;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;mobj.nitify
+2. &#x8FD9;&#x51E0;&#x4E2A;&#x65B9;&#x6CD5;&#x5FC5;&#x987B;&#x5728;&#x83B7;&#x5F97;mobj&#x9501;&#x7684;&#x524D;&#x63D0;&#x4E0B;&#x8C03;&#x7528;&#xFF0C;&#x5426;&#x5219;IllegalMonitorStateException
+3. &#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x8C03;&#x7528;&#x4E86;wait()&#xFF0C;&#x5373;&#x91CA;&#x653E;mobj&#x4E0A;&#x7684;&#x9501;
+4. &#x4E00;&#x65E6;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x88AB;&#x5524;&#x9192;&#xFF0C;&#x4E0D;&#x80FD;&#x7ACB;&#x523B;&#x5C31;&#x9000;&#x51FA;wait()&#x7684;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#xFF0C;&#x76F4;&#x5230;&#x8C03;&#x7528;
+notify()&#x7684;&#x7EBF;&#x7A0B;&#x9000;&#x51FA;&#x4E86;&#x5B83;&#x81EA;&#x5DF1;&#x7684;&#x540C;&#x6B65;&#x5757;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x88AB;notifyAll&#x5524;&#x9192;&#xFF0C;&#x53EA;&#x6709;&#x4E00;&#x4E2A;
+&#x7EBF;&#x7A0B;&#x53EF;&#x4EE5;&#x6700;&#x7EC8;&#x9000;&#x51FA;wait()&#x65B9;&#x6CD5;&#xFF0C;&#x56E0;&#x4E3A;&#x5FC5;&#x987B;&#x83B7;&#x5F97;mobj&#x7684;&#x9501;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&#x4E22;&#x5931;&#x7684;&#x4FE1;&#x53F7;&#xFF08;Missed Signal&#xFF09;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&#x7EBF;&#x7A0B;A&#x5148;&#x8C03;&#x7528;&#x4E86;mobj.notify()&#xFF0C;&#x7EBF;&#x7A0B;B&#x540E;&#x8C03;&#x7528;mobj.wait()&#xFF0C;&#x901A;&#x77E5;&#x4FE1;&#x53F7;&#x53D1;&#x9001;&#x8FC7;&#x4E86;&#x5C31;&#x88AB;&#x4E22;&#x5F03;&#xFF0C;
+&#x7EBF;&#x7A0B;B&#x5C31;&#x53EF;&#x80FD;&#x6C38;&#x8FDC;&#x4E0D;&#x80FD;&#x9192;&#x6765;&#x3002;
+&#x8FD9;&#x5C31;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x989D;&#x5916;&#x7684;&#x53D8;&#x91CF;&#x6765;&#x4FDD;&#x5B58;&#x2018;&#x662F;&#x5426;&#x88AB;&#x901A;&#x77E5;&#x8FC7;&#x2019;&#x7684;&#x4FE1;&#x606F;&#x3002;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&#x5047;&#x5524;&#x9192;&#xFF08;spurious wakeups&#xFF09;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&#x6CA1;&#x6709;&#x8C03;&#x7528;&#x8FC7;notify()&#x548C;notifyAll()&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x9192;&#x6765;&#xFF0C;&#x539F;&#x56E0;&#x672A;&#x77E5;
+&#x9700;&#x8981;&#x52A0;&#x4E2A;&#x81EA;&#x65CB;&#x9501;&#xFF0C;&#x5373;&#x5C06;wait()&#x65B9;&#x6CD5;&#x653E;&#x5230;while&#x5FAA;&#x73AF;&#x4E2D;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&#x4E0D;&#x8981;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x5E38;&#x91CF;&#x6216;&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#x4E2D;&#x8C03;&#x7528;wait()&#x3002;mobj&#x4E0E;&#x4FE1;&#x53F7;&#x5E38;&#x91CF;&#x4E0D;&#x662F;&#x4E00;&#x4E00;&#x5BF9;&#x5E94;&#x3002;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;mobj: &#x7BA1;&#x7A0B; (&#x82F1;&#x8BED;&#xFF1A;Monitors&#xFF0C;&#x4E5F;&#x79F0;&#x4E3A;&#x76D1;&#x89C6;&#x5668;)  &lt;/p&gt;
+
+&lt;h1 id="toc_1"&gt;&#x9501;&lt;/h1&gt;
+
+&lt;p&gt;&#x9501;&#x7531;synchronized&#x5B9E;&#x73B0;&#xFF0C;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x7279;&#x6027;:  &lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&#x540C;&#x4E00;&#x65F6;&#x523B;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x7A7F;&#x8FC7;&#x4E34;&#x754C;&#x533A;&#xFF0C;&#x8FDB;&#x5165;&#x540C;&#x6B65;&#x5757;&lt;/li&gt;
+&lt;li&gt;&#x9501;&#x7684;&#x53EF;&#x91CD;&#x5165;&#x6027;&#xFF1A;synchronized&#x540C;&#x6B65;&#x5757;&#x53EF;&#x91CD;&#x5165;&#xFF0C;&#x76F8;&#x5E94;&#x4E5F;&#x6709;&#x53EF;&#x91CD;&#x5165;&#x9501;&lt;/li&gt;
+&lt;li&gt;&#x9501;&#x7684;&#x516C;&#x5E73;&#x6027;&#xFF1A;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x4E0D;&#x65AD;&#x7ADE;&#x4E89;&#x8BBF;&#x95EE;&#x76F8;&#x540C;&#x7684;synchronized&#x540C;&#x6B65;&#x5757;&#xFF0C;&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x67D0;&#x4E2A;
+&#x7EBF;&#x7A0B;&#x4E00;&#x76F4;&#x7ADE;&#x4E89;&#x4E0D;&#x5230;&#x3002;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;&#x53C2;&#x8003;&lt;/strong&gt;:&lt;br&gt;
+&lt;a href="http://ifeve.com/locks/"&gt;Java&#x4E2D;&#x7684;&#x9501;&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://ifeve.com/thread-signaling/"&gt;&#x7EBF;&#x7A0B;&#x901A;&#x4FE1;&lt;/a&gt;  &lt;/p&gt;
+
+    &lt;hr&gt;
+    &lt;div class="pagination"&gt;
+      &lt;ul&gt;
+        &lt;ul&gt;
             &lt;li class="prev"&gt;&lt;a href="/2013-06/ssh.html" title="ssh&#x5BC6;&#x94A5;&#x81EA;&#x52A8;&#x767B;&#x9646;+ssh-agent&#x4F7F;&#x7528;+&#x5355;&#x673A;&#x591A;&#x4E2A;ssh&#x8D26;&#x53F7;"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
 
             &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
 
-            &lt;li class="next"&gt;&lt;a href="/2013-08/java-locks.html" title="java&#x9501;&#x7B14;&#x8BB0;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="next"&gt;&lt;a href="/2013-08/jdk-tools.html" title="jdk&#x81EA;&#x5E26;&#x5DE5;&#x5177;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
@@ -1911,9 +2082,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.4045338140963567" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.9780569301358704" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5769333307471132" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9538292849855179" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.266717172010137" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5205158256662507" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -2203,9 +2374,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.08131528368580587" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.0003755381594044982" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8106423860980954" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.8031342432579044" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.4841630649794356" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7053243091525754" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -2633,310 +2804,6 @@ clicky_site_ids.push(defworld.com);
       <link>http://defworld.com/2013-05/spring-annotaion.html</link>
       <pubDate>2013-05-23</pubDate>
       <description>spring annotation</description>
-    </item>
-    <item>
-      <title>spring&#x5F02;&#x5E38;&#x5904;&#x7406;</title>
-      <link>http://defworld.com/2013-05/spring-3-exception-handling.html</link>
-      <pubDate>2013-05-19</pubDate>
-      <description>spring&#x5F02;&#x5E38;&#x5904;&#x7406;</description>
-    </item>
-    <item>
-      <title>markdown&#x6240;&#x7528;&#x56FE;&#x7247;&#x4E0A;&#x4F20;&#x81EA;&#x52A8;&#x5316;&#x811A;&#x672C;</title>
-      <link>http://defworld.com/2013-05/auto-up-img-to-filikr-and-get-shareurl.html</link>
-      <pubDate>2013-05-18</pubDate>
-      <description>&lt;!DOCTYPE html&gt;
-&lt;html lang="en" xmlns:wb=&#x201C;http://open.weibo.com/wb&#x201D;&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;markdown&#x6240;&#x7528;&#x56FE;&#x7247;&#x4E0A;&#x4F20;&#x81EA;&#x52A8;&#x5316;&#x811A;&#x672C;&lt;/title&gt;
-    &lt;meta name="author" content="tiemei"&gt;
-
-    &lt;!-- Le HTML5 shim, for IE6-8 support of HTML elements --&gt;
-    &lt;!--[if lt IE 9]&gt;
-      &lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
-    &lt;![endif]--&gt;
-
-    &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7622112210184325" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.2408623682260217" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4437968486469226" type="text/css" rel="stylesheet" media="all"&gt;
-
- 
-
-    &lt;!-- Le fav and touch icons --&gt;
-  &lt;!-- Update these with your own images
-    &lt;link rel="shortcut icon" href="images/favicon.ico"&gt;
-    &lt;link rel="apple-touch-icon" href="images/apple-touch-icon.png"&gt;
-    &lt;link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"&gt;
-    &lt;link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"&gt;
-  --&gt;
-  &lt;script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
-  &lt;/head&gt;
-
-  &lt;body&gt;
-
-    &lt;div class="navbar"&gt;
-      &lt;div class="navbar-inner"&gt;
-        &lt;div class="container"&gt;
-          &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
-          &lt;ul class="nav"&gt;
-              
-                &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
-              
-                &lt;li&gt;&lt;a href="/tools"&gt;Tools&lt;/a&gt;&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class="container"&gt;
-
-      &lt;div class="content"&gt;
-        &lt;div class="page-header"&gt;
-  &lt;h1&gt;markdown&#x6240;&#x7528;&#x56FE;&#x7247;&#x4E0A;&#x4F20;&#x81EA;&#x52A8;&#x5316;&#x811A;&#x672C; &lt;/h1&gt;
-&lt;/div&gt;
-
-&lt;div class="row"&gt;
-  &lt;div class="span8"&gt;
-    &lt;h2 id="toc_0"&gt;&#x6211;&#x5728;&#x505A;&#x4E00;&#x4EF6;&#x4EC0;&#x4E48;&#x4E8B;?&lt;/h2&gt;
-
-&lt;p&gt;&#x6211;&#x5728;&#x5199;markdown&#x7B14;&#x8BB0;&#x65F6;&#xFF0C;&#x6709;&#x4E9B;&#x672C;&#x5730;&#x56FE;&#x7247;&#x9700;&#x8981;&#x5D4C;&#x5165;&#xFF0C;&#x800C;&#x4E0A;&#x4F20;&#x5E76;&#x83B7;&#x53D6;&#x5916;&#x94FE;&#x5B9E;&#x5728;&#x662F;&#x4E00;&#x4E2A;&#x7E41;&#x7410;&#x7684;
-&#x8FC7;&#x7A0B;&#x3002;&#x8FD9;&#x660E;&#x663E;&#x662F;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x5316;&#x6389;&#x7684;&#x8FC7;&#x7A0B;&#x3002;&lt;br&gt;
-&#x66F4;&#x8FDB;&#x4E00;&#x6B65;&#xFF0C;&#x56FE;&#x7247;&#x4E0A;&#x4F20;&#x548C;&#x83B7;&#x53D6;&#x5916;&#x94FE;&#x81EA;&#x52A8;&#x5316;&#x6389;&#xFF0C;&#x4F46;&#x8FD8;&#x9700;&#x8981;&#x624B;&#x52A8;&#x62F7;&#x8D1D;&#x66FF;&#x6362;makrdown&#x4E2D;&#x7684;&#x56FE;&#x7247;&#x94FE;&#x63A5;&#xFF0C;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x4EA6;&#x53EF;&#x81EA;&#x52A8;&#x5316;&#x6389;&#x3002;&lt;/p&gt;
-
-&lt;h2 id="toc_1"&gt;&#x601D;&#x8DEF;&lt;/h2&gt;
-
-&lt;p&gt;&#x8C03;&#x7528;&lt;a href="http://flikr.com/"&gt;flickr&lt;/a&gt;&#x5C06;&#x56FE;&#x7247;&#x4E0A;&#x4F20;&#x5E76;&#x83B7;&#x53D6;&#x5916;&#x94FE;&lt;/p&gt;
-
-&lt;h2 id="toc_2"&gt;&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;&lt;/h2&gt;
-
-&lt;h3 id="toc_3"&gt;flickr&#x6388;&#x6743;&#x9A8C;&#x8BC1;&lt;/h3&gt;
-
-&lt;p&gt;&#x6211;&#x5199;&#x4E86;&#x4E00;&#x4E2A;&#x5DE5;&#x5177;&#xFF0C;&#x65B9;&#x4FBF;&#x62FF;&#x5230;flickr&#x6388;&#x6743;&#x540E;&#x7684;access&lt;em&gt;token &amp;amp; access&lt;/em&gt;secret, &lt;a href="/tools"&gt;here&lt;/a&gt;&lt;br&gt;
-&#x6216;&#x8005;&#x4F60;&#x5199;&#x4E2A;&#x811A;&#x672C;&#x6765;&#x62FF;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E0B;&#x9762;&#x6211;&#x7528;ruby&#x5B9E;&#x73B0;&#x7684;&#x8FD9;&#x6BB5;&#xFF1A;  &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;require &amp;#39;flickraw&amp;#39;
-
-FlickRaw.api_key = &amp;quot;933e8bb7bee8381c46a9b3cb1e321ed6&amp;quot;
-FlickRaw.shared_secret=&amp;quot;99bb0541ec349ae5&amp;quot;
-
-# authentication 
-token = flickr.get_request_token
-auth_url =  flickr.get_authorize_url(token[&amp;#39;oauth_token&amp;#39;], :perms =&amp;gt; &amp;#39;delete&amp;#39;)
-
-puts &amp;quot;Open this url in your process to complete the authication process : #{auth_url}&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id="toc_4"&gt;flickr&#x56FE;&#x7247;&#x81EA;&#x52A8;&#x4E0A;&#x4F20;&amp;amp;&#x83B7;&#x53D6;&#x5206;&#x4EAB;&#x5916;&#x94FE;&lt;/h3&gt;
-
-&lt;p&gt;&#x7528;ruby&#x5B9E;&#x73B0;&#xFF0C;&#x6240;&#x4EE5;&#x82E5;&#x60F3;&#x6210;&#x529F;&#x8FD0;&#x884C;&#x8BF7;&#x786E;&#x4FDD;&#x5B89;&#x88C5;&#x4E86;ruby&#xFF0C;&#x4E14;&lt;code&gt;gem install flickraw&lt;/code&gt;  &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;require &amp;#39;flickraw&amp;#39;
-
-FlickRaw.api_key = &amp;quot;933e8bb7bee8381c46a9b3cb1e321ed6&amp;quot;
-FlickRaw.shared_secret=&amp;quot;99bb0541ec349ae5&amp;quot;
-
-flickr.access_token = &amp;quot;72157633501230371-9da780bd34f&amp;quot; # !!! &#x586B;&#x4F60;&#x7684;acess_token
-flickr.access_secret = &amp;quot;f448a228f71afecd&amp;quot; # !!! &#x586B;&#x4F60;&#x7684;acess_secret
-
-puts &amp;#39;photo path:&amp;#39;
-photo_path = gets.strip # &#x547D;&#x4EE4;&#x884C;&#x8F93;&#x5165;&#x56FE;&#x7247;&#x8DEF;&#x5F84;
-
-puts &amp;#39;photo tilte:&amp;#39;
-photo_title = gets.strip 
-if photo_title.empty?
-    photo_title = File.basename(photo_path, &amp;quot;.*&amp;quot;) # &#x82E5;&#x6CA1;&#x6709;&#x8F93;&#x5165;title&#xFF0C;&#x9ED8;&#x8BA4;&#x7528;&#x56FE;&#x7247;&#x540D;
-end
-
-puts &amp;#39;photo description:&amp;#39;
-photo_description = gets.strip
-
-
-# &#x6240;&#x6709;&#x56FE;&#x7247;&#x90FD;&#x5B58;&#x5728;&#x8FD9;&#x4E2A;set&#x4E2D;
-SET_TITLE=&amp;quot;markdown_imgs&amp;quot;
-SET_DESCRIPTION=&amp;quot;iFlikcr&#x5E94;&#x7528;&#xFF0C;tiemei&#x652F;&#x6301;&#xFF0C;&#x8BE6;&#x89C1;defworld.com&amp;quot;
-
-photo_id = flickr.upload_photo photo_path, :title =&amp;gt; photo_title, 
-                               :description =&amp;gt; photo_description 
-
-
-set = nil 
-
-has_set = false
-# !!! &#x6362;&#x6210;&#x4F60;&#x81EA;&#x5DF1;&#x7684;user_id&#xFF0C;&#x53F3;&#x4FA7;&#x53EF;&#x62FF;&#x5230;&#xFF1A;http://www.flickr.com/services/api/explore/flickr.auth.oauth.getAccessToken
-flickr.photosets.getList(:user_id =&amp;gt; &amp;#39;79104125@N05&amp;#39;).each do |e| 
-  if e.to_hash[&amp;#39;title&amp;#39;] == SET_TITLE
-    has_set = true
-    set = e.to_hash
-  end 
-end
-# title&#x76F8;&#x540C;&#x7684;set&#x8FD8;&#x4E0D;&#x5B58;&#x5728;
-if not has_set
-  set = flickr.photosets.create(:title       =&amp;gt; SET_TITLE, 
-                                :description =&amp;gt; SET_DESCRIPTION,
-                                :primary_photo_id    =&amp;gt; photo_id)
-else
-  flickr.photosets.addPhoto(:photoset_id =&amp;gt; set[&amp;#39;id&amp;#39;], 
-                            :photo_id    =&amp;gt; photo_id)
-end
-
-# &#x83B7;&#x53D6;&#x56FE;&#x7247;&#x5916;&#x94FE;
-info = flickr.photos.getInfo(:photo_id =&amp;gt; photo_id)
-puts FlickRaw.url(info) # !!! &#x66FF;&#x6362;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x53EF;&#x9009;&#x62E9;&#x5916;&#x94FE;&#x7684;&#x56FE;&#x7247;&#x5C3A;&#x5BF8;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&#x6F14;&#x793A;&#x793A;&#x4F8B;&#xFF1A;  &lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://farm8.staticflickr.com/7401/8749136193_2d19cbb140.jpg" alt="auto upload imgs &amp;amp; get share url demo"&gt;  &lt;/p&gt;
-
-&lt;p&gt;&#x53E6;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;share url&#x7684;&#x56FE;&#x7247;&#x652F;&#x6301;&#x662F;&#x53EF;&#x8C03;&#x8282;&#x7684;:&lt;br&gt;
-&lt;img src="http://farm3.staticflickr.com/2833/8749133645_83b09f7396.jpg" alt="flickr&#x56FE;&#x7247;&#x5C3A;&#x5BF8;&#x89C4;&#x5219;"&gt;  &lt;/p&gt;
-
-&lt;p&gt;&#x5BF9;&#x5E94;&#x5230;&#x4EE3;&#x7801;&#x91CC;&#x662F;&lt;code&gt;puts FlickRaw.url(info)&lt;/code&gt;&#x8FD9;&#x884C;:&lt;br&gt;
-&lt;img src="http://farm8.staticflickr.com/7368/8749149989_2f285b06da.jpg" alt="flickraw&#x63A5;&#x53E3;"&gt;  &lt;/p&gt;
-
-&lt;h2 id="toc_5"&gt;&#x9047;&#x5230;&#x7684;&#x5751;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;pi&#x7684;&#x9ED8;&#x8BA4;&#x65F6;&#x533A;&#x4E0D;&#x662F;CST&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-&#x5982;&#x679C;&#x4F60;&#x4E4B;&#x524D;&#x7528;date&#x4FEE;&#x6539;&#x4E86;&#x65F6;&#x95F4;&#x6CA1;&#x6539;&#x65F6;&#x533A;&#xFF0C;&#x60CA;&#x9192;oauth&#x9A8C;&#x8BC1;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;
-&#x6539;&#x5B8C;&#x65F6;&#x533A;&#x540E;&#x4E0D;&#x4EC5;&#x9700;&#x8981;&#x624B;&#x52A8;date&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x8FDB;&#x5230;root&#x4E0B;&#x53BB;&#x4FEE;&#x6539;
-sudo -s; date MMDDhhmmYYYY
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id="toc_6"&gt;tips&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;install ruby in pi&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo apt-get install ruby 
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;install node.js in pi&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo apt-get install g++
-
-wget http://nodejs.org/dist/v0.10.7/node-v0.10.7.tar.gz
-tar -xzvf node-v0.10.7.tar.gz
-cd node-v0.10.7
-./configure --prefix=/usr/local/node
-make 
-sudo make install
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;ok ! enjoy it !  &lt;/p&gt;
-
-    &lt;hr&gt;
-    &lt;div class="pagination"&gt;
-      &lt;ul&gt;
-        &lt;ul&gt;
-            &lt;li class="prev"&gt;&lt;a href="/2013-05/a-little-things-abount-java-language.html" title="java&#x8BED;&#x8A00;&#x57FA;&#x7840;&#x7EC6;&#x8282;"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
-
-            &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
-
-            &lt;li class="next"&gt;&lt;a href="/2013-05/spring-3-exception-handling.html" title="spring&#x5F02;&#x5E38;&#x5904;&#x7406;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;hr&gt;
-    &lt;div id="disqus_thread"&gt;&lt;/div&gt;
-&lt;script&gt;
-    var disqus_developer = 1;
-    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-&lt;/script&gt;
-&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
-&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
-
-  &lt;/div&gt;
-  
-  &lt;div class="span4"&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-    (function(){
-       var _w = 90 , _h = 24;
-       var param = {
-       url:location.href,
-       type:'2',
-       count:'1', /**&#x662F;&#x5426;&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6570;&#xFF0C;1&#x663E;&#x793A;(&#x53EF;&#x9009;)*/
-       appkey:'', /**&#x60A8;&#x7533;&#x8BF7;&#x7684;&#x5E94;&#x7528;appkey,&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6765;&#x6E90;(&#x53EF;&#x9009;)*/
-       title:'', /**&#x5206;&#x4EAB;&#x7684;&#x6587;&#x5B57;&#x5185;&#x5BB9;(&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;title)*/
-       pic:'', /**&#x5206;&#x4EAB;&#x56FE;&#x7247;&#x7684;&#x8DEF;&#x5F84;(&#x53EF;&#x9009;)*/
-       ralateUid:'2388250330', /**&#x5173;&#x8054;&#x7528;&#x6237;&#x7684;UID&#xFF0C;&#x5206;&#x4EAB;&#x5FAE;&#x535A;&#x4F1A;@&#x8BE5;&#x7528;&#x6237;(&#x53EF;&#x9009;)*/
-       language:'zh_cn', /**&#x8BBE;&#x7F6E;&#x8BED;&#x8A00;&#xFF0C;zh_cn|zh_tw(&#x53EF;&#x9009;)*/
-       rnd:new Date().valueOf()
-     }
-     var temp = [];
-     for( var p in param ){
-     temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
-     }
-     document.write('&lt;iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&amp;') + '" width="'+ _w+'" height="'+_h+'"&gt;&lt;/iframe&gt;')
-     })()
-    &lt;/script&gt;
-
-    &lt;h4&gt;Published&lt;/h4&gt;
-    &lt;div class="date"&gt;&lt;span&gt;2013-05-18&lt;/span&gt;&lt;/div&gt;
-    &lt;br&gt;
-    &lt;h4&gt;Categories&lt;/h4&gt;
-    &lt;ul class="tag_box"&gt;
-      &lt;li&gt;
-        &lt;a href="/categories#funny-ref"&gt;funny &lt;span&gt;3&lt;/span&gt;&lt;/a&gt;
-      &lt;/li&gt;    &lt;/ul&gt;
-    &lt;br&gt;
-    &lt;h4&gt;Tags&lt;/h4&gt;
-    &lt;ul class="tag_box"&gt;
-      &lt;li&gt;
-        &lt;a href="/tags#script-ref"&gt;script &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
-      &lt;/li&gt;    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-      &lt;/div&gt;
-
-      &lt;footer&gt;
-        &lt;p&gt;&amp;copy; tiemei 2012 
-          with help from &lt;a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework"&gt;ruhoh&lt;/a&gt;
-          and &lt;a href="http://twitter.github.com/bootstrap/" target="_blank"&gt;Twitter Bootstrap&lt;/a&gt;
-        &lt;/p&gt;
-        &lt;p&gt;
-        &lt;script src="http://s9.cnzz.com/stat.php?id=5379369&amp;web_id=5379369&amp;online=1&amp;show=line" language="JavaScript"&gt;&lt;/script&gt;
-        &lt;/p&gt;
-      &lt;/footer&gt;
-
-    &lt;/div&gt; &lt;!-- /container --&gt;
-
-    &lt;!-- Google Prettify --&gt;
-&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-  var pres = document.getElementsByTagName("pre");
-  for (var i=0; i &lt; pres.length; ++i) {
-    pres[i].className = "prettyprint linenums";
-  }
-  prettyPrint();
-&lt;/script&gt;
-&lt;!-- end Google Prettify --&gt;
-    &lt;script&gt;
-var clicky_site_ids = clicky_site_ids || [];
-clicky_site_ids.push(defworld.com);
-(function() {
-  var s = document.createElement('script');
-  s.type = 'text/javascript';
-  s.async = true;
-  s.src = '//static.getclicky.com/js';
-  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
-})();
-&lt;/script&gt;
-&lt;noscript&gt;&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /&gt;&lt;/p&gt;&lt;/noscript&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</description>
     </item>
   </channel>
 </rss>

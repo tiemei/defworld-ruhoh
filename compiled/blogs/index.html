@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.1734390178695372" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.937732782160869" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.1689380825628206" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.4815213771688557" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.9024576091009996" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.08683437916763737" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -54,6 +54,45 @@
 <div class="row">
   <div class="span12">
     <h2>Latest Posts</h2>
+
+<div class="post">
+  <h3 class="title"><a href="/2014-06/notes-js-object.html">Notes Js Object</a> <span class="date">2014-06-13</span></h3>
+
+  
+
+  <div class="more">
+    <a href="/2014-06/notes-js-object.html" class="btn">read more..</a>
+  </div>
+</div>
+
+<div class="post">
+  <h3 class="title"><a href="/2014-06/notes-js.html">js入门笔记</a> <span class="date">2014-06-13</span></h3>
+
+  <h1 id="toc_0">js函数有啥特点</h1>
+
+<ul>
+<li>函数的参数实际上在内部是用一个数组表示的，在函数体内可以通过<code>arguments</code>对象访问。arguments只是跟数组类型可以通过方括号访问每一个元素，实际不是Array实例</li>
+<li>函数定义的参数与实际传递的参数没有个数相等的限制，不像Java语言会编译校验这个</li>
+<li>因为函数参数是由包含另零个或多个值的数组来表示的，没有函数签名，故<code>没有重载</code></li>
+</ul>
+
+<h1 id="toc_1">js基本类型和引用类型</h1>
+
+<ul>
+<li><code>基本数据类型</code>：Undefined 、 Null 、 Boolean 、 Number 、 String</li>
+<li>不能给基本数据类型添加属性，添加以后访问也是undifined</li>
+<li>因为String在js不同于其他语言是基本类型，所以赋值的时候会将值拷贝一份</li>
+</ul>
+
+<h3 id="toc_2">检测类型</h3>
+
+<p><strong><code>typeof</code>区分是基本类型还是应用类型</strong>  </p>
+
+
+  <div class="more">
+    <a href="/2014-06/notes-js.html" class="btn">read more..</a>
+  </div>
+</div>
 
 <div class="post">
   <h3 class="title"><a href="/2014-06/st3-debug-node-js.html">run &amp; debug node.js</a> <span class="date">2014-06-08</span></h3>
@@ -134,6 +173,7 @@
 <li><code>⌘ ↩</code> insert line after</li>
 <li><code>⇧ ⌘ ↩</code> insert line before</li>
 <li><code>⌃ K</code>  <code>⌘ ⌦</code> delete to end / beginning</li>
+<li><code>⌃ a</code> go to line head <code>⌃ e</code> go to line end</li>
 </ul>
 
 
@@ -291,64 +331,6 @@ SUSE LinuxEnterprise，简称SUSE，和Ubuntu Server，简称Ubuntu。有分支�
 
   <div class="more">
     <a href="/2013-09/maven-cmd.html" class="btn">read more..</a>
-  </div>
-</div>
-
-<div class="post">
-  <h3 class="title"><a href="/2013-08/java-locks.html">java锁笔记</a> <span class="date">2013-08-30</span></h3>
-
-  <h1 id="toc_0">线程通信</h1>
-
-<p>通信遇到的问题包括：  </p>
-
-<ol>
-<li>共享对象：需要做同步处理</li>
-<li>忙等待：循环等待另一个线程发来信号，可sleep</li>
-<li><p>wait(),notify()</p>
-
-<pre><code>1. 遇到mobj.wait()，让线程进入非运行状态，直到另一个线程mobj.nitify
-2. 这几个方法必须在获得mobj锁的前提下调用，否则IllegalMonitorStateException
-3. 一个线程调用了wait()，即释放mobj上的锁
-4. 一旦一个线程被唤醒，不能立刻就退出wait()的方法调用，直到调用
-notify()的线程退出了它自己的同步块。因此，多个线程被notifyAll唤醒，只有一个
-线程可以最终退出wait()方法，因为必须获得mobj的锁
-</code></pre></li>
-</ol>
-
-
-  <div class="more">
-    <a href="/2013-08/java-locks.html" class="btn">read more..</a>
-  </div>
-</div>
-
-<div class="post">
-  <h3 class="title"><a href="/2013-08/jdk-tools.html">jdk自带工具</a> <span class="date">2013-08-30</span></h3>
-
-  <h1 id="toc_0">javah</h1>
-
-<h2 id="toc_1">JNI示例</h2>
-
-<p>参考:<a href="https://blogs.oracle.com/moonocean/entry/a_simple_example_of_jni">JNI example</a>  </p>
-
-<ol>
-<li>写一个java类，生命navtive方法</li>
-<li>调用javah生成头文件</li>
-<li>写c代码，生成库文件</li>
-<li><code>java -Djava.library.path=&lt;path_of_native_lib&gt; JNIFoo</code>会默认先载入头文件，
-然后按指定的路径查找库文件</li>
-</ol>
-
-<h1 id="toc_2">jmap(Java Memory Map)</h1>
-
-<p>参考:<a href="http://blog.csdn.net/fenglibing/article/details/6411953">jmap</a>  </p>
-
-<h2 id="toc_3">jmap -histo pid</h2>
-
-<p><img src="http://farm8.staticflickr.com/7346/9627329472_b28eba137c.jpg" alt="jmap output"></p>
-
-
-  <div class="more">
-    <a href="/2013-08/jdk-tools.html" class="btn">read more..</a>
   </div>
 </div>
 

@@ -2,8 +2,7 @@
 <html lang="en" xmlns:wb=“http://open.weibo.com/wb”>
   <head>
     <meta charset="utf-8">
-    <title>ssh密钥自动登陆+ssh-agent使用+单机多个ssh账号</title>
-    <meta name="description" content="ssh">
+    <title>Notes Js Object</title>
     <meta name="author" content="tiemei">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -12,9 +11,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.20101095051138873" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.6700412485282055" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.47989761140392895" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9986647184213461" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.953606297011948" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.11394297933707487" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -48,67 +47,21 @@
 
       <div class="content">
         <div class="page-header">
-  <h1>ssh密钥自动登陆+ssh-agent使用+单机多个ssh账号 </h1>
+  <h1>Notes Js Object </h1>
 </div>
 
 <div class="row">
   <div class="span8">
-    <p>参考：<br>
-<a href="http://www.lainme.com/doku.php/blog/2011/01/%E4%BD%BF%E7%94%A8ssh_config#%E7%94%9F%E6%88%90ssh%E8%AF%81%E4%B9%A6">使用SSH CONFIG</a><br>
-<a href="http://7056824.blog.51cto.com/69854/403669/">使用ssh公钥密钥自动登陆linux服务器</a>  </p>
-
-<h2 id="toc_0">生成ssh key</h2>
-
-<p><code>ssh -t rsa</code><br>
-<code>ssh -t rsa -C &quot;jiadongkai@gmail.com&quot;</code> 注释用邮箱地址<br>
-将公钥追加到需要登录机器的~/.ssh/authorized<em>keys，如果无法登陆将~/.ssh/known</em>hosts
-对应行删掉<br>
-注意需要保证authorized_keys文件只有当前用户有写权限  </p>
-
-<h2 id="toc_1">用ssh-agent省掉passphrase输入</h2>
-
-<ol>
-<li><p>准备ssh-agent需要的环境变量，选择下面的一种方法即可  </p>
-
-<pre><code>eval `ssh-agent` 只在当前登陆窗口生效
-echo &#39;eval `ssh-agent`&#39; &gt;&gt; /etc/profile 每次登陆生效
-</code></pre></li>
-<li><p>将ssh key对应的passphrase添加到ssh agent高速缓存中  </p>
-
-<pre><code>ssh-add ~/.ssh/private_key_name
-你可已查看缓存中内容
-</code></pre></li>
-<li><p>ssh-agent默认打开，你可以关掉<code>ssh-agent -k</code></p></li>
-</ol>
-
-<h2 id="toc_2">你有这些特殊需求嘛？ 多个ssh帐号、使用非标准端口</h2>
-
-<p>用ssh config解决，详见<code>man ssh_config</code><br>
-编辑<code>~/.ssh/config</code>：  </p>
-
-<pre><code>Host pi
-  HostName defworld.com
-  User pi
-  IdentityFile ~/.ssh/id_rsa
-
-Host github
-  HostName github.com
-  User git
-  IdentityFile ~/.ssh/gmail
-</code></pre>
-
-<p>任何使用<code>pi@defworld.com</code>的地方用<code>pi</code>代替，例如<code>ssh pi@defworld.com</code>用<code>ssh pi</code>代替，
-会自动查找指定的密钥<code>id_rsa</code>进行权限验证。于是，你可以单机保存多个密钥。  </p>
-
+    
     <hr>
     <div class="pagination">
       <ul>
         <ul>
-            <li class="prev"><a href="/2013-06/about-bashrc.html" title=".bashrc .bash_profile等文件区别">&larr; Previous</a></li>
+            <li class="prev"><a href="/2014-06/notes-js.html" title="js入门笔记">&larr; Previous</a></li>
 
             <li><a href="/archive">Archive</a></li>
 
-            <li class="next"><a href="/2013-08/java-locks.html" title="java锁笔记">Next &rarr;</a></li>
+            <li class="next disabled"><a>Next &rarr;</a>
         </ul>
       </ul>
     </div>
@@ -153,13 +106,11 @@ Host github
     </script>
 
     <h4>Published</h4>
-    <div class="date"><span>2013-06-30</span></div>
+    <div class="date"><span>2014-06-13</span></div>
     <br>
     <h4>Categories</h4>
     <ul class="tag_box">
-      <li>
-        <a href="/categories#linux-ref">linux <span>4</span></a>
-      </li>    </ul>
+    </ul>
     <br>
     <h4>Tags</h4>
     <ul class="tag_box">

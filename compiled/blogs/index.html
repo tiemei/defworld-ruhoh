@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.4815213771688557" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.9024576091009996" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.08683437916763737" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6041180617635564" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.9809032591905298" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.11431154679129019" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -54,16 +54,6 @@
 <div class="row">
   <div class="span12">
     <h2>Latest Posts</h2>
-
-<div class="post">
-  <h3 class="title"><a href="/2014-06/notes-js-object.html">Notes Js Object</a> <span class="date">2014-06-13</span></h3>
-
-  
-
-  <div class="more">
-    <a href="/2014-06/notes-js-object.html" class="btn">read more..</a>
-  </div>
-</div>
 
 <div class="post">
   <h3 class="title"><a href="/2014-06/notes-js.html">js入门笔记</a> <span class="date">2014-06-13</span></h3>
@@ -331,6 +321,37 @@ SUSE LinuxEnterprise，简称SUSE，和Ubuntu Server，简称Ubuntu。有分支�
 
   <div class="more">
     <a href="/2013-09/maven-cmd.html" class="btn">read more..</a>
+  </div>
+</div>
+
+<div class="post">
+  <h3 class="title"><a href="/2013-08/jdk-tools.html">jdk自带工具</a> <span class="date">2013-08-30</span></h3>
+
+  <h1 id="toc_0">javah</h1>
+
+<h2 id="toc_1">JNI示例</h2>
+
+<p>参考:<a href="https://blogs.oracle.com/moonocean/entry/a_simple_example_of_jni">JNI example</a>  </p>
+
+<ol>
+<li>写一个java类，生命navtive方法</li>
+<li>调用javah生成头文件</li>
+<li>写c代码，生成库文件</li>
+<li><code>java -Djava.library.path=&lt;path_of_native_lib&gt; JNIFoo</code>会默认先载入头文件，
+然后按指定的路径查找库文件</li>
+</ol>
+
+<h1 id="toc_2">jmap(Java Memory Map)</h1>
+
+<p>参考:<a href="http://blog.csdn.net/fenglibing/article/details/6411953">jmap</a>  </p>
+
+<h2 id="toc_3">jmap -histo pid</h2>
+
+<p><img src="http://farm8.staticflickr.com/7346/9627329472_b28eba137c.jpg" alt="jmap output"></p>
+
+
+  <div class="more">
+    <a href="/2013-08/jdk-tools.html" class="btn">read more..</a>
   </div>
 </div>
 

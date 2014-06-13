@@ -3,9 +3,15 @@
   <channel>
     <title>tiemei</title>
     <link>http://defworld.com</link>
-    <pubDate>2014-06-13 11:24:27 +0800</pubDate>
+    <pubDate>2014-06-13 18:41:24 +0800</pubDate>
     <item>
-      <title>js&#x5165;&#x95E8;&#x7B14;&#x8BB0;</title>
+      <title>js&#x5165;&#x95E8;&#x7B14;&#x8BB0;&#xFF08;&#x4E8C;&#xFF09;</title>
+      <link>http://defworld.com/2014-06/notes-js-object.html</link>
+      <pubDate>2014-06-13</pubDate>
+      <description>js  javascript &#x9762;&#x5411;&#x5BF9;&#x8C61;</description>
+    </item>
+    <item>
+      <title>js&#x5165;&#x95E8;&#x7B14;&#x8BB0;&#xFF08;&#x4E00;&#xFF09;</title>
       <link>http://defworld.com/2014-06/notes-js.html</link>
       <pubDate>2014-06-13</pubDate>
       <description>nodes javascript</description>
@@ -27,9 +33,9 @@
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.29927254936711933" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.301070674350023" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.30915080782996707" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.24558064596949214" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.3450495123399475" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.3478358172282472" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -141,7 +147,7 @@ sudo gem install terminal-notifier
 
             &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
 
-            &lt;li class="next"&gt;&lt;a href="/2014-06/notes-js.html" title="js&#x5165;&#x95E8;&#x7B14;&#x8BB0;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="next"&gt;&lt;a href="/2014-06/notes-js.html" title="js&#x5165;&#x95E8;&#x7B14;&#x8BB0;&#xFF08;&#x4E00;&#xFF09;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
@@ -191,7 +197,7 @@ sudo gem install terminal-notifier
     &lt;h4&gt;Categories&lt;/h4&gt;
     &lt;ul class="tag_box"&gt;
       &lt;li&gt;
-        &lt;a href="/categories#Node.js-ref"&gt;Node.js &lt;span&gt;3&lt;/span&gt;&lt;/a&gt;
+        &lt;a href="/categories#Node.js-ref"&gt;Node.js &lt;span&gt;4&lt;/span&gt;&lt;/a&gt;
       &lt;/li&gt;    &lt;/ul&gt;
     &lt;br&gt;
     &lt;h4&gt;Tags&lt;/h4&gt;
@@ -257,9 +263,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6775322382093687" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.7367090350695457" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.666165712861207" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.28693926398858005" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.8975167842680493" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9200935946154853" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -501,9 +507,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.12198736276994737" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.2054651547959343" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4652830145489665" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.20386212668919246" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.37301071321748325" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8706599965150775" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -750,9 +756,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.746454990385583" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.6965954602398439" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.07578702911620339" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.19285629154003447" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.756528497423245" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.05026988913186392" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1146,9 +1152,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.2401829728366146" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.60284771677852" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.06018137728017936" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.764209227194306" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.2873599618845659" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.2983945084160359" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1421,9 +1427,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.5375291900240642" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.5813254627149119" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5674213821541552" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.3424533281635752" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.8159073850448327" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8428333276272104" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1676,9 +1682,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.0831452888718569" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.1576448803721665" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4541686380942427" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6509009179279076" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.7102854785367804" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9605676833705936" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1918,9 +1924,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.4401649140865792" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.2833954608800986" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.02328135144975263" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.13071517344079175" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.4784883377983089" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.12344511216442633" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -2210,9 +2216,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.004342229978625545" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.5993156066634494" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7525502164210529" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.016890617413215847" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.22811727043530716" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.46072337427696464" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -2640,12 +2646,6 @@ clicky_site_ids.push(defworld.com);
       <link>http://defworld.com/2013-05/spring-annotaion.html</link>
       <pubDate>2013-05-23</pubDate>
       <description>spring annotation</description>
-    </item>
-    <item>
-      <title>spring&#x5F02;&#x5E38;&#x5904;&#x7406;</title>
-      <link>http://defworld.com/2013-05/spring-3-exception-handling.html</link>
-      <pubDate>2013-05-19</pubDate>
-      <description>spring&#x5F02;&#x5E38;&#x5904;&#x7406;</description>
     </item>
   </channel>
 </rss>

@@ -1,5 +1,5 @@
 ---
-title: js入门笔记
+title: js入门笔记（一）
 date: '2014-06-13'
 description: 'nodes javascript'
 categories: 'Node.js'

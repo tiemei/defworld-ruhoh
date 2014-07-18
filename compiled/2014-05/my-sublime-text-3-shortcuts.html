@@ -11,9 +11,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.06921048861340495" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.8068582657957311" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8643517381202724" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.17798894543875465" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.20857573301809829" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5838715927903777" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -120,15 +120,27 @@
 <li><code>⌘ ⇧ P</code> 调出package control</li>
 </ul>
 
-<h3 id="toc_8">格式化</h3>
+<h3 id="toc_8">其他</h3>
 
-<p>key bindings:<br>
-<code>single_line</code>表示不仅作用于当前行，作用于整个文本。<br>
+<p><strong>key bindings</strong>  </p>
+
+<p><code>single_line</code>表示不仅作用于当前行，作用于整个文本。<br>
 <code>json
 [
-  { &quot;keys&quot;: [&quot;ctrl+shift+f&quot;], &quot;command&quot;: &quot;reindent&quot;, &quot;args&quot;: {&quot;single_line&quot;: false}}
+  { &quot;keys&quot;: [&quot;ctrl+shift+r&quot;], &quot;command&quot;: &quot;reveal_in_side_bar&quot;},
+  { &quot;keys&quot;: [&quot;ctrl+shift+f&quot;], &quot;command&quot;: &quot;reindent&quot;, &quot;args&quot;: {&quot;single_line&quot;: false}},
+  { &quot;keys&quot;: [&quot;ctrl+shift+w&quot;], &quot;command&quot;: &quot;close_all&quot; },
+  { &quot;keys&quot;: [&quot;ctrl+shift+s&quot;], &quot;command&quot;: &quot;sava_all&quot;},
+  { &quot;keys&quot;: [&quot;ctrl+shift+b&quot;], &quot;command&quot;: &quot;view_in_browser&quot;, &quot;args&quot;: { &quot;browser&quot;: &quot;chrome&quot; } }
 ]
 </code></p>
+
+<h3 id="toc_9">插件</h3>
+
+<ul>
+<li>JSONLint json语法检查插件</li>
+<li>PrettyJSON json格式化，因为reindent对json不好用，<code>⌃ ⌘ j</code>快捷键</li>
+</ul>
 
     <hr>
     <div class="pagination">

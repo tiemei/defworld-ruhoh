@@ -1,5 +1,5 @@
 ---
-title: js入门笔记（二）
+title: js入门笔记（二）——面向对象
 date: '2014-06-13'
 description: js  javascript 面向对象
 categories: 'Node.js'
@@ -509,5 +509,9 @@ SubType.prototype.sayAge = function() {
 # js闭包
 
 待续
+
+参考:  
+
+JavaScript高级程序设计（第2版）》  
 
 

@@ -1,5 +1,5 @@
 ---
-title: js入门笔记（一）
+title: js入门笔记（一）——基础
 date: '2014-06-13'
 description: 'nodes javascript'
 categories: 'Node.js'
@@ -125,3 +125,7 @@ function buildUrl() {
 
 * 所有控制语句的代码块内部声明的变量都会逸出到外部，不同于Java语言。  
 * 函数中的声明的var变量作用域仅限于函数内部
+
+参考:  
+
+JavaScript高级程序设计（第2版）》  

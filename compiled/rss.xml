@@ -3,15 +3,15 @@
   <channel>
     <title>tiemei</title>
     <link>http://defworld.com</link>
-    <pubDate>2014-06-13 21:32:28 +0800</pubDate>
+    <pubDate>2014-06-15 15:39:59 +0800</pubDate>
     <item>
-      <title>js&#x5165;&#x95E8;&#x7B14;&#x8BB0;&#xFF08;&#x4E8C;&#xFF09;</title>
+      <title>js&#x5165;&#x95E8;&#x7B14;&#x8BB0;&#xFF08;&#x4E8C;&#xFF09;&#x2014;&#x2014;&#x9762;&#x5411;&#x5BF9;&#x8C61;</title>
       <link>http://defworld.com/2014-06/notes-js-object.html</link>
       <pubDate>2014-06-13</pubDate>
       <description>js  javascript &#x9762;&#x5411;&#x5BF9;&#x8C61;</description>
     </item>
     <item>
-      <title>js&#x5165;&#x95E8;&#x7B14;&#x8BB0;&#xFF08;&#x4E00;&#xFF09;</title>
+      <title>js&#x5165;&#x95E8;&#x7B14;&#x8BB0;&#xFF08;&#x4E00;&#xFF09;&#x2014;&#x2014;&#x57FA;&#x7840;</title>
       <link>http://defworld.com/2014-06/notes-js.html</link>
       <pubDate>2014-06-13</pubDate>
       <description>nodes javascript</description>
@@ -33,9 +33,9 @@
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.012931739123716035" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.6330160530986406" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.41513853247061705" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.5037586683061414" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.14540660858133025" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7469559423797956" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -147,7 +147,7 @@ sudo gem install terminal-notifier
 
             &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
 
-            &lt;li class="next"&gt;&lt;a href="/2014-06/notes-js.html" title="js&#x5165;&#x95E8;&#x7B14;&#x8BB0;&#xFF08;&#x4E00;&#xFF09;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="next"&gt;&lt;a href="/2014-06/notes-js.html" title="js&#x5165;&#x95E8;&#x7B14;&#x8BB0;&#xFF08;&#x4E00;&#xFF09;&#x2014;&#x2014;&#x57FA;&#x7840;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
@@ -263,9 +263,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.005801076571447239" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.35147198179695793" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7157357536864604" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.34467439717827786" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.4093435673113197" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6481372679299399" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -507,9 +507,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.8118815038475538" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.743912921791958" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.024201716257885364" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9653932583092184" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.690633297991297" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.365554839219156" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -616,15 +616,27 @@ clicky_site_ids.push(defworld.com);
 &lt;li&gt;&lt;code&gt;&#x2318; &#x21E7; P&lt;/code&gt; &#x8C03;&#x51FA;package control&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id="toc_8"&gt;&#x683C;&#x5F0F;&#x5316;&lt;/h3&gt;
+&lt;h3 id="toc_8"&gt;&#x5176;&#x4ED6;&lt;/h3&gt;
 
-&lt;p&gt;key bindings:&lt;br&gt;
-&lt;code&gt;single_line&lt;/code&gt;&#x8868;&#x793A;&#x4E0D;&#x4EC5;&#x4F5C;&#x7528;&#x4E8E;&#x5F53;&#x524D;&#x884C;&#xFF0C;&#x4F5C;&#x7528;&#x4E8E;&#x6574;&#x4E2A;&#x6587;&#x672C;&#x3002;&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;key bindings&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;single_line&lt;/code&gt;&#x8868;&#x793A;&#x4E0D;&#x4EC5;&#x4F5C;&#x7528;&#x4E8E;&#x5F53;&#x524D;&#x884C;&#xFF0C;&#x4F5C;&#x7528;&#x4E8E;&#x6574;&#x4E2A;&#x6587;&#x672C;&#x3002;&lt;br&gt;
 &lt;code&gt;json
 [
-  { &amp;quot;keys&amp;quot;: [&amp;quot;ctrl+shift+f&amp;quot;], &amp;quot;command&amp;quot;: &amp;quot;reindent&amp;quot;, &amp;quot;args&amp;quot;: {&amp;quot;single_line&amp;quot;: false}}
+  { &amp;quot;keys&amp;quot;: [&amp;quot;ctrl+shift+r&amp;quot;], &amp;quot;command&amp;quot;: &amp;quot;reveal_in_side_bar&amp;quot;},
+  { &amp;quot;keys&amp;quot;: [&amp;quot;ctrl+shift+f&amp;quot;], &amp;quot;command&amp;quot;: &amp;quot;reindent&amp;quot;, &amp;quot;args&amp;quot;: {&amp;quot;single_line&amp;quot;: false}},
+  { &amp;quot;keys&amp;quot;: [&amp;quot;ctrl+shift+w&amp;quot;], &amp;quot;command&amp;quot;: &amp;quot;close_all&amp;quot; },
+  { &amp;quot;keys&amp;quot;: [&amp;quot;ctrl+shift+s&amp;quot;], &amp;quot;command&amp;quot;: &amp;quot;sava_all&amp;quot;},
+  { &amp;quot;keys&amp;quot;: [&amp;quot;ctrl+shift+b&amp;quot;], &amp;quot;command&amp;quot;: &amp;quot;view_in_browser&amp;quot;, &amp;quot;args&amp;quot;: { &amp;quot;browser&amp;quot;: &amp;quot;chrome&amp;quot; } }
 ]
 &lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id="toc_9"&gt;&#x63D2;&#x4EF6;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;JSONLint json&#x8BED;&#x6CD5;&#x68C0;&#x67E5;&#x63D2;&#x4EF6;&lt;/li&gt;
+&lt;li&gt;PrettyJSON json&#x683C;&#x5F0F;&#x5316;&#xFF0C;&#x56E0;&#x4E3A;reindent&#x5BF9;json&#x4E0D;&#x597D;&#x7528;&#xFF0C;&lt;code&gt;&#x2303; &#x2318; j&lt;/code&gt;&#x5FEB;&#x6377;&#x952E;&lt;/li&gt;
+&lt;/ul&gt;
 
     &lt;hr&gt;
     &lt;div class="pagination"&gt;
@@ -756,9 +768,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6613976448070763" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.9080450699488791" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.07034185080259736" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.724340363975407" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.5999699425392411" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7419528439915083" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1152,9 +1164,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.8184481655379086" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.7380130244081893" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6136711588131853" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.06719068069244127" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.29112766278819335" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6935541269134669" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1427,9 +1439,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.08615251001009538" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.83922480607241" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.2184086195643289" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7922487819282532" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.3104732467195336" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9018649454607605" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1682,9 +1694,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.26868086630165944" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.3441433877036446" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.27520034384800607" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7312544698570671" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.45581658941507397" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7302402528819786" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1924,9 +1936,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.19948994511631868" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.807592044670115" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.25768716206296993" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.2973854828221928" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.9555893325198138" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.49729744122416253" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -2216,9 +2228,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.16875087497813157" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.5665807584413037" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.1283430106214214" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6498455523149863" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.09440766323870475" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.754323402413191" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 

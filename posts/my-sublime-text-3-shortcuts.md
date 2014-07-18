@@ -57,12 +57,22 @@ categories: 'tool'
 
 * `⌘ ⇧ P` 调出package control
 
-### 格式化
+### 其他
 
-key bindings:  
+**key bindings**  
+
 `single_line`表示不仅作用于当前行，作用于整个文本。  
 ```json
 [
-  { "keys": ["ctrl+shift+f"], "command": "reindent", "args": {"single_line": false}}
+  { "keys": ["ctrl+shift+r"], "command": "reveal_in_side_bar"},
+  { "keys": ["ctrl+shift+f"], "command": "reindent", "args": {"single_line": false}},
+  { "keys": ["ctrl+shift+w"], "command": "close_all" },
+  { "keys": ["ctrl+shift+s"], "command": "sava_all"},
+  { "keys": ["ctrl+shift+b"], "command": "view_in_browser", "args": { "browser": "chrome" } }
 ]
 ```
+
+### 插件
+
+* JSONLint json语法检查插件
+* PrettyJSON json格式化，因为reindent对json不好用，`⌃ ⌘ j`快捷键

@@ -3,7 +3,7 @@
   <channel>
     <title>tiemei</title>
     <link>http://defworld.com</link>
-    <pubDate>2014-06-15 15:39:59 +0800</pubDate>
+    <pubDate>2014-07-18 11:12:30 +0800</pubDate>
     <item>
       <title>js&#x5165;&#x95E8;&#x7B14;&#x8BB0;&#xFF08;&#x4E8C;&#xFF09;&#x2014;&#x2014;&#x9762;&#x5411;&#x5BF9;&#x8C61;</title>
       <link>http://defworld.com/2014-06/notes-js-object.html</link>
@@ -33,9 +33,9 @@
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.5037586683061414" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.14540660858133025" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7469559423797956" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6891026928688421" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.7172250702167652" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.3560904306563003" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -54,6 +54,9 @@
     &lt;div class="navbar"&gt;
       &lt;div class="navbar-inner"&gt;
         &lt;div class="container"&gt;
+          &lt;a class="touxiang" href="http://weibo.com/wgdkfk"&gt;
+            &lt;img src="https://farm6.staticflickr.com/5577/14680769772_ac1af8df86.jpg" width="40" height="40" &gt;
+          &lt;/a&gt;
           &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
           &lt;ul class="nav"&gt;
               
@@ -263,9 +266,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.34467439717827786" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.4093435673113197" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6481372679299399" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.8260169516492865" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.20632042354634927" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.971188844042038" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -284,6 +287,9 @@ clicky_site_ids.push(defworld.com);
     &lt;div class="navbar"&gt;
       &lt;div class="navbar-inner"&gt;
         &lt;div class="container"&gt;
+          &lt;a class="touxiang" href="http://weibo.com/wgdkfk"&gt;
+            &lt;img src="https://farm6.staticflickr.com/5577/14680769772_ac1af8df86.jpg" width="40" height="40" &gt;
+          &lt;/a&gt;
           &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
           &lt;ul class="nav"&gt;
               
@@ -507,9 +513,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9653932583092184" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.690633297991297" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.365554839219156" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6757342841727556" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.44965352030234573" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.49766193703237094" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -528,6 +534,9 @@ clicky_site_ids.push(defworld.com);
     &lt;div class="navbar"&gt;
       &lt;div class="navbar-inner"&gt;
         &lt;div class="container"&gt;
+          &lt;a class="touxiang" href="http://weibo.com/wgdkfk"&gt;
+            &lt;img src="https://farm6.staticflickr.com/5577/14680769772_ac1af8df86.jpg" width="40" height="40" &gt;
+          &lt;/a&gt;
           &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
           &lt;ul class="nav"&gt;
               
@@ -768,9 +777,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.724340363975407" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.5999699425392411" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7419528439915083" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6977593456337344" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.8006913912053114" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9686377138863114" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -789,6 +798,9 @@ clicky_site_ids.push(defworld.com);
     &lt;div class="navbar"&gt;
       &lt;div class="navbar-inner"&gt;
         &lt;div class="container"&gt;
+          &lt;a class="touxiang" href="http://weibo.com/wgdkfk"&gt;
+            &lt;img src="https://farm6.staticflickr.com/5577/14680769772_ac1af8df86.jpg" width="40" height="40" &gt;
+          &lt;/a&gt;
           &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
           &lt;ul class="nav"&gt;
               
@@ -1164,9 +1176,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.06719068069244127" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.29112766278819335" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6935541269134669" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.8885141246178458" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.968964174843755" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4366848056532414" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1185,6 +1197,9 @@ clicky_site_ids.push(defworld.com);
     &lt;div class="navbar"&gt;
       &lt;div class="navbar-inner"&gt;
         &lt;div class="container"&gt;
+          &lt;a class="touxiang" href="http://weibo.com/wgdkfk"&gt;
+            &lt;img src="https://farm6.staticflickr.com/5577/14680769772_ac1af8df86.jpg" width="40" height="40" &gt;
+          &lt;/a&gt;
           &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
           &lt;ul class="nav"&gt;
               
@@ -1439,9 +1454,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7922487819282532" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.3104732467195336" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9018649454607605" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9022933107288468" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.6125716727175641" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6701313109710565" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1460,6 +1475,9 @@ clicky_site_ids.push(defworld.com);
     &lt;div class="navbar"&gt;
       &lt;div class="navbar-inner"&gt;
         &lt;div class="container"&gt;
+          &lt;a class="touxiang" href="http://weibo.com/wgdkfk"&gt;
+            &lt;img src="https://farm6.staticflickr.com/5577/14680769772_ac1af8df86.jpg" width="40" height="40" &gt;
+          &lt;/a&gt;
           &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
           &lt;ul class="nav"&gt;
               
@@ -1694,9 +1712,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7312544698570671" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.45581658941507397" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7302402528819786" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9788705871954178" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.8362554580673539" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.412689337595631" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1715,6 +1733,9 @@ clicky_site_ids.push(defworld.com);
     &lt;div class="navbar"&gt;
       &lt;div class="navbar-inner"&gt;
         &lt;div class="container"&gt;
+          &lt;a class="touxiang" href="http://weibo.com/wgdkfk"&gt;
+            &lt;img src="https://farm6.staticflickr.com/5577/14680769772_ac1af8df86.jpg" width="40" height="40" &gt;
+          &lt;/a&gt;
           &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
           &lt;ul class="nav"&gt;
               
@@ -1936,9 +1957,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.2973854828221928" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.9555893325198138" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.49729744122416253" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7802433458863465" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.9683682436037439" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9072960611117029" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1957,6 +1978,9 @@ clicky_site_ids.push(defworld.com);
     &lt;div class="navbar"&gt;
       &lt;div class="navbar-inner"&gt;
         &lt;div class="container"&gt;
+          &lt;a class="touxiang" href="http://weibo.com/wgdkfk"&gt;
+            &lt;img src="https://farm6.staticflickr.com/5577/14680769772_ac1af8df86.jpg" width="40" height="40" &gt;
+          &lt;/a&gt;
           &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
           &lt;ul class="nav"&gt;
               
@@ -2228,9 +2252,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6498455523149863" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.09440766323870475" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.754323402413191" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.91627631835625" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.17867252879470186" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5450865312524389" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -2249,6 +2273,9 @@ clicky_site_ids.push(defworld.com);
     &lt;div class="navbar"&gt;
       &lt;div class="navbar-inner"&gt;
         &lt;div class="container"&gt;
+          &lt;a class="touxiang" href="http://weibo.com/wgdkfk"&gt;
+            &lt;img src="https://farm6.staticflickr.com/5577/14680769772_ac1af8df86.jpg" width="40" height="40" &gt;
+          &lt;/a&gt;
           &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
           &lt;ul class="nav"&gt;
               

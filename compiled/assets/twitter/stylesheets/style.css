@@ -93,3 +93,9 @@ html, body {
 #posts {
   margin: 0 30px 0 0;
 }
+
+.touxiang {
+  display: block;
+  float: left;
+  margin-right: 4px;
+}

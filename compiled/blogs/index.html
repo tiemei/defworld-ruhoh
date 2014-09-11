@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7674030080310466" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.10639064911577512" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.586900888921477" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7738414621555821" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.633093183276232" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.00399864336847644" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -59,7 +59,99 @@
     <h2>Latest Posts</h2>
 
 <div class="post">
-  <h3 class="title"><a href="/2014-06/notes-js-object.html">js入门笔记（二）——面向对象</a> <span class="date">2014-06-13</span></h3>
+  <h3 class="title"><a href="/2014-09/java-null-note.html">笔记 - 关于Java中的Null</a> <span class="date">2014-09-12</span></h3>
+
+  <p>有人说写出NPE，是程序员的逻辑错误，我们在做code review的时候也经常提醒或者被提醒这一点，殊不知这个坑真的太容易踩了。但是如果你不辞辛劳的判断Null，你会发现你的代码变成一坨奇怪的形状，就像脸蛋白皙五官精致的姑娘被各种乱涂乱画。下面大家看看这个例子：  </p>
+
+<pre><code class="java">computer.getSoundCard().getUsb().getVersion();
+</code></pre>
+
+<p>我们很容易被吐槽（博主经常被测试妹子吐槽这里这里检查了NPE了么），一个电脑肯定有声卡么，声卡肯定有usa插口么？然后代码变成了这样：  </p>
+
+<pre><code class="java">if (computer != null) {
+    SoundCard sc = computer.getSoundcard();
+    if (sc != null) {
+        Usb usb = sc.getUsb();
+        if (usab != null) {
+            return usb.getVersion();
+        } else {
+            return null;
+        }      
+    } else {
+        return null;
+    }
+} else {
+    return null;
+}
+</code></pre>
+
+
+  <div class="more">
+    <a href="/2014-09/java-null-note.html" class="btn">read more..</a>
+  </div>
+</div>
+
+<div class="post">
+  <h3 class="title"><a href="/2014-09/node-js-4-tools.html">js入门笔记（四）—— 工具</a> <span class="date">2014-09-03</span></h3>
+
+  <h1 id="toc_0"><a href="http://gruntjs.com/getting-started">grunt</a></h1>
+
+<p>grunt是javascript的任务运行器。  </p>
+
+<h1 id="toc_1"><a href="https://www.npmjs.org/">npm</a></h1>
+
+<p>npm是node.js的包管理器。  </p>
+
+<h2 id="toc_2">常用命令</h2>
+
+<ul>
+<li><code>npm install</code>在<code>package.json</code>文件存在的目录执行，安装响应的依赖</li>
+<li><code>npm install grunt --save-dev</code>将grunt的最新版本安装到工程目录，并在devDependencies中添加</li>
+</ul>
+
+<h2 id="toc_3">版本描述定义</h2>
+
+<p>参见<a href="https://www.npmjs.org/doc/misc/semver.html">semver</a>  </p>
+
+<h2 id="toc_4">npmrc</h2>
+
+
+  <div class="more">
+    <a href="/2014-09/node-js-4-tools.html" class="btn">read more..</a>
+  </div>
+</div>
+
+<div class="post">
+  <h3 class="title"><a href="/2014-08/huangshan.html">黄山团队三日游</a> <span class="date">2014-08-10</span></h3>
+
+  <p>主题 - 黄山</p>
+
+<p>黄山主要的路线就是两条，前山山后山下，后山上前山下。考虑到是团队出游，且还有没有可能还有小孩，我们主路线是：后山徒步上（后山较平缓），前山下，且前山下到玉屏楼走玉屏索道缆车下山。有妇女儿童体力欠缺者建议后山也是走云谷新索道缆车到白鹅岭再行步行。主要的时间安排是第一天早上坐车中午到黄山，下午晚上住在山脚，会准备三国杀和狼人杀。第二天早上开始登山，全天登山，晚上住光明顶，第三天从前山下。详细安排是：  </p>
+
+<h1 id="toc_0">详细规划</h1>
+
+<h3 id="toc_1">D1上午，杭州 -&gt; 黄山景区换乘中心</h3>
+
+<p>早上9点阿里巴巴西溪园区发车。<br>
+从杭州坐汽车或者包车到黄山景区（看映容是否能包到车）大约4h，找一户农家吃午饭。下午下榻旁边的中泰大酒店，下午可以在酒店打牌，也可去后山泡温泉。  </p>
+
+<h3 id="toc_2">D2，云谷寺 -&gt; 白鹅岭 -&gt; 光明顶-&gt;西海大峡谷-&gt;光明顶</h3>
+
+<p>先从换乘中心坐车到云谷寺，大约30min。<br>
+从云谷寺开始就是登山的起点，山顶为光明顶。可以有几种选择，全程步行登顶或者坐缆车，是否去西海大峡谷，都是可选的，大家可根据自己体力酌情考虑。<br>
+云谷寺到白鹅岭6.5km，步行3小时左右，腿力好的2.5之内应该可以搞定。<br>
+从白鹅岭至光明顶至光明顶至光明顶，要2~3h，只能步行。<br>
+光明顶去西海大峡谷，下山3~4h，上山4~5h，上山可选择坐缆车。<br>
+一路云海天梯美女帅哥欢歌笑语不再多说。  </p>
+
+
+  <div class="more">
+    <a href="/2014-08/huangshan.html" class="btn">read more..</a>
+  </div>
+</div>
+
+<div class="post">
+  <h3 class="title"><a href="/2014-06/notes-js-2-object.html">js入门笔记（二）——面向对象</a> <span class="date">2014-06-13</span></h3>
 
   <h1 id="toc_0">直接创建一个对象</h1>
 
@@ -78,12 +170,12 @@ person.sayName = function() {
 
 
   <div class="more">
-    <a href="/2014-06/notes-js-object.html" class="btn">read more..</a>
+    <a href="/2014-06/notes-js-2-object.html" class="btn">read more..</a>
   </div>
 </div>
 
 <div class="post">
-  <h3 class="title"><a href="/2014-06/notes-js.html">js入门笔记（一）——基础</a> <span class="date">2014-06-13</span></h3>
+  <h3 class="title"><a href="/2014-06/notes-js-1.html">js入门笔记（一）——基础</a> <span class="date">2014-06-13</span></h3>
 
   <h1 id="toc_0">js函数有啥特点</h1>
 
@@ -107,7 +199,7 @@ person.sayName = function() {
 
 
   <div class="more">
-    <a href="/2014-06/notes-js.html" class="btn">read more..</a>
+    <a href="/2014-06/notes-js-1.html" class="btn">read more..</a>
   </div>
 </div>
 
@@ -258,96 +350,6 @@ alias ..3=&#39;cd ../../..&#39;
 
   <div class="more">
     <a href="/2014-01/reading-linux-101-hacks.html" class="btn">read more..</a>
-  </div>
-</div>
-
-<div class="post">
-  <h3 class="title"><a href="/2013-11/linux-software-install.html">谈谈Unix-like上软件安装那些事</a> <span class="date">2013-11-10</span></h3>
-
-  <h2 id="toc_0">Linux和Mac OS X</h2>
-
-<p>在大学刚听说linux时候，被一堆名词唬住了：CentOS,Ubuntu,RedHat等。我一开始用
-Fedora13一直用到Fedora15，使用过程中遇到多次诡异问题，最后都定位到是Fedora发行
-版的bug，变忍痛弃之。相对，使用率更高的Ubuntu成为我的第二选择，因为使用率高，出现
-问题也能从网上获得更多帮助。从今年3月份开始，换成了现在的os x系统。<br>
-如此多的选择，常常让入门者无所适从。<br>
-linux发行版分为主要的三个分支：RedHat、Slackware和Debian，每一个分支都拥有一个
-最具代表性的商业服务器级的发行版，它们是：RedHat Enterpries Linux，简称RHEL、
-SUSE LinuxEnterprise，简称SUSE，和Ubuntu Server，简称Ubuntu。有分支的区分，是因为
-后来的各种发行版是在这几个最初版本上修改而来的，虽然某些发行版实际上已经跟最初的
-版本相差甚远了。很多大型互联网公司会选择REHL，因为它对kvm的支持。但REHL收费，除非
-你自己下它的源码编译，不过CentOS就是REHL源码编译过来的，所以，直接上CentOS就好。<br>
-那现在苹果机器搭载的os x系统处在什么位置呢？<code>Mac OS</code>基于Mach内核，这个内核的出现也是
-为了弥补Unix的某些局限和不足，对Unix系统下的程序的直接移植也做到了较好的兼容性。<code>mac os x</code>
-是一次内核层面的改造，核心名为<code>Darwin</code>，以<code>FreeBSD</code>源码和<code>Mach</code>微内核为基础。于是可知现在
-我们使用的<code>Mac os x</code>衍生自<code>BSD</code>分支，而linux于1991被<code>Linus Benedict Torvalds</code>编写时，<code>386BSD</code>
-还没有发布。如果真的要追溯linux和<code>mac os x</code>的血缘关系，恐怕要更远了。所以，如果你觉得
-用惯了Ubuntu，换成Mac机有一些不习惯，那是不可避免的了。  </p>
-
-
-  <div class="more">
-    <a href="/2013-11/linux-software-install.html" class="btn">read more..</a>
-  </div>
-</div>
-
-<div class="post">
-  <h3 class="title"><a href="/2013-09/jvm-class-loader-and-init.html">JVM——类加载器，初始化</a> <span class="date">2013-09-15</span></h3>
-
-  <h1 id="toc_0">类加载器</h1>
-
-<h2 id="toc_1">“双亲”委派</h2>
-
-<ol>
-<li><p>类加载器使用“双亲委派”模型。
-<img src="http://farm4.staticflickr.com/3705/9757201665_47321648aa.jpg" alt="classloaders"></p></li>
-<li><p>可以自己写一个类编辑打成Jar包放到<code>$JAVA_HOME/jre/lib/ext</code>目录，再写一个启动类，
-打印出加载所写类的classloader，发现是extclassloader。但是放到<code>$JAVA_HOME/jre/lib</code>
-目录并不会被加载</p></li>
-<li><p>被加载的类唯一标识是类路径+类加载器id.</p></li>
-</ol>
-
-<h2 id="toc_2">线程类加载器</h2>
-
-<p>首先介绍一个概念：<strong>当前类加载器</strong>，指当前方法方法所在类的加载器。<code>Class.forName(String)</code>
-<code>Class.getResource(String)</code><code>X.class</code>都是用的当前类加载器。<br>
-这是原有的“双亲委派”模型就不能解决问题了。例如JNDI的核心类在JRE的rt.jar中，而这些核心类
-需要加载第三方厂商的JNDI实现，加载时的类加载器默认是“当前类加载器”，即<code>Bootstrap class loader</code>，
-显然是加载不到这些实现类的。这时，<strong>线程类加载器</strong>就起作用了。让JNDI核心类的加载使用线程
-上下文类加载器，打破“双亲委托”限定的向上代理机制。<br>
-虽然下“线程类加载器”解决了某些特殊问题，但它也存在不足。除非所有线程使用同一个线程上下文类
-加载器，否则它们的数据共享成为问题。并且，缺省规则为使用当前类加载器，有些代码你又没法控制，
-这个问题变得更加复杂。  </p>
-
-
-  <div class="more">
-    <a href="/2013-09/jvm-class-loader-and-init.html" class="btn">read more..</a>
-  </div>
-</div>
-
-<div class="post">
-  <h3 class="title"><a href="/2013-09/maven-cmd.html">常用maven命令</a> <span class="date">2013-09-12</span></h3>
-
-  <h2 id="toc_0">剪裁反应堆</h2>
-
-<ul>
-<li>构建指定几个模块<code>mvn clean install -pl account-email,account-persist</code> </li>
-<li>构建指定模块及其依赖<code>mvn clean install -pl account-email -am</code></li>
-<li>构建指定模块及依赖它的模块<code>mvn clean install -pl account-email -amd</code></li>
-<li>在完整的反应对顺序上指定从哪个模块开始构建<code>mvn clean install -rf account-email</code></li>
-<li>在<code>-pl -am / -pl -amd</code>基础上还能用<code>-rf</code>再次剪裁</li>
-</ul>
-
-<h2 id="toc_1">常用命令</h2>
-
-<p>新建一个空白工程  </p>
-
-<pre><code>mvn archetype:create -DgroupId=com.tiemei -DartifactId=p1 -DpackageName=com.tiemei.p1
-建web工程加-DarchetypeArtifactId=maven-archetype-webapp
-</code></pre>
-
-
-  <div class="more">
-    <a href="/2013-09/maven-cmd.html" class="btn">read more..</a>
   </div>
 </div>
 

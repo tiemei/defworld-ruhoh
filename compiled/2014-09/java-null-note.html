@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:wb=“http://open.weibo.com/wb”>
+  <head>
+    <meta charset="utf-8">
+    <title>笔记 - 关于Java中的Null</title>
+    <meta name="author" content="tiemei">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.29260976463079913" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.5504653342108216" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9186381500212263" type="text/css" rel="stylesheet" media="all">
+
+ 
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="touxiang" href="http://weibo.com/wgdkfk">
+            <img src="https://farm6.staticflickr.com/5577/14680769772_ac1af8df86.jpg" width="40" height="40" >
+          </a>
+          <a class="brand" href="/">tiemei</a>
+          <ul class="nav">
+              
+                <li><a href="/categories">Categories</a></li>
+              
+                <li><a href="/tools">Tools</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        <div class="page-header">
+  <h1>笔记 - 关于Java中的Null </h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+    <p>有人说写出NPE，是程序员的逻辑错误，我们在做code review的时候也经常提醒或者被提醒这一点，殊不知这个坑真的太容易踩了。但是如果你不辞辛劳的判断Null，你会发现你的代码变成一坨奇怪的形状，就像脸蛋白皙五官精致的姑娘被各种乱涂乱画。下面大家看看这个例子：  </p>
+
+<pre><code class="java">computer.getSoundCard().getUsb().getVersion();
+</code></pre>
+
+<p>我们很容易被吐槽（博主经常被测试妹子吐槽这里这里检查了NPE了么），一个电脑肯定有声卡么，声卡肯定有usa插口么？然后代码变成了这样：  </p>
+
+<pre><code class="java">if (computer != null) {
+    SoundCard sc = computer.getSoundcard();
+    if (sc != null) {
+        Usb usb = sc.getUsb();
+        if (usab != null) {
+            return usb.getVersion();
+        } else {
+            return null;
+        }      
+    } else {
+        return null;
+    }
+} else {
+    return null;
+}
+</code></pre>
+
+<p>有人说你这么写太夸张了，不是可以精简一下：  </p>
+
+<pre><code class="java">if (computer != null &amp;&amp; computer.getSoundCard() != null &amp;&amp; computer.getSoundCard().getUsb() != null) {
+    return computer.getSoundCard().getUsb().getVersion();
+} else {
+    return null;
+}
+</code></pre>
+
+<p>我们来对比下这种情况其他语言和工具是怎么写的：<br>
+groovy用语言级别支持的?处理清晰简洁：  </p>
+
+<pre><code class="Groovy">String version = computer?.getSoundcard()?.getUsb()?.getVersion();
+</code></pre>
+
+<p>Guava框架用自定义的Optional<T>对象：  </p>
+
+<pre><code class="java">Optional&lt;Computer&gt; maybeComputer = Optional.of(computer); // 如果此处computer为null，将跑出NPE，可用Optional.fromNullable(T)允许传入Null表示缺失
+if (maybeComputer.isPresent()) { // 这里只有present/absent两种状态，present时就拿到的对象就肯定不为null
+    maybeComputer.getSoundCard();
+}
+// ...
+</code></pre>
+
+<p>Java8：<br>
+简单解释下下面代码，<code>maybeSoundcard.orElse(new Soundcard(&quot;defaut&quot;))</code>等价于<code>soundcard != null ? soundcard : new Soundcard(&quot;basic_sound_card&quot;)</code>，<code>maybeSoundcard.map(Soundcard::getUSB)</code>等价于<code>soundcard != null ? souncard.getUSB() : null</code>，而<code>Computer::getSoundcard</code>是Lambdas写法。  </p>
+
+<pre><code class="java">String name = computer.flatMap(Computer::getSoundcard)
+                          .flatMap(Soundcard::getUSB)
+                          .map(USB::getVersion)
+                          .orElse(&quot;UNKNOWN&quot;);
+</code></pre>
+
+<p>总结一下，Map中get一个值返回Null有可能表示缺失也可能表示存在且值就为Null，而Guava Optional<T>强制提醒开发者需要去关注是否null，从而去避免NPE引起执行流程的异常甚至整个程序中断，它里面其他一些工具一定程度上简化了各种判断和默认值的书写，但还不够彻底。使用java8的Optional<T>加Lambdas加Streams的写法，在Guava基础上做的更加彻底，但比Groovy这种语言级别的支持略显笨重。<br>
+建议先在框架的某个层面（比如控制层）把所有NPE处理掉，不要往下层流，尤其是在多个模块甚至多个系统之间交互的时候，最好能够一方处理掉这个，最起码保证另一方怎么写代码都不会跑NPE。其次才是用Optional<T>这样的工具来处理。最次是在接口doc上写清楚可能为null的情况。    </p>
+
+<p>参考：  </p>
+
+<p>*《Tired of Null Pointer Exceptions? Consider Using Java SE 8&#39;s Optional!》<a href="http://www.oracle.com/technetwork/articles/java/java8-optional-2175753.html">http://www.oracle.com/technetwork/articles/java/java8-optional-2175753.html</a><br>
+*《避免Java中的空对象检查》<a href="http://it.deepinmind.com/java/2014/08/08/avoiding-null-checks-in-java.html">http://it.deepinmind.com/java/2014/08/08/avoiding-null-checks-in-java.html</a><br>
+*《[Google Guava] 1.1-使用和避免null》<a href="http://ifeve.com/google-guava-using-and-avoiding-null/">http://ifeve.com/google-guava-using-and-avoiding-null/</a>  </p>
+
+    <hr>
+    <div class="pagination">
+      <ul>
+        <ul>
+            <li class="prev"><a href="/2014-09/node-js-4-tools.html" title="js入门笔记（四）—— 工具">&larr; Previous</a></li>
+
+            <li><a href="/archive">Archive</a></li>
+
+            <li class="next disabled"><a>Next &rarr;</a>
+        </ul>
+      </ul>
+    </div>
+    <hr>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  </div>
+  
+  <div class="span4">
+    <script type="text/javascript" charset="utf-8">
+    (function(){
+       var _w = 90 , _h = 24;
+       var param = {
+       url:location.href,
+       type:'2',
+       count:'1', /**是否显示分享数，1显示(可选)*/
+       appkey:'', /**您申请的应用appkey,显示分享来源(可选)*/
+       title:'', /**分享的文字内容(可选，默认为所在页面的title)*/
+       pic:'', /**分享图片的路径(可选)*/
+       ralateUid:'2388250330', /**关联用户的UID，分享微博会@该用户(可选)*/
+       language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
+       rnd:new Date().valueOf()
+     }
+     var temp = [];
+     for( var p in param ){
+     temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+     }
+     document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
+     })()
+    </script>
+
+    <h4>Published</h4>
+    <div class="date"><span>2014-09-12</span></div>
+    <br>
+    <h4>Categories</h4>
+    <ul class="tag_box">
+      <li>
+        <a href="/categories#java-ref">java <span>7</span></a>
+      </li>    </ul>
+    <br>
+    <h4>Tags</h4>
+    <ul class="tag_box">
+    </ul>
+  </div>
+</div>
+
+      </div>
+
+      <footer>
+        <p>&copy; tiemei 2012 
+          with help from <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">ruhoh</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+        <p>
+        <script src="http://s9.cnzz.com/stat.php?id=5379369&web_id=5379369&online=1&show=line" language="JavaScript"></script>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Google Prettify -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+<script>
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i < pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+</script>
+<!-- end Google Prettify -->
+    <script>
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(defworld.com);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /></p></noscript>
+  </body>
+</html>

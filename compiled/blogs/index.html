@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7738414621555821" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.633093183276232" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.00399864336847644" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6536482180653546" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.6560009284243894" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.17801092787144135" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -57,6 +57,34 @@
 <div class="row">
   <div class="span12">
     <h2>Latest Posts</h2>
+
+<div class="post">
+  <h3 class="title"><a href="/2014-09/spring-dispatcherservlet-and-contextloaderlistener.html">spring DispatcherServlet &amp; ContextLoaderListener</a> <span class="date">2014-09-13</span></h3>
+
+  <p>实际上我们只要知道了servlet config和servlet conext的区别就能清楚spring中的DispatcherServlet和ContextLoaderListener有啥区别了。servlet config是单个servlet维度的，而servlet conext是整个application维度的，一个application可能有多个servlet。  </p>
+
+<p>spring是基于servlet标准的serlvet为中心扩展的一个MVC框架（<a href="http://webx.github.io/">webx</a>以filter为中心扩展的），DispatcherServlet正是这个中心。如下图，Front Controller就是指的DispatchServlet。    </p>
+
+<p><img src="https://farm4.staticflickr.com/3851/15218580671_18437fa8a9.jpg" alt="spring mvc">  </p>
+
+<p>所以我们用类似这样的方式指定的实际是DispatchServlet范围内的context:  </p>
+
+<pre><code class="xml">&lt;servlet&gt;
+        &lt;servlet-name&gt;dispatcher&lt;/servlet-name&gt;
+        &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;
+        &lt;init-param&gt;
+            &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+            &lt;param-value&gt;classpath:spring-context.xml&lt;/param-value&gt;
+        &lt;/init-param&gt;
+        &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+&lt;/servlet&gt;
+</code></pre>
+
+
+  <div class="more">
+    <a href="/2014-09/spring-dispatcherservlet-and-contextloaderlistener.html" class="btn">read more..</a>
+  </div>
+</div>
 
 <div class="post">
   <h3 class="title"><a href="/2014-09/java-null-note.html">笔记 - 关于Java中的Null</a> <span class="date">2014-09-12</span></h3>
@@ -151,30 +179,6 @@
 </div>
 
 <div class="post">
-  <h3 class="title"><a href="/2014-06/notes-js-2-object.html">js入门笔记（二）——面向对象</a> <span class="date">2014-06-13</span></h3>
-
-  <h1 id="toc_0">直接创建一个对象</h1>
-
-<p>ECMA-262把对象定义为<code>无需属性的结合，其属性尅包含基本值、对象或者函数</code>。</p>
-
-<p><strong>创建自定义对象方式一——创建一个Object实例</strong> </p>
-
-<pre><code class="js">var person = new Object();
-person.name = &#39;tiemie&#39;;
-person.age = 29;
-
-person.sayName = function() {
-    alert(this.name);
-};
-</code></pre>
-
-
-  <div class="more">
-    <a href="/2014-06/notes-js-2-object.html" class="btn">read more..</a>
-  </div>
-</div>
-
-<div class="post">
   <h3 class="title"><a href="/2014-06/notes-js-1.html">js入门笔记（一）——基础</a> <span class="date">2014-06-13</span></h3>
 
   <h1 id="toc_0">js函数有啥特点</h1>
@@ -200,6 +204,30 @@ person.sayName = function() {
 
   <div class="more">
     <a href="/2014-06/notes-js-1.html" class="btn">read more..</a>
+  </div>
+</div>
+
+<div class="post">
+  <h3 class="title"><a href="/2014-06/notes-js-2-object.html">js入门笔记（二）——面向对象</a> <span class="date">2014-06-13</span></h3>
+
+  <h1 id="toc_0">直接创建一个对象</h1>
+
+<p>ECMA-262把对象定义为<code>无需属性的结合，其属性尅包含基本值、对象或者函数</code>。</p>
+
+<p><strong>创建自定义对象方式一——创建一个Object实例</strong> </p>
+
+<pre><code class="js">var person = new Object();
+person.name = &#39;tiemie&#39;;
+person.age = 29;
+
+person.sayName = function() {
+    alert(this.name);
+};
+</code></pre>
+
+
+  <div class="more">
+    <a href="/2014-06/notes-js-2-object.html" class="btn">read more..</a>
   </div>
 </div>
 
@@ -323,33 +351,6 @@ person.sayName = function() {
 
   <div class="more">
     <a href="/2014-04/node-js-and-division-of-work.html" class="btn">read more..</a>
-  </div>
-</div>
-
-<div class="post">
-  <h3 class="title"><a href="/2014-01/reading-linux-101-hacks.html">《linux 101 hacks》笔记</a> <span class="date">2014-01-18</span></h3>
-
-  <h2 id="toc_0">cd</h2>
-
-<p><strong>CDPATH</strong>  </p>
-
-<p>默认<code>cd logs</code>进入当前目录的logs目录，设置了这个变量，优先进入这个变量
-指向的目录的下对应的文件夹。可用冒号分隔指定多个。  </p>
-
-<p><strong>返回多级上级目录</strong>  </p>
-
-<pre><code>~/.bashrc
-
-alias ..=&#39;cd ..&#39;
-alias ..2=&#39;cd ../..&#39;
-alias ..3=&#39;cd ../../..&#39;
-
-或者这种方式：
-</code></pre>
-
-
-  <div class="more">
-    <a href="/2014-01/reading-linux-101-hacks.html" class="btn">read more..</a>
   </div>
 </div>
 

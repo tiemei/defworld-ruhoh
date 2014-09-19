@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6536482180653546" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.6560009284243894" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.17801092787144135" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.5792948844628756" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.4146456964678197" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.19791768940217935" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -57,6 +57,35 @@
 <div class="row">
   <div class="span12">
     <h2>Latest Posts</h2>
+
+<div class="post">
+  <h3 class="title"><a href="/2014-09/node-js-async-i-o.html">聊聊Node.js的异步I/O</a> <span class="date">2014-09-19</span></h3>
+
+  <h1 id="toc_0">阻塞vs非阻塞，同步vs异步</h1>
+
+<p>阻塞是你做一件事不能立即得到返回，否则是非阻塞。同步是做完一件事，做下一件事，反之异步。<br>
+阻塞非阻塞都是同步，异步就无所谓阻塞非阻塞了。  </p>
+
+<h1 id="toc_1">各种I/O模型</h1>
+
+<p>一个输入主要包括两个阶段：  </p>
+
+<ol>
+<li>等待数据到达</li>
+<li>将数据从内核空间拷贝到用户空间</li>
+</ol>
+
+<p>Blocking I/O model:  </p>
+
+<p><img src="https://farm6.staticflickr.com/5574/15261520936_c092d571bd.jpg" alt="Blocking I/O model">  </p>
+
+<p>这里以UDP为例，因为UDP的datagram ready只要一个datagram到了就行了，TCP相对复杂很多。这里我们发现系统层面一个系统调用需要等待1，2都完成后才能返回。  </p>
+
+
+  <div class="more">
+    <a href="/2014-09/node-js-async-i-o.html" class="btn">read more..</a>
+  </div>
+</div>
 
 <div class="post">
   <h3 class="title"><a href="/2014-09/spring-dispatcherservlet-and-contextloaderlistener.html">spring DispatcherServlet &amp; ContextLoaderListener</a> <span class="date">2014-09-13</span></h3>
@@ -316,41 +345,6 @@ person.sayName = function() {
 
   <div class="more">
     <a href="/2014-05/my-sublime-text-3-shortcuts.html" class="btn">read more..</a>
-  </div>
-</div>
-
-<div class="post">
-  <h3 class="title"><a href="/2014-04/node-js-and-division-of-work.html">Node.js前后端分离在广告页面中的思考</a> <span class="date">2014-04-20</span></h3>
-
-  <p>撇下Node.js社区的红火，异步I/O的相比阻塞I/O的好处，也不谈回调嵌套是否反人类，Node.js是否在“羞辱”后端程序员，我想借着这篇文字理一下Node.js在我们广告页面中能否提高合作效率和迭代速度。  </p>
-
-<h3 id="toc_0">过去和现状</h3>
-
-<p>我们团队维护直通车、外投外、无线等多条产品线的二跳页面，且正在接入一跳广告位。  </p>
-
-<p>2012年我刚来团队的时候，说的简单点，主要做的事情无非就是从广告引擎、其他数据源获取数据，展示到页面上。因为公司技术环境的原因，最开始选择了webx+velocity模板，由前端工程师写静态的html页面，java工程师拿过来，把其中的动态部分用vm模板语言重写一遍，再从后端数据源把数据拿过来，几乎不会对数据进行更多的逻辑加工。加上页面几乎没有用户输入部分，基本上交互都集中在纯js/css动态效果，ajax异步数据请求和展现（没有数据输入）。  </p>
-
-<p>可以看到这样的合作模式里，前端/后端工程师的分工是非常明确和解耦的，当然前端同学也能在这样的模式下积累可重用的js组件提交效率。但，随着粗放式增长的瓶颈，加上内部流程的制约，这样的迭代方式遇到了问题？首先，经常性的页面局部调整一般只能在下周的发布日才能完成；一次无法尝试过多版本，因为开发html改成动态模版和测试都需要资源；重复的页面模块开发；后端工程师一直在干重复枯燥的劳动，没有精力去思考如何做到流程的自动化、数据可反馈、统一解决方案的问题；当然还有多终端时代的挑战。  </p>
-
-<p>我们做的第一次尝试，“组件化”平台，我认为实际上是做到页面搭建过程的模型化，也就是说用一种统一的模型来描述页面的逻辑，进而用线上可动态改变的配置文件来描述这个模型。显然，在后端工程师的角度，我们不再是写写数据接口，写写页面模版了，我们面对统一的页面模型，进行配置的统一生成和解析。这里可以简单说下这个模型，基于广告页面的实际业务场景，我们把页面切分成几个独立的块，每块用“动态模版+数据源配置+样式js”的方式描述，块之间的js,css依赖通过css class命名规范进行解耦，块之间的数据依赖（这样的依赖极少）通过配置上的数据传递来解决。  </p>
-
-<p>“组件化”平台的配置化的统一模型尝试是突破性的，后端开发终于从将html改写成动态模版这样的无聊的工作中解脱了，我们也似乎看到一点平台化的统一解决方案的影子。但，因为这个配置化的模型还是过于复杂了，生成模型配置的管理系统，提供出来的配置界面(<code>http://moc.taobao.org/</code>)过于复杂，也注定了它只能给开发自己玩玩。更大的问题是，<strong>前端工程师需要写后端动态模板</strong>，调试是个大问题呀！前端们用node.js+velocity.js搭了一个调试平台，然后再用约定的接口数据格式，自己定义一些mock数据调试。这样的方式勉强可以跑通，但前端开发完页面的动的模块后，需要后端工程师在配置系统配置上数据接口和模块之间的依赖关系，然后再将模块代码上传到后端渲染系统，然后才能看到真正的动态页面长什么样。这样的合作方式，我们做出来的页面已经覆盖到淘客、直通车、外投外、淘星云等多个页面，流量也上千万了。如此多的依赖，和前端对最终运行环境的无法感知，带来不少坎坷和诡异的问题。  </p>
-
-<h3 id="toc_1">“组件化”方案中前后端到底哪里耦合</h3>
-
-<p>首先再反思下，我们现有的前后端解耦手段：  </p>
-
-<ol>
-<li>数据接口输出预先约定好</li>
-<li>Node.js + velocity.js 搭建前端开发调试环境</li>
-<li>前端控制动态模版的编写和css/js的控制</li>
-<li>后端控制数据接口入参的控制，数据接口的准备，页面模块间依赖的配置，
-最终配置的解析和渲染输出</li>
-</ol>
-
-
-  <div class="more">
-    <a href="/2014-04/node-js-and-division-of-work.html" class="btn">read more..</a>
   </div>
 </div>
 

@@ -7,7 +7,7 @@ categories: 'Node.js'
 
 # 直接创建一个对象
 
-ECMA-262把对象定义为`无需属性的结合，其属性尅包含基本值、对象或者函数`。
+ECMA-262把对象定义为`无序属性的结合，其属性可包含基本值、对象或者函数`。
 
 **创建自定义对象方式一——创建一个Object实例** 
 
@@ -139,7 +139,7 @@ o.sayName(); // tiemei2
 
 缺点：
 
-* 每个方法都要在每个势力上重新创建一遍，没有必要
+* 每个方法都要在每个对象上重新创建一遍，没有必要
 
 **构造函数的进化模式**  
 
@@ -338,6 +338,7 @@ function SubType() {
 
 // 继承了SuperType
 // 原来存在于SuperType的实例中所有的属性和方法，现在也存在于SubType.prototype中了
+// 实际上SubType.prototype指向的对象，就是SupterType的实例。
 SubType.prototype = new SuperType();
 // 添加新方法
 SubType.prototype.getSubValue = function() {
@@ -351,6 +352,8 @@ SubType.prototype.getSubValue = function() {
 var instance = new SubType();
 alert(instance.getSuperValue()); // true
 ```
+
+![prototype inherit](https://farm4.staticflickr.com/3924/15135450548_b4f2082b7c.jpg)  
 
 原型链继承所带来的缺点：  
 

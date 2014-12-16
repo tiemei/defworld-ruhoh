@@ -2,7 +2,7 @@
 <html lang="en" xmlns:wb=“http://open.weibo.com/wb”>
   <head>
     <meta charset="utf-8">
-    <title>run &amp; debug node.js</title>
+    <title>mysql常用命令</title>
     <meta name="author" content="tiemei">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -11,9 +11,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.8143390006786485" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.21855090389950627" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6616989603442353" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.11805357429102603" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.964062841979096" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7760917637610232" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -50,85 +50,35 @@
 
       <div class="content">
         <div class="page-header">
-  <h1>run &amp; debug node.js </h1>
+  <h1>mysql常用命令 </h1>
 </div>
 
 <div class="row">
   <div class="span8">
-    <h1 id="toc_0">debug node.js</h1>
-
-<ol>
-<li><code>sudo npm install -g node-inspector</code></li>
-<li><code>node-debug xxx.js</code></li>
-<li>set breakpoints</li>
-<li>request &amp; break auto</li>
-</ol>
-
-<p><strong>shortcuts</strong>  </p>
-
-<ul>
-<li>Resume script execution (F8): 继续执行</li>
-<li>Step over next function call (F10): 按步执行，不进入另一个函数</li>
-<li>Step into next function call (F11): 按步执行，进入另一个函数内部</li>
-<li><p>Step out of current functino (⇧ F11): 跳出当前函数，进入父函数</p></li>
-<li><p><code>⌘ o</code> find file</p></li>
-<li><p><code>⇧ ⌘ o</code> find function member in current file</p></li>
+    <ul>
+<li><code>mysqldump --set-gtid-purged=OFF -h host -u user_name -p  --databases database &gt; ~/dropbox/work/db/database.sql</code> dump整个数据库到本地文件</li>
+<li><code>mysql -h host -u user_name -p</code>登录数据库</li>
 </ul>
 
-<p><strong>other</strong>  </p>
+<h2 id="toc_0">mysql dump</h2>
 
 <ul>
-<li>可给断点设置条件</li>
-<li>可通过console查看当前断点下上下文状态</li>
-<li>Pause on exception 可选择打开或关闭</li>
-<li>可打开左侧源码窗口，保持两边窗口的同步</li>
+<li><code>-d</code> 不dump数据</li>
+<li><p><code>--tables</code> 指定哪几个表</p></li>
+<li><p><code>show databases;</code>显示所有数据库</p></li>
+<li><p><code>user database;</code>使用哪个数据库</p></li>
+<li><p><code>show tables;</code>显示所有表</p></li>
 </ul>
-
-<h1 id="toc_1">run node.js</h1>
-
-<h2 id="toc_2">用<a href="https://github.com/fgnass/node-dev">node-dev</a>做文件热加载</h2>
-
-<p><strong>准备工作</strong>  </p>
-
-<pre><code class="bash">npm install -g node-dev
-# 你也可以选择Growl or libnotify，osX可以内置的提醒器
-sudo gem install terminal-notifier
-</code></pre>
-
-<p><strong>开始吧</strong>  </p>
-
-<p><code>node-dev foo.js</code><br>
-可用两个选项：  </p>
-
-<ul>
-<li><code>--no-deps</code> Watch only the project&#39;s own files and linked modules (via <code>npm link</code>)</li>
-<li><code>--all-deps</code> Watch the whole dependency tree</li>
-</ul>
-
-<p>By default node-dev will watch all first-level dependencies, i.e. the ones in the project&#39;s node_modulesfolder.  </p>
-
-<p><strong>其他</strong>  </p>
-
-<ul>
-<li>CoffeeScript这样的翻译成js的语言也可以用这个工具</li>
-<li>还有其他高级配置项可供选择</li>
-<li>如果子进程需要重启，会发一个<code>SIGTERM</code>信号，如果你的代码没有处理这些
-信号，<code>process.exit(0)</code>就会被强行调用</li>
-</ul>
-
-<p>参考：<br>
-<a href="https://developer.chrome.com/devtools/docs/javascript-debugging?csw=1">Debugging JavaScript</a><br>
-<a href="http://docs.strongloop.com/display/DOC/Debugging+with+Node+Inspector#DebuggingwithNodeInspector-Keyboardshortcuts">Debugging with Node Inspector</a></p>
 
     <hr>
     <div class="pagination">
       <ul>
         <ul>
-            <li class="prev"><a href="/2014-06/notes-c.html" title="C语言入门笔记">&larr; Previous</a></li>
+            <li class="prev"><a href="/2014-11/base-lvs.html" title="基础 - lvs">&larr; Previous</a></li>
 
             <li><a href="/archive">Archive</a></li>
 
-            <li class="next"><a href="/2014-06/notes-js-2-object.html" title="js入门笔记（二）——面向对象">Next &rarr;</a></li>
+            <li class="next"><a href="/2014-12/r-db.html" title="关系型数据库笔记">Next &rarr;</a></li>
         </ul>
       </ul>
     </div>
@@ -173,12 +123,12 @@ sudo gem install terminal-notifier
     </script>
 
     <h4>Published</h4>
-    <div class="date"><span>2014-06-08</span></div>
+    <div class="date"><span>2014-11-26</span></div>
     <br>
     <h4>Categories</h4>
     <ul class="tag_box">
       <li>
-        <a href="/categories#Node.js-ref">Node.js <span>9</span></a>
+        <a href="/categories#mysql-ref">mysql <span>1</span></a>
       </li>    </ul>
     <br>
     <h4>Tags</h4>

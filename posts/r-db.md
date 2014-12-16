@@ -105,8 +105,55 @@ categories: 'DB'
 
 ## 闭包表
 
+
+# 几种操作DB工具
+
+## java的jdbc
+
+jdbc这边包括几个概念，如下图：  
+
+![jdbc](https://farm8.staticflickr.com/7488/15839289920_b67e7d5e88.jpg)   
+
+写代码时面对的是jdbc api，统一的，而怎么连接具体类型的db由具体的JDBC Driver实现，方便在程序切换DB。  
+
+```java
+public class JDBCDemo {
+    public staic void main(String args[]) {
+        /* get conn */
+        Class.forName("com.mysql.jdbc.Driver").newInstance();
+        String url = "jdbc:mysql://localhost/coffeebreak";
+        Connection conn = DriverManager.getConnection(url, "username", "password");
+
+        /* query db */
+        String query = "SELECT COF_NAME, PRICE FROM COFFEES";
+        Statement st = conn.createStatement();
+        ResultSet rs = st.executeQuery(query);
+        while (rs.next()) {
+            String s = rs.getString("COF_NAME");
+            float n = rs.getFloat("PRICE");
+            System.out.println(s + "   " + n);
+        }
+
+        /* close conn */
+        conn.close();
+    }
+}
+```
+
+## java的ibatis
+
+DB列名和Do对象的映射，通过sql.xml配置文件配置，不需要像jdbc代码手写。  
+
+## java的hibernate
+
+略
+
+## RoR
+
 参考:  
 
-[知乎：解释一下关系数据库的第一第二第三范式？](http://www.zhihu.com/question/24696366)    
+[知乎：解释一下关系数据库的第一第二第三范式？](http://www.zhihu.com/question/24696366)  
+[一个教程](http://www3.ntu.edu.sg/home/ehchua/programming/index.html)      
+[oracle官方jdbc教程](http://docs.oracle.com/javase/tutorial/jdbc/overview/index.html)  
 
 

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:wb=“http://open.weibo.com/wb”>
+  <head>
+    <meta charset="utf-8">
+    <title>Node.js Promise/Deferred入门</title>
+    <meta name="description" content="nodejs promoise">
+    <meta name="author" content="tiemei">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.4825952009253581" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.6207535673892611" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8827241093394183" type="text/css" rel="stylesheet" media="all">
+
+ 
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="touxiang" href="http://weibo.com/wgdkfk">
+            <img src="https://farm6.staticflickr.com/5577/14680769772_ac1af8df86.jpg" width="40" height="40" >
+          </a>
+          <a class="brand" href="/">tiemei</a>
+          <ul class="nav">
+              
+                <li><a href="/categories">Categories</a></li>
+              
+                <li><a href="/tools">Tools</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        <div class="page-header">
+  <h1>Node.js Promise/Deferred入门 </h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+    <p>Promise/Deffered模式只是解决异步编程的一个模式，我这里一个一个来说吧。  </p>
+
+<h2 id="toc_0">回调/高阶函数/函数编程</h2>
+
+<p><strong>高阶函数</strong>编程是指，函数可作为参数或返回值。其中<strong>偏函数</strong>是其中一种应用，举个例子：  </p>
+
+<pre><code class="javascript">// Underscore库提供
+// 生成一个需要调用多次才真正执行的函数
+_.after = function(times, func) {
+    if (times &lt;= 0) return func();
+    return function() {
+        if (--times &lt; 1) {
+            return func.apply(this, arguments);
+        }
+    } 
+}
+</code></pre>
+
+<h3 id="toc_1">优点</h3>
+
+<ul>
+<li>多线程编程模型的问题</li>
+<li>很好的处理 I/O 密集型问题</li>
+<li>V8</li>
+<li>调用C/C++扩展模块</li>
+</ul>
+
+<h3 id="toc_2">缺点</h3>
+
+<blockquote>
+<p>难点一：异常处理</p>
+</blockquote>
+
+<pre><code class="javascript">// 只能捕获调用async方法的异常，实际执行callback的异常因为是异步执行无法捕获
+try {
+    async(callback);
+} catch (e) {
+    // TODO
+}
+</code></pre>
+
+<p>Node在处理异常时形成一种约定，将异常作为回调函数的第一个实参传回：  </p>
+
+<pre><code class="javascript">// 如果发生了异常，async方法的实现需要在调用callback时讲err传回
+async(function (err, result) {
+    // TODO
+});
+</code></pre>
+
+<blockquote>
+<p>难点二：函数嵌套过深</p>
+
+<p>难点三：阻塞代码</p>
+</blockquote>
+
+<p>因为是单进程，不能像java一样阻塞后续代码的执行。</p>
+
+<blockquote>
+<p>难点四：多线程编程 </p>
+</blockquote>
+
+<p>浏览器中最终JavaScript执行线程与UI渲染公用一个，为了更好利用多核CPU，提出Web Workders，将JavaScript执行与UI渲染分离，但并没有形成一个标准。Node可以编写多进程代码，充分利用多核CPU。  </p>
+
+<blockquote>
+<p>异步转同步</p>
+</blockquote>
+
+<p>无法很好的支持需要同步编程的场景。  </p>
+
+<h2 id="toc_3">事件发布/订阅模式</h2>
+
+<p>即回调函数的事件化。<br>
+Node自身提供的events模块，是发布/订阅模式的一个简单实现，Node中部分模块继承自它。   </p>
+
+<pre><code class="javascript">// 下面是Node中Stream对象继承EventEmitter例子。
+// Node提供的核心模块中有近半数都继承自EventEmitter。
+var events = require(&#39;events&#39;);
+
+function Stream() {
+    events.EventEmitter.call(this); // 继承属性
+}
+
+util.inherits(Stream, events.EventEmitter); // 继承方法
+</code></pre>
+
+<h3 id="toc_4">利用事件队列解决雪崩问题</h3>
+
+<p>比如缓存是失效时，高并发将压力打到后方数据源。  </p>
+
+<pre><code class="javascript">var select = function (callback) {
+    db.select(&quot;SQL&quot;, function (result) {
+        callback(results);
+    });
+};
+</code></pre>
+
+<p>加上状态锁：  </p>
+
+<pre><code class="javascript">var status = &quot;ready&quot;;
+var select = function (callback) {
+    if (status ==== &#39;ready&#39;) {
+        status = &quot;pending&quot;;
+        db.select(&quot;SQL&quot;, function (results) {
+            status = &quot;ready&quot;;
+            callback(results);
+        });
+    }
+};
+</code></pre>
+
+<p>这样的调用只有第一次石油结果返回的，其他的调用没有结果。改进下，利用once：  </p>
+
+<pre><code class="javascript">var proxy = new evnets.EvnetEmitter();
+vat status = &quot;ready&quot;;
+var select = function (callback) {
+    // 将请求的事件压入事件队列中，执行一次这个listner就会被移除
+    proxy.once(&quot;selected&quot;, callback);
+    if (status === &#39;ready&#39;) {
+        stauts = &#39;pending&#39;;
+        db.select(&quot;SQL&quot;, function (result) {
+            proxy.emit(&quot;selected&quot;, results);
+            status = &quot;ready&quot;;
+        });
+    }
+};
+</code></pre>
+
+<h3 id="toc_5">多异步之间的写作方案（一对多，多对一，多对多）</h3>
+
+<h3 id="toc_6">EventProxy</h3>
+
+<p>对事件订阅/发布模型的扩充。  </p>
+
+<h2 id="toc_7">Promise/Deffered模式</h2>
+
+<p>Prmoise/A提议对单个异步操作做了这样的抽象定义：  </p>
+
+<ul>
+<li>Prmoise操作只会处在3中状态的一种：未完成态、完成态何失败态</li>
+<li>Prmoise的状态只会从未完成态向完成态或失败态转化，不能逆反。完成态和失败态不能互相转化。</li>
+<li>Prmoise的状态一旦转化，将不能被更改。</li>
+</ul>
+
+<p>在API的定义上，Prmoise/A提议是比较简单的。一个Prmoise对象只要具备then()方法即可。Deferred对象主要是用于内部，用于维护异步模型的状态;Prmoise则作用域外部，通过then()方法暴露给外部以添加自定义逻辑。将业务不可变的部分封装在Deferred中，将可变的部分交给了Promise。Prmoise是高级接口，事件是低级接口，低级接口可以构成更多复杂的场景。<br>
+下面看一个Node的events模块实现的版本。  </p>
+
+<pre><code class="javascript">
+
+</code></pre>
+
+<h2 id="toc_8">流程控制库</h2>
+
+    <hr>
+    <div class="pagination">
+      <ul>
+        <ul>
+            <li class="prev"><a href="/2014-09/node-how-to-write-node-async-code.html" title="Node的异步代码怎么写">&larr; Previous</a></li>
+
+            <li><a href="/archive">Archive</a></li>
+
+            <li class="next"><a href="/2014-11/system-evn-prepare.html" title="系统环境准备">Next &rarr;</a></li>
+        </ul>
+      </ul>
+    </div>
+    <hr>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  </div>
+  
+  <div class="span4">
+    <script type="text/javascript" charset="utf-8">
+    (function(){
+       var _w = 90 , _h = 24;
+       var param = {
+       url:location.href,
+       type:'2',
+       count:'1', /**是否显示分享数，1显示(可选)*/
+       appkey:'', /**您申请的应用appkey,显示分享来源(可选)*/
+       title:'', /**分享的文字内容(可选，默认为所在页面的title)*/
+       pic:'', /**分享图片的路径(可选)*/
+       ralateUid:'2388250330', /**关联用户的UID，分享微博会@该用户(可选)*/
+       language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
+       rnd:new Date().valueOf()
+     }
+     var temp = [];
+     for( var p in param ){
+     temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+     }
+     document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
+     })()
+    </script>
+
+    <h4>Published</h4>
+    <div class="date"><span>2014-10-16</span></div>
+    <br>
+    <h4>Categories</h4>
+    <ul class="tag_box">
+      <li>
+        <a href="/categories#Node.js-ref">Node.js <span>9</span></a>
+      </li>    </ul>
+    <br>
+    <h4>Tags</h4>
+    <ul class="tag_box">
+    </ul>
+  </div>
+</div>
+
+      </div>
+
+      <footer>
+        <p>&copy; tiemei 2012 
+          with help from <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">ruhoh</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+        <p>
+        <script src="http://s9.cnzz.com/stat.php?id=5379369&web_id=5379369&online=1&show=line" language="JavaScript"></script>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Google Prettify -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+<script>
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i < pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+</script>
+<!-- end Google Prettify -->
+    <script>
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(defworld.com);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /></p></noscript>
+  </body>
+</html>

@@ -3,7 +3,1584 @@
   <channel>
     <title>tiemei</title>
     <link>http://defworld.com</link>
-    <pubDate>2014-09-19 18:33:18 +0800</pubDate>
+    <pubDate>2014-12-16 15:47:46 +0800</pubDate>
+    <item>
+      <title>&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x7B14;&#x8BB0;</title>
+      <link>http://defworld.com/2014-12/r-db.html</link>
+      <pubDate>2014-12-05</pubDate>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang="en" xmlns:wb=&#x201C;http://open.weibo.com/wb&#x201D;&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x7B14;&#x8BB0;&lt;/title&gt;
+    &lt;meta name="author" content="tiemei"&gt;
+
+    &lt;!-- Le HTML5 shim, for IE6-8 support of HTML elements --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+
+    &lt;!-- Le styles --&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.933262971885336" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.1399583993559239" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.30311040642716247" type="text/css" rel="stylesheet" media="all"&gt;
+
+ 
+
+    &lt;!-- Le fav and touch icons --&gt;
+  &lt;!-- Update these with your own images
+    &lt;link rel="shortcut icon" href="images/favicon.ico"&gt;
+    &lt;link rel="apple-touch-icon" href="images/apple-touch-icon.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"&gt;
+  --&gt;
+  &lt;script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+    &lt;div class="navbar"&gt;
+      &lt;div class="navbar-inner"&gt;
+        &lt;div class="container"&gt;
+          &lt;a class="touxiang" href="http://weibo.com/wgdkfk"&gt;
+            &lt;img src="https://farm6.staticflickr.com/5577/14680769772_ac1af8df86.jpg" width="40" height="40" &gt;
+          &lt;/a&gt;
+          &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
+          &lt;ul class="nav"&gt;
+              
+                &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
+              
+                &lt;li&gt;&lt;a href="/tools"&gt;Tools&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="container"&gt;
+
+      &lt;div class="content"&gt;
+        &lt;div class="page-header"&gt;
+  &lt;h1&gt;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x7B14;&#x8BB0; &lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="span8"&gt;
+    &lt;h1 id="toc_0"&gt;1NF 2NF 3NF ...&lt;/h1&gt;
+
+&lt;p&gt;&#x8303;&#x5F0F;&#xFF08;NF&#xFF09;&#xFF1A;&#x4E00;&#x5F20;&#x6570;&#x636E;&#x8868;&#x7684;&#x8868;&#x7ED3;&#x6784;&#x6240;&#x7B26;&#x5408;&#x7684;&#x67D0;&#x79CD;&#x8BBE;&#x8BA1;&#x6807;&#x51C6;&#x7684;&#x7EA7;&#x522B;&#x3002;&#x8981;&#x6C42;&#x9010;&#x7EA7;&#x63D0;&#x9AD8;&#xFF0C;&#x800C;&#x9AD8;&#x7EA7;&#x7684;&#x540C;&#x65F6;&#x6EE1;&#x8DB3;&#x4F4E;&#x7EA7;&#x7684;&#x3002;  &lt;/p&gt;
+
+&lt;h2 id="toc_1"&gt;1NF&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src="https://farm9.staticflickr.com/8616/15925324316_09846f9765_z.jpg" alt="1NF"&gt; &lt;/p&gt;
+
+&lt;p&gt;&#x5982;&#x4E0A;&#x56FE;&#x8FDB;&#x8D27;&#x548C;&#x9500;&#x552E;&#x53C8;&#x7EC6;&#x5206;&#x4E86;&#x5C5E;&#x6027;&#xFF0C;&#x4E0D;&#x6EE1;&#x8DB3;1NF&#x3002;&lt;br&gt;
+&#x6BCF;&#x4E2A;&#x5C5E;&#x6027;&#x90FD;&#x4E0D;&#x53EF;&#x518D;&#x5206;&#x3002;&#x56E0;&#x4E3A;&#x771F;&#x5B9E;&#x7684;DB&#x6BCF;&#x5217;&#x90FD;&#x4E0D;&#x53EF;&#x518D;&#x5206;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x80FD;&#x5B58;&#x5230;&#x771F;&#x5B9E;DB&#x91CC;&#x5C31;&#x8BF4;&#x660E;&#x6EE1;&#x8DB3;1NF&#x3002;&lt;/p&gt;
+
+&lt;h2 id="toc_2"&gt;2NF&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src="https://farm8.staticflickr.com/7495/15786427597_96178e86ab.jpg" alt="2NF"&gt;  &lt;/p&gt;
+
+&lt;p&gt;&#x5982;&#x4E0A;&#x56FE;&#xFF0C;&#x6EE1;&#x8DB3;1NF&#xFF0C;&#x4F46;&#x5B58;&#x5728;&#x4EE5;&#x4E0B;&#x95EE;&#x9898;&#xFF1A;  &lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&#x6BCF;&#x4E00;&#x540D;&#x5B66;&#x751F;&#x7684;&#x5B66;&#x53F7;&#x3001;&#x59D3;&#x540D;&#x3001;&#x7CFB;&#x540D;&#x3001;&#x7CFB;&#x4E3B;&#x4EFB;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x91CD;&#x590D;&#x591A;&#x6B21;&#x3002;&#x6BCF;&#x4E2A;&#x7CFB;&#x4E0E;&#x5BF9;&#x5E94;&#x7684;&#x7CFB;&#x4E3B;&#x4EFB;&#x7684;&#x6570;&#x636E;&#x4E5F;&#x91CD;&#x590D;&#x591A;&#x6B21;&#x2014;&#x2014;&lt;strong&gt;&#x6570;&#x636E;&#x5197;&#x4F59;&#x8FC7;&#x5927;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x7CFB;&#xFF0C;&#x65E0;&#x6CD5;&#x5C06;&#x7CFB;&#x540D;&#x4E0E;&#x7CFB;&#x4E3B;&#x4EFB;&#x7684;&#x6570;&#x636E;&#x5355;&#x72EC;&#x6DFB;&#x52A0;&#x5230;&#x6570;&#x636E;&#x5E93;&#x2014;&#x2014;&lt;strong&gt;&#x63D2;&#x5165;&#x5F02;&#x5E38;&lt;/strong&gt; &lt;/li&gt;
+&lt;li&gt;&#x5220;&#x9664;&#x67D0;&#x4E2A;&#x7CFB;&#x6240;&#x6B32;&#x5B66;&#x751F;&#x8BB0;&#x5F55;&#xFF0C;&#x8FD9;&#x4E2A;&#x7CFB;&#x7684;&#x6570;&#x636E;&#x88AB;&#x5220;&#x9664;&#x6389; &#x2014;&#x2014; &lt;strong&gt;&#x5220;&#x9664;&#x5F02;&#x5E38;&lt;/strong&gt; &lt;/li&gt;
+&lt;li&gt;&#x67D0;&#x540C;&#x5B66;&#x8F6C;&#x7CFB;&#xFF0C;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x4E09;&#x6761;&#x8BB0;&#x5F55; &#x2014;&#x2014; &lt;strong&gt;&#x4FEE;&#x6539;&#x5F02;&#x5E38;&lt;/strong&gt; &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&#x5148;&#x4ECB;&#x7ECD;&#x51E0;&#x4E2A;&#x6982;&#x5FF5;:  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&#x7801;&#xFF1A;K&#x4E3A;&#x67D0;&#x8868;&#x7684;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x6216;&#x5C5E;&#x6027;&#x7EC4;&#xFF0C;&#x5B83;&#x662F;&#x552F;&#x4E00;&#x7684;&#xFF0C;&#x5373;&#x5176;&#x4ED6;&#x5C5E;&#x6027;&#x5B8C;&#x5168;&#x51FD;&#x6570;&#x4F9D;&#x8D56;&#x4E8E;K&#xFF0C;&#x79F0;K&#x4E3A;&#x5019;&#x9009;&#x7801;&#xFF0C;&#x7B80;&#x79F0;&#x7801;&#x3002;&#x9009;&#x62E9;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x4F5C;&#x4E3A;&#x4E3B;&#x7801;&lt;/li&gt;
+&lt;li&gt;&#x51FD;&#x6570;&#x4F9D;&#x8D56;&#xFF1A;&#x4E00;&#x5F20;&#x8868;&#x4E2D;&#xFF0C;&#x5728;&#x5C5E;&#x6027;&#xFF08;&#x6216;&#x5C5E;&#x6027;&#x7EC4;&#xFF09;X&#x503C;&#x786E;&#x5B9A;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5FC5;&#x80FD;&#x80FD;&#x786E;&#x5B9A;&#x5C5E;&#x6027;Y&#x7684;&#x503C;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x53EF;&#x4EE5;&#x8BF4;Y&#x51FD;&#x6570;&#x4F9D;&#x8D56;&#x4E8E;X&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&#x5B8C;&#x5168;&#x51FD;&#x6570;&#x4F9D;&#x8D56;&#xFF1A;&#x82E5;Y&#x51FD;&#x6570;&#x4F9D;&#x8D56;X&#xFF0C;&#x4E14;&#x5BF9;&#x4E8E;X&#x7684;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x771F;&#x5B50;&#x96C6;X&amp;#39;&#xFF08;&#x5047;&#x5982;&#x5C5E;&#x6027;&#x7EC4;X&#x5305;&#x542B;&#x8D85;&#x8FC7;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x7684;&#x8BDD;&#xFF09;&#xFF0C;Y&#x51FD;&#x6570;&#x4F9D;&#x8D56;&#x4E8E;X&amp;#39;&#x4E0D;&#x6210;&#x7ACB;&#xFF0C;&#x79F0;Y&#x5BF9;X&#x5B8C;&#x5168;&#x51FD;&#x6570;&#x4F9D;&#x8D56;&#x3002;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&#xFF08;&#x5B66;&#x53F7;&#xFF0C;&#x8BFE;&#x540D;&#xFF09; F&#x2192; &#x5206;&#x6570; &#xFF08;&#x6CE8;&#xFF1A;&#x56E0;&#x4E3A;&#x540C;&#x4E00;&#x4E2A;&#x7684;&#x5B66;&#x53F7;&#x5BF9;&#x5E94;&#x7684;&#x5206;&#x6570;&#x4E0D;&#x786E;&#x5B9A;&#xFF0C;&#x540C;&#x4E00;&#x4E2A;&#x8BFE;&#x540D;&#x5BF9;&#x5E94;&#x7684;&#x5206;&#x6570;&#x4E5F;&#x4E0D;&#x786E;&#x5B9A;&#xFF09;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&#x90E8;&#x5206;&#x51FD;&#x6570;&#x4F9D;&#x8D56;&#xFF1A;&#x4E0D;&#x5B8C;&#x5168;&#x51FD;&#x6570;&#x4F9D;&#x8D56;&#x65F6;&#x53CD;&#x8FC7;&#x6765;&#x5C31;&#x662F;&#x90E8;&#x5206;&#x51FD;&#x6570;&#x4F9D;&#x8D56;&#x3002;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&#x4F20;&#x9012;&#x51FD;&#x6570;&#x4F9D;&#x8D56;&#xFF1A;&#x5047;&#x5982; Z &#x51FD;&#x6570;&#x4F9D;&#x8D56;&#x4E8E; Y&#xFF0C;&#x4E14; Y &#x51FD;&#x6570;&#x4F9D;&#x8D56;&#x4E8E; X &#xFF08;&#x4E25;&#x683C;&#x6765;&#x8BF4;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;X &#x4E0D;&#x5305;&#x542B;&#x4E8E;Y&#xFF0C;&#x4E14; Y &#x4E0D;&#x51FD;&#x6570;&#x4F9D;&#x8D56;&#x4E8E;Z&#x7684;&#x524D;&#x63D0;&#x6761;&#x4EF6;&#xFF09;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5C31;&#x79F0; Z &#x4F20;&#x9012;&#x51FD;&#x6570;&#x4F9D;&#x8D56;&#x4E8E; X &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&#x975E;&#x4E3B;&#x5C5E;&#x6027;&#xFF1A;&#x5305;&#x542B;&#x5728;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x7801;&#x4E2D;&#x7684;&#x5C5E;&#x6027;&#x6210;&#x4E3A;&#x4E3B;&#x5C5E;&#x6027;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;2NF&#x5B9A;&#x4E49;&#xFF1A;2NF&#x5728;1NF&#x7684;&#x57FA;&#x7840;&#x4E4B;&#x4E0A;&#xFF0C;&#x6D88;&#x9664;&#x4E86;&#x975E;&#x4E3B;&#x5C5E;&#x6027;&#x5BF9;&#x4E8E;&#x7801;&#x7684;&#x90E8;&#x5206;&#x51FD;&#x6570;&#x4F9D;&#x8D56;&#x3002;&#x5224;&#x65AD;&#x6B65;&#x9AA4;&#xFF1A;  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x627E;&#x51FA;&#x6570;&#x636E;&#x8868;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x7801;&#x3002;&lt;/li&gt;
+&lt;li&gt;&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x6839;&#x636E;&#x7B2C;&#x4E00;&#x6B65;&#x6240;&#x5F97;&#x5230;&#x7684;&#x7801;&#xFF0C;&#x627E;&#x51FA;&#x6240;&#x6709;&#x7684;&#x4E3B;&#x5C5E;&#x6027;&#x3002;&lt;/li&gt;
+&lt;li&gt;&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x6570;&#x636E;&#x8868;&#x4E2D;&#xFF0C;&#x9664;&#x53BB;&#x6240;&#x6709;&#x7684;&#x4E3B;&#x5C5E;&#x6027;&#xFF0C;&#x5269;&#x4E0B;&#x7684;&#x5C31;&#x90FD;&#x662F;&#x975E;&#x4E3B;&#x5C5E;&#x6027;&#x4E86;&#x3002;&lt;/li&gt;
+&lt;li&gt;&#x7B2C;&#x56DB;&#x6B65;&#xFF1A;&#x67E5;&#x770B;&#x662F;&#x5426;&#x5B58;&#x5728;&#x975E;&#x4E3B;&#x5C5E;&#x6027;&#x5BF9;&#x7801;&#x7684;&#x90E8;&#x5206;&#x51FD;&#x6570;&#x4F9D;&#x8D56;&#x3002;&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src="https://farm9.staticflickr.com/8619/15784930058_d21ff87fe3.jpg" alt="2NF-2"&gt;  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&#x7801;&#xFF1A;&#xFF08;&#x5B66;&#x53F7;&#x3001;&#x8BFE;&#x540D;&#xFF09;
+&#x4E3B;&#x5C5E;&#x6027;&#x6709;&#x4E24;&#x4E2A;&#xFF1A;&#x5B66;&#x53F7; &#x4E0E; &#x8BFE;&#x540D;
+&#x975E;&#x4E3B;&#x5C5E;&#x6027;&#x6709;&#x56DB;&#x4E2A;&#xFF1A;&#x59D3;&#x540D;&#x3001;&#x7CFB;&#x540D;&#x3001;&#x7CFB;&#x4E3B;&#x4EFB;&#x3001;&#x5206;&#x6570;
+
+&#x5BF9;&#x4E8E;&#xFF08;&#x5B66;&#x53F7;&#xFF0C;&#x8BFE;&#x540D;&#xFF09; &#x2192; &#x59D3;&#x540D;&#xFF0C;&#x6709; &#x5B66;&#x53F7; &#x2192; &#x59D3;&#x540D;&#xFF0C;&#x5B58;&#x5728;&#x975E;&#x4E3B;&#x5C5E;&#x6027; &#x59D3;&#x540D; &#x5BF9;&#x7801;&#xFF08;&#x5B66;&#x53F7;&#xFF0C;&#x8BFE;&#x540D;&#xFF09;&#x7684;&#x90E8;&#x5206;&#x51FD;&#x6570;&#x4F9D;&#x8D56;&#x3002;
+&#x5BF9;&#x4E8E;&#xFF08;&#x5B66;&#x53F7;&#xFF0C;&#x8BFE;&#x540D;&#xFF09; &#x2192; &#x7CFB;&#x540D;&#xFF0C;&#x6709; &#x5B66;&#x53F7; &#x2192; &#x7CFB;&#x540D;&#xFF0C;&#x5B58;&#x5728;&#x975E;&#x4E3B;&#x5C5E;&#x6027; &#x7CFB;&#x540D; &#x5BF9;&#x7801;&#xFF08;&#x5B66;&#x53F7;&#xFF0C;&#x8BFE;&#x540D;&#xFF09;&#x7684;&#x90E8;&#x5206;&#x51FD;&#x6570;&#x4F9D;&#x8D56;&#x3002;
+&#x5BF9;&#x4E8E;&#xFF08;&#x5B66;&#x53F7;&#xFF0C;&#x8BFE;&#x540D;&#xFF09; &#x2192; &#x7CFB;&#x4E3B;&#x4EFB;&#xFF0C;&#x6709; &#x5B66;&#x53F7; &#x2192; &#x7CFB;&#x4E3B;&#x4EFB;&#xFF0C;&#x5B58;&#x5728;&#x975E;&#x4E3B;&#x5C5E;&#x6027; &#x5BF9;&#x7801;&#xFF08;&#x5B66;&#x53F7;&#xFF0C;&#x8BFE;&#x540D;&#xFF09;&#x7684;&#x90E8;&#x5206;&#x51FD;&#x6570;&#x4F9D;&#x8D56;&#x3002;
+
+&#x6240;&#x4EE5;&#x8868;3&#x5B58;&#x5728;&#x975E;&#x4E3B;&#x5C5E;&#x6027;&#x5BF9;&#x4E8E;&#x7801;&#x7684;&#x90E8;&#x5206;&#x51FD;&#x6570;&#x4F9D;&#x8D56;&#xFF0C;&#x6700;&#x9AD8;&#x53EA;&#x7B26;&#x5408;1NF&#x7684;&#x8981;&#x6C42;&#xFF0C;&#x4E0D;&#x7B26;&#x5408;2NF&#x7684;&#x8981;&#x6C42;&#x3002;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&#x90A3;&#x5C31;&#x8981;&#x8FDB;&#x884C;&#x6A21;&#x5F0F;&#x5206;&#x89E3;&#xFF0C;&#x5206;&#x89E3;&#x6210;&#x4E0B;&#x9762;&#x4E24;&#x4E2A;&#x8868;&#xFF1A;  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&#x9009;&#x8BFE;&#xFF08;&#x5B66;&#x53F7;&#xFF0C;&#x8BFE;&#x540D;&#xFF0C;&#x5206;&#x6570;&#xFF09;
+&#x5B66;&#x751F;&#xFF08;&#x5B66;&#x53F7;&#xFF0C;&#x59D3;&#x540D;&#xFF0C;&#x7CFB;&#x540D;&#xFF0C;&#x7CFB;&#x4E3B;&#x4EFB;&#xFF09;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&#x65B0;&#x7684;&#x51FD;&#x6570;&#x4F9D;&#x8D56;&#x56FE;&#xFF1A;  &lt;/p&gt;
+
+&lt;p&gt;[2NF-3]()  &lt;/p&gt;
+
+&lt;p&gt;&#x6EE1;&#x8DB3;&#x4E86;2NF&#xFF0C;&#x8FD8;&#x662F;&#x5B58;&#x5728;&#x4E00;&#x4E9B;&#x95EE;&#x9898;&#xFF1A;  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&#x5220;&#x9664;&#x67D0;&#x4E2A;&#x7CFB;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x5B66;&#x751F;&#x8BB0;&#x5F55;&#xFF1A;&#x8BE5;&#x7CFB;&#x7684;&#x4FE1;&#x606F;&#x4ECD;&#x7136;&#x5168;&#x90E8;&#x4E22;&#x5931;&#x3002;&#x2014;&#x2014;&#x65E0;&#x6539;&#x8FDB;&lt;/li&gt;
+&lt;li&gt;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x5C1A;&#x65E0;&#x5B66;&#x751F;&#x7684;&#x65B0;&#x7CFB;&#x7684;&#x4FE1;&#x606F;&#xFF1A;&#x56E0;&#x4E3A;&#x5B66;&#x751F;&#x8868;&#x7684;&#x7801;&#x662F;&#x5B66;&#x53F7;&#xFF0C;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#xFF0C;&#x6240;&#x4EE5;&#x6B64;&#x64CD;&#x4F5C;&#x4E0D;&#x88AB;&#x5141;&#x8BB8;&#x3002;&#x2014;&#x2014;&#x65E0;&#x6539;&#x8FDB;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="toc_3"&gt;3NF&lt;/h2&gt;
+
+&lt;p&gt;3NF&#x5728;2NF&#x7684;&#x57FA;&#x7840;&#x4E4B;&#x4E0A;&#xFF0C;&#x6D88;&#x9664;&#x4E86;&#x975E;&#x4E3B;&#x5C5E;&#x6027;&#x5BF9;&#x4E8E;&#x7801;&#x7684;&#x4F20;&#x9012;&#x51FD;&#x6570;&#x4F9D;&#x8D56;&#x3002;  &lt;/p&gt;
+
+&lt;p&gt;&#x5BF9;&#x4E8E;&#x9009;&#x8BFE;&#x8868;&#xFF0C;&#x4E3B;&#x7801;&#x4E3A;&#xFF08;&#x5B66;&#x53F7;&#xFF0C;&#x8BFE;&#x540D;&#xFF09;&#xFF0C;&#x4E3B;&#x5C5E;&#x6027;&#x4E3A;&#x5B66;&#x53F7;&#x548C;&#x8BFE;&#x540D;&#xFF0C;&#x975E;&#x4E3B;&#x5C5E;&#x6027;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#xFF0C;&#x4E3A;&#x5206;&#x6570;&#xFF0C;&#x4E0D;&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x4F20;&#x9012;&#x51FD;&#x6570;&#x4F9D;&#x8D56;&#xFF0C;&#x6240;&#x4EE5;&#x9009;&#x8BFE;&#x8868;&#x7684;&#x8BBE;&#x8BA1;&#xFF0C;&#x7B26;&#x5408;3NF&#x7684;&#x8981;&#x6C42;&#x3002;&lt;/p&gt;
+
+&lt;p&gt;&#x5BF9;&#x4E8E;&#x5B66;&#x751F;&#x8868;&#xFF0C;&#x4E3B;&#x7801;&#x4E3A;&#x5B66;&#x53F7;&#xFF0C;&#x4E3B;&#x5C5E;&#x6027;&#x4E3A;&#x5B66;&#x53F7;&#xFF0C;&#x975E;&#x4E3B;&#x5C5E;&#x6027;&#x4E3A;&#x59D3;&#x540D;&#x3001;&#x7CFB;&#x540D;&#x548C;&#x7CFB;&#x4E3B;&#x4EFB;&#x3002;&#x56E0;&#x4E3A; &#x5B66;&#x53F7; &#x2192; &#x7CFB;&#x540D;&#xFF0C;&#x540C;&#x65F6; &#x7CFB;&#x540D; &#x2192; &#x7CFB;&#x4E3B;&#x4EFB;&#xFF0C;&#x6240;&#x4EE5;&#x5B58;&#x5728;&#x975E;&#x4E3B;&#x5C5E;&#x6027;&#x7CFB;&#x4E3B;&#x4EFB;&#x5BF9;&#x4E8E;&#x7801;&#x5B66;&#x53F7;&#x7684;&#x4F20;&#x9012;&#x51FD;&#x6570;&#x4F9D;&#x8D56;&#xFF0C;&#x6240;&#x4EE5;&#x5B66;&#x751F;&#x8868;&#x7684;&#x8BBE;&#x8BA1;&#xFF0C;&#x4E0D;&#x7B26;&#x5408;3NF&#x7684;&#x8981;&#x6C42;&#x3002;&#x3002;&lt;/p&gt;
+
+&lt;p&gt;&#x8FDB;&#x4E00;&#x6B65;&#x6A21;&#x5F0F;&#x5206;&#x89E3;&#xFF1A;  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&#x9009;&#x8BFE;&#xFF08;&#x5B66;&#x53F7;&#xFF0C;&#x8BFE;&#x540D;&#xFF0C;&#x5206;&#x6570;&#xFF09;
+&#x5B66;&#x751F;&#xFF08;&#x5B66;&#x53F7;&#xFF0C;&#x59D3;&#x540D;&#xFF0C;&#x7CFB;&#x540D;&#xFF09;
+&#x7CFB;&#xFF08;&#x7CFB;&#x540D;&#xFF0C;&#x7CFB;&#x4E3B;&#x4EFB;&#xFF09;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_4"&gt;How to Store a Tree?&lt;/h1&gt;
+
+&lt;h2 id="toc_5"&gt;&#x90BB;&#x63A5;&#x8868;&lt;/h2&gt;
+
+&lt;h2 id="toc_6"&gt;&#x679A;&#x4E3E;&#x8DEF;&#x5F84;&lt;/h2&gt;
+
+&lt;h2 id="toc_7"&gt;&#x5D4C;&#x5957;&#x96C6;&lt;/h2&gt;
+
+&lt;h2 id="toc_8"&gt;&#x95ED;&#x5305;&#x8868;&lt;/h2&gt;
+
+&lt;h1 id="toc_9"&gt;&#x51E0;&#x79CD;&#x64CD;&#x4F5C;DB&#x5DE5;&#x5177;&lt;/h1&gt;
+
+&lt;h2 id="toc_10"&gt;java&#x7684;jdbc&lt;/h2&gt;
+
+&lt;p&gt;jdbc&#x8FD9;&#x8FB9;&#x5305;&#x62EC;&#x51E0;&#x4E2A;&#x6982;&#x5FF5;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://farm8.staticflickr.com/7488/15839289920_b67e7d5e88.jpg" alt="jdbc"&gt;   &lt;/p&gt;
+
+&lt;p&gt;&#x5199;&#x4EE3;&#x7801;&#x65F6;&#x9762;&#x5BF9;&#x7684;&#x662F;jdbc api&#xFF0C;&#x7EDF;&#x4E00;&#x7684;&#xFF0C;&#x800C;&#x600E;&#x4E48;&#x8FDE;&#x63A5;&#x5177;&#x4F53;&#x7C7B;&#x578B;&#x7684;db&#x7531;&#x5177;&#x4F53;&#x7684;JDBC Driver&#x5B9E;&#x73B0;&#xFF0C;&#x65B9;&#x4FBF;&#x5728;&#x7A0B;&#x5E8F;&#x5207;&#x6362;DB&#x3002;  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="java"&gt;public class JDBCDemo {
+    public staic void main(String args[]) {
+        /* get conn */
+        Class.forName(&amp;quot;com.mysql.jdbc.Driver&amp;quot;).newInstance();
+        String url = &amp;quot;jdbc:mysql://localhost/coffeebreak&amp;quot;;
+        Connection conn = DriverManager.getConnection(url, &amp;quot;username&amp;quot;, &amp;quot;password&amp;quot;);
+
+        /* query db */
+        String query = &amp;quot;SELECT COF_NAME, PRICE FROM COFFEES&amp;quot;;
+        Statement st = conn.createStatement();
+        ResultSet rs = st.executeQuery(query);
+        while (rs.next()) {
+            String s = rs.getString(&amp;quot;COF_NAME&amp;quot;);
+            float n = rs.getFloat(&amp;quot;PRICE&amp;quot;);
+            System.out.println(s + &amp;quot;   &amp;quot; + n);
+        }
+
+        /* close conn */
+        conn.close();
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id="toc_11"&gt;java&#x7684;ibatis&lt;/h2&gt;
+
+&lt;p&gt;DB&#x5217;&#x540D;&#x548C;Do&#x5BF9;&#x8C61;&#x7684;&#x6620;&#x5C04;&#xFF0C;&#x901A;&#x8FC7;sql.xml&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x914D;&#x7F6E;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x50CF;jdbc&#x4EE3;&#x7801;&#x624B;&#x5199;&#x3002;  &lt;/p&gt;
+
+&lt;h2 id="toc_12"&gt;java&#x7684;hibernate&lt;/h2&gt;
+
+&lt;p&gt;&#x7565;&lt;/p&gt;
+
+&lt;h2 id="toc_13"&gt;RoR&lt;/h2&gt;
+
+&lt;p&gt;&#x53C2;&#x8003;:  &lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.zhihu.com/question/24696366"&gt;&#x77E5;&#x4E4E;&#xFF1A;&#x89E3;&#x91CA;&#x4E00;&#x4E0B;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;&#x7684;&#x7B2C;&#x4E00;&#x7B2C;&#x4E8C;&#x7B2C;&#x4E09;&#x8303;&#x5F0F;&#xFF1F;&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://www3.ntu.edu.sg/home/ehchua/programming/index.html"&gt;&#x4E00;&#x4E2A;&#x6559;&#x7A0B;&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://docs.oracle.com/javase/tutorial/jdbc/overview/index.html"&gt;oracle&#x5B98;&#x65B9;jdbc&#x6559;&#x7A0B;&lt;/a&gt;  &lt;/p&gt;
+
+    &lt;hr&gt;
+    &lt;div class="pagination"&gt;
+      &lt;ul&gt;
+        &lt;ul&gt;
+            &lt;li class="prev"&gt;&lt;a href="/2014-11/mysql-command.html" title="mysql&#x5E38;&#x7528;&#x547D;&#x4EE4;"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li class="next disabled"&gt;&lt;a&gt;Next &amp;rarr;&lt;/a&gt;
+        &lt;/ul&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;div id="disqus_thread"&gt;&lt;/div&gt;
+&lt;script&gt;
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+
+  &lt;/div&gt;
+  
+  &lt;div class="span4"&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+    (function(){
+       var _w = 90 , _h = 24;
+       var param = {
+       url:location.href,
+       type:'2',
+       count:'1', /**&#x662F;&#x5426;&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6570;&#xFF0C;1&#x663E;&#x793A;(&#x53EF;&#x9009;)*/
+       appkey:'', /**&#x60A8;&#x7533;&#x8BF7;&#x7684;&#x5E94;&#x7528;appkey,&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6765;&#x6E90;(&#x53EF;&#x9009;)*/
+       title:'', /**&#x5206;&#x4EAB;&#x7684;&#x6587;&#x5B57;&#x5185;&#x5BB9;(&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;title)*/
+       pic:'', /**&#x5206;&#x4EAB;&#x56FE;&#x7247;&#x7684;&#x8DEF;&#x5F84;(&#x53EF;&#x9009;)*/
+       ralateUid:'2388250330', /**&#x5173;&#x8054;&#x7528;&#x6237;&#x7684;UID&#xFF0C;&#x5206;&#x4EAB;&#x5FAE;&#x535A;&#x4F1A;@&#x8BE5;&#x7528;&#x6237;(&#x53EF;&#x9009;)*/
+       language:'zh_cn', /**&#x8BBE;&#x7F6E;&#x8BED;&#x8A00;&#xFF0C;zh_cn|zh_tw(&#x53EF;&#x9009;)*/
+       rnd:new Date().valueOf()
+     }
+     var temp = [];
+     for( var p in param ){
+     temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+     }
+     document.write('&lt;iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&amp;') + '" width="'+ _w+'" height="'+_h+'"&gt;&lt;/iframe&gt;')
+     })()
+    &lt;/script&gt;
+
+    &lt;h4&gt;Published&lt;/h4&gt;
+    &lt;div class="date"&gt;&lt;span&gt;2014-12-05&lt;/span&gt;&lt;/div&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Categories&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+      &lt;li&gt;
+        &lt;a href="/categories#DB-ref"&gt;DB &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;    &lt;/ul&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Tags&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+
+      &lt;footer&gt;
+        &lt;p&gt;&amp;copy; tiemei 2012 
+          with help from &lt;a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework"&gt;ruhoh&lt;/a&gt;
+          and &lt;a href="http://twitter.github.com/bootstrap/" target="_blank"&gt;Twitter Bootstrap&lt;/a&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+        &lt;script src="http://s9.cnzz.com/stat.php?id=5379369&amp;web_id=5379369&amp;online=1&amp;show=line" language="JavaScript"&gt;&lt;/script&gt;
+        &lt;/p&gt;
+      &lt;/footer&gt;
+
+    &lt;/div&gt; &lt;!-- /container --&gt;
+
+    &lt;!-- Google Prettify --&gt;
+&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i &lt; pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+&lt;/script&gt;
+&lt;!-- end Google Prettify --&gt;
+    &lt;script&gt;
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(defworld.com);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+&lt;/script&gt;
+&lt;noscript&gt;&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /&gt;&lt;/p&gt;&lt;/noscript&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
+    <item>
+      <title>mysql&#x5E38;&#x7528;&#x547D;&#x4EE4;</title>
+      <link>http://defworld.com/2014-11/mysql-command.html</link>
+      <pubDate>2014-11-26</pubDate>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang="en" xmlns:wb=&#x201C;http://open.weibo.com/wb&#x201D;&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;mysql&#x5E38;&#x7528;&#x547D;&#x4EE4;&lt;/title&gt;
+    &lt;meta name="author" content="tiemei"&gt;
+
+    &lt;!-- Le HTML5 shim, for IE6-8 support of HTML elements --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+
+    &lt;!-- Le styles --&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7508680676357864" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.029355805923491407" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.840538633019771" type="text/css" rel="stylesheet" media="all"&gt;
+
+ 
+
+    &lt;!-- Le fav and touch icons --&gt;
+  &lt;!-- Update these with your own images
+    &lt;link rel="shortcut icon" href="images/favicon.ico"&gt;
+    &lt;link rel="apple-touch-icon" href="images/apple-touch-icon.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"&gt;
+  --&gt;
+  &lt;script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+    &lt;div class="navbar"&gt;
+      &lt;div class="navbar-inner"&gt;
+        &lt;div class="container"&gt;
+          &lt;a class="touxiang" href="http://weibo.com/wgdkfk"&gt;
+            &lt;img src="https://farm6.staticflickr.com/5577/14680769772_ac1af8df86.jpg" width="40" height="40" &gt;
+          &lt;/a&gt;
+          &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
+          &lt;ul class="nav"&gt;
+              
+                &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
+              
+                &lt;li&gt;&lt;a href="/tools"&gt;Tools&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="container"&gt;
+
+      &lt;div class="content"&gt;
+        &lt;div class="page-header"&gt;
+  &lt;h1&gt;mysql&#x5E38;&#x7528;&#x547D;&#x4EE4; &lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="span8"&gt;
+    &lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mysqldump --set-gtid-purged=OFF -h host -u user_name -p  --databases database &amp;gt; ~/dropbox/work/db/database.sql&lt;/code&gt; dump&#x6574;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x5230;&#x672C;&#x5730;&#x6587;&#x4EF6;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mysql -h host -u user_name -p&lt;/code&gt;&#x767B;&#x5F55;&#x6570;&#x636E;&#x5E93;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="toc_0"&gt;mysql dump&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-d&lt;/code&gt; &#x4E0D;dump&#x6570;&#x636E;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;--tables&lt;/code&gt; &#x6307;&#x5B9A;&#x54EA;&#x51E0;&#x4E2A;&#x8868;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;show databases;&lt;/code&gt;&#x663E;&#x793A;&#x6240;&#x6709;&#x6570;&#x636E;&#x5E93;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;user database;&lt;/code&gt;&#x4F7F;&#x7528;&#x54EA;&#x4E2A;&#x6570;&#x636E;&#x5E93;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;show tables;&lt;/code&gt;&#x663E;&#x793A;&#x6240;&#x6709;&#x8868;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+    &lt;hr&gt;
+    &lt;div class="pagination"&gt;
+      &lt;ul&gt;
+        &lt;ul&gt;
+            &lt;li class="prev"&gt;&lt;a href="/2014-11/base-lvs.html" title="&#x57FA;&#x7840; - lvs"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li class="next"&gt;&lt;a href="/2014-12/r-db.html" title="&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x7B14;&#x8BB0;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;div id="disqus_thread"&gt;&lt;/div&gt;
+&lt;script&gt;
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+
+  &lt;/div&gt;
+  
+  &lt;div class="span4"&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+    (function(){
+       var _w = 90 , _h = 24;
+       var param = {
+       url:location.href,
+       type:'2',
+       count:'1', /**&#x662F;&#x5426;&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6570;&#xFF0C;1&#x663E;&#x793A;(&#x53EF;&#x9009;)*/
+       appkey:'', /**&#x60A8;&#x7533;&#x8BF7;&#x7684;&#x5E94;&#x7528;appkey,&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6765;&#x6E90;(&#x53EF;&#x9009;)*/
+       title:'', /**&#x5206;&#x4EAB;&#x7684;&#x6587;&#x5B57;&#x5185;&#x5BB9;(&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;title)*/
+       pic:'', /**&#x5206;&#x4EAB;&#x56FE;&#x7247;&#x7684;&#x8DEF;&#x5F84;(&#x53EF;&#x9009;)*/
+       ralateUid:'2388250330', /**&#x5173;&#x8054;&#x7528;&#x6237;&#x7684;UID&#xFF0C;&#x5206;&#x4EAB;&#x5FAE;&#x535A;&#x4F1A;@&#x8BE5;&#x7528;&#x6237;(&#x53EF;&#x9009;)*/
+       language:'zh_cn', /**&#x8BBE;&#x7F6E;&#x8BED;&#x8A00;&#xFF0C;zh_cn|zh_tw(&#x53EF;&#x9009;)*/
+       rnd:new Date().valueOf()
+     }
+     var temp = [];
+     for( var p in param ){
+     temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+     }
+     document.write('&lt;iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&amp;') + '" width="'+ _w+'" height="'+_h+'"&gt;&lt;/iframe&gt;')
+     })()
+    &lt;/script&gt;
+
+    &lt;h4&gt;Published&lt;/h4&gt;
+    &lt;div class="date"&gt;&lt;span&gt;2014-11-26&lt;/span&gt;&lt;/div&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Categories&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+      &lt;li&gt;
+        &lt;a href="/categories#mysql-ref"&gt;mysql &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;    &lt;/ul&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Tags&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+
+      &lt;footer&gt;
+        &lt;p&gt;&amp;copy; tiemei 2012 
+          with help from &lt;a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework"&gt;ruhoh&lt;/a&gt;
+          and &lt;a href="http://twitter.github.com/bootstrap/" target="_blank"&gt;Twitter Bootstrap&lt;/a&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+        &lt;script src="http://s9.cnzz.com/stat.php?id=5379369&amp;web_id=5379369&amp;online=1&amp;show=line" language="JavaScript"&gt;&lt;/script&gt;
+        &lt;/p&gt;
+      &lt;/footer&gt;
+
+    &lt;/div&gt; &lt;!-- /container --&gt;
+
+    &lt;!-- Google Prettify --&gt;
+&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i &lt; pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+&lt;/script&gt;
+&lt;!-- end Google Prettify --&gt;
+    &lt;script&gt;
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(defworld.com);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+&lt;/script&gt;
+&lt;noscript&gt;&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /&gt;&lt;/p&gt;&lt;/noscript&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
+    <item>
+      <title>&#x57FA;&#x7840; - lvs</title>
+      <link>http://defworld.com/2014-11/base-lvs.html</link>
+      <pubDate>2014-11-18</pubDate>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang="en" xmlns:wb=&#x201C;http://open.weibo.com/wb&#x201D;&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;&#x57FA;&#x7840; - lvs&lt;/title&gt;
+    &lt;meta name="author" content="tiemei"&gt;
+
+    &lt;!-- Le HTML5 shim, for IE6-8 support of HTML elements --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+
+    &lt;!-- Le styles --&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7267164120867945" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.3817442089655779" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.3867203306519489" type="text/css" rel="stylesheet" media="all"&gt;
+
+ 
+
+    &lt;!-- Le fav and touch icons --&gt;
+  &lt;!-- Update these with your own images
+    &lt;link rel="shortcut icon" href="images/favicon.ico"&gt;
+    &lt;link rel="apple-touch-icon" href="images/apple-touch-icon.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"&gt;
+  --&gt;
+  &lt;script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+    &lt;div class="navbar"&gt;
+      &lt;div class="navbar-inner"&gt;
+        &lt;div class="container"&gt;
+          &lt;a class="touxiang" href="http://weibo.com/wgdkfk"&gt;
+            &lt;img src="https://farm6.staticflickr.com/5577/14680769772_ac1af8df86.jpg" width="40" height="40" &gt;
+          &lt;/a&gt;
+          &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
+          &lt;ul class="nav"&gt;
+              
+                &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
+              
+                &lt;li&gt;&lt;a href="/tools"&gt;Tools&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="container"&gt;
+
+      &lt;div class="content"&gt;
+        &lt;div class="page-header"&gt;
+  &lt;h1&gt;&#x57FA;&#x7840; - lvs &lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="span8"&gt;
+    &lt;p&gt;&#x57FA;&#x7840;&#x7CFB;&#x5217;&#x4E00;&#xFF0C;&#x8BF4;&#x8BF4;&#x5BF9;lvs&#x7684;&#x7406;&#x89E3;&#x3002;   &lt;/p&gt;
+
+&lt;h2 id="toc_0"&gt;&#x9996;&#x5148;&#x7406;&#x89E3;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x6709;lvs&lt;/h2&gt;
+
+&lt;p&gt;[&#x5178;&#x578B;&#x7684;&#x5E94;&#x7528;&#x7ED3;&#x6784;]()  &lt;/p&gt;
+
+&lt;h3 id="toc_1"&gt;lvs&#x5206;&#x7C7B;&lt;/h3&gt;
+
+&lt;h3 id="toc_2"&gt;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;lvs&#x914D;&#x7F6E;&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class="bash"&gt;ipvsadm -A -t 10.101.86.153:80 -s rr
+ipvsadm -a -t 10.101.86.153:80 -r 10.101.86.153:8080 -m
+# &#x4E34;&#x65F6;&#x6253;&#x5F00;&#x7F51;&#x5361;&#x95F4;&#x8F6C;&#x53D1;
+echo 1 &amp;gt;/proc/sys/net/ipv4/ip_forward
+&lt;/code&gt;&lt;/pre&gt;
+
+    &lt;hr&gt;
+    &lt;div class="pagination"&gt;
+      &lt;ul&gt;
+        &lt;ul&gt;
+            &lt;li class="prev"&gt;&lt;a href="/2014-11/url-encode.html" title="url encode"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li class="next"&gt;&lt;a href="/2014-11/mysql-command.html" title="mysql&#x5E38;&#x7528;&#x547D;&#x4EE4;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;div id="disqus_thread"&gt;&lt;/div&gt;
+&lt;script&gt;
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+
+  &lt;/div&gt;
+  
+  &lt;div class="span4"&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+    (function(){
+       var _w = 90 , _h = 24;
+       var param = {
+       url:location.href,
+       type:'2',
+       count:'1', /**&#x662F;&#x5426;&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6570;&#xFF0C;1&#x663E;&#x793A;(&#x53EF;&#x9009;)*/
+       appkey:'', /**&#x60A8;&#x7533;&#x8BF7;&#x7684;&#x5E94;&#x7528;appkey,&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6765;&#x6E90;(&#x53EF;&#x9009;)*/
+       title:'', /**&#x5206;&#x4EAB;&#x7684;&#x6587;&#x5B57;&#x5185;&#x5BB9;(&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;title)*/
+       pic:'', /**&#x5206;&#x4EAB;&#x56FE;&#x7247;&#x7684;&#x8DEF;&#x5F84;(&#x53EF;&#x9009;)*/
+       ralateUid:'2388250330', /**&#x5173;&#x8054;&#x7528;&#x6237;&#x7684;UID&#xFF0C;&#x5206;&#x4EAB;&#x5FAE;&#x535A;&#x4F1A;@&#x8BE5;&#x7528;&#x6237;(&#x53EF;&#x9009;)*/
+       language:'zh_cn', /**&#x8BBE;&#x7F6E;&#x8BED;&#x8A00;&#xFF0C;zh_cn|zh_tw(&#x53EF;&#x9009;)*/
+       rnd:new Date().valueOf()
+     }
+     var temp = [];
+     for( var p in param ){
+     temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+     }
+     document.write('&lt;iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&amp;') + '" width="'+ _w+'" height="'+_h+'"&gt;&lt;/iframe&gt;')
+     })()
+    &lt;/script&gt;
+
+    &lt;h4&gt;Published&lt;/h4&gt;
+    &lt;div class="date"&gt;&lt;span&gt;2014-11-18&lt;/span&gt;&lt;/div&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Categories&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+      &lt;li&gt;
+        &lt;a href="/categories#Base-ref"&gt;Base &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;    &lt;/ul&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Tags&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+
+      &lt;footer&gt;
+        &lt;p&gt;&amp;copy; tiemei 2012 
+          with help from &lt;a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework"&gt;ruhoh&lt;/a&gt;
+          and &lt;a href="http://twitter.github.com/bootstrap/" target="_blank"&gt;Twitter Bootstrap&lt;/a&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+        &lt;script src="http://s9.cnzz.com/stat.php?id=5379369&amp;web_id=5379369&amp;online=1&amp;show=line" language="JavaScript"&gt;&lt;/script&gt;
+        &lt;/p&gt;
+      &lt;/footer&gt;
+
+    &lt;/div&gt; &lt;!-- /container --&gt;
+
+    &lt;!-- Google Prettify --&gt;
+&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i &lt; pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+&lt;/script&gt;
+&lt;!-- end Google Prettify --&gt;
+    &lt;script&gt;
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(defworld.com);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+&lt;/script&gt;
+&lt;noscript&gt;&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /&gt;&lt;/p&gt;&lt;/noscript&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
+    <item>
+      <title>url encode</title>
+      <link>http://defworld.com/2014-11/url-encode.html</link>
+      <pubDate>2014-11-16</pubDate>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang="en" xmlns:wb=&#x201C;http://open.weibo.com/wb&#x201D;&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;url encode&lt;/title&gt;
+    &lt;meta name="author" content="tiemei"&gt;
+
+    &lt;!-- Le HTML5 shim, for IE6-8 support of HTML elements --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+
+    &lt;!-- Le styles --&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.39362221562010646" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.6538175904259741" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4683253978646489" type="text/css" rel="stylesheet" media="all"&gt;
+
+ 
+
+    &lt;!-- Le fav and touch icons --&gt;
+  &lt;!-- Update these with your own images
+    &lt;link rel="shortcut icon" href="images/favicon.ico"&gt;
+    &lt;link rel="apple-touch-icon" href="images/apple-touch-icon.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"&gt;
+  --&gt;
+  &lt;script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+    &lt;div class="navbar"&gt;
+      &lt;div class="navbar-inner"&gt;
+        &lt;div class="container"&gt;
+          &lt;a class="touxiang" href="http://weibo.com/wgdkfk"&gt;
+            &lt;img src="https://farm6.staticflickr.com/5577/14680769772_ac1af8df86.jpg" width="40" height="40" &gt;
+          &lt;/a&gt;
+          &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
+          &lt;ul class="nav"&gt;
+              
+                &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
+              
+                &lt;li&gt;&lt;a href="/tools"&gt;Tools&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="container"&gt;
+
+      &lt;div class="content"&gt;
+        &lt;div class="page-header"&gt;
+  &lt;h1&gt;url encode &lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="span8"&gt;
+    &lt;h2 id="toc_0"&gt;BitSet&lt;/h2&gt;
+
+&lt;p&gt;{[0],[0],[0],[0],[0],[0],[0],[0]} * 4&lt;/p&gt;
+
+&lt;p&gt;java&#x7528;long[]&#x5B58;&#x50A8;&#xFF08;&#x53D6;&#x540D;word&#xFF09;&#xFF0C;&#x800C;bitset&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x4E00;&#x4E2A;bit[]&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x9700;&#x8981;&#x6709;&#x4E00;&#x4E2A;&#x6620;&#x5C04;bitIndex -&amp;gt; wordIndex&#x3002;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x4F8B;&#x5982;7&#x5E76;&#x4E0D;&#x662F;&#x76F4;&#x63A5;&#x6362;&#x6210;bit&#x5F62;&#x5F0F;&#xFF0C;&#x800C;&#x662F;&#x4F4D;&#x4E8E;bit[]&#x7684;&#x7B2C;&#x4E03;&#x4F4D;&#x3002;  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="java"&gt;private long[] words; // &#x771F;&#x5B9E;&#x7684;&#x7528;&#x6765;&#x5B58;&#x50A8;bitIndex&#x7684;&#x5185;&#x5B58;&#x7A7A;&#x95F4;
+private final static int ADDRESS_BITS_PER_WORD = 6;
+private final static int BITS_PER_WORD = 1 &amp;lt;&amp;lt; ADDRESS_BITS_PER_WORD; // 1 &amp;lt;&amp;lt; 2 = 2^6 = 64&#xFF0C;&#x6BCF;&#x4E2A;long&#x5B58;&#x50A8;&#x5B58;64&#x4E2A;bitIndex
+
+private static int wordIndex(int bitIndex) {
+    return bitIndex &amp;gt;&amp;gt; ADDRESS_BITS_PER_WORD; 
+}
+
+private void expandTo(int wordIndex) {
+    int wordsRequired = wordIndex+1;
+    if (wordsInUse &amp;lt; wordsRequired) {
+        ensureCapacity(wordsRequired);
+        wordsInUse = wordsRequired;
+    }
+}
+
+ public void set(int bitIndex) {
+    if (bitIndex &amp;lt; 0)
+        throw new IndexOutOfBoundsException(&amp;quot;bitIndex &amp;lt; 0: &amp;quot; + bitIndex);
+
+        int wordIndex = wordIndex(bitIndex);
+    expandTo(wordIndex);
+
+    // 1L &amp;lt;&amp;lt; bitIndex&#xFF0C; 1L &amp;lt;&amp;lt; 64&#x662F;&#x4E00;&#x4E2A;&#x5FAA;&#x73AF;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x7B49;&#x4E8E; 1L &amp;lt;&amp;lt; (bitIndex % 64)
+    // &#x628A;bitIndex&#x63D2;&#x5165;&#x5230;&#x5408;&#x9002;&#x7684;bit&#x4F4D;
+    words[wordIndex] |= (1L &amp;lt;&amp;lt; bitIndex); // Restores invariants
+
+    checkInvariants();
+}
+
+// &#x5224;&#x65AD;&#x662F;&#x5426;&#x5B58;&#x5728;
+public boolean get(int bitIndex) {
+    if (bitIndex &amp;lt; 0)
+        throw new IndexOutOfBoundsException(&amp;quot;bitIndex &amp;lt; 0: &amp;quot; + bitIndex);
+
+    checkInvariants();
+
+    int wordIndex = wordIndex(bitIndex);
+    return (wordIndex &amp;lt; wordsInUse)
+        &amp;amp;&amp;amp; ((words[wordIndex] &amp;amp; (1L &amp;lt;&amp;lt; bitIndex)) != 0);
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id="toc_1"&gt;UrlEncode&lt;/h2&gt;
+
+&lt;p&gt;&#x89C1;:&lt;a href="http://www.w3.org/TR/html40/appendix/notes.html#non-ascii-chars"&gt;http://www.w3.org/TR/html40/appendix/notes.html#non-ascii-chars&lt;/a&gt;  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="java"&gt;public static String encode(String s, String enc) 
+    throws UnsupportedEncodingException {
+
+    boolean needToChange = false;
+    StringBuffer out = new StringBuffer(s.length());
+    Charset charset;
+    CharArrayWriter charArrayWriter = new CharArrayWriter();
+
+    if (enc == null)
+        throw new NullPointerException(&amp;quot;charsetName&amp;quot;);
+
+    try {
+        charset = Charset.forName(enc);
+    } catch (IllegalCharsetNameException e) {
+        throw new UnsupportedEncodingException(enc);
+    } catch (UnsupportedCharsetException e) {
+        throw new UnsupportedEncodingException(enc);
+    }
+
+    for (int i = 0; i &amp;lt; s.length();) {
+        int c = (int) s.charAt(i);
+        //System.out.println(&amp;quot;Examining character: &amp;quot; + c);
+        // dontNeedEncoding&#x5305;&#x542B;&#xFF1A;[a-zA-Z0-9 -_.*]
+        if (dontNeedEncoding.get(c)) {
+            if (c == &amp;#39; &amp;#39;) {
+                c = &amp;#39;+&amp;#39;;
+                needToChange = true;
+            }
+            //System.out.println(&amp;quot;Storing: &amp;quot; + c);
+            out.append((char)c);
+            i++;
+        } else {
+        // convert to external encoding before hex conversion
+        do {
+            charArrayWriter.write(c);
+            /*
+             * If this character represents the start of a Unicode
+             * surrogate pair, then pass in two characters. It&amp;#39;s not
+             * clear what should be done if a bytes reserved in the 
+             * surrogate pairs range occurs outside of a legal
+             * surrogate pair. For now, just treat it as if it were 
+             * any other character.
+             */
+            // &#x5904;&#x7406;&#x4E00;&#x4E9B;UTF-16&#x7684;&#x5B57;&#x7B26;&#xFF1A;http://en.wikipedia.org/wiki/UTF-16
+            if (c &amp;gt;= 0xD800 &amp;amp;&amp;amp; c &amp;lt;= 0xDBFF) {
+            /*
+              System.out.println(Integer.toHexString(c) 
+              + &amp;quot; is high surrogate&amp;quot;);
+            */
+            if ( (i+1) &amp;lt; s.length()) {
+                int d = (int) s.charAt(i+1);
+                /*
+                  System.out.println(&amp;quot;\tExamining &amp;quot; 
+                  + Integer.toHexString(d));
+                */
+                if (d &amp;gt;= 0xDC00 &amp;amp;&amp;amp; d &amp;lt;= 0xDFFF) {
+                /*
+                  System.out.println(&amp;quot;\t&amp;quot; 
+                  + Integer.toHexString(d) 
+                  + &amp;quot; is low surrogate&amp;quot;);
+                */
+                    charArrayWriter.write(d);
+                i++;
+                }
+            }
+            } 
+            i++;
+        } while (i &amp;lt; s.length() &amp;amp;&amp;amp; !dontNeedEncoding.get((c = (int) s.charAt(i))));
+
+        charArrayWriter.flush();
+        String str = new String(charArrayWriter.toCharArray());
+        byte[] ba = str.getBytes(charset);
+        for (int j = 0; j &amp;lt; ba.length; j++) {
+            out.append(&amp;#39;%&amp;#39;);
+            char ch = Character.forDigit((ba[j] &amp;gt;&amp;gt; 4) &amp;amp; 0xF, 16);
+            // converting to use uppercase letter as part of
+            // the hex value if ch is a letter.
+            if (Character.isLetter(ch)) {
+            ch -= caseDiff;
+            }
+            out.append(ch);
+            ch = Character.forDigit(ba[j] &amp;amp; 0xF, 16);
+            if (Character.isLetter(ch)) {
+            ch -= caseDiff;
+            }
+            out.append(ch);
+        }
+        charArrayWriter.reset();
+        needToChange = true;
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+    &lt;hr&gt;
+    &lt;div class="pagination"&gt;
+      &lt;ul&gt;
+        &lt;ul&gt;
+            &lt;li class="prev"&gt;&lt;a href="/2014-11/node-articles.html" title="node&#x76F8;&#x5173;&#x6587;&#x7AE0;&#x79EF;&#x7D2F;"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li class="next"&gt;&lt;a href="/2014-11/base-lvs.html" title="&#x57FA;&#x7840; - lvs"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;div id="disqus_thread"&gt;&lt;/div&gt;
+&lt;script&gt;
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+
+  &lt;/div&gt;
+  
+  &lt;div class="span4"&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+    (function(){
+       var _w = 90 , _h = 24;
+       var param = {
+       url:location.href,
+       type:'2',
+       count:'1', /**&#x662F;&#x5426;&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6570;&#xFF0C;1&#x663E;&#x793A;(&#x53EF;&#x9009;)*/
+       appkey:'', /**&#x60A8;&#x7533;&#x8BF7;&#x7684;&#x5E94;&#x7528;appkey,&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6765;&#x6E90;(&#x53EF;&#x9009;)*/
+       title:'', /**&#x5206;&#x4EAB;&#x7684;&#x6587;&#x5B57;&#x5185;&#x5BB9;(&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;title)*/
+       pic:'', /**&#x5206;&#x4EAB;&#x56FE;&#x7247;&#x7684;&#x8DEF;&#x5F84;(&#x53EF;&#x9009;)*/
+       ralateUid:'2388250330', /**&#x5173;&#x8054;&#x7528;&#x6237;&#x7684;UID&#xFF0C;&#x5206;&#x4EAB;&#x5FAE;&#x535A;&#x4F1A;@&#x8BE5;&#x7528;&#x6237;(&#x53EF;&#x9009;)*/
+       language:'zh_cn', /**&#x8BBE;&#x7F6E;&#x8BED;&#x8A00;&#xFF0C;zh_cn|zh_tw(&#x53EF;&#x9009;)*/
+       rnd:new Date().valueOf()
+     }
+     var temp = [];
+     for( var p in param ){
+     temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+     }
+     document.write('&lt;iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&amp;') + '" width="'+ _w+'" height="'+_h+'"&gt;&lt;/iframe&gt;')
+     })()
+    &lt;/script&gt;
+
+    &lt;h4&gt;Published&lt;/h4&gt;
+    &lt;div class="date"&gt;&lt;span&gt;2014-11-16&lt;/span&gt;&lt;/div&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Categories&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+      &lt;li&gt;
+        &lt;a href="/categories#http-ref"&gt;http &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;    &lt;/ul&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Tags&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+
+      &lt;footer&gt;
+        &lt;p&gt;&amp;copy; tiemei 2012 
+          with help from &lt;a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework"&gt;ruhoh&lt;/a&gt;
+          and &lt;a href="http://twitter.github.com/bootstrap/" target="_blank"&gt;Twitter Bootstrap&lt;/a&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+        &lt;script src="http://s9.cnzz.com/stat.php?id=5379369&amp;web_id=5379369&amp;online=1&amp;show=line" language="JavaScript"&gt;&lt;/script&gt;
+        &lt;/p&gt;
+      &lt;/footer&gt;
+
+    &lt;/div&gt; &lt;!-- /container --&gt;
+
+    &lt;!-- Google Prettify --&gt;
+&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i &lt; pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+&lt;/script&gt;
+&lt;!-- end Google Prettify --&gt;
+    &lt;script&gt;
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(defworld.com);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+&lt;/script&gt;
+&lt;noscript&gt;&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /&gt;&lt;/p&gt;&lt;/noscript&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
+    <item>
+      <title>node&#x76F8;&#x5173;&#x6587;&#x7AE0;&#x79EF;&#x7D2F;</title>
+      <link>http://defworld.com/2014-11/node-articles.html</link>
+      <pubDate>2014-11-05</pubDate>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang="en" xmlns:wb=&#x201C;http://open.weibo.com/wb&#x201D;&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;node&#x76F8;&#x5173;&#x6587;&#x7AE0;&#x79EF;&#x7D2F;&lt;/title&gt;
+    &lt;meta name="author" content="tiemei"&gt;
+
+    &lt;!-- Le HTML5 shim, for IE6-8 support of HTML elements --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+
+    &lt;!-- Le styles --&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.04993521044433158" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.7277084500603384" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7890550147914381" type="text/css" rel="stylesheet" media="all"&gt;
+
+ 
+
+    &lt;!-- Le fav and touch icons --&gt;
+  &lt;!-- Update these with your own images
+    &lt;link rel="shortcut icon" href="images/favicon.ico"&gt;
+    &lt;link rel="apple-touch-icon" href="images/apple-touch-icon.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"&gt;
+  --&gt;
+  &lt;script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+    &lt;div class="navbar"&gt;
+      &lt;div class="navbar-inner"&gt;
+        &lt;div class="container"&gt;
+          &lt;a class="touxiang" href="http://weibo.com/wgdkfk"&gt;
+            &lt;img src="https://farm6.staticflickr.com/5577/14680769772_ac1af8df86.jpg" width="40" height="40" &gt;
+          &lt;/a&gt;
+          &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
+          &lt;ul class="nav"&gt;
+              
+                &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
+              
+                &lt;li&gt;&lt;a href="/tools"&gt;Tools&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="container"&gt;
+
+      &lt;div class="content"&gt;
+        &lt;div class="page-header"&gt;
+  &lt;h1&gt;node&#x76F8;&#x5173;&#x6587;&#x7AE0;&#x79EF;&#x7D2F; &lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="span8"&gt;
+    &lt;p&gt;node.js&#x67D0;&#x4E2A;&#x6587;&#x4EF6;foo.js&#xFF0C;&#x76F4;&#x63A5;&#x6267;&#x884C;node foo.js&#x4F1A;&#x6267;&#x884C;main&#x65B9;&#x6CD5;&#xFF0C;&#x800C;require(&amp;#39;foo&amp;#39;)&#x65F6;&#x4E0D;&#x4F1A;&#x6267;&#x884C;&#xFF1A;&lt;br&gt;
+&lt;a href="http://stackoverflow.com/questions/4981891/node-js-equivalent-of-pythons-if-name-main"&gt;&#x300A;node.js equivalent of python&amp;#39;s if &lt;strong&gt;name&lt;/strong&gt; == &amp;#39;&lt;strong&gt;main&lt;/strong&gt;&amp;#39;&#x300B;&lt;/a&gt;  &lt;/p&gt;
+
+    &lt;hr&gt;
+    &lt;div class="pagination"&gt;
+      &lt;ul&gt;
+        &lt;ul&gt;
+            &lt;li class="prev"&gt;&lt;a href="/2014-11/system-evn-prepare.html" title="&#x7CFB;&#x7EDF;&#x73AF;&#x5883;&#x51C6;&#x5907;"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li class="next"&gt;&lt;a href="/2014-11/url-encode.html" title="url encode"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;div id="disqus_thread"&gt;&lt;/div&gt;
+&lt;script&gt;
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+
+  &lt;/div&gt;
+  
+  &lt;div class="span4"&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+    (function(){
+       var _w = 90 , _h = 24;
+       var param = {
+       url:location.href,
+       type:'2',
+       count:'1', /**&#x662F;&#x5426;&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6570;&#xFF0C;1&#x663E;&#x793A;(&#x53EF;&#x9009;)*/
+       appkey:'', /**&#x60A8;&#x7533;&#x8BF7;&#x7684;&#x5E94;&#x7528;appkey,&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6765;&#x6E90;(&#x53EF;&#x9009;)*/
+       title:'', /**&#x5206;&#x4EAB;&#x7684;&#x6587;&#x5B57;&#x5185;&#x5BB9;(&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;title)*/
+       pic:'', /**&#x5206;&#x4EAB;&#x56FE;&#x7247;&#x7684;&#x8DEF;&#x5F84;(&#x53EF;&#x9009;)*/
+       ralateUid:'2388250330', /**&#x5173;&#x8054;&#x7528;&#x6237;&#x7684;UID&#xFF0C;&#x5206;&#x4EAB;&#x5FAE;&#x535A;&#x4F1A;@&#x8BE5;&#x7528;&#x6237;(&#x53EF;&#x9009;)*/
+       language:'zh_cn', /**&#x8BBE;&#x7F6E;&#x8BED;&#x8A00;&#xFF0C;zh_cn|zh_tw(&#x53EF;&#x9009;)*/
+       rnd:new Date().valueOf()
+     }
+     var temp = [];
+     for( var p in param ){
+     temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+     }
+     document.write('&lt;iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&amp;') + '" width="'+ _w+'" height="'+_h+'"&gt;&lt;/iframe&gt;')
+     })()
+    &lt;/script&gt;
+
+    &lt;h4&gt;Published&lt;/h4&gt;
+    &lt;div class="date"&gt;&lt;span&gt;2014-11-05&lt;/span&gt;&lt;/div&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Categories&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+      &lt;li&gt;
+        &lt;a href="/categories#Node.js-ref"&gt;Node.js &lt;span&gt;9&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;    &lt;/ul&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Tags&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+
+      &lt;footer&gt;
+        &lt;p&gt;&amp;copy; tiemei 2012 
+          with help from &lt;a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework"&gt;ruhoh&lt;/a&gt;
+          and &lt;a href="http://twitter.github.com/bootstrap/" target="_blank"&gt;Twitter Bootstrap&lt;/a&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+        &lt;script src="http://s9.cnzz.com/stat.php?id=5379369&amp;web_id=5379369&amp;online=1&amp;show=line" language="JavaScript"&gt;&lt;/script&gt;
+        &lt;/p&gt;
+      &lt;/footer&gt;
+
+    &lt;/div&gt; &lt;!-- /container --&gt;
+
+    &lt;!-- Google Prettify --&gt;
+&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i &lt; pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+&lt;/script&gt;
+&lt;!-- end Google Prettify --&gt;
+    &lt;script&gt;
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(defworld.com);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+&lt;/script&gt;
+&lt;noscript&gt;&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /&gt;&lt;/p&gt;&lt;/noscript&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
+    <item>
+      <title>&#x7CFB;&#x7EDF;&#x73AF;&#x5883;&#x51C6;&#x5907;</title>
+      <link>http://defworld.com/2014-11/system-evn-prepare.html</link>
+      <pubDate>2014-11-03</pubDate>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang="en" xmlns:wb=&#x201C;http://open.weibo.com/wb&#x201D;&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;&#x7CFB;&#x7EDF;&#x73AF;&#x5883;&#x51C6;&#x5907;&lt;/title&gt;
+    &lt;meta name="author" content="tiemei"&gt;
+
+    &lt;!-- Le HTML5 shim, for IE6-8 support of HTML elements --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+
+    &lt;!-- Le styles --&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.15361260337343718" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.8978299535874343" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7754076153696887" type="text/css" rel="stylesheet" media="all"&gt;
+
+ 
+
+    &lt;!-- Le fav and touch icons --&gt;
+  &lt;!-- Update these with your own images
+    &lt;link rel="shortcut icon" href="images/favicon.ico"&gt;
+    &lt;link rel="apple-touch-icon" href="images/apple-touch-icon.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"&gt;
+  --&gt;
+  &lt;script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+    &lt;div class="navbar"&gt;
+      &lt;div class="navbar-inner"&gt;
+        &lt;div class="container"&gt;
+          &lt;a class="touxiang" href="http://weibo.com/wgdkfk"&gt;
+            &lt;img src="https://farm6.staticflickr.com/5577/14680769772_ac1af8df86.jpg" width="40" height="40" &gt;
+          &lt;/a&gt;
+          &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
+          &lt;ul class="nav"&gt;
+              
+                &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
+              
+                &lt;li&gt;&lt;a href="/tools"&gt;Tools&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="container"&gt;
+
+      &lt;div class="content"&gt;
+        &lt;div class="page-header"&gt;
+  &lt;h1&gt;&#x7CFB;&#x7EDF;&#x73AF;&#x5883;&#x51C6;&#x5907; &lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="span8"&gt;
+    &lt;h1 id="toc_0"&gt;Redhat&lt;/h1&gt;
+
+&lt;h2 id="toc_1"&gt;ruby&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class="bash"&gt;wget &amp;#39;http://curl.haxx.se/ca/cacert.pem&amp;#39;
+curl --cacert cacert.pem -sSLk https://get.rvm.io | bash -s stable
+source ~/.profile
+source ~/.rvm/scripts/rvm
+rvm install 1.9.2
+rvm use 1.9.2 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&#x53C2;&#x8003;&#xFF1A;  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;img src="http://www.cnblogs.com/ainiaa/archive/2011/11/08/2241385.html" alt="http &#x4F7F;&#x7528;curl&#x53D1;&#x8D77;https&#x8BF7;&#x6C42;"&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src="https://ruby-china.org/wiki/install_ruby_guide" alt="&#x5982;&#x4F55;&#x5FEB;&#x901F;&#x6B63;&#x786E;&#x7684;&#x5B89;&#x88C5; Ruby, Rails &#x8FD0;&#x884C;&#x73AF;&#x5883;"&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id="toc_2"&gt;Mac&lt;/h1&gt;
+
+    &lt;hr&gt;
+    &lt;div class="pagination"&gt;
+      &lt;ul&gt;
+        &lt;ul&gt;
+            &lt;li class="prev"&gt;&lt;a href="/2014-10/node-js-prmoise.html" title="Node.js Promise/Deferred&#x5165;&#x95E8;"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li class="next"&gt;&lt;a href="/2014-11/node-articles.html" title="node&#x76F8;&#x5173;&#x6587;&#x7AE0;&#x79EF;&#x7D2F;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;div id="disqus_thread"&gt;&lt;/div&gt;
+&lt;script&gt;
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+
+  &lt;/div&gt;
+  
+  &lt;div class="span4"&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+    (function(){
+       var _w = 90 , _h = 24;
+       var param = {
+       url:location.href,
+       type:'2',
+       count:'1', /**&#x662F;&#x5426;&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6570;&#xFF0C;1&#x663E;&#x793A;(&#x53EF;&#x9009;)*/
+       appkey:'', /**&#x60A8;&#x7533;&#x8BF7;&#x7684;&#x5E94;&#x7528;appkey,&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6765;&#x6E90;(&#x53EF;&#x9009;)*/
+       title:'', /**&#x5206;&#x4EAB;&#x7684;&#x6587;&#x5B57;&#x5185;&#x5BB9;(&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;title)*/
+       pic:'', /**&#x5206;&#x4EAB;&#x56FE;&#x7247;&#x7684;&#x8DEF;&#x5F84;(&#x53EF;&#x9009;)*/
+       ralateUid:'2388250330', /**&#x5173;&#x8054;&#x7528;&#x6237;&#x7684;UID&#xFF0C;&#x5206;&#x4EAB;&#x5FAE;&#x535A;&#x4F1A;@&#x8BE5;&#x7528;&#x6237;(&#x53EF;&#x9009;)*/
+       language:'zh_cn', /**&#x8BBE;&#x7F6E;&#x8BED;&#x8A00;&#xFF0C;zh_cn|zh_tw(&#x53EF;&#x9009;)*/
+       rnd:new Date().valueOf()
+     }
+     var temp = [];
+     for( var p in param ){
+     temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+     }
+     document.write('&lt;iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&amp;') + '" width="'+ _w+'" height="'+_h+'"&gt;&lt;/iframe&gt;')
+     })()
+    &lt;/script&gt;
+
+    &lt;h4&gt;Published&lt;/h4&gt;
+    &lt;div class="date"&gt;&lt;span&gt;2014-11-03&lt;/span&gt;&lt;/div&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Categories&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+      &lt;li&gt;
+        &lt;a href="/categories#linux-ref"&gt;linux &lt;span&gt;5&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;    &lt;/ul&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Tags&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+
+      &lt;footer&gt;
+        &lt;p&gt;&amp;copy; tiemei 2012 
+          with help from &lt;a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework"&gt;ruhoh&lt;/a&gt;
+          and &lt;a href="http://twitter.github.com/bootstrap/" target="_blank"&gt;Twitter Bootstrap&lt;/a&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+        &lt;script src="http://s9.cnzz.com/stat.php?id=5379369&amp;web_id=5379369&amp;online=1&amp;show=line" language="JavaScript"&gt;&lt;/script&gt;
+        &lt;/p&gt;
+      &lt;/footer&gt;
+
+    &lt;/div&gt; &lt;!-- /container --&gt;
+
+    &lt;!-- Google Prettify --&gt;
+&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i &lt; pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+&lt;/script&gt;
+&lt;!-- end Google Prettify --&gt;
+    &lt;script&gt;
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(defworld.com);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+&lt;/script&gt;
+&lt;noscript&gt;&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /&gt;&lt;/p&gt;&lt;/noscript&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
+    <item>
+      <title>Node.js Promise/Deferred&#x5165;&#x95E8;</title>
+      <link>http://defworld.com/2014-10/node-js-prmoise.html</link>
+      <pubDate>2014-10-16</pubDate>
+      <description>nodejs promoise</description>
+    </item>
+    <item>
+      <title>Node&#x7684;&#x5F02;&#x6B65;&#x4EE3;&#x7801;&#x600E;&#x4E48;&#x5199;</title>
+      <link>http://defworld.com/2014-09/node-how-to-write-node-async-code.html</link>
+      <pubDate>2014-09-19</pubDate>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang="en" xmlns:wb=&#x201C;http://open.weibo.com/wb&#x201D;&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Node&#x7684;&#x5F02;&#x6B65;&#x4EE3;&#x7801;&#x600E;&#x4E48;&#x5199;&lt;/title&gt;
+    &lt;meta name="author" content="tiemei"&gt;
+
+    &lt;!-- Le HTML5 shim, for IE6-8 support of HTML elements --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+
+    &lt;!-- Le styles --&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9713671223936055" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.17003050565779276" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.37988033142883637" type="text/css" rel="stylesheet" media="all"&gt;
+
+ 
+
+    &lt;!-- Le fav and touch icons --&gt;
+  &lt;!-- Update these with your own images
+    &lt;link rel="shortcut icon" href="images/favicon.ico"&gt;
+    &lt;link rel="apple-touch-icon" href="images/apple-touch-icon.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"&gt;
+  --&gt;
+  &lt;script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+    &lt;div class="navbar"&gt;
+      &lt;div class="navbar-inner"&gt;
+        &lt;div class="container"&gt;
+          &lt;a class="touxiang" href="http://weibo.com/wgdkfk"&gt;
+            &lt;img src="https://farm6.staticflickr.com/5577/14680769772_ac1af8df86.jpg" width="40" height="40" &gt;
+          &lt;/a&gt;
+          &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
+          &lt;ul class="nav"&gt;
+              
+                &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
+              
+                &lt;li&gt;&lt;a href="/tools"&gt;Tools&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="container"&gt;
+
+      &lt;div class="content"&gt;
+        &lt;div class="page-header"&gt;
+  &lt;h1&gt;Node&#x7684;&#x5F02;&#x6B65;&#x4EE3;&#x7801;&#x600E;&#x4E48;&#x5199; &lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="span8"&gt;
+    &lt;h1 id="toc_0"&gt;&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;&lt;/h1&gt;
+
+&lt;p&gt;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;js&#x4E2D;&#x7684;&#x4E00;&#x7B49;&#x516C;&#x6C11;&#xFF0C;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x6216;&#x8FD4;&#x56DE;&#x503C;&#x4F20;&#x9012;&#xFF0C;&#x6B64;&#x8C13;&#x9AD8;&#x9636;&#x51FD;&#x6570;&#x3002;&#x504F;&#x51FD;&#x6570;&#x4E5F;&#x662F;&#x57FA;&#x4E8E;&#x6B64;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x8FD4;&#x56DE;&#x7684;&#x51FD;&#x6570;&#x4E00;&#x90E8;&#x5206;&#x5DF2;&#x7ECF;&#x9884;&#x7F6E;&#x4E86;&#xFF0C;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="js"&gt;// &#x4E00;&#x4E2A;&#x8C03;&#x7528;&#x591A;&#x6B21;&#x624D;&#x4F1A;&#x6267;&#x884C;&#x7684;&#x51FD;&#x6570;
+_.after = function(times, func) {
+    if (times &amp;lt;= 0)return func();
+    return function() {
+        if (--times &amp;lt; 1) {
+            return func.apply(this, arguments);
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_1"&gt;&#x5F02;&#x6B65;&#x7F16;&#x7A0B;&#x96BE;&#x70B9;&lt;/h1&gt;
+
+&lt;h2 id="toc_2"&gt;&#x5F02;&#x5E38;&#x5904;&#x7406;&lt;/h2&gt;
+
+&lt;h2 id="toc_3"&gt;&#x51FD;&#x6570;&#x5D4C;&#x5957;&#x8FC7;&#x6DF1;&lt;/h2&gt;
+
+&lt;h2 id="toc_4"&gt;&#x963B;&#x585E;&#x4EE3;&#x7801;&lt;/h2&gt;
+
+&lt;h2 id="toc_5"&gt;&#x591A;&#x7EBF;&#x7A0B;&#x7F16;&#x7A0B;&lt;/h2&gt;
+
+&lt;h1 id="toc_6"&gt;&#x5F02;&#x6B65;&#x7F16;&#x7A0B;&#x89E3;&#x51B3;&#x65B9;&#x6848;&lt;/h1&gt;
+
+&lt;h2 id="toc_7"&gt;&#x4E8B;&#x4EF6;&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x6A21;&#x5F0F;&lt;/h2&gt;
+
+&lt;p&gt;Node&#x81EA;&#x8EAB;&#x63D0;&#x4F9B;&#x7684;events&#x6A21;&#x5757;&#x3002;  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="js"&gt;// &#x8BA2;&#x9605;
+emitter.on(&amp;quot;event1&amp;quot;, function (message) {
+    console.log(message);
+});
+
+// &#x53D1;&#x5E03;
+emitter.emit(&amp;#39;event1&amp;#39;, &amp;quot;I am message!&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&#x5C06;&#x4E8B;&#x4EF6;&#x4E0E;&#x5177;&#x4F53;&#x7684;&#x5904;&#x7406;&#x903B;&#x8F91;&#x89E3;&#x8026;&#xFF0C;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x4E0E;&#x591A;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5173;&#x8054;&#x3002;&#x4ECE;&#x67D0;&#x79CD;&#x89D2;&#x5EA6;&#x6765;&#x8BF4;&#x4E8B;&#x4EF6;&#x7684;&#x8BBE;&#x8BA1;&#x5C31;&#x662F;&#x7EC4;&#x4EF6;&#x7684;&#x63A5;&#x53E3;&#x8BBE;&#x8BA1;&#x3002;    &lt;/p&gt;
+
+    &lt;hr&gt;
+    &lt;div class="pagination"&gt;
+      &lt;ul&gt;
+        &lt;ul&gt;
+            &lt;li class="prev"&gt;&lt;a href="/2014-09/node-js-async-i-o.html" title="&#x804A;&#x804A;Node.js&#x7684;&#x5F02;&#x6B65;I/O"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li class="next"&gt;&lt;a href="/2014-10/node-js-prmoise.html" title="Node.js Promise/Deferred&#x5165;&#x95E8;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;div id="disqus_thread"&gt;&lt;/div&gt;
+&lt;script&gt;
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+
+  &lt;/div&gt;
+  
+  &lt;div class="span4"&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+    (function(){
+       var _w = 90 , _h = 24;
+       var param = {
+       url:location.href,
+       type:'2',
+       count:'1', /**&#x662F;&#x5426;&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6570;&#xFF0C;1&#x663E;&#x793A;(&#x53EF;&#x9009;)*/
+       appkey:'', /**&#x60A8;&#x7533;&#x8BF7;&#x7684;&#x5E94;&#x7528;appkey,&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6765;&#x6E90;(&#x53EF;&#x9009;)*/
+       title:'', /**&#x5206;&#x4EAB;&#x7684;&#x6587;&#x5B57;&#x5185;&#x5BB9;(&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;title)*/
+       pic:'', /**&#x5206;&#x4EAB;&#x56FE;&#x7247;&#x7684;&#x8DEF;&#x5F84;(&#x53EF;&#x9009;)*/
+       ralateUid:'2388250330', /**&#x5173;&#x8054;&#x7528;&#x6237;&#x7684;UID&#xFF0C;&#x5206;&#x4EAB;&#x5FAE;&#x535A;&#x4F1A;@&#x8BE5;&#x7528;&#x6237;(&#x53EF;&#x9009;)*/
+       language:'zh_cn', /**&#x8BBE;&#x7F6E;&#x8BED;&#x8A00;&#xFF0C;zh_cn|zh_tw(&#x53EF;&#x9009;)*/
+       rnd:new Date().valueOf()
+     }
+     var temp = [];
+     for( var p in param ){
+     temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+     }
+     document.write('&lt;iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&amp;') + '" width="'+ _w+'" height="'+_h+'"&gt;&lt;/iframe&gt;')
+     })()
+    &lt;/script&gt;
+
+    &lt;h4&gt;Published&lt;/h4&gt;
+    &lt;div class="date"&gt;&lt;span&gt;2014-09-19&lt;/span&gt;&lt;/div&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Categories&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+      &lt;li&gt;
+        &lt;a href="/categories#Node.js-ref"&gt;Node.js &lt;span&gt;9&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;    &lt;/ul&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Tags&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+
+      &lt;footer&gt;
+        &lt;p&gt;&amp;copy; tiemei 2012 
+          with help from &lt;a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework"&gt;ruhoh&lt;/a&gt;
+          and &lt;a href="http://twitter.github.com/bootstrap/" target="_blank"&gt;Twitter Bootstrap&lt;/a&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+        &lt;script src="http://s9.cnzz.com/stat.php?id=5379369&amp;web_id=5379369&amp;online=1&amp;show=line" language="JavaScript"&gt;&lt;/script&gt;
+        &lt;/p&gt;
+      &lt;/footer&gt;
+
+    &lt;/div&gt; &lt;!-- /container --&gt;
+
+    &lt;!-- Google Prettify --&gt;
+&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i &lt; pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+&lt;/script&gt;
+&lt;!-- end Google Prettify --&gt;
+    &lt;script&gt;
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(defworld.com);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+&lt;/script&gt;
+&lt;noscript&gt;&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /&gt;&lt;/p&gt;&lt;/noscript&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
     <item>
       <title>&#x804A;&#x804A;Node.js&#x7684;&#x5F02;&#x6B65;I/O</title>
       <link>http://defworld.com/2014-09/node-js-async-i-o.html</link>
@@ -21,9 +1598,9 @@
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.26777876679592505" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.7061108229984359" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.17372647886860593" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6805703555344697" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.09245546900874635" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.20272194737961613" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -163,7 +1740,7 @@ Node&#x63D0;&#x4F9B;&#x7684;&#x51E0;&#x4E2A;&#x5F02;&#x6B65;&#x8C03;&#x7528;&#x9
 
             &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
 
-            &lt;li class="next disabled"&gt;&lt;a&gt;Next &amp;rarr;&lt;/a&gt;
+            &lt;li class="next"&gt;&lt;a href="/2014-09/node-how-to-write-node-async-code.html" title="Node&#x7684;&#x5F02;&#x6B65;&#x4EE3;&#x7801;&#x600E;&#x4E48;&#x5199;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
@@ -213,7 +1790,7 @@ Node&#x63D0;&#x4F9B;&#x7684;&#x51E0;&#x4E2A;&#x5F02;&#x6B65;&#x8C03;&#x7528;&#x9
     &lt;h4&gt;Categories&lt;/h4&gt;
     &lt;ul class="tag_box"&gt;
       &lt;li&gt;
-        &lt;a href="/categories#Node.js-ref"&gt;Node.js &lt;span&gt;6&lt;/span&gt;&lt;/a&gt;
+        &lt;a href="/categories#Node.js-ref"&gt;Node.js &lt;span&gt;9&lt;/span&gt;&lt;/a&gt;
       &lt;/li&gt;    &lt;/ul&gt;
     &lt;br&gt;
     &lt;h4&gt;Tags&lt;/h4&gt;
@@ -279,9 +1856,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.41922899719482065" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.14941637481011694" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5224130233525097" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9837590008015262" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.6962164884537354" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6517011182722215" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -552,9 +2129,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.40443941963530106" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.10706666613558746" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8937782425789942" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.54979070814173" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.4736751663322889" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.22743726095313588" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -792,9 +2369,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.19207218885876243" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.5124183926270487" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.3316357591699747" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6618552216676916" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.6506906657329817" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.3128357440129991" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1021,9 +2598,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.020102203492211368" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.3419299026388556" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.06377152814391818" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.3792097212572223" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.15434219361242418" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9074941884381079" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1188,7 +2765,7 @@ sudo gem install terminal-notifier
     &lt;h4&gt;Categories&lt;/h4&gt;
     &lt;ul class="tag_box"&gt;
       &lt;li&gt;
-        &lt;a href="/categories#Node.js-ref"&gt;Node.js &lt;span&gt;6&lt;/span&gt;&lt;/a&gt;
+        &lt;a href="/categories#Node.js-ref"&gt;Node.js &lt;span&gt;9&lt;/span&gt;&lt;/a&gt;
       &lt;/li&gt;    &lt;/ul&gt;
     &lt;br&gt;
     &lt;h4&gt;Tags&lt;/h4&gt;
@@ -1254,9 +2831,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9237247571199056" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.4271798186525817" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.18857738691000936" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.5263662717633691" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.8140404244253018" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7315800873701889" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1501,9 +3078,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7647455086907816" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.6793992595456578" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4478570453497085" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.018080538642167743" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.9361549073852193" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8996291853997279" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1765,9 +3342,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.8703117024335151" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.22139406061081868" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.938924700760165" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6817486621584543" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.4633655277716838" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.06724931979943527" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -2140,781 +3717,6 @@ clicky_site_ids.push(defworld.com);
   &lt;/body&gt;
 &lt;/html&gt;
 </description>
-    </item>
-    <item>
-      <title>&#x8C08;&#x8C08;Unix-like&#x4E0A;&#x8F6F;&#x4EF6;&#x5B89;&#x88C5;&#x90A3;&#x4E9B;&#x4E8B;</title>
-      <link>http://defworld.com/2013-11/linux-software-install.html</link>
-      <pubDate>2013-11-10</pubDate>
-      <description>linux soft</description>
-    </item>
-    <item>
-      <title>JVM&#x2014;&#x2014;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF0C;&#x521D;&#x59CB;&#x5316;</title>
-      <link>http://defworld.com/2013-09/jvm-class-loader-and-init.html</link>
-      <pubDate>2013-09-15</pubDate>
-      <description>&lt;!DOCTYPE html&gt;
-&lt;html lang="en" xmlns:wb=&#x201C;http://open.weibo.com/wb&#x201D;&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;JVM&#x2014;&#x2014;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF0C;&#x521D;&#x59CB;&#x5316;&lt;/title&gt;
-    &lt;meta name="author" content="tiemei"&gt;
-
-    &lt;!-- Le HTML5 shim, for IE6-8 support of HTML elements --&gt;
-    &lt;!--[if lt IE 9]&gt;
-      &lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
-    &lt;![endif]--&gt;
-
-    &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7275722310445614" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.7856835206626162" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9936484549594718" type="text/css" rel="stylesheet" media="all"&gt;
-
- 
-
-    &lt;!-- Le fav and touch icons --&gt;
-  &lt;!-- Update these with your own images
-    &lt;link rel="shortcut icon" href="images/favicon.ico"&gt;
-    &lt;link rel="apple-touch-icon" href="images/apple-touch-icon.png"&gt;
-    &lt;link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"&gt;
-    &lt;link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"&gt;
-  --&gt;
-  &lt;script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
-  &lt;/head&gt;
-
-  &lt;body&gt;
-
-    &lt;div class="navbar"&gt;
-      &lt;div class="navbar-inner"&gt;
-        &lt;div class="container"&gt;
-          &lt;a class="touxiang" href="http://weibo.com/wgdkfk"&gt;
-            &lt;img src="https://farm6.staticflickr.com/5577/14680769772_ac1af8df86.jpg" width="40" height="40" &gt;
-          &lt;/a&gt;
-          &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
-          &lt;ul class="nav"&gt;
-              
-                &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
-              
-                &lt;li&gt;&lt;a href="/tools"&gt;Tools&lt;/a&gt;&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class="container"&gt;
-
-      &lt;div class="content"&gt;
-        &lt;div class="page-header"&gt;
-  &lt;h1&gt;JVM&#x2014;&#x2014;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF0C;&#x521D;&#x59CB;&#x5316; &lt;/h1&gt;
-&lt;/div&gt;
-
-&lt;div class="row"&gt;
-  &lt;div class="span8"&gt;
-    &lt;h1 id="toc_0"&gt;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&lt;/h1&gt;
-
-&lt;h2 id="toc_1"&gt;&#x201C;&#x53CC;&#x4EB2;&#x201D;&#x59D4;&#x6D3E;&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x4F7F;&#x7528;&#x201C;&#x53CC;&#x4EB2;&#x59D4;&#x6D3E;&#x201D;&#x6A21;&#x578B;&#x3002;
-&lt;img src="http://farm4.staticflickr.com/3705/9757201665_47321648aa.jpg" alt="classloaders"&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x5199;&#x4E00;&#x4E2A;&#x7C7B;&#x7F16;&#x8F91;&#x6253;&#x6210;Jar&#x5305;&#x653E;&#x5230;&lt;code&gt;$JAVA_HOME/jre/lib/ext&lt;/code&gt;&#x76EE;&#x5F55;&#xFF0C;&#x518D;&#x5199;&#x4E00;&#x4E2A;&#x542F;&#x52A8;&#x7C7B;&#xFF0C;
-&#x6253;&#x5370;&#x51FA;&#x52A0;&#x8F7D;&#x6240;&#x5199;&#x7C7B;&#x7684;classloader&#xFF0C;&#x53D1;&#x73B0;&#x662F;extclassloader&#x3002;&#x4F46;&#x662F;&#x653E;&#x5230;&lt;code&gt;$JAVA_HOME/jre/lib&lt;/code&gt;
-&#x76EE;&#x5F55;&#x5E76;&#x4E0D;&#x4F1A;&#x88AB;&#x52A0;&#x8F7D;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&#x88AB;&#x52A0;&#x8F7D;&#x7684;&#x7C7B;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x662F;&#x7C7B;&#x8DEF;&#x5F84;+&#x7C7B;&#x52A0;&#x8F7D;&#x5668;id.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id="toc_2"&gt;&#x7EBF;&#x7A0B;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&lt;/h2&gt;
-
-&lt;p&gt;&#x9996;&#x5148;&#x4ECB;&#x7ECD;&#x4E00;&#x4E2A;&#x6982;&#x5FF5;&#xFF1A;&lt;strong&gt;&#x5F53;&#x524D;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&lt;/strong&gt;&#xFF0C;&#x6307;&#x5F53;&#x524D;&#x65B9;&#x6CD5;&#x65B9;&#x6CD5;&#x6240;&#x5728;&#x7C7B;&#x7684;&#x52A0;&#x8F7D;&#x5668;&#x3002;&lt;code&gt;Class.forName(String)&lt;/code&gt;
-&lt;code&gt;Class.getResource(String)&lt;/code&gt;&lt;code&gt;X.class&lt;/code&gt;&#x90FD;&#x662F;&#x7528;&#x7684;&#x5F53;&#x524D;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x3002;&lt;br&gt;
-&#x8FD9;&#x662F;&#x539F;&#x6709;&#x7684;&#x201C;&#x53CC;&#x4EB2;&#x59D4;&#x6D3E;&#x201D;&#x6A21;&#x578B;&#x5C31;&#x4E0D;&#x80FD;&#x89E3;&#x51B3;&#x95EE;&#x9898;&#x4E86;&#x3002;&#x4F8B;&#x5982;JNDI&#x7684;&#x6838;&#x5FC3;&#x7C7B;&#x5728;JRE&#x7684;rt.jar&#x4E2D;&#xFF0C;&#x800C;&#x8FD9;&#x4E9B;&#x6838;&#x5FC3;&#x7C7B;
-&#x9700;&#x8981;&#x52A0;&#x8F7D;&#x7B2C;&#x4E09;&#x65B9;&#x5382;&#x5546;&#x7684;JNDI&#x5B9E;&#x73B0;&#xFF0C;&#x52A0;&#x8F7D;&#x65F6;&#x7684;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x9ED8;&#x8BA4;&#x662F;&#x201C;&#x5F53;&#x524D;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x201D;&#xFF0C;&#x5373;&lt;code&gt;Bootstrap class loader&lt;/code&gt;&#xFF0C;
-&#x663E;&#x7136;&#x662F;&#x52A0;&#x8F7D;&#x4E0D;&#x5230;&#x8FD9;&#x4E9B;&#x5B9E;&#x73B0;&#x7C7B;&#x7684;&#x3002;&#x8FD9;&#x65F6;&#xFF0C;&lt;strong&gt;&#x7EBF;&#x7A0B;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&lt;/strong&gt;&#x5C31;&#x8D77;&#x4F5C;&#x7528;&#x4E86;&#x3002;&#x8BA9;JNDI&#x6838;&#x5FC3;&#x7C7B;&#x7684;&#x52A0;&#x8F7D;&#x4F7F;&#x7528;&#x7EBF;&#x7A0B;
-&#x4E0A;&#x4E0B;&#x6587;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF0C;&#x6253;&#x7834;&#x201C;&#x53CC;&#x4EB2;&#x59D4;&#x6258;&#x201D;&#x9650;&#x5B9A;&#x7684;&#x5411;&#x4E0A;&#x4EE3;&#x7406;&#x673A;&#x5236;&#x3002;&lt;br&gt;
-&#x867D;&#x7136;&#x4E0B;&#x201C;&#x7EBF;&#x7A0B;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x201D;&#x89E3;&#x51B3;&#x4E86;&#x67D0;&#x4E9B;&#x7279;&#x6B8A;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x5B83;&#x4E5F;&#x5B58;&#x5728;&#x4E0D;&#x8DB3;&#x3002;&#x9664;&#x975E;&#x6240;&#x6709;&#x7EBF;&#x7A0B;&#x4F7F;&#x7528;&#x540C;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x4E0A;&#x4E0B;&#x6587;&#x7C7B;
-&#x52A0;&#x8F7D;&#x5668;&#xFF0C;&#x5426;&#x5219;&#x5B83;&#x4EEC;&#x7684;&#x6570;&#x636E;&#x5171;&#x4EAB;&#x6210;&#x4E3A;&#x95EE;&#x9898;&#x3002;&#x5E76;&#x4E14;&#xFF0C;&#x7F3A;&#x7701;&#x89C4;&#x5219;&#x4E3A;&#x4F7F;&#x7528;&#x5F53;&#x524D;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF0C;&#x6709;&#x4E9B;&#x4EE3;&#x7801;&#x4F60;&#x53C8;&#x6CA1;&#x6CD5;&#x63A7;&#x5236;&#xFF0C;
-&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x53D8;&#x5F97;&#x66F4;&#x52A0;&#x590D;&#x6742;&#x3002;  &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;J2SE&#x4E2D;&#x5E38;&#x89C1;&#x7C7B;&#x52A0;&#x8F7D;&#x573A;&#x666F;&#xFF1A;
-&#x2192; JNDI&#x4F7F;&#x7528;&#x7EBF;&#x7A0B;&#x4E0A;&#x4E0B;&#x6587;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;
-&#x2192; Class.getResource()&#x548C;Class.forName()&#x4F7F;&#x7528;&#x5F53;&#x524D;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;
-&#x2192; JAXP&#x4F7F;&#x7528;&#x4E0A;&#x4E0B;&#x6587;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;
-&#x2192; Java.unit.ResourceBundle&#x4F7F;&#x7528;&#x8C03;&#x7528;&#x8005;&#x7684;&#x5F53;&#x524D;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;
-&#x2192; URL&#x534F;&#x8BAE;&#x5904;&#x7406;&#x5668;&#x4F7F;&#x7528;java.protocol.handler.pkgs&#x7CFB;&#x7EDF;&#x5C5E;&#x6027;&#x5E76;&#x53EA;&#x4F7F;&#x7528;&#x7CFB;&#x7EDF;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;
-&#x2192; Java&#x5E8F;&#x5217;&#x5316;API&#x7F3A;&#x7701;&#x4F7F;&#x7528;&#x8C03;&#x7528;&#x8005;&#x5F53;&#x524D;&#x7684;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id="toc_3"&gt;JVM&#x7C7B;&#x52A0;&#x8F7D;&#x4F53;&#x7CFB;&#x521D;&#x59CB;&#x5316;&#x8FC7;&#x7A0B;&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src="http://farm3.staticflickr.com/2812/9758702554_fdd089dd36.jpg" alt="JVM classloader init"&gt;  &lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&#x8F7D;&#x5165;&#x65B9;&#x5F0F;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&#x2192; pre-loading &#x9884;&#x5148;&#x8F7D;&#x5165;&#xFF0C;&#x672A;&#x907F;&#x514D;&#x4EE5;&#x540E;&#x591A;&#x6B21;IO&#x64CD;&#x4F5C;&#xFF0C;JRE&#x9884;&#x5148;&#x8F7D;&#x5165;&#x4E00;&#x4E9B;&#x57FA;&#x7840;&#x7C7B;&#xFF0C;&#x4E3B;&#x8981;&#x662F;rt.jar&#x91CC;
-&#x2192; load-on-demand&#xFF0C;&#x6309;&#x9700;&#x8F7D;&#x5165;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&#x53EF;&#x7528;&lt;code&gt;java &#x2013;verbos:class Main&lt;/code&gt;&#x67E5;&#x770B;&#x52A0;&#x8F7D;&#x8BE6;&#x7EC6;&#x8FC7;&#x7A0B;  &lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Static &#x4F55;&#x65F6;&#x6267;&#x884C;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&#x2192; forName(String)&#x6267;&#x884C;&#xFF0C;&#x800C;ClassLoader.loadClass&#x5E76;&#x4E0D;&#x4F1A;&#x6267;&#x884C;&#xFF0C;forName(String,false,ClassLoader)&#x4E5F;&#x4E0D;&#x4F1A;&#x6267;&#x884C;
-&#x2192; &#x8F7D;&#x5165;class&#x65F6;&#x6CA1;&#x6709;&#x6267;&#x884C;static&#x5757;&#xFF0C;&#x5219;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x5B9E;&#x4F8B;&#x5316;&#x65F6;&#x6267;&#x884C;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&#x9690;&#x5F0F;&#x52A0;&#x8F7D;/&#x663E;&#x793A;&#x52A0;&#x8F7D;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&#x2192; &#x663E;&#x793A;&#x52A0;&#x8F7D;&#xFF1A;&#x7528;forName&#x65B9;&#x6CD5;&#x663E;&#x793A;&#x6307;&#x5B9A;&#x8981;&#x52A0;&#x8F7D;&#x54EA;&#x4E2A;&#x7C7B;
-&#x2192; &#x9690;&#x5F0F;&#x52A0;&#x8F7D;&#xFF1A;new&#x65B9;&#x6CD5;&#x5B9E;&#x4F8B;&#x5316;&#x65F6;&#xFF0C;JVM&#x9690;&#x5F0F;&#x5E2E;&#x5FD9;&#x505A;&#x52A0;&#x8F7D;&#xFF0C;&#x5E76;&#x6267;&#x884C;&#x9759;&#x6001;&#x4EE3;&#x7801;&#x5FEB;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id="toc_4"&gt;tomcat&#x4E2D;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&lt;/h1&gt;
-
-&lt;p&gt;&#x9664;&#x4E86;J2SE&#x5DF2;&#x7ECF;&#x6709;&#x7684;&#x6700;&#x57FA;&#x7840;&#x7684;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF0C;tomcat&#x7C7B;&#x52A0;&#x8F7D;&#x8FD8;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#xFF1A;  &lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Catalina&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF1A;&#x5BF9;Tomcat&#x670D;&#x52A1;&#x5668;&#x5185;&#x6838;&#x53EF;&#x89C1;,&#x5BF9;Web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E0D;&#x53EF;&#x89C1;&#x3002;
-tomcat&#x5185;&#x6838;&#x7EBF;&#x7A0B;&#x4E0A;&#x4E0B;&#x6587;&#x52A0;&#x8F7D;&#x5668;&#x5C31;&#x662F;&#x5B83;&#x3002;
-&#x52A0;&#x8F7D;&#x76EE;&#x5F55;&lt;code&gt;server/classes&#x548C;server/lib&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Common&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF1A;Tomcat&#x5185;&#x6838;&#x548C;&#x6BCF;&#x4E2A;Web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x90FD;&#x53EF;&#x4EE5;&#x770B;&#x89C1;&#x3002;
-&#x52A0;&#x8F7D;&#x672A;&#x77E5;&lt;code&gt;common/class&lt;/code&gt;&lt;code&gt;common/lib&lt;/code&gt;&#xFF0C;&#x4F8B;&#x5982;servlet.jar&lt;/li&gt;
-&lt;li&gt;Shared&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF1A;&#x53EA;&#x5BF9;&#x6240;&#x6709;Web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6709;&#x6548;,&#x5BF9;Tomcat&#x4E0D;&#x53EF;&#x89C1;&#x3002;
-&#x52A0;&#x8F7D;&#x4F4D;&#x7F6E;&#xFF1A;&lt;code&gt;share/classes&lt;/code&gt;&lt;code&gt;share/lib&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Webapp&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF1A;&#x53EA;&#x5BF9;&#x5F53;&#x524D;Web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6709;&#x6548;&#x3002;
-&#x6BCF;&#x4E2A;web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x5C31;&#x662F;&#x5B83;&#x3002;
-&#x52A0;&#x8F7D;&#x4F4D;&#x7F6E;&#xFF1A;&lt;code&gt;WEB-INF/classes&lt;/code&gt;&lt;code&gt;WEB-INF/lib&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id="toc_5"&gt;tomcat&#x7C7B;&#x52A0;&#x8F7D;&#x987A;&#x5E8F;&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&#x67E5;&#x770B;&#x7F13;&#x5B58;&#x4E2D;&#x4E4B;&#x524D;&#x6709;&#x6CA1;&#x52A0;&#x8F7D;&#x8FC7;&lt;/li&gt;
-&lt;li&gt;&#x6CA1;&#x6709;&#xFF0C;&#x59D4;&#x6258;&#x7ED9;system classloader&#x52A0;&#x8F7D;&#xFF0C;&#x8D70;&#x201C;&#x53CC;&#x4EB2;&#x59D4;&#x6D3E;&#x201D;&#x90A3;&#x5957;&lt;/li&gt;
-&lt;li&gt;2&#x52A0;&#x8F7D;&#x4E0D;&#x5230;&#xFF0C;&#x67D0;&#x4E9B;&#x7C7B;&#x4F1A;&#x5C1D;&#x8BD5;&#x7528;&#x201D;shared&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x201C;&#xFF0C;&#x5176;&#x4ED6;&#x7528;&#x201C;webapp&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x201D;&#x52A0;&#x8F7D;&lt;/li&gt;
-&lt;li&gt;3&#x641E;&#x4E0D;&#x5B9A;&#xFF0C;&#x5411;&#x4E0A;&#x59D4;&#x6D3E;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&#x6574;&#x4E2A;&#x8FC7;&#x7A0B;&#x5982;&#x56FE;&#xFF1A;&lt;br&gt;
-&lt;img src="http://farm4.staticflickr.com/3777/9758884752_bac5a4b3b7.jpg" alt="tomcat class loader"&gt;&lt;/p&gt;
-
-&lt;h2 id="toc_6"&gt;tomcat&#x6700;&#x65B0;&#x7248;&#x672C;&lt;/h2&gt;
-
-&lt;p&gt;Tomcat 6&#x4E4B;&#x540E;classloader &#x7A0D;&#x5FAE;&#x6709;&#x4E9B;&#x6539;&#x52A8;&#x4E86;&#xFF0C;&#x53BB;&#x6389;&#x4E86;server &#x548C; shared, &#x90FD;&#x7531;common classloader &#x6765;&#x8F7D;&#x5165;&#x4E86;&lt;/p&gt;
-
-&lt;h1 id="toc_7"&gt;&#x521D;&#x59CB;&#x5316;&lt;/h1&gt;
-
-&lt;p&gt;&#x5F85;&#x8865;&#x5145;&lt;/p&gt;
-
-&lt;p&gt;&#x53C2;&#x8003;:&lt;br&gt;
-&lt;a href="http://blog.csdn.net/vernonzheng/article/details/8461380"&gt; &#x6DF1;&#x5165;JVM&#x7CFB;&#x5217;&#xFF08;&#x4E09;&#xFF09;&#x4E4B;&#x7C7B;&#x52A0;&#x8F7D;&#x3001;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x3001;&#x53CC;&#x4EB2;&#x59D4;&#x6D3E;&#x673A;&#x5236;&#x4E0E;&#x5E38;&#x89C1;&#x95EE;&#x9898;&lt;/a&gt;&lt;br&gt;
-&lt;a href="http://ieroot.com/2013/05/01/932.html"&gt;ClassLoader&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&lt;/a&gt;&lt;br&gt;
-&lt;a href="http://www.goldendoc.org/2010/12/tomcat_classloader/"&gt;Tomcat ClassLoader&#x673A;&#x5236;&#x4ECB;&#x7ECD;&lt;/a&gt;&lt;br&gt;
-&lt;a href="http://www.blogjava.net/William/archive/2006/08/25/65804.html"&gt;&#x6DF1;&#x5165;&#x63A2;&#x8BA8;Java&#x7684;&#x7C7B;&#x52A0;&#x8F7D;&#x673A;&#x5236;&lt;/a&gt;  &lt;/p&gt;
-
-    &lt;hr&gt;
-    &lt;div class="pagination"&gt;
-      &lt;ul&gt;
-        &lt;ul&gt;
-            &lt;li class="prev"&gt;&lt;a href="/2013-09/maven-cmd.html" title="&#x5E38;&#x7528;maven&#x547D;&#x4EE4;"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
-
-            &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
-
-            &lt;li class="next"&gt;&lt;a href="/2013-11/linux-software-install.html" title="&#x8C08;&#x8C08;Unix-like&#x4E0A;&#x8F6F;&#x4EF6;&#x5B89;&#x88C5;&#x90A3;&#x4E9B;&#x4E8B;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;hr&gt;
-    &lt;div id="disqus_thread"&gt;&lt;/div&gt;
-&lt;script&gt;
-    var disqus_developer = 1;
-    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-&lt;/script&gt;
-&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
-&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
-
-  &lt;/div&gt;
-  
-  &lt;div class="span4"&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-    (function(){
-       var _w = 90 , _h = 24;
-       var param = {
-       url:location.href,
-       type:'2',
-       count:'1', /**&#x662F;&#x5426;&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6570;&#xFF0C;1&#x663E;&#x793A;(&#x53EF;&#x9009;)*/
-       appkey:'', /**&#x60A8;&#x7533;&#x8BF7;&#x7684;&#x5E94;&#x7528;appkey,&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6765;&#x6E90;(&#x53EF;&#x9009;)*/
-       title:'', /**&#x5206;&#x4EAB;&#x7684;&#x6587;&#x5B57;&#x5185;&#x5BB9;(&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;title)*/
-       pic:'', /**&#x5206;&#x4EAB;&#x56FE;&#x7247;&#x7684;&#x8DEF;&#x5F84;(&#x53EF;&#x9009;)*/
-       ralateUid:'2388250330', /**&#x5173;&#x8054;&#x7528;&#x6237;&#x7684;UID&#xFF0C;&#x5206;&#x4EAB;&#x5FAE;&#x535A;&#x4F1A;@&#x8BE5;&#x7528;&#x6237;(&#x53EF;&#x9009;)*/
-       language:'zh_cn', /**&#x8BBE;&#x7F6E;&#x8BED;&#x8A00;&#xFF0C;zh_cn|zh_tw(&#x53EF;&#x9009;)*/
-       rnd:new Date().valueOf()
-     }
-     var temp = [];
-     for( var p in param ){
-     temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
-     }
-     document.write('&lt;iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&amp;') + '" width="'+ _w+'" height="'+_h+'"&gt;&lt;/iframe&gt;')
-     })()
-    &lt;/script&gt;
-
-    &lt;h4&gt;Published&lt;/h4&gt;
-    &lt;div class="date"&gt;&lt;span&gt;2013-09-15&lt;/span&gt;&lt;/div&gt;
-    &lt;br&gt;
-    &lt;h4&gt;Categories&lt;/h4&gt;
-    &lt;ul class="tag_box"&gt;
-      &lt;li&gt;
-        &lt;a href="/categories#java-ref"&gt;java &lt;span&gt;8&lt;/span&gt;&lt;/a&gt;
-      &lt;/li&gt;    &lt;/ul&gt;
-    &lt;br&gt;
-    &lt;h4&gt;Tags&lt;/h4&gt;
-    &lt;ul class="tag_box"&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-      &lt;/div&gt;
-
-      &lt;footer&gt;
-        &lt;p&gt;&amp;copy; tiemei 2012 
-          with help from &lt;a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework"&gt;ruhoh&lt;/a&gt;
-          and &lt;a href="http://twitter.github.com/bootstrap/" target="_blank"&gt;Twitter Bootstrap&lt;/a&gt;
-        &lt;/p&gt;
-        &lt;p&gt;
-        &lt;script src="http://s9.cnzz.com/stat.php?id=5379369&amp;web_id=5379369&amp;online=1&amp;show=line" language="JavaScript"&gt;&lt;/script&gt;
-        &lt;/p&gt;
-      &lt;/footer&gt;
-
-    &lt;/div&gt; &lt;!-- /container --&gt;
-
-    &lt;!-- Google Prettify --&gt;
-&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-  var pres = document.getElementsByTagName("pre");
-  for (var i=0; i &lt; pres.length; ++i) {
-    pres[i].className = "prettyprint linenums";
-  }
-  prettyPrint();
-&lt;/script&gt;
-&lt;!-- end Google Prettify --&gt;
-    &lt;script&gt;
-var clicky_site_ids = clicky_site_ids || [];
-clicky_site_ids.push(defworld.com);
-(function() {
-  var s = document.createElement('script');
-  s.type = 'text/javascript';
-  s.async = true;
-  s.src = '//static.getclicky.com/js';
-  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
-})();
-&lt;/script&gt;
-&lt;noscript&gt;&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /&gt;&lt;/p&gt;&lt;/noscript&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</description>
-    </item>
-    <item>
-      <title>&#x5E38;&#x7528;maven&#x547D;&#x4EE4;</title>
-      <link>http://defworld.com/2013-09/maven-cmd.html</link>
-      <pubDate>2013-09-12</pubDate>
-      <description>maven, &#x547D;&#x4EE4;</description>
-    </item>
-    <item>
-      <title>jdk&#x81EA;&#x5E26;&#x5DE5;&#x5177;</title>
-      <link>http://defworld.com/2013-08/jdk-tools.html</link>
-      <pubDate>2013-08-30</pubDate>
-      <description>&lt;!DOCTYPE html&gt;
-&lt;html lang="en" xmlns:wb=&#x201C;http://open.weibo.com/wb&#x201D;&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;jdk&#x81EA;&#x5E26;&#x5DE5;&#x5177;&lt;/title&gt;
-    &lt;meta name="author" content="tiemei"&gt;
-
-    &lt;!-- Le HTML5 shim, for IE6-8 support of HTML elements --&gt;
-    &lt;!--[if lt IE 9]&gt;
-      &lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
-    &lt;![endif]--&gt;
-
-    &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.5746863090595473" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.21986885161598568" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9988831502969783" type="text/css" rel="stylesheet" media="all"&gt;
-
- 
-
-    &lt;!-- Le fav and touch icons --&gt;
-  &lt;!-- Update these with your own images
-    &lt;link rel="shortcut icon" href="images/favicon.ico"&gt;
-    &lt;link rel="apple-touch-icon" href="images/apple-touch-icon.png"&gt;
-    &lt;link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"&gt;
-    &lt;link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"&gt;
-  --&gt;
-  &lt;script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
-  &lt;/head&gt;
-
-  &lt;body&gt;
-
-    &lt;div class="navbar"&gt;
-      &lt;div class="navbar-inner"&gt;
-        &lt;div class="container"&gt;
-          &lt;a class="touxiang" href="http://weibo.com/wgdkfk"&gt;
-            &lt;img src="https://farm6.staticflickr.com/5577/14680769772_ac1af8df86.jpg" width="40" height="40" &gt;
-          &lt;/a&gt;
-          &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
-          &lt;ul class="nav"&gt;
-              
-                &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
-              
-                &lt;li&gt;&lt;a href="/tools"&gt;Tools&lt;/a&gt;&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class="container"&gt;
-
-      &lt;div class="content"&gt;
-        &lt;div class="page-header"&gt;
-  &lt;h1&gt;jdk&#x81EA;&#x5E26;&#x5DE5;&#x5177; &lt;/h1&gt;
-&lt;/div&gt;
-
-&lt;div class="row"&gt;
-  &lt;div class="span8"&gt;
-    &lt;h1 id="toc_0"&gt;javah&lt;/h1&gt;
-
-&lt;h2 id="toc_1"&gt;JNI&#x793A;&#x4F8B;&lt;/h2&gt;
-
-&lt;p&gt;&#x53C2;&#x8003;:&lt;a href="https://blogs.oracle.com/moonocean/entry/a_simple_example_of_jni"&gt;JNI example&lt;/a&gt;  &lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&#x5199;&#x4E00;&#x4E2A;java&#x7C7B;&#xFF0C;&#x751F;&#x547D;navtive&#x65B9;&#x6CD5;&lt;/li&gt;
-&lt;li&gt;&#x8C03;&#x7528;javah&#x751F;&#x6210;&#x5934;&#x6587;&#x4EF6;&lt;/li&gt;
-&lt;li&gt;&#x5199;c&#x4EE3;&#x7801;&#xFF0C;&#x751F;&#x6210;&#x5E93;&#x6587;&#x4EF6;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;java -Djava.library.path=&amp;lt;path_of_native_lib&amp;gt; JNIFoo&lt;/code&gt;&#x4F1A;&#x9ED8;&#x8BA4;&#x5148;&#x8F7D;&#x5165;&#x5934;&#x6587;&#x4EF6;&#xFF0C;
-&#x7136;&#x540E;&#x6309;&#x6307;&#x5B9A;&#x7684;&#x8DEF;&#x5F84;&#x67E5;&#x627E;&#x5E93;&#x6587;&#x4EF6;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id="toc_2"&gt;jmap(Java Memory Map)&lt;/h1&gt;
-
-&lt;p&gt;&#x53C2;&#x8003;:&lt;a href="http://blog.csdn.net/fenglibing/article/details/6411953"&gt;jmap&lt;/a&gt;  &lt;/p&gt;
-
-&lt;h2 id="toc_3"&gt;jmap -histo pid&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src="http://farm8.staticflickr.com/7346/9627329472_b28eba137c.jpg" alt="jmap output"&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;B&#x4EE3;&#x8868;byte
-C&#x4EE3;&#x8868;char
-D&#x4EE3;&#x8868;double
-F&#x4EE3;&#x8868;float
-I&#x4EE3;&#x8868;int
-J&#x4EE3;&#x8868;long
-Z&#x4EE3;&#x8868;boolean
-&#x524D;&#x8FB9;&#x6709;[&#x4EE3;&#x8868;&#x6570;&#x7EC4;&#xFF0C;[I &#x5C31;&#x76F8;&#x5F53;&#x4E8E;int[]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id="toc_4"&gt;jmap -heap pid&lt;/h2&gt;
-
-&lt;p&gt;&#x67E5;&#x770B;JVM&#x521D;&#x59CB;&#x5316;&#x5185;&#x5B58;&#x5206;&#x914D;&#xFF0C;&#x4EE5;&#x53CA;&#x5404;&#x4EE3;&#x8BE6;&#x7EC6;&#x7684;&#x5185;&#x5B58;&#x4F7F;&#x7528;&lt;/p&gt;
-
-&lt;h2 id="toc_5"&gt;&#x4EA7;&#x751F;heap dump&#x6587;&#x4EF6;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;jmap -heap:format=b pid&lt;/code&gt; JDK1.5&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;jmap -dump:live,format=b,file=xxx pid&lt;/code&gt; JDK1.6&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id="toc_6"&gt;jmap -permstat pid&lt;/h2&gt;
-
-&lt;p&gt;&#x6253;&#x5370;&#x4E00;&#x4E9B;&#x6301;&#x4E45;&#x4EE3;&#x4E0A;&#x7684;&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x72B6;&#x6001;&lt;/p&gt;
-
-&lt;h1 id="toc_7"&gt;jstack&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;pstree -p pid&lt;/code&gt; &#x67E5;&#x770B;&#x67D0;&#x4E2A;&#x8FDB;&#x7A0B;&#x7684;&#x8FDB;&#x7A0B;&#x6570;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;top -H&lt;/code&gt; &#x7EBF;&#x7A0B;&#x7EF4;&#x5EA6;&#x67E5;&#x770B;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ps -eLf | grep java | wc&lt;/code&gt; &#x67E5;&#x770B;java&#x7EBF;&#x7A0B;&#x6570;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ps -Lf 24551&lt;/code&gt;&#x67E5;&#x770B;&#x67D0;&#x4E2A;&#x8FDB;&#x7A0B;&#x6240;&#x6709;&#x7EBF;&#x7A0B;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ps mp pid -o THREAD,tid&lt;/code&gt; &#x67E5;&#x770B;&#x67D0;&#x4E2A;&#x8FDB;&#x7A0B;&#x4E0B;&#x5404;&#x7EBF;&#x7A0B;&#x7684;&#x8FD0;&#x884C;&#x72B6;&#x6001;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;netstat -anp |grep port&lt;/code&gt; &#x67E5;&#x770B;&#x5360;&#x7528;&#x67D0;&#x4E2A;&#x7AEF;&#x53E3;&#x7684;&#x8FDB;&#x7A0B;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id="toc_8"&gt;&#x7ED3;&#x679C;&#x5206;&#x6790;&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href="http://iamzhongyong.iteye.com/blog/1441285"&gt;cankao&lt;/a&gt;&lt;br&gt;
-&#x53EF;&#x4EE5;&#x5206;&#x6790;&#x5230;&#xFF1A;  &lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&#x6B7B;&#x9501;&#xFF1A;&#x770B;&#x5230;&#x7EBF;&#x7A0B;&#x5DF2;&#x83B7;&#x5F97;&#x54EA;&#x4E2A;&#x9501;&#xFF0C;&#x5728;&#x7B49;&#x5F85;&#x54EA;&#x4E2A;&#x9501;&lt;/li&gt;
-&lt;li&gt;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x6162;&#xFF1A;&#x67E5;&#x770B;waiting&#x72B6;&#x6001;&#x7684;&#x51E0;&#x4E2A;&#x7EBF;&#x7A0B;&#x5728;&#x5E72;&#x561B;&lt;/li&gt;
-&lt;li&gt;cpu&#x5360;&#x7528;&#x7279;&#x522B;&#x9AD8;&#x7684;&#x7EBF;&#x7A0B;&#x5728;&#x5E72;&#x4EC0;&#x4E48;
-
-&lt;ol&gt;
-&lt;li&gt;&#x67D0;&#x4E2A;&#x8FDB;&#x7A0B;&#x5360;&#x7528;cpu/mem&#x8F83;&#x9AD8;&#xFF0C;&#x7528;ps&#x67E5;&#x770B;&#x6539;&#x8FDB;&#x7A0B;&#x5404;&#x7EBF;&#x7A0B;&#x8FD0;&#x884C;&#x72B6;&#x6001;&lt;/li&gt;
-&lt;li&gt;&#x7528;jstack&#x67E5;&#x770B;&#x6539;&#x7EBF;&#x7A0B;&#x7684;&#x8C03;&#x7528;&#x5806;&#x6808;&#xFF0C;&#x5B9A;&#x4F4D;&#x95EE;&#x9898;&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;:  &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;quot;main&amp;quot; prio=10 tid=0x0000000040c75800 nid=0x5fe8 runnable [0x0000000040209000]
-&amp;quot;xxx&amp;quot; - &#x7EBF;&#x7A0B;&#x540D; 
-prio  - &#x4F18;&#x5148;&#x7EA7; 
-tid   - &#x7EBF;&#x7A0B;id(jmm&#x4E2D;&#x5185;&#x5B58;&#x89C4;&#x8303;&#x4E2D;&#x5730;&#x5740;) 
-nid   - &#x662F;linux&#x4E0B;&#x7684;&#x7EBF;&#x7A0B;id  
-runnable - &#x7EBF;&#x7A0B;&#x72B6;&#x6001;
-&amp;quot;main&amp;quot; &#x4E3B;&#x7EBF;&#x7A0B;&#xFF0C;&#x540E;&#x9762;&#x63A5;&#x4E86;daemon&#x672A;&#x5B88;&#x62A4;&#x7EBF;&#x7A0B;
-&amp;quot;http-bio-8080-exec-xxx&amp;quot; http 8080 &#x7AEF;&#x53E3;bloked io &#x7EBF;&#x7A0B;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id="toc_9"&gt;JVM pid&#x6587;&#x4EF6;&lt;/h2&gt;
-
-&lt;p&gt;jvm&#x8FD0;&#x884C;&#x65F6;&#x4F1A;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;hsperfdata&lt;em&gt;$USER(linux&#x9ED8;&#x8BA4;&#x5728;/tmp/hsperfdata&lt;/em&gt;$USER)&#xFF0C;&#x5B58;&#x653E;Pid&#x6587;&#x4EF6;(/etc/cron.daily/tmpwatch&#x4F1A;240h&#x79FB;&#x9664;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;)&#x3002;jstack&#x7B49;&#x5DE5;&#x5177;&#x8BFB;&#x53D6;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x83B7;&#x53D6;pid&#x3002;&#xFF08;&lt;a href="http://windows9834.blog.163.com/blog/static/273450042012919101435608/"&gt;&#x53C2;&#x8003;&lt;/a&gt;&#xFF09;&#x4ECE;Java 6 update 21 ~ 24&#xFF0C;&#x4F1A;&#x4F18;&#x5148;&lt;code&gt;-Djava.io.tmpdir&lt;/code&gt;&#xFF0C;&#x8FD9;&#x6837;jstack&#x7B49;&#x6587;&#x4EF6;&#x53EF;&#x53EF;&#x80FD;&#x627E;&#x4E0D;&#x5230;pid&#x6587;&#x4EF6;&#x3002;&lt;/p&gt;
-
-    &lt;hr&gt;
-    &lt;div class="pagination"&gt;
-      &lt;ul&gt;
-        &lt;ul&gt;
-            &lt;li class="prev"&gt;&lt;a href="/2013-08/java-locks.html" title="java&#x9501;&#x7B14;&#x8BB0;"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
-
-            &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
-
-            &lt;li class="next"&gt;&lt;a href="/2013-09/maven-cmd.html" title="&#x5E38;&#x7528;maven&#x547D;&#x4EE4;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;hr&gt;
-    &lt;div id="disqus_thread"&gt;&lt;/div&gt;
-&lt;script&gt;
-    var disqus_developer = 1;
-    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-&lt;/script&gt;
-&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
-&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
-
-  &lt;/div&gt;
-  
-  &lt;div class="span4"&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-    (function(){
-       var _w = 90 , _h = 24;
-       var param = {
-       url:location.href,
-       type:'2',
-       count:'1', /**&#x662F;&#x5426;&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6570;&#xFF0C;1&#x663E;&#x793A;(&#x53EF;&#x9009;)*/
-       appkey:'', /**&#x60A8;&#x7533;&#x8BF7;&#x7684;&#x5E94;&#x7528;appkey,&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6765;&#x6E90;(&#x53EF;&#x9009;)*/
-       title:'', /**&#x5206;&#x4EAB;&#x7684;&#x6587;&#x5B57;&#x5185;&#x5BB9;(&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;title)*/
-       pic:'', /**&#x5206;&#x4EAB;&#x56FE;&#x7247;&#x7684;&#x8DEF;&#x5F84;(&#x53EF;&#x9009;)*/
-       ralateUid:'2388250330', /**&#x5173;&#x8054;&#x7528;&#x6237;&#x7684;UID&#xFF0C;&#x5206;&#x4EAB;&#x5FAE;&#x535A;&#x4F1A;@&#x8BE5;&#x7528;&#x6237;(&#x53EF;&#x9009;)*/
-       language:'zh_cn', /**&#x8BBE;&#x7F6E;&#x8BED;&#x8A00;&#xFF0C;zh_cn|zh_tw(&#x53EF;&#x9009;)*/
-       rnd:new Date().valueOf()
-     }
-     var temp = [];
-     for( var p in param ){
-     temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
-     }
-     document.write('&lt;iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&amp;') + '" width="'+ _w+'" height="'+_h+'"&gt;&lt;/iframe&gt;')
-     })()
-    &lt;/script&gt;
-
-    &lt;h4&gt;Published&lt;/h4&gt;
-    &lt;div class="date"&gt;&lt;span&gt;2013-08-30&lt;/span&gt;&lt;/div&gt;
-    &lt;br&gt;
-    &lt;h4&gt;Categories&lt;/h4&gt;
-    &lt;ul class="tag_box"&gt;
-      &lt;li&gt;
-        &lt;a href="/categories#java-ref"&gt;java &lt;span&gt;8&lt;/span&gt;&lt;/a&gt;
-      &lt;/li&gt;    &lt;/ul&gt;
-    &lt;br&gt;
-    &lt;h4&gt;Tags&lt;/h4&gt;
-    &lt;ul class="tag_box"&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-      &lt;/div&gt;
-
-      &lt;footer&gt;
-        &lt;p&gt;&amp;copy; tiemei 2012 
-          with help from &lt;a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework"&gt;ruhoh&lt;/a&gt;
-          and &lt;a href="http://twitter.github.com/bootstrap/" target="_blank"&gt;Twitter Bootstrap&lt;/a&gt;
-        &lt;/p&gt;
-        &lt;p&gt;
-        &lt;script src="http://s9.cnzz.com/stat.php?id=5379369&amp;web_id=5379369&amp;online=1&amp;show=line" language="JavaScript"&gt;&lt;/script&gt;
-        &lt;/p&gt;
-      &lt;/footer&gt;
-
-    &lt;/div&gt; &lt;!-- /container --&gt;
-
-    &lt;!-- Google Prettify --&gt;
-&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-  var pres = document.getElementsByTagName("pre");
-  for (var i=0; i &lt; pres.length; ++i) {
-    pres[i].className = "prettyprint linenums";
-  }
-  prettyPrint();
-&lt;/script&gt;
-&lt;!-- end Google Prettify --&gt;
-    &lt;script&gt;
-var clicky_site_ids = clicky_site_ids || [];
-clicky_site_ids.push(defworld.com);
-(function() {
-  var s = document.createElement('script');
-  s.type = 'text/javascript';
-  s.async = true;
-  s.src = '//static.getclicky.com/js';
-  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
-})();
-&lt;/script&gt;
-&lt;noscript&gt;&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /&gt;&lt;/p&gt;&lt;/noscript&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</description>
-    </item>
-    <item>
-      <title>java&#x9501;&#x7B14;&#x8BB0;</title>
-      <link>http://defworld.com/2013-08/java-locks.html</link>
-      <pubDate>2013-08-30</pubDate>
-      <description>&lt;!DOCTYPE html&gt;
-&lt;html lang="en" xmlns:wb=&#x201C;http://open.weibo.com/wb&#x201D;&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;java&#x9501;&#x7B14;&#x8BB0;&lt;/title&gt;
-    &lt;meta name="author" content="tiemei"&gt;
-
-    &lt;!-- Le HTML5 shim, for IE6-8 support of HTML elements --&gt;
-    &lt;!--[if lt IE 9]&gt;
-      &lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
-    &lt;![endif]--&gt;
-
-    &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.8329541988733917" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.2999014839149511" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.24245822679307583" type="text/css" rel="stylesheet" media="all"&gt;
-
- 
-
-    &lt;!-- Le fav and touch icons --&gt;
-  &lt;!-- Update these with your own images
-    &lt;link rel="shortcut icon" href="images/favicon.ico"&gt;
-    &lt;link rel="apple-touch-icon" href="images/apple-touch-icon.png"&gt;
-    &lt;link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"&gt;
-    &lt;link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"&gt;
-  --&gt;
-  &lt;script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
-  &lt;/head&gt;
-
-  &lt;body&gt;
-
-    &lt;div class="navbar"&gt;
-      &lt;div class="navbar-inner"&gt;
-        &lt;div class="container"&gt;
-          &lt;a class="touxiang" href="http://weibo.com/wgdkfk"&gt;
-            &lt;img src="https://farm6.staticflickr.com/5577/14680769772_ac1af8df86.jpg" width="40" height="40" &gt;
-          &lt;/a&gt;
-          &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
-          &lt;ul class="nav"&gt;
-              
-                &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
-              
-                &lt;li&gt;&lt;a href="/tools"&gt;Tools&lt;/a&gt;&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class="container"&gt;
-
-      &lt;div class="content"&gt;
-        &lt;div class="page-header"&gt;
-  &lt;h1&gt;java&#x9501;&#x7B14;&#x8BB0; &lt;/h1&gt;
-&lt;/div&gt;
-
-&lt;div class="row"&gt;
-  &lt;div class="span8"&gt;
-    &lt;h1 id="toc_0"&gt;&#x7EBF;&#x7A0B;&#x901A;&#x4FE1;&lt;/h1&gt;
-
-&lt;p&gt;&#x901A;&#x4FE1;&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;&#x5305;&#x62EC;&#xFF1A;  &lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&#x5171;&#x4EAB;&#x5BF9;&#x8C61;&#xFF1A;&#x9700;&#x8981;&#x505A;&#x540C;&#x6B65;&#x5904;&#x7406;&lt;/li&gt;
-&lt;li&gt;&#x5FD9;&#x7B49;&#x5F85;&#xFF1A;&#x5FAA;&#x73AF;&#x7B49;&#x5F85;&#x53E6;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x53D1;&#x6765;&#x4FE1;&#x53F7;&#xFF0C;&#x53EF;sleep&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;wait(),notify()&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;1. &#x9047;&#x5230;mobj.wait()&#xFF0C;&#x8BA9;&#x7EBF;&#x7A0B;&#x8FDB;&#x5165;&#x975E;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#xFF0C;&#x76F4;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;mobj.nitify
-2. &#x8FD9;&#x51E0;&#x4E2A;&#x65B9;&#x6CD5;&#x5FC5;&#x987B;&#x5728;&#x83B7;&#x5F97;mobj&#x9501;&#x7684;&#x524D;&#x63D0;&#x4E0B;&#x8C03;&#x7528;&#xFF0C;&#x5426;&#x5219;IllegalMonitorStateException
-3. &#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x8C03;&#x7528;&#x4E86;wait()&#xFF0C;&#x5373;&#x91CA;&#x653E;mobj&#x4E0A;&#x7684;&#x9501;
-4. &#x4E00;&#x65E6;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x88AB;&#x5524;&#x9192;&#xFF0C;&#x4E0D;&#x80FD;&#x7ACB;&#x523B;&#x5C31;&#x9000;&#x51FA;wait()&#x7684;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#xFF0C;&#x76F4;&#x5230;&#x8C03;&#x7528;
-notify()&#x7684;&#x7EBF;&#x7A0B;&#x9000;&#x51FA;&#x4E86;&#x5B83;&#x81EA;&#x5DF1;&#x7684;&#x540C;&#x6B65;&#x5757;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x88AB;notifyAll&#x5524;&#x9192;&#xFF0C;&#x53EA;&#x6709;&#x4E00;&#x4E2A;
-&#x7EBF;&#x7A0B;&#x53EF;&#x4EE5;&#x6700;&#x7EC8;&#x9000;&#x51FA;wait()&#x65B9;&#x6CD5;&#xFF0C;&#x56E0;&#x4E3A;&#x5FC5;&#x987B;&#x83B7;&#x5F97;mobj&#x7684;&#x9501;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&#x4E22;&#x5931;&#x7684;&#x4FE1;&#x53F7;&#xFF08;Missed Signal&#xFF09;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&#x7EBF;&#x7A0B;A&#x5148;&#x8C03;&#x7528;&#x4E86;mobj.notify()&#xFF0C;&#x7EBF;&#x7A0B;B&#x540E;&#x8C03;&#x7528;mobj.wait()&#xFF0C;&#x901A;&#x77E5;&#x4FE1;&#x53F7;&#x53D1;&#x9001;&#x8FC7;&#x4E86;&#x5C31;&#x88AB;&#x4E22;&#x5F03;&#xFF0C;
-&#x7EBF;&#x7A0B;B&#x5C31;&#x53EF;&#x80FD;&#x6C38;&#x8FDC;&#x4E0D;&#x80FD;&#x9192;&#x6765;&#x3002;
-&#x8FD9;&#x5C31;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x989D;&#x5916;&#x7684;&#x53D8;&#x91CF;&#x6765;&#x4FDD;&#x5B58;&#x2018;&#x662F;&#x5426;&#x88AB;&#x901A;&#x77E5;&#x8FC7;&#x2019;&#x7684;&#x4FE1;&#x606F;&#x3002;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&#x5047;&#x5524;&#x9192;&#xFF08;spurious wakeups&#xFF09;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&#x6CA1;&#x6709;&#x8C03;&#x7528;&#x8FC7;notify()&#x548C;notifyAll()&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x9192;&#x6765;&#xFF0C;&#x539F;&#x56E0;&#x672A;&#x77E5;
-&#x9700;&#x8981;&#x52A0;&#x4E2A;&#x81EA;&#x65CB;&#x9501;&#xFF0C;&#x5373;&#x5C06;wait()&#x65B9;&#x6CD5;&#x653E;&#x5230;while&#x5FAA;&#x73AF;&#x4E2D;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&#x4E0D;&#x8981;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x5E38;&#x91CF;&#x6216;&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#x4E2D;&#x8C03;&#x7528;wait()&#x3002;mobj&#x4E0E;&#x4FE1;&#x53F7;&#x5E38;&#x91CF;&#x4E0D;&#x662F;&#x4E00;&#x4E00;&#x5BF9;&#x5E94;&#x3002;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;mobj: &#x7BA1;&#x7A0B; (&#x82F1;&#x8BED;&#xFF1A;Monitors&#xFF0C;&#x4E5F;&#x79F0;&#x4E3A;&#x76D1;&#x89C6;&#x5668;)  &lt;/p&gt;
-
-&lt;h1 id="toc_1"&gt;&#x9501;&lt;/h1&gt;
-
-&lt;p&gt;&#x9501;&#x7531;synchronized&#x5B9E;&#x73B0;&#xFF0C;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x7279;&#x6027;:  &lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&#x540C;&#x4E00;&#x65F6;&#x523B;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x7A7F;&#x8FC7;&#x4E34;&#x754C;&#x533A;&#xFF0C;&#x8FDB;&#x5165;&#x540C;&#x6B65;&#x5757;&lt;/li&gt;
-&lt;li&gt;&#x9501;&#x7684;&#x53EF;&#x91CD;&#x5165;&#x6027;&#xFF1A;synchronized&#x540C;&#x6B65;&#x5757;&#x53EF;&#x91CD;&#x5165;&#xFF0C;&#x76F8;&#x5E94;&#x4E5F;&#x6709;&#x53EF;&#x91CD;&#x5165;&#x9501;&lt;/li&gt;
-&lt;li&gt;&#x9501;&#x7684;&#x516C;&#x5E73;&#x6027;&#xFF1A;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x4E0D;&#x65AD;&#x7ADE;&#x4E89;&#x8BBF;&#x95EE;&#x76F8;&#x540C;&#x7684;synchronized&#x540C;&#x6B65;&#x5757;&#xFF0C;&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x67D0;&#x4E2A;
-&#x7EBF;&#x7A0B;&#x4E00;&#x76F4;&#x7ADE;&#x4E89;&#x4E0D;&#x5230;&#x3002;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;&#x53C2;&#x8003;&lt;/strong&gt;:&lt;br&gt;
-&lt;a href="http://ifeve.com/locks/"&gt;Java&#x4E2D;&#x7684;&#x9501;&lt;/a&gt;&lt;br&gt;
-&lt;a href="http://ifeve.com/thread-signaling/"&gt;&#x7EBF;&#x7A0B;&#x901A;&#x4FE1;&lt;/a&gt;  &lt;/p&gt;
-
-    &lt;hr&gt;
-    &lt;div class="pagination"&gt;
-      &lt;ul&gt;
-        &lt;ul&gt;
-            &lt;li class="prev"&gt;&lt;a href="/2013-06/ssh.html" title="ssh&#x5BC6;&#x94A5;&#x81EA;&#x52A8;&#x767B;&#x9646;+ssh-agent&#x4F7F;&#x7528;+&#x5355;&#x673A;&#x591A;&#x4E2A;ssh&#x8D26;&#x53F7;"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
-
-            &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
-
-            &lt;li class="next"&gt;&lt;a href="/2013-08/jdk-tools.html" title="jdk&#x81EA;&#x5E26;&#x5DE5;&#x5177;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;hr&gt;
-    &lt;div id="disqus_thread"&gt;&lt;/div&gt;
-&lt;script&gt;
-    var disqus_developer = 1;
-    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-&lt;/script&gt;
-&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
-&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
-
-  &lt;/div&gt;
-  
-  &lt;div class="span4"&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-    (function(){
-       var _w = 90 , _h = 24;
-       var param = {
-       url:location.href,
-       type:'2',
-       count:'1', /**&#x662F;&#x5426;&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6570;&#xFF0C;1&#x663E;&#x793A;(&#x53EF;&#x9009;)*/
-       appkey:'', /**&#x60A8;&#x7533;&#x8BF7;&#x7684;&#x5E94;&#x7528;appkey,&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6765;&#x6E90;(&#x53EF;&#x9009;)*/
-       title:'', /**&#x5206;&#x4EAB;&#x7684;&#x6587;&#x5B57;&#x5185;&#x5BB9;(&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;title)*/
-       pic:'', /**&#x5206;&#x4EAB;&#x56FE;&#x7247;&#x7684;&#x8DEF;&#x5F84;(&#x53EF;&#x9009;)*/
-       ralateUid:'2388250330', /**&#x5173;&#x8054;&#x7528;&#x6237;&#x7684;UID&#xFF0C;&#x5206;&#x4EAB;&#x5FAE;&#x535A;&#x4F1A;@&#x8BE5;&#x7528;&#x6237;(&#x53EF;&#x9009;)*/
-       language:'zh_cn', /**&#x8BBE;&#x7F6E;&#x8BED;&#x8A00;&#xFF0C;zh_cn|zh_tw(&#x53EF;&#x9009;)*/
-       rnd:new Date().valueOf()
-     }
-     var temp = [];
-     for( var p in param ){
-     temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
-     }
-     document.write('&lt;iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&amp;') + '" width="'+ _w+'" height="'+_h+'"&gt;&lt;/iframe&gt;')
-     })()
-    &lt;/script&gt;
-
-    &lt;h4&gt;Published&lt;/h4&gt;
-    &lt;div class="date"&gt;&lt;span&gt;2013-08-30&lt;/span&gt;&lt;/div&gt;
-    &lt;br&gt;
-    &lt;h4&gt;Categories&lt;/h4&gt;
-    &lt;ul class="tag_box"&gt;
-      &lt;li&gt;
-        &lt;a href="/categories#java-ref"&gt;java &lt;span&gt;8&lt;/span&gt;&lt;/a&gt;
-      &lt;/li&gt;    &lt;/ul&gt;
-    &lt;br&gt;
-    &lt;h4&gt;Tags&lt;/h4&gt;
-    &lt;ul class="tag_box"&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-      &lt;/div&gt;
-
-      &lt;footer&gt;
-        &lt;p&gt;&amp;copy; tiemei 2012 
-          with help from &lt;a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework"&gt;ruhoh&lt;/a&gt;
-          and &lt;a href="http://twitter.github.com/bootstrap/" target="_blank"&gt;Twitter Bootstrap&lt;/a&gt;
-        &lt;/p&gt;
-        &lt;p&gt;
-        &lt;script src="http://s9.cnzz.com/stat.php?id=5379369&amp;web_id=5379369&amp;online=1&amp;show=line" language="JavaScript"&gt;&lt;/script&gt;
-        &lt;/p&gt;
-      &lt;/footer&gt;
-
-    &lt;/div&gt; &lt;!-- /container --&gt;
-
-    &lt;!-- Google Prettify --&gt;
-&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-  var pres = document.getElementsByTagName("pre");
-  for (var i=0; i &lt; pres.length; ++i) {
-    pres[i].className = "prettyprint linenums";
-  }
-  prettyPrint();
-&lt;/script&gt;
-&lt;!-- end Google Prettify --&gt;
-    &lt;script&gt;
-var clicky_site_ids = clicky_site_ids || [];
-clicky_site_ids.push(defworld.com);
-(function() {
-  var s = document.createElement('script');
-  s.type = 'text/javascript';
-  s.async = true;
-  s.src = '//static.getclicky.com/js';
-  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
-})();
-&lt;/script&gt;
-&lt;noscript&gt;&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /&gt;&lt;/p&gt;&lt;/noscript&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</description>
-    </item>
-    <item>
-      <title>ssh&#x5BC6;&#x94A5;&#x81EA;&#x52A8;&#x767B;&#x9646;+ssh-agent&#x4F7F;&#x7528;+&#x5355;&#x673A;&#x591A;&#x4E2A;ssh&#x8D26;&#x53F7;</title>
-      <link>http://defworld.com/2013-06/ssh.html</link>
-      <pubDate>2013-06-30</pubDate>
-      <description>ssh</description>
-    </item>
-    <item>
-      <title>.bashrc .bash_profile&#x7B49;&#x6587;&#x4EF6;&#x533A;&#x522B;</title>
-      <link>http://defworld.com/2013-06/about-bashrc.html</link>
-      <pubDate>2013-06-28</pubDate>
-      <description>bashrc</description>
-    </item>
-    <item>
-      <title>&#x6211;&#x7684;svn git&#x5E38;&#x7528;&#x547D;&#x4EE4;&#x53CA;&#x914D;&#x7F6E;</title>
-      <link>http://defworld.com/2013-06/svn-git-cmds.html</link>
-      <pubDate>2013-06-27</pubDate>
-      <description>svn,git,&#x5E38;&#x7528;&#x547D;&#x4EE4;</description>
     </item>
   </channel>
 </rss>

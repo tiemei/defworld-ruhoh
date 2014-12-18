@@ -2,7 +2,7 @@
 <html lang="en" xmlns:wb=“http://open.weibo.com/wb”>
   <head>
     <meta charset="utf-8">
-    <title>run &amp; debug node.js</title>
+    <title>笔记 - java annotation</title>
     <meta name="author" content="tiemei">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -11,9 +11,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.854016600732912" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.8614497278408744" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7342810351221832" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.5960542934619024" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.20820809734351275" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5188584015824965" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -50,85 +50,87 @@
 
       <div class="content">
         <div class="page-header">
-  <h1>run &amp; debug node.js </h1>
+  <h1>笔记 - java annotation </h1>
 </div>
 
 <div class="row">
   <div class="span8">
-    <h1 id="toc_0">debug node.js</h1>
+    <h1 id="toc_0">分类</h1>
 
-<ol>
-<li><code>sudo npm install -g node-inspector</code></li>
-<li><code>node-debug xxx.js</code></li>
-<li>set breakpoints</li>
-<li>request &amp; break auto</li>
-</ol>
-
-<p><strong>shortcuts</strong>  </p>
+<p>java annotation主要分为以下几类：  </p>
 
 <ul>
-<li>Resume script execution (F8): 继续执行</li>
-<li>Step over next function call (F10): 按步执行，不进入另一个函数</li>
-<li>Step into next function call (F11): 按步执行，进入另一个函数内部</li>
-<li><p>Step out of current functino (⇧ F11): 跳出当前函数，进入父函数</p></li>
-<li><p><code>⌘ o</code> find file</p></li>
-<li><p><code>⇧ ⌘ o</code> find function member in current file</p></li>
+<li>Compiler instructions</li>
+<li>Build-time instructions</li>
+<li>Runtime instructions</li>
 </ul>
 
-<p><strong>other</strong>  </p>
+<p>Compiler instructions比如Java&#39;s Builtin Annotations，give instructions to the Java compiler：    </p>
 
 <ul>
-<li>可给断点设置条件</li>
-<li>可通过console查看当前断点下上下文状态</li>
-<li>Pause on exception 可选择打开或关闭</li>
-<li>可打开左侧源码窗口，保持两边窗口的同步</li>
+<li>@Deprecated</li>
+<li>@Override</li>
+<li>@SuppressWarnings</li>
 </ul>
 
-<h1 id="toc_1">run node.js</h1>
+<p>The build process includes generating source code, compiling the source, generating XML files (e.g. deployment descriptors), packaging the compiled code and files into a JAR file etc. Building the software is typically done by an automatic build tool like Apache Ant or Apache Maven. Build tools may scan your Java code for specific annotations and generate source code or other files based on these annotations. Build-time instructions比如</p>
 
-<h2 id="toc_2">用<a href="https://github.com/fgnass/node-dev">node-dev</a>做文件热加载</h2>
+<h1 id="toc_1">构成</h1>
 
-<p><strong>准备工作</strong>  </p>
-
-<pre><code class="bash">npm install -g node-dev
-# 你也可以选择Growl or libnotify，osX可以内置的提醒器
-sudo gem install terminal-notifier
-</code></pre>
-
-<p><strong>开始吧</strong>  </p>
-
-<p><code>node-dev foo.js</code><br>
-可用两个选项：  </p>
+<p>java annotation主要构成：  </p>
 
 <ul>
-<li><code>--no-deps</code> Watch only the project&#39;s own files and linked modules (via <code>npm link</code>)</li>
-<li><code>--all-deps</code> Watch the whole dependency tree</li>
+<li><p>Annotation Elements</p>
+
+<pre><code>You can use all primitive data types as element data types. You can 
+also use arrays as data type. You cannot use complex objects as data type.
+</code></pre></li>
+<li><p>Annotation Placement,@Target: </p>
+
+<pre><code>You can put Java annotations above classes, interfaces, methods, 
+method parameters, fields and local variables.
+</code></pre></li>
+<li><p>Java Annotation Purposes,@Retention: </p>
+
+<pre><code>/**
+ * Annotations are to be discarded by the compiler.
+ * (If you create your own annotations for use with build tools that scan the code, you can use this retention policy.)
+ */
+SOURCE,
+
+/**
+* Annotations are to be recorded in the class file by the compiler
+* but need not be retained by the VM at run time.  This is the default
+* behavior.
+*/
+CLASS,
+
+/**
+* Annotations are to be recorded in the class file by the compiler and
+* retained by the VM at run time, so they may be read reflectively.
+*
+* @see java.lang.reflect.AnnotatedElement
+*/
+RUNTIME
+</code></pre></li>
+<li><p>@Inherited 可以被subclasses继承</p></li>
+<li><p>@Documented 标识javaDoc中可以见这个annotation</p></li>
 </ul>
 
-<p>By default node-dev will watch all first-level dependencies, i.e. the ones in the project&#39;s node_modulesfolder.  </p>
+<p>参考：  </p>
 
-<p><strong>其他</strong>  </p>
-
-<ul>
-<li>CoffeeScript这样的翻译成js的语言也可以用这个工具</li>
-<li>还有其他高级配置项可供选择</li>
-<li>如果子进程需要重启，会发一个<code>SIGTERM</code>信号，如果你的代码没有处理这些
-信号，<code>process.exit(0)</code>就会被强行调用</li>
-</ul>
-
-<p>参考：<br>
-<a href="https://developer.chrome.com/devtools/docs/javascript-debugging?csw=1">Debugging JavaScript</a><br>
-<a href="http://docs.strongloop.com/display/DOC/Debugging+with+Node+Inspector#DebuggingwithNodeInspector-Keyboardshortcuts">Debugging with Node Inspector</a></p>
+<p><a href="http://ifeve.com/java-reflection-8-annotation/">Java Reflection(八):注解</a><br>
+<a href="http://tutorials.jenkov.com/java/annotations.html">Java Annotations</a>  </p>
 
     <hr>
     <div class="pagination">
       <ul>
         <ul>
-            <li class="prev"><a href="/2014-06/notes-c.html" title="C语言入门笔记">&larr; Previous</a></li>
+            <li class="prev"><a href="/2014-12/r-db.html" title="关系型数据库笔记">&larr; Previous</a></li>
 
             <li><a href="/archive">Archive</a></li>
 
-            <li class="next"><a href="/2014-06/notes-js-1.html" title="js入门笔记（一）——基础">Next &rarr;</a></li>
+            <li class="next disabled"><a>Next &rarr;</a>
         </ul>
       </ul>
     </div>
@@ -173,12 +175,12 @@ sudo gem install terminal-notifier
     </script>
 
     <h4>Published</h4>
-    <div class="date"><span>2014-06-08</span></div>
+    <div class="date"><span>2014-12-18</span></div>
     <br>
     <h4>Categories</h4>
     <ul class="tag_box">
       <li>
-        <a href="/categories#Node.js-ref">Node.js <span>9</span></a>
+        <a href="/categories#java-ref">java <span>9</span></a>
       </li>    </ul>
     <br>
     <h4>Tags</h4>

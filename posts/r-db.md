@@ -150,10 +150,76 @@ DB列名和Do对象的映射，通过sql.xml配置文件配置，不需要像jdb
 
 ## RoR
 
+# 事务
+
+## mysql事务
+
+上层的封装其实依赖底层DB支持，mysql如何支持，后续再展开。  
+
+## jdbc事务
+
+### JDBC事务隔离级别
+
+JDBC定义了五种事务隔离级别：  
+
+* TRANSACTION_NONE JDBC驱动不支持事务
+* TRANSACTION_READ_UNCOMMITTED 允许脏读、不可重复读和幻读。
+* TRANSACTION_READ_COMMITTED 禁止脏读，但允许不可重复读和幻读。
+* TRANSACTION_REPEATABLE_READ 禁止脏读和不可重复读，但允许幻读。
+* TRANSACTION_SERIALIZABLE 禁止脏读、不可重复读和幻读
+
+JDBC定义了SavePoint接口，提供在一个更细粒度的事务控制机制。当设置了一个保存点后，可以rollback到该保存点处的状态，而不是rollback整个事务。  
+JDBC规范虽然定义了事务的以上支持行为，但是各个JDBC驱动，数据库厂商对事务的支持程度可能各不相同。为此，JDBC提供了DatabaseMetaData接口，提供了一系列JDBC特性支持情况的获取方法。  
+
+```
+脏读(dirty read)：一个事物读取了另一个事务尚未提交的数据
+不可重复读(non-repeatable read) ：解决了脏读问题，一个事务的操作导致另一个事务前后两次读取到不同的数据
+幻读(phantom read) ：解决了不可重复读问题。保证了同一个事务里，查询的结果都是事务开始时的状态（一致性）。但是，如果另一个事务同时提交了新数据，本事务再更新时，就会“惊奇的”发现了这些新数据。
+
+脏读和不可重复读的区别是，脏读是读到未提交的数据，不可重复读读到的确实是已经提交的数据。  
+```
+
+### jdbc savepoint
+
+将一个事务再细分，不是整个事务都要回滚。
+
+## spring事务支持
+
+### 隔离级别（isolation level）
+
+参考jdbc事务隔离
+
+### 事务只读（transaction readonly）
+
+Spring只是提供设置入口，最终起作用是在ORM框架和JDBC impl层，这里[有篇文章](http://www.codeinstructions.com/2009/04/read-only-transactions-with-spring-and.html)
+
+### 事务传播（transaction propagation）
+
+```
+outer transaction : 外部methodA对应的transaction
+inner transaction : methodA调用的methodB对ing的transaction
+```
+
+以下说明，相似的实现带扣Spring源码。  
+
+#### Required
+
+outer transaction和inner transaction公用一个physical transaction（对应DB transaction），但其实是两个独立的logical transaction。methodB失败，会在physical tranaction身上mark roolback only，然后methodB methodA都需要回滚。
+
+#### RequiresNew
+
+outer transaction和inner transaction各自一个physical transaction，commit / rollback都是独立的。  
+
+#### Nested
+
+跟RequiresNew不同的是，用transaction的savapoint概念来实现，methodB开始之前启动一个savapoint，methodB失败，只是这个savapoint回滚，而整个transaction可以不回滚。   
+
 参考:  
 
 [知乎：解释一下关系数据库的第一第二第三范式？](http://www.zhihu.com/question/24696366)  
 [一个教程](http://www3.ntu.edu.sg/home/ehchua/programming/index.html)      
 [oracle官方jdbc教程](http://docs.oracle.com/javase/tutorial/jdbc/overview/index.html)  
-
-
+《Mysql技术内幕-InnoDB存储引擎》  
+《Marking Rollback Only》https://docs.oracle.com/cd/E23095_01/Platform.93/ATGProgGuide/html/s1204markingrollbackonly01.html  
+《spring-reference-3.2x Transaction propagation》  
+《Spring声明式事务管理与配置详解》http://www.cnblogs.com/hellojava/archive/2012/11/21/2780694.html  

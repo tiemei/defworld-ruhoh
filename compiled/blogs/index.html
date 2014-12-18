@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6156417115728091" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.14594753505596947" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.17469859647080677" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.4053118836707923" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.49218604149421974" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4570145029445618" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -57,6 +57,35 @@
 <div class="row">
   <div class="span12">
     <h2>Latest Posts</h2>
+
+<div class="post">
+  <h3 class="title"><a href="/2014-12/java-annotation.html">笔记 - java annotation</a> <span class="date">2014-12-18</span></h3>
+
+  <h1 id="toc_0">分类</h1>
+
+<p>java annotation主要分为以下几类：  </p>
+
+<ul>
+<li>Compiler instructions</li>
+<li>Build-time instructions</li>
+<li>Runtime instructions</li>
+</ul>
+
+<p>Compiler instructions比如Java&#39;s Builtin Annotations，give instructions to the Java compiler：    </p>
+
+<ul>
+<li>@Deprecated</li>
+<li>@Override</li>
+<li>@SuppressWarnings</li>
+</ul>
+
+<p>The build process includes generating source code, compiling the source, generating XML files (e.g. deployment descriptors), packaging the compiled code and files into a JAR file etc. Building the software is typically done by an automatic build tool like Apache Ant or Apache Maven. Build tools may scan your Java code for specific annotations and generate source code or other files based on these annotations. Build-time instructions比如</p>
+
+
+  <div class="more">
+    <a href="/2014-12/java-annotation.html" class="btn">read more..</a>
+  </div>
+</div>
 
 <div class="post">
   <h3 class="title"><a href="/2014-12/r-db.html">关系型数据库笔记</a> <span class="date">2014-12-05</span></h3>
@@ -274,34 +303,6 @@ _.after = function(times, func) {
 
   <div class="more">
     <a href="/2014-09/node-js-async-i-o.html" class="btn">read more..</a>
-  </div>
-</div>
-
-<div class="post">
-  <h3 class="title"><a href="/2014-09/spring-dispatcherservlet-and-contextloaderlistener.html">spring DispatcherServlet &amp; ContextLoaderListener</a> <span class="date">2014-09-13</span></h3>
-
-  <p>实际上我们只要知道了servlet config和servlet conext的区别就能清楚spring中的DispatcherServlet和ContextLoaderListener有啥区别了。servlet config是单个servlet维度的，而servlet conext是整个application维度的，一个application可能有多个servlet。  </p>
-
-<p>spring是基于servlet标准的serlvet为中心扩展的一个MVC框架（<a href="http://webx.github.io/">webx</a>以filter为中心扩展的），DispatcherServlet正是这个中心。如下图，Front Controller就是指的DispatchServlet。    </p>
-
-<p><img src="https://farm4.staticflickr.com/3851/15218580671_18437fa8a9.jpg" alt="spring mvc">  </p>
-
-<p>所以我们用类似这样的方式指定的实际是DispatchServlet范围内的context:  </p>
-
-<pre><code class="xml">&lt;servlet&gt;
-        &lt;servlet-name&gt;dispatcher&lt;/servlet-name&gt;
-        &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;
-        &lt;init-param&gt;
-            &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
-            &lt;param-value&gt;classpath:spring-context.xml&lt;/param-value&gt;
-        &lt;/init-param&gt;
-        &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
-&lt;/servlet&gt;
-</code></pre>
-
-
-  <div class="more">
-    <a href="/2014-09/spring-dispatcherservlet-and-contextloaderlistener.html" class="btn">read more..</a>
   </div>
 </div>
 

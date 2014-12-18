@@ -3,7 +3,242 @@
   <channel>
     <title>tiemei</title>
     <link>http://defworld.com</link>
-    <pubDate>2014-12-16 15:47:46 +0800</pubDate>
+    <pubDate>2014-12-18 11:00:57 +0800</pubDate>
+    <item>
+      <title>&#x7B14;&#x8BB0; - java annotation</title>
+      <link>http://defworld.com/2014-12/java-annotation.html</link>
+      <pubDate>2014-12-18</pubDate>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang="en" xmlns:wb=&#x201C;http://open.weibo.com/wb&#x201D;&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;&#x7B14;&#x8BB0; - java annotation&lt;/title&gt;
+    &lt;meta name="author" content="tiemei"&gt;
+
+    &lt;!-- Le HTML5 shim, for IE6-8 support of HTML elements --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+
+    &lt;!-- Le styles --&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9382437475104978" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.1278127256382715" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.11497208667236214" type="text/css" rel="stylesheet" media="all"&gt;
+
+ 
+
+    &lt;!-- Le fav and touch icons --&gt;
+  &lt;!-- Update these with your own images
+    &lt;link rel="shortcut icon" href="images/favicon.ico"&gt;
+    &lt;link rel="apple-touch-icon" href="images/apple-touch-icon.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"&gt;
+  --&gt;
+  &lt;script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+    &lt;div class="navbar"&gt;
+      &lt;div class="navbar-inner"&gt;
+        &lt;div class="container"&gt;
+          &lt;a class="touxiang" href="http://weibo.com/wgdkfk"&gt;
+            &lt;img src="https://farm6.staticflickr.com/5577/14680769772_ac1af8df86.jpg" width="40" height="40" &gt;
+          &lt;/a&gt;
+          &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
+          &lt;ul class="nav"&gt;
+              
+                &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
+              
+                &lt;li&gt;&lt;a href="/tools"&gt;Tools&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="container"&gt;
+
+      &lt;div class="content"&gt;
+        &lt;div class="page-header"&gt;
+  &lt;h1&gt;&#x7B14;&#x8BB0; - java annotation &lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="span8"&gt;
+    &lt;h1 id="toc_0"&gt;&#x5206;&#x7C7B;&lt;/h1&gt;
+
+&lt;p&gt;java annotation&#x4E3B;&#x8981;&#x5206;&#x4E3A;&#x4EE5;&#x4E0B;&#x51E0;&#x7C7B;&#xFF1A;  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Compiler instructions&lt;/li&gt;
+&lt;li&gt;Build-time instructions&lt;/li&gt;
+&lt;li&gt;Runtime instructions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Compiler instructions&#x6BD4;&#x5982;Java&amp;#39;s Builtin Annotations&#xFF0C;give instructions to the Java compiler&#xFF1A;    &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;@Deprecated&lt;/li&gt;
+&lt;li&gt;@Override&lt;/li&gt;
+&lt;li&gt;@SuppressWarnings&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The build process includes generating source code, compiling the source, generating XML files (e.g. deployment descriptors), packaging the compiled code and files into a JAR file etc. Building the software is typically done by an automatic build tool like Apache Ant or Apache Maven. Build tools may scan your Java code for specific annotations and generate source code or other files based on these annotations. Build-time instructions&#x6BD4;&#x5982;&lt;/p&gt;
+
+&lt;h1 id="toc_1"&gt;&#x6784;&#x6210;&lt;/h1&gt;
+
+&lt;p&gt;java annotation&#x4E3B;&#x8981;&#x6784;&#x6210;&#xFF1A;  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Annotation Elements&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;You can use all primitive data types as element data types. You can 
+also use arrays as data type. You cannot use complex objects as data type.
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Annotation Placement,@Target: &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;You can put Java annotations above classes, interfaces, methods, 
+method parameters, fields and local variables.
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Java Annotation Purposes,@Retention: &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/**
+ * Annotations are to be discarded by the compiler.
+ * (If you create your own annotations for use with build tools that scan the code, you can use this retention policy.)
+ */
+SOURCE,
+
+/**
+* Annotations are to be recorded in the class file by the compiler
+* but need not be retained by the VM at run time.  This is the default
+* behavior.
+*/
+CLASS,
+
+/**
+* Annotations are to be recorded in the class file by the compiler and
+* retained by the VM at run time, so they may be read reflectively.
+*
+* @see java.lang.reflect.AnnotatedElement
+*/
+RUNTIME
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;@Inherited &#x53EF;&#x4EE5;&#x88AB;subclasses&#x7EE7;&#x627F;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;@Documented &#x6807;&#x8BC6;javaDoc&#x4E2D;&#x53EF;&#x4EE5;&#x89C1;&#x8FD9;&#x4E2A;annotation&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&#x53C2;&#x8003;&#xFF1A;  &lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://ifeve.com/java-reflection-8-annotation/"&gt;Java Reflection(&#x516B;):&#x6CE8;&#x89E3;&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://tutorials.jenkov.com/java/annotations.html"&gt;Java Annotations&lt;/a&gt;  &lt;/p&gt;
+
+    &lt;hr&gt;
+    &lt;div class="pagination"&gt;
+      &lt;ul&gt;
+        &lt;ul&gt;
+            &lt;li class="prev"&gt;&lt;a href="/2014-12/r-db.html" title="&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x7B14;&#x8BB0;"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li class="next disabled"&gt;&lt;a&gt;Next &amp;rarr;&lt;/a&gt;
+        &lt;/ul&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;div id="disqus_thread"&gt;&lt;/div&gt;
+&lt;script&gt;
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+
+  &lt;/div&gt;
+  
+  &lt;div class="span4"&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+    (function(){
+       var _w = 90 , _h = 24;
+       var param = {
+       url:location.href,
+       type:'2',
+       count:'1', /**&#x662F;&#x5426;&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6570;&#xFF0C;1&#x663E;&#x793A;(&#x53EF;&#x9009;)*/
+       appkey:'', /**&#x60A8;&#x7533;&#x8BF7;&#x7684;&#x5E94;&#x7528;appkey,&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6765;&#x6E90;(&#x53EF;&#x9009;)*/
+       title:'', /**&#x5206;&#x4EAB;&#x7684;&#x6587;&#x5B57;&#x5185;&#x5BB9;(&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;title)*/
+       pic:'', /**&#x5206;&#x4EAB;&#x56FE;&#x7247;&#x7684;&#x8DEF;&#x5F84;(&#x53EF;&#x9009;)*/
+       ralateUid:'2388250330', /**&#x5173;&#x8054;&#x7528;&#x6237;&#x7684;UID&#xFF0C;&#x5206;&#x4EAB;&#x5FAE;&#x535A;&#x4F1A;@&#x8BE5;&#x7528;&#x6237;(&#x53EF;&#x9009;)*/
+       language:'zh_cn', /**&#x8BBE;&#x7F6E;&#x8BED;&#x8A00;&#xFF0C;zh_cn|zh_tw(&#x53EF;&#x9009;)*/
+       rnd:new Date().valueOf()
+     }
+     var temp = [];
+     for( var p in param ){
+     temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+     }
+     document.write('&lt;iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&amp;') + '" width="'+ _w+'" height="'+_h+'"&gt;&lt;/iframe&gt;')
+     })()
+    &lt;/script&gt;
+
+    &lt;h4&gt;Published&lt;/h4&gt;
+    &lt;div class="date"&gt;&lt;span&gt;2014-12-18&lt;/span&gt;&lt;/div&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Categories&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+      &lt;li&gt;
+        &lt;a href="/categories#java-ref"&gt;java &lt;span&gt;9&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;    &lt;/ul&gt;
+    &lt;br&gt;
+    &lt;h4&gt;Tags&lt;/h4&gt;
+    &lt;ul class="tag_box"&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+
+      &lt;footer&gt;
+        &lt;p&gt;&amp;copy; tiemei 2012 
+          with help from &lt;a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework"&gt;ruhoh&lt;/a&gt;
+          and &lt;a href="http://twitter.github.com/bootstrap/" target="_blank"&gt;Twitter Bootstrap&lt;/a&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+        &lt;script src="http://s9.cnzz.com/stat.php?id=5379369&amp;web_id=5379369&amp;online=1&amp;show=line" language="JavaScript"&gt;&lt;/script&gt;
+        &lt;/p&gt;
+      &lt;/footer&gt;
+
+    &lt;/div&gt; &lt;!-- /container --&gt;
+
+    &lt;!-- Google Prettify --&gt;
+&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i &lt; pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+&lt;/script&gt;
+&lt;!-- end Google Prettify --&gt;
+    &lt;script&gt;
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(defworld.com);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+&lt;/script&gt;
+&lt;noscript&gt;&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /&gt;&lt;/p&gt;&lt;/noscript&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
     <item>
       <title>&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x7B14;&#x8BB0;</title>
       <link>http://defworld.com/2014-12/r-db.html</link>
@@ -21,9 +256,9 @@
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.933262971885336" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.1399583993559239" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.30311040642716247" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.38637442382830034" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.9368650458326053" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.12715704230958547" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -210,11 +445,79 @@
 
 &lt;h2 id="toc_13"&gt;RoR&lt;/h2&gt;
 
+&lt;h1 id="toc_14"&gt;&#x4E8B;&#x52A1;&lt;/h1&gt;
+
+&lt;h2 id="toc_15"&gt;mysql&#x4E8B;&#x52A1;&lt;/h2&gt;
+
+&lt;p&gt;&#x4E0A;&#x5C42;&#x7684;&#x5C01;&#x88C5;&#x5176;&#x5B9E;&#x4F9D;&#x8D56;&#x5E95;&#x5C42;DB&#x652F;&#x6301;&#xFF0C;mysql&#x5982;&#x4F55;&#x652F;&#x6301;&#xFF0C;&#x540E;&#x7EED;&#x518D;&#x5C55;&#x5F00;&#x3002;  &lt;/p&gt;
+
+&lt;h2 id="toc_16"&gt;jdbc&#x4E8B;&#x52A1;&lt;/h2&gt;
+
+&lt;h3 id="toc_17"&gt;JDBC&#x4E8B;&#x52A1;&#x9694;&#x79BB;&#x7EA7;&#x522B;&lt;/h3&gt;
+
+&lt;p&gt;JDBC&#x5B9A;&#x4E49;&#x4E86;&#x4E94;&#x79CD;&#x4E8B;&#x52A1;&#x9694;&#x79BB;&#x7EA7;&#x522B;&#xFF1A;  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;TRANSACTION_NONE JDBC&#x9A71;&#x52A8;&#x4E0D;&#x652F;&#x6301;&#x4E8B;&#x52A1;&lt;/li&gt;
+&lt;li&gt;TRANSACTION&lt;em&gt;READ&lt;/em&gt;UNCOMMITTED &#x5141;&#x8BB8;&#x810F;&#x8BFB;&#x3001;&#x4E0D;&#x53EF;&#x91CD;&#x590D;&#x8BFB;&#x548C;&#x5E7B;&#x8BFB;&#x3002;&lt;/li&gt;
+&lt;li&gt;TRANSACTION&lt;em&gt;READ&lt;/em&gt;COMMITTED &#x7981;&#x6B62;&#x810F;&#x8BFB;&#xFF0C;&#x4F46;&#x5141;&#x8BB8;&#x4E0D;&#x53EF;&#x91CD;&#x590D;&#x8BFB;&#x548C;&#x5E7B;&#x8BFB;&#x3002;&lt;/li&gt;
+&lt;li&gt;TRANSACTION&lt;em&gt;REPEATABLE&lt;/em&gt;READ &#x7981;&#x6B62;&#x810F;&#x8BFB;&#x548C;&#x4E0D;&#x53EF;&#x91CD;&#x590D;&#x8BFB;&#xFF0C;&#x4F46;&#x5141;&#x8BB8;&#x5E7B;&#x8BFB;&#x3002;&lt;/li&gt;
+&lt;li&gt;TRANSACTION_SERIALIZABLE &#x7981;&#x6B62;&#x810F;&#x8BFB;&#x3001;&#x4E0D;&#x53EF;&#x91CD;&#x590D;&#x8BFB;&#x548C;&#x5E7B;&#x8BFB;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;JDBC&#x5B9A;&#x4E49;&#x4E86;SavePoint&#x63A5;&#x53E3;&#xFF0C;&#x63D0;&#x4F9B;&#x5728;&#x4E00;&#x4E2A;&#x66F4;&#x7EC6;&#x7C92;&#x5EA6;&#x7684;&#x4E8B;&#x52A1;&#x63A7;&#x5236;&#x673A;&#x5236;&#x3002;&#x5F53;&#x8BBE;&#x7F6E;&#x4E86;&#x4E00;&#x4E2A;&#x4FDD;&#x5B58;&#x70B9;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;rollback&#x5230;&#x8BE5;&#x4FDD;&#x5B58;&#x70B9;&#x5904;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x800C;&#x4E0D;&#x662F;rollback&#x6574;&#x4E2A;&#x4E8B;&#x52A1;&#x3002;&lt;br&gt;
+JDBC&#x89C4;&#x8303;&#x867D;&#x7136;&#x5B9A;&#x4E49;&#x4E86;&#x4E8B;&#x52A1;&#x7684;&#x4EE5;&#x4E0A;&#x652F;&#x6301;&#x884C;&#x4E3A;&#xFF0C;&#x4F46;&#x662F;&#x5404;&#x4E2A;JDBC&#x9A71;&#x52A8;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x5382;&#x5546;&#x5BF9;&#x4E8B;&#x52A1;&#x7684;&#x652F;&#x6301;&#x7A0B;&#x5EA6;&#x53EF;&#x80FD;&#x5404;&#x4E0D;&#x76F8;&#x540C;&#x3002;&#x4E3A;&#x6B64;&#xFF0C;JDBC&#x63D0;&#x4F9B;&#x4E86;DatabaseMetaData&#x63A5;&#x53E3;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x7CFB;&#x5217;JDBC&#x7279;&#x6027;&#x652F;&#x6301;&#x60C5;&#x51B5;&#x7684;&#x83B7;&#x53D6;&#x65B9;&#x6CD5;&#x3002;  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&#x810F;&#x8BFB;(dirty read)&#xFF1A;&#x4E00;&#x4E2A;&#x4E8B;&#x7269;&#x8BFB;&#x53D6;&#x4E86;&#x53E6;&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x5C1A;&#x672A;&#x63D0;&#x4EA4;&#x7684;&#x6570;&#x636E;
+&#x4E0D;&#x53EF;&#x91CD;&#x590D;&#x8BFB;(non-repeatable read) &#xFF1A;&#x89E3;&#x51B3;&#x4E86;&#x810F;&#x8BFB;&#x95EE;&#x9898;&#xFF0C;&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x7684;&#x64CD;&#x4F5C;&#x5BFC;&#x81F4;&#x53E6;&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x524D;&#x540E;&#x4E24;&#x6B21;&#x8BFB;&#x53D6;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x636E;
+&#x5E7B;&#x8BFB;(phantom read) &#xFF1A;&#x89E3;&#x51B3;&#x4E86;&#x4E0D;&#x53EF;&#x91CD;&#x590D;&#x8BFB;&#x95EE;&#x9898;&#x3002;&#x4FDD;&#x8BC1;&#x4E86;&#x540C;&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x91CC;&#xFF0C;&#x67E5;&#x8BE2;&#x7684;&#x7ED3;&#x679C;&#x90FD;&#x662F;&#x4E8B;&#x52A1;&#x5F00;&#x59CB;&#x65F6;&#x7684;&#x72B6;&#x6001;&#xFF08;&#x4E00;&#x81F4;&#x6027;&#xFF09;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x53E6;&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x540C;&#x65F6;&#x63D0;&#x4EA4;&#x4E86;&#x65B0;&#x6570;&#x636E;&#xFF0C;&#x672C;&#x4E8B;&#x52A1;&#x518D;&#x66F4;&#x65B0;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x201C;&#x60CA;&#x5947;&#x7684;&#x201D;&#x53D1;&#x73B0;&#x4E86;&#x8FD9;&#x4E9B;&#x65B0;&#x6570;&#x636E;&#x3002;
+
+&#x810F;&#x8BFB;&#x548C;&#x4E0D;&#x53EF;&#x91CD;&#x590D;&#x8BFB;&#x7684;&#x533A;&#x522B;&#x662F;&#xFF0C;&#x810F;&#x8BFB;&#x662F;&#x8BFB;&#x5230;&#x672A;&#x63D0;&#x4EA4;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4E0D;&#x53EF;&#x91CD;&#x590D;&#x8BFB;&#x8BFB;&#x5230;&#x7684;&#x786E;&#x5B9E;&#x662F;&#x5DF2;&#x7ECF;&#x63D0;&#x4EA4;&#x7684;&#x6570;&#x636E;&#x3002;  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id="toc_18"&gt;jdbc savepoint&lt;/h3&gt;
+
+&lt;p&gt;&#x5C06;&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x518D;&#x7EC6;&#x5206;&#xFF0C;&#x4E0D;&#x662F;&#x6574;&#x4E2A;&#x4E8B;&#x52A1;&#x90FD;&#x8981;&#x56DE;&#x6EDA;&#x3002;&lt;/p&gt;
+
+&lt;h2 id="toc_19"&gt;spring&#x4E8B;&#x52A1;&#x652F;&#x6301;&lt;/h2&gt;
+
+&lt;h3 id="toc_20"&gt;&#x9694;&#x79BB;&#x7EA7;&#x522B;&#xFF08;isolation level&#xFF09;&lt;/h3&gt;
+
+&lt;p&gt;&#x53C2;&#x8003;jdbc&#x4E8B;&#x52A1;&#x9694;&#x79BB;&lt;/p&gt;
+
+&lt;h3 id="toc_21"&gt;&#x4E8B;&#x52A1;&#x53EA;&#x8BFB;&#xFF08;transaction readonly&#xFF09;&lt;/h3&gt;
+
+&lt;p&gt;Spring&#x53EA;&#x662F;&#x63D0;&#x4F9B;&#x8BBE;&#x7F6E;&#x5165;&#x53E3;&#xFF0C;&#x6700;&#x7EC8;&#x8D77;&#x4F5C;&#x7528;&#x662F;&#x5728;ORM&#x6846;&#x67B6;&#x548C;JDBC impl&#x5C42;&#xFF0C;&#x8FD9;&#x91CC;&lt;a href="http://www.codeinstructions.com/2009/04/read-only-transactions-with-spring-and.html"&gt;&#x6709;&#x7BC7;&#x6587;&#x7AE0;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id="toc_22"&gt;&#x4E8B;&#x52A1;&#x4F20;&#x64AD;&#xFF08;transaction propagation&#xFF09;&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;outer transaction : &#x5916;&#x90E8;methodA&#x5BF9;&#x5E94;&#x7684;transaction
+inner transaction : methodA&#x8C03;&#x7528;&#x7684;methodB&#x5BF9;ing&#x7684;transaction
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&#x4EE5;&#x4E0B;&#x8BF4;&#x660E;&#xFF0C;&#x76F8;&#x4F3C;&#x7684;&#x5B9E;&#x73B0;&#x5E26;&#x6263;Spring&#x6E90;&#x7801;&#x3002;  &lt;/p&gt;
+
+&lt;h4 id="toc_23"&gt;Required&lt;/h4&gt;
+
+&lt;p&gt;outer transaction&#x548C;inner transaction&#x516C;&#x7528;&#x4E00;&#x4E2A;physical transaction&#xFF08;&#x5BF9;&#x5E94;DB transaction&#xFF09;&#xFF0C;&#x4F46;&#x5176;&#x5B9E;&#x662F;&#x4E24;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;logical transaction&#x3002;methodB&#x5931;&#x8D25;&#xFF0C;&#x4F1A;&#x5728;physical tranaction&#x8EAB;&#x4E0A;mark roolback only&#xFF0C;&#x7136;&#x540E;methodB methodA&#x90FD;&#x9700;&#x8981;&#x56DE;&#x6EDA;&#x3002;&lt;/p&gt;
+
+&lt;h4 id="toc_24"&gt;RequiresNew&lt;/h4&gt;
+
+&lt;p&gt;outer transaction&#x548C;inner transaction&#x5404;&#x81EA;&#x4E00;&#x4E2A;physical transaction&#xFF0C;commit / rollback&#x90FD;&#x662F;&#x72EC;&#x7ACB;&#x7684;&#x3002;  &lt;/p&gt;
+
+&lt;h4 id="toc_25"&gt;Nested&lt;/h4&gt;
+
+&lt;p&gt;&#x8DDF;RequiresNew&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;&#x7528;transaction&#x7684;savapoint&#x6982;&#x5FF5;&#x6765;&#x5B9E;&#x73B0;&#xFF0C;methodB&#x5F00;&#x59CB;&#x4E4B;&#x524D;&#x542F;&#x52A8;&#x4E00;&#x4E2A;savapoint&#xFF0C;methodB&#x5931;&#x8D25;&#xFF0C;&#x53EA;&#x662F;&#x8FD9;&#x4E2A;savapoint&#x56DE;&#x6EDA;&#xFF0C;&#x800C;&#x6574;&#x4E2A;transaction&#x53EF;&#x4EE5;&#x4E0D;&#x56DE;&#x6EDA;&#x3002;   &lt;/p&gt;
+
 &lt;p&gt;&#x53C2;&#x8003;:  &lt;/p&gt;
 
 &lt;p&gt;&lt;a href="http://www.zhihu.com/question/24696366"&gt;&#x77E5;&#x4E4E;&#xFF1A;&#x89E3;&#x91CA;&#x4E00;&#x4E0B;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;&#x7684;&#x7B2C;&#x4E00;&#x7B2C;&#x4E8C;&#x7B2C;&#x4E09;&#x8303;&#x5F0F;&#xFF1F;&lt;/a&gt;&lt;br&gt;
 &lt;a href="http://www3.ntu.edu.sg/home/ehchua/programming/index.html"&gt;&#x4E00;&#x4E2A;&#x6559;&#x7A0B;&lt;/a&gt;&lt;br&gt;
-&lt;a href="http://docs.oracle.com/javase/tutorial/jdbc/overview/index.html"&gt;oracle&#x5B98;&#x65B9;jdbc&#x6559;&#x7A0B;&lt;/a&gt;  &lt;/p&gt;
+&lt;a href="http://docs.oracle.com/javase/tutorial/jdbc/overview/index.html"&gt;oracle&#x5B98;&#x65B9;jdbc&#x6559;&#x7A0B;&lt;/a&gt;&lt;br&gt;
+&#x300A;Mysql&#x6280;&#x672F;&#x5185;&#x5E55;-InnoDB&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x300B;&lt;br&gt;
+&#x300A;Marking Rollback Only&#x300B;&lt;a href="https://docs.oracle.com/cd/E23095_01/Platform.93/ATGProgGuide/html/s1204markingrollbackonly01.html"&gt;https://docs.oracle.com/cd/E23095_01/Platform.93/ATGProgGuide/html/s1204markingrollbackonly01.html&lt;/a&gt;&lt;br&gt;
+&#x300A;spring-reference-3.2x Transaction propagation&#x300B;&lt;br&gt;
+&#x300A;Spring&#x58F0;&#x660E;&#x5F0F;&#x4E8B;&#x52A1;&#x7BA1;&#x7406;&#x4E0E;&#x914D;&#x7F6E;&#x8BE6;&#x89E3;&#x300B;&lt;a href="http://www.cnblogs.com/hellojava/archive/2012/11/21/2780694.html"&gt;http://www.cnblogs.com/hellojava/archive/2012/11/21/2780694.html&lt;/a&gt;  &lt;/p&gt;
 
     &lt;hr&gt;
     &lt;div class="pagination"&gt;
@@ -224,7 +527,7 @@
 
             &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
 
-            &lt;li class="next disabled"&gt;&lt;a&gt;Next &amp;rarr;&lt;/a&gt;
+            &lt;li class="next"&gt;&lt;a href="/2014-12/java-annotation.html" title="&#x7B14;&#x8BB0; - java annotation"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
@@ -340,9 +643,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7508680676357864" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.029355805923491407" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.840538633019771" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.24713795670847827" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.8440834322761137" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.37466355055078493" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -523,9 +826,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7267164120867945" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.3817442089655779" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.3867203306519489" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.7287270918914757" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.8708433236183823" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.768603690251834" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -707,9 +1010,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.39362221562010646" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.6538175904259741" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4683253978646489" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.2422585567471658" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.30173163604264874" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.08663779617875356" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1022,9 +1325,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.04993521044433158" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.7277084500603384" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7890550147914381" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.2387623954033996" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.19546769071866854" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6897323311901079" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1193,9 +1496,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.15361260337343718" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.8978299535874343" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7754076153696887" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.8873851771303682" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.31516539492725926" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.488453159368869" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1388,9 +1691,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9713671223936055" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.17003050565779276" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.37988033142883637" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.612827613494864" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.6023574029410776" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.15915575784969904" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1598,9 +1901,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6805703555344697" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.09245546900874635" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.20272194737961613" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.24757763090578289" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.12514437293552627" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8767193386849018" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -1856,9 +2159,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9837590008015262" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.6962164884537354" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6517011182722215" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.8467919916723871" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.4776437345017386" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.0604741669340374" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -2063,7 +2366,7 @@ clicky_site_ids.push(defworld.com);
     &lt;h4&gt;Categories&lt;/h4&gt;
     &lt;ul class="tag_box"&gt;
       &lt;li&gt;
-        &lt;a href="/categories#java-ref"&gt;java &lt;span&gt;8&lt;/span&gt;&lt;/a&gt;
+        &lt;a href="/categories#java-ref"&gt;java &lt;span&gt;9&lt;/span&gt;&lt;/a&gt;
       &lt;/li&gt;    &lt;/ul&gt;
     &lt;br&gt;
     &lt;h4&gt;Tags&lt;/h4&gt;
@@ -2129,9 +2432,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.54979070814173" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.4736751663322889" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.22743726095313588" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9455814257665444" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.5981858603550924" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.44525220826355427" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -2297,7 +2600,7 @@ if (maybeComputer.isPresent()) { // &#x8FD9;&#x91CC;&#x53EA;&#x6709;present/abse
     &lt;h4&gt;Categories&lt;/h4&gt;
     &lt;ul class="tag_box"&gt;
       &lt;li&gt;
-        &lt;a href="/categories#java-ref"&gt;java &lt;span&gt;8&lt;/span&gt;&lt;/a&gt;
+        &lt;a href="/categories#java-ref"&gt;java &lt;span&gt;9&lt;/span&gt;&lt;/a&gt;
       &lt;/li&gt;    &lt;/ul&gt;
     &lt;br&gt;
     &lt;h4&gt;Tags&lt;/h4&gt;
@@ -2369,9 +2672,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6618552216676916" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.6506906657329817" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.3128357440129991" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.644763934159082" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.7133701631534909" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8872816864993744" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -2466,7 +2769,7 @@ clicky_site_ids.push(defworld.com);
     &lt;div class="pagination"&gt;
       &lt;ul&gt;
         &lt;ul&gt;
-            &lt;li class="prev"&gt;&lt;a href="/2014-06/notes-js-1.html" title="js&#x5165;&#x95E8;&#x7B14;&#x8BB0;&#xFF08;&#x4E00;&#xFF09;&#x2014;&#x2014;&#x57FA;&#x7840;"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="prev"&gt;&lt;a href="/2014-06/notes-js-2-object.html" title="js&#x5165;&#x95E8;&#x7B14;&#x8BB0;&#xFF08;&#x4E8C;&#xFF09;&#x2014;&#x2014;&#x9762;&#x5411;&#x5BF9;&#x8C61;"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
 
             &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
 
@@ -2570,16 +2873,16 @@ clicky_site_ids.push(defworld.com);
 </description>
     </item>
     <item>
-      <title>js&#x5165;&#x95E8;&#x7B14;&#x8BB0;&#xFF08;&#x4E00;&#xFF09;&#x2014;&#x2014;&#x57FA;&#x7840;</title>
-      <link>http://defworld.com/2014-06/notes-js-1.html</link>
-      <pubDate>2014-06-13</pubDate>
-      <description>nodes javascript</description>
-    </item>
-    <item>
       <title>js&#x5165;&#x95E8;&#x7B14;&#x8BB0;&#xFF08;&#x4E8C;&#xFF09;&#x2014;&#x2014;&#x9762;&#x5411;&#x5BF9;&#x8C61;</title>
       <link>http://defworld.com/2014-06/notes-js-2-object.html</link>
       <pubDate>2014-06-13</pubDate>
       <description>js  javascript &#x9762;&#x5411;&#x5BF9;&#x8C61;</description>
+    </item>
+    <item>
+      <title>js&#x5165;&#x95E8;&#x7B14;&#x8BB0;&#xFF08;&#x4E00;&#xFF09;&#x2014;&#x2014;&#x57FA;&#x7840;</title>
+      <link>http://defworld.com/2014-06/notes-js-1.html</link>
+      <pubDate>2014-06-13</pubDate>
+      <description>nodes javascript</description>
     </item>
     <item>
       <title>run &amp; debug node.js</title>
@@ -2598,9 +2901,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.3792097212572223" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.15434219361242418" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9074941884381079" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6794536904447336" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.6799473273874214" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.3559015877601769" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -2715,7 +3018,7 @@ sudo gem install terminal-notifier
 
             &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
 
-            &lt;li class="next"&gt;&lt;a href="/2014-06/notes-js-2-object.html" title="js&#x5165;&#x95E8;&#x7B14;&#x8BB0;&#xFF08;&#x4E8C;&#xFF09;&#x2014;&#x2014;&#x9762;&#x5411;&#x5BF9;&#x8C61;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="next"&gt;&lt;a href="/2014-06/notes-js-1.html" title="js&#x5165;&#x95E8;&#x7B14;&#x8BB0;&#xFF08;&#x4E00;&#xFF09;&#x2014;&#x2014;&#x57FA;&#x7840;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
@@ -2831,9 +3134,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.5263662717633691" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.8140404244253018" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7315800873701889" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.150769844963638" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.875106892594023" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9021788685103336" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -3078,9 +3381,9 @@ clicky_site_ids.push(defworld.com);
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.018080538642167743" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.9361549073852193" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8996291853997279" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.978295571779358" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.7362035011434482" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6200388040187572" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -3324,399 +3627,6 @@ clicky_site_ids.push(defworld.com);
       <link>http://defworld.com/2014-04/node-js-and-division-of-work.html</link>
       <pubDate>2014-04-20</pubDate>
       <description>node.js &#x6548;&#x7387;</description>
-    </item>
-    <item>
-      <title>&#x300A;linux 101 hacks&#x300B;&#x7B14;&#x8BB0;</title>
-      <link>http://defworld.com/2014-01/reading-linux-101-hacks.html</link>
-      <pubDate>2014-01-18</pubDate>
-      <description>&lt;!DOCTYPE html&gt;
-&lt;html lang="en" xmlns:wb=&#x201C;http://open.weibo.com/wb&#x201D;&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;&#x300A;linux 101 hacks&#x300B;&#x7B14;&#x8BB0;&lt;/title&gt;
-    &lt;meta name="author" content="tiemei"&gt;
-
-    &lt;!-- Le HTML5 shim, for IE6-8 support of HTML elements --&gt;
-    &lt;!--[if lt IE 9]&gt;
-      &lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
-    &lt;![endif]--&gt;
-
-    &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.6817486621584543" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.4633655277716838" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.06724931979943527" type="text/css" rel="stylesheet" media="all"&gt;
-
- 
-
-    &lt;!-- Le fav and touch icons --&gt;
-  &lt;!-- Update these with your own images
-    &lt;link rel="shortcut icon" href="images/favicon.ico"&gt;
-    &lt;link rel="apple-touch-icon" href="images/apple-touch-icon.png"&gt;
-    &lt;link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"&gt;
-    &lt;link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"&gt;
-  --&gt;
-  &lt;script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
-  &lt;/head&gt;
-
-  &lt;body&gt;
-
-    &lt;div class="navbar"&gt;
-      &lt;div class="navbar-inner"&gt;
-        &lt;div class="container"&gt;
-          &lt;a class="touxiang" href="http://weibo.com/wgdkfk"&gt;
-            &lt;img src="https://farm6.staticflickr.com/5577/14680769772_ac1af8df86.jpg" width="40" height="40" &gt;
-          &lt;/a&gt;
-          &lt;a class="brand" href="/"&gt;tiemei&lt;/a&gt;
-          &lt;ul class="nav"&gt;
-              
-                &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
-              
-                &lt;li&gt;&lt;a href="/tools"&gt;Tools&lt;/a&gt;&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class="container"&gt;
-
-      &lt;div class="content"&gt;
-        &lt;div class="page-header"&gt;
-  &lt;h1&gt;&#x300A;linux 101 hacks&#x300B;&#x7B14;&#x8BB0; &lt;/h1&gt;
-&lt;/div&gt;
-
-&lt;div class="row"&gt;
-  &lt;div class="span8"&gt;
-    &lt;h2 id="toc_0"&gt;cd&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;CDPATH&lt;/strong&gt;  &lt;/p&gt;
-
-&lt;p&gt;&#x9ED8;&#x8BA4;&lt;code&gt;cd logs&lt;/code&gt;&#x8FDB;&#x5165;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x7684;logs&#x76EE;&#x5F55;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E86;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x4F18;&#x5148;&#x8FDB;&#x5165;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;
-&#x6307;&#x5411;&#x7684;&#x76EE;&#x5F55;&#x7684;&#x4E0B;&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x3002;&#x53EF;&#x7528;&#x5192;&#x53F7;&#x5206;&#x9694;&#x6307;&#x5B9A;&#x591A;&#x4E2A;&#x3002;  &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&#x8FD4;&#x56DE;&#x591A;&#x7EA7;&#x4E0A;&#x7EA7;&#x76EE;&#x5F55;&lt;/strong&gt;  &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;~/.bashrc
-
-alias ..=&amp;#39;cd ..&amp;#39;
-alias ..2=&amp;#39;cd ../..&amp;#39;
-alias ..3=&amp;#39;cd ../../..&amp;#39;
-
-&#x6216;&#x8005;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;
-
-alias ..=&amp;#39;cd ..&amp;#39;
-alias ...=&amp;#39;cd ...&amp;#39;
-
-&#x6216;&#x8005;
-
-alias cd...=&amp;quot;cd ../..&amp;quot;
-
-&#x7B49;&#x7B49;&#x65B9;&#x5F0F;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;&#x521B;&#x5EFA;&#x76EE;&#x5F55;&#x5E76;&#x8FDB;&#x5165;&#x8BE5;&#x76EE;&#x5F55;&lt;/strong&gt;  &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;function mkdircd () { mkdir -p &amp;quot;$@&amp;quot; &amp;amp;&amp;amp; eval cd &amp;quot;\&amp;quot;\$$#\&amp;quot;&amp;quot;; }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;$@&lt;/code&gt;&#x6240;&#x6709;&#x53C2;&#x6570;&#xFF0C;&lt;code&gt;$#&lt;/code&gt;mkdircd&#x51FD;&#x6570;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x957F;&#x5EA6;&#xFF0C;&#x4F8B;&#x5982;mkdircd hello&#xFF0C;
-eval&#x5C06;$1&#x8FD9;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x89E3;&#x91CA;&#x4E3A;&#x53D8;&#x91CF;&#x503C;hello  &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;cd -&lt;/strong&gt; &#x5728;&#x6700;&#x8FD1;&#x8BBF;&#x95EE;&#x7684;&#x4E24;&#x4E2A;&#x76EE;&#x5F55;&#x95F4;&#x5207;&#x6362;  &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&#x76EE;&#x5F55;&#x5806;&#x6808;&lt;/strong&gt;  &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;* dirs:&#x663E;&#x793A;&#x76EE;&#x5F55;&#x6808;
-* pushd:&#x5C06;&#x76EE;&#x5F55;&#x538B;&#x5165;&#x76EE;&#x5F55;&#x6808; 
-* popd:&#x5C06;&#x76EE;&#x5F55;&#x5F39;&#x51FA;&#x76EE;&#x5F55;&#x6808;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;&#x667A;&#x80FD;&#x7EA0;&#x6B63;cd&#x547D;&#x4EE4;&#x9519;&#x8BEF;&#x76EE;&#x5F55;&#x540D;&lt;/strong&gt;  &lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;shopt &#x2013;s cdspell&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id="toc_1"&gt;&#x5176;&#x4ED6;&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;grep&lt;/strong&gt;  &lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;grep -ri str dir&lt;/code&gt; &#x5728;&#x76EE;&#x5F55;dir&#x7684;&#x6240;&#x6709;&#x5B50;&#x76EE;&#x5F55;&#x8D85;&#x627E;&#x5305;&#x542B;&#x5B57;&#x7B26;str&#x7684;&#x5185;&#x5BB9;&#x7684;&#x5730;&#x65B9;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;grep -ril str dir&lt;/code&gt; &#x53EA;&#x663E;&#x793A;&#x6587;&#x4EF6;&#x540D;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;find&lt;/strong&gt;  &lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;find / -type f -size +100M&lt;/code&gt; &#x627E;&#x5230;/&#x76EE;&#x5F55;&#x4E0B;&#x5927;&#x4E8E;100M&#x7684;&#x6587;&#x4EF6;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;find . -mtime +60&lt;/code&gt; &#x6700;&#x8FD1;60&#x5929;&#x6CA1;&#x6709;&#x88AB;&#x4FEE;&#x6539;&#x8FC7;&#x7684;&#x6587;&#x4EF6;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;find . &#x2013;mtime -2&lt;/code&gt;  &#x6700;&#x8FD1;2&#x5929;&#x88AB;&#x4FEE;&#x6539;&#x8FC7;&#x7684;&#x6587;&#x4EF6;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&#x5220;&#x9664; &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; find / -type f -name *.tar.gz -size +100M -exec ls -l {} \;
- find / -type f -name *.tar.gz -size +100M -exec rm -f {} \;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&#x6253;&#x5305;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; find /home/jsmith -type f -mtime +60 | xargs tar -cvf /tmp/`date &amp;#39;+%d%m%Y&amp;#39;_archive.tar`
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;join&lt;/strong&gt;  &lt;/p&gt;
-
-&lt;p&gt;&#x5408;&#x5E76;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x6309;&#x76F8;&#x540C;&#x5217;&#x3002;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;xargs&lt;/strong&gt;  &lt;/p&gt;
-
-&lt;p&gt;&#x5C06;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x7684;&#x8F93;&#x51FA;&#x4F20;&#x9012;&#x7ED9;&#x4E0B;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x7684;&#x8F93;&#x5165;  &lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;cat url-list.txt | xargs wget &#x2013;c&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;find /etc -name &amp;quot;*.conf&amp;quot; | xargs ls &#x2013;l&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;uniq&lt;/strong&gt;  &lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;sort namesd.txt | uniq &#x2013;cd&lt;/code&gt; -c&#x663E;&#x793A;&#x51FA;&#x4E2A;&#x6570;&#xFF0C;-d&#x53EA;&#x5217;&#x51FA;&#x91CD;&#x590D;&#x9879;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;ac&lt;/strong&gt;  &lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;ac -d&lt;/code&gt; &#x6309;&#x5929;&#x663E;&#x793A;&#x767B;&#x9646;&#x4E3B;&#x673A;&#x65F6;&#x95F4;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ac -p&lt;/code&gt; &#x663E;&#x793A;&#x6240;&#x6709;&#x7528;&#x6237;&#x7684;&#x65F6;&#x95F4;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ac -d jiadongkai&lt;/code&gt; &#x6307;&#x5B9A;&#x7528;&#x6237;&#x65F6;&#x95F4;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;&#x63D0;&#x793A;&#x7B26;&lt;/strong&gt;  &lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;PS1=&#x201D;\u@\h \w&amp;gt;&amp;quot;&lt;/code&gt; \u&#x7528;&#x6237; \h&#x4E3B;&#x673A;&#x540D; \w&#x5F53;&#x524D;&#x76EE;&#x5F55;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;PS2=&amp;quot;continue-&amp;gt; &amp;quot;&lt;/code&gt; &#x591A;&#x884C;&#x547D;&#x4EE4;&#x7684;&#x9ED8;&#x8BA4;&#x63D0;&#x793A;&#x7B26;&amp;gt;&#x4FEE;&#x6539;&#x4E3A;continue-&amp;gt; &lt;/li&gt;
-&lt;li&gt;&lt;code&gt;PS3=&amp;quot;Select a day (1-4): &amp;quot;&lt;/code&gt;select&#x547D;&#x4EE4;&#x7684;&#x9ED8;&#x8BA4;&#x63D0;&#x793A;&#x7B26;&#x53F7;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src="http://farm8.staticflickr.com/7331/12007421406_6031688bca.jpg" alt="PS3"&gt;  &lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;PS4=&amp;#39;$0.$LINENO+ &amp;#39;&lt;/code&gt; &#x6539;&#x53D8;&#x8C03;&#x8BD5;&#x811A;&#x672C;(&#x76F4;&#x63A5;&#x52A0;&#x4E0A;&lt;code&gt;set -xv&lt;/code&gt;/&lt;code&gt;bash -xv script&lt;/code&gt;)&#x65F6;&#x7684;&#x9ED8;&#x8BA4;&#x524D;&#x7F00;&#xFF0C;$0&#x5F53;&#x524D;&#x811A;&#x672C;&#x7684;&#x540D;&#x5B57;&#xFF0C;$LINENO&#x5F53;&#x524D;&#x884C;&#x53F7;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;PROMPT_COMMAND=&amp;quot;date +%k:%m:%S&amp;quot;&lt;/code&gt; Bash &#x5728;&#x663E;&#x793A; PS1 &#x4E4B;&#x524D;&#x5148;&#x6267;&#x884C; PROMPT_COMMAND &#x5B9A;&#x4E49;&#x7684;&#x5185;&#x5BB9;&lt;/li&gt;
-&lt;li&gt;&#x53EF;&#x4EE5;&#x5728;&#x63D0;&#x793A;&#x7B26;&#x4E2D;&#x663E;&#x793A;&#x4EFB;&#x4F55;&#x547D;&#x4EE4;&#x7684;&#x8F93;&#x51FA;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;&#x63D0;&#x793A;&#x7B26;&#x989C;&#x8272;&lt;/strong&gt;  &lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;export PS1=&amp;quot;\e[0;34m\u@\h \w&amp;gt; \e[m &amp;quot;&lt;/code&gt; &#x6539;&#x53D8;&#x63D0;&#x793A;&#x7B26;&#x7684;&#x524D;&#x666F;&#x989C;&#x8272;&#x4E3A;&#x4EAE;&#x84DD;&#x8272;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;export PS1=&amp;quot;\e[0;34m\e[47m\u@\h \w&amp;gt; \e[m &amp;quot;&lt;/code&gt;&#x5B9A;&#x5236;&#x524D;&#x666F;&#x8272;&#x548C;&#x80CC;&#x666F;&#x8272;&lt;/li&gt;
-&lt;li&gt;&#x53EF;&#x4F7F;&#x7528;tput&#x66F4;&#x52A0;&#x4E30;&#x5BCC;&#x989C;&#x8272;&#x5C55;&#x793A;&lt;/li&gt;
-&lt;li&gt;&#x5DF2;&#x6709;&#x7684; PS1 &#x53D8;&#x91CF;&#x53EF;&#x4F7F;&#x7528;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;&#x538B;&#x7F29;&lt;/strong&gt;  &lt;/p&gt;
-
-&lt;p&gt;&#x7565;&#x8FC7;  &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;history&lt;/strong&gt;  &lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;export HISTTIMEFORMAT=&amp;#39;%F %T &amp;#39;&lt;/code&gt; history&#x663E;&#x793A;&#x65F6;&#x95F4;&#x6233;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ctrl + r&lt;/code&gt;&#x641C;&#x7D22;&#x5386;&#x53F2;&#x547D;&#x4EE4;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;!n&lt;/code&gt; &#x6267;&#x884C;history&#x4E2D;&#x7B2C;&#x51E0;&#x6761;&#x547D;&#x4EE4;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;!ps&lt;/code&gt;&#x6267;&#x884C;&#x6700;&#x8FD1;&#x7684;&#x5DF2;ps&#x5F00;&#x5934;&#x7684;&#x5386;&#x53F2;&#x547D;&#x4EE4;&lt;/li&gt;
-&lt;li&gt;&#x5386;&#x53F2;&#x547D;&#x4EE4;&#x9ED8;&#x8BA4;&#x4FDD;&#x5B58;&#x5728;.bash_history&#xFF0C;&#x7528;HISTFILE&#x6539;&#x53D8;&lt;/li&gt;
-&lt;li&gt;&#x81EA;&#x52A8;&#x53BB;&#x9664;&#x91CD;&#x590D;&#x5386;&#x53F2;&#x547D;&#x4EE4;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;fdisk&lt;/strong&gt; &#x7BA1;&#x7406;&#x5206;&#x533A;&lt;br&gt;
-&lt;strong&gt;mke2fsk&lt;/strong&gt; &#x7BA1;&#x7406;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&lt;br&gt;
-&#x7565;  &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;crontab&lt;/strong&gt;  &lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://farm3.staticflickr.com/2838/12008804724_a300fcfbe1.jpg" alt="crontab"&gt;  &lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;1,2,3,4&lt;/code&gt;&lt;code&gt;1-4&lt;/code&gt; &#x6BCF;&#x4E00;&#x9879;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x591A;&#x4E2A;&#x503C;&#xFF0C;&#x4E24;&#x79CD;&#x5199;&#x6CD5;&#x76F8;&#x540C;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;*/5 * * * *&lt;/code&gt; &#x6BCF;&#x9694;5&#x5206;&#x949F;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;crontab file&lt;/code&gt; &#x7528;file&#x66FF;&#x4EE3;&#x5F53;&#x524D;&#x7684;crontab&#x5185;&#x5BB9;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;echo &amp;quot;5 * * * * touch ni&amp;quot; | crontab -&lt;/code&gt; &#x66FF;&#x6362;crontab&#x5185;&#x5BB9;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;.bash..&lt;/strong&gt;  &lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&#x6267;&#x884C;&#x987A;&#x5E8F;:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src="http://farm4.staticflickr.com/3803/12013970874_ff612e3f50.jpg" alt="bash&#x6267;&#x884C;&#x987A;&#x5E8F;"&gt;  &lt;/p&gt;
-
-&lt;p&gt;/etc/bashrc&#x5728;/etc/profile&#x4E2D;&#x88AB;&#x8C03;&#x7528;&#xFF0C;~/.bashrc&#x5728;~/.bash_profile&#x4E2D;&#x88AB;&#x8C03;&#x7528;&#x3002;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://farm6.staticflickr.com/5498/12014506206_8f06f37a46.jpg" alt="&#x975E;&#x767B;&#x5F55;bash&#x6267;&#x884C;&#x987A;&#x5E8F;"&gt;  &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;echo&lt;/strong&gt;  &lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;echo 1 \; 2&lt;/code&gt; &#x8F93;&#x51FA;&lt;code&gt;1 ; 2&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&#x5355;&#x5F15;&#x53F7;&#x6309;&#x5B57;&#x7B26;&#x539F;&#x610F;&#x8F93;&#x51FA;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&#x53CC;&#x5F15;&#x53F7;&#x53D8;&#x91CF;&#x4F1A;&#x88AB;&#x89E3;&#x91CA;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&#x9664;&#x4E86;&#x4EE5;&#x4E0B;&#x5B57;&#x7B26;,&#x53CC;&#x5F15;&#x53F7;&#x4F1A;&#x53BB;&#x9664;&#x6240;&#x6709;&#x5B57;&#x7B26;&#x7684;&#x7279;&#x6B8A;&#x542B;&#x4E49;
-$ &#x53C2;&#x6570;&#x66FF;&#x6362;
-` &#x540E;&#x5F15;&#x53F7;
-\$ &#x7F8E;&#x5143;&#x7B26;&#x53F7;
-\&amp;quot; &#x53CC;&#x5F15;&#x53F7;
-\\ &#x63D2;&#x5165;&#x53CD;&#x659C;&#x6760;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;&#x4ECE;&#x6587;&#x4EF6;&#x4E2D;&#x8BFB;&#x53D6;&#x6307;&#x5B9A;&#x57DF;&lt;/strong&gt;  &lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://farm6.staticflickr.com/5541/12014671226_006e3e3ca2.jpg" alt="while&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x6307;&#x5B9A;&#x57DF;"&gt;  &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;top&lt;/strong&gt;  &lt;/p&gt;
-
-&lt;p&gt;&#x663E;&#x793A;&#x8FDB;&#x7A0B;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x6309;c  &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;ps&lt;/strong&gt;  &lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;ps axuf&lt;/code&gt;/&lt;code&gt;ps &#x2013;ejH&lt;/code&gt;/&lt;code&gt;pstree&lt;/code&gt; &#x663E;&#x793A;&#x8FDB;&#x7A0B;&#x6811;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ps U oracle&lt;/code&gt;&#x67E5;&#x770B;&#x6307;&#x5B9A;&#x7528;&#x6237;&#x8FDB;&#x7A0B;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;lsof&lt;/strong&gt;&#x5217;&#x51FA;&#x7CFB;&#x7EDF;&#x4E2D;&#x6240;&#x6709;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;  &lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;lsof -u user&lt;/code&gt; &#x67E5;&#x770B;&#x6307;&#x5B9A;&#x7528;&#x6237;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;lsof file&lt;/code&gt; &#x67E5;&#x770B;&#x4F7F;&#x7528;&#x6587;&#x4EF6;&#x7684;&#x6240;&#x6709;&#x7528;&#x6237;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;nice&lt;/strong&gt;  &lt;/p&gt;
-
-&lt;p&gt;&#x7A0B;&#x7684; nice &#x503C;&#x51B3;&#x5B9A;&#x8FDB;&#x7A0B;&#x9700;&#x8981;&#x591A;&#x5C11;&#x5904;&#x7406;&#x5668;&#x65F6;&#x95F4;&#x3002;nice &#x503C;&#x7684;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x662F;&#x662F;:-20 &#x5230; 20&#x3002;&#x4E00;
-&#x4E2A;&#x5177;&#x6709;-20 &#x7684; nice &#x503C;&#x7684;&#x8FDB;&#x7A0B;&#x6709;&#x5F88;&#x9AD8;&#x7684;&#x4F18;&#x5148;&#x7EA7;&lt;br&gt;
-&lt;code&gt;renice&lt;/code&gt;&#x53EF;&#x4EE5;&#x7ED9;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x8FDB;&#x7A0B;&#x8BBE;&#x7F6E;&#x8C03;&#x5EA6;&#x4F18;&#x5148;&#x7EA7;  &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;tee&lt;/strong&gt;  &lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;ls | tee file&lt;/code&gt; &#x540C;&#x65F6;&#x5C06;&#x8F93;&#x51FA;&#x5199;&#x5165;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x548C;&#x6587;&#x4EF6;&#xFF0C;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;crontab -l | tee crontab-backup.txt | sed &amp;#39;s/old/new/&amp;#39; | crontab &#x2013;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ls | tee -a file&lt;/code&gt; &#x9ED8;&#x8BA4;&#x8986;&#x76D6;&#x6587;&#x4EF6;&#x6539;&#x6210;&#x8FFD;&#x52A0;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ls | tee f1 f2 f3&lt;/code&gt; &#x5199;&#x5165;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id="toc_2"&gt;&#x7CFB;&#x7EDF;&#x76D1;&#x63A7;&#x547D;&#x4EE4;&#x7CFB;&#x5217;&lt;/h2&gt;
-
-&lt;p&gt;&#x5F85;&#x7EED;&lt;/p&gt;
-
-    &lt;hr&gt;
-    &lt;div class="pagination"&gt;
-      &lt;ul&gt;
-        &lt;ul&gt;
-            &lt;li class="prev"&gt;&lt;a href="/2013-11/linux-software-install.html" title="&#x8C08;&#x8C08;Unix-like&#x4E0A;&#x8F6F;&#x4EF6;&#x5B89;&#x88C5;&#x90A3;&#x4E9B;&#x4E8B;"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
-
-            &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
-
-            &lt;li class="next"&gt;&lt;a href="/2014-04/node-js-and-division-of-work.html" title="Node.js&#x524D;&#x540E;&#x7AEF;&#x5206;&#x79BB;&#x5728;&#x5E7F;&#x544A;&#x9875;&#x9762;&#x4E2D;&#x7684;&#x601D;&#x8003;"&gt;Next &amp;rarr;&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;hr&gt;
-    &lt;div id="disqus_thread"&gt;&lt;/div&gt;
-&lt;script&gt;
-    var disqus_developer = 1;
-    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-&lt;/script&gt;
-&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
-&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
-
-  &lt;/div&gt;
-  
-  &lt;div class="span4"&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-    (function(){
-       var _w = 90 , _h = 24;
-       var param = {
-       url:location.href,
-       type:'2',
-       count:'1', /**&#x662F;&#x5426;&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6570;&#xFF0C;1&#x663E;&#x793A;(&#x53EF;&#x9009;)*/
-       appkey:'', /**&#x60A8;&#x7533;&#x8BF7;&#x7684;&#x5E94;&#x7528;appkey,&#x663E;&#x793A;&#x5206;&#x4EAB;&#x6765;&#x6E90;(&#x53EF;&#x9009;)*/
-       title:'', /**&#x5206;&#x4EAB;&#x7684;&#x6587;&#x5B57;&#x5185;&#x5BB9;(&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;title)*/
-       pic:'', /**&#x5206;&#x4EAB;&#x56FE;&#x7247;&#x7684;&#x8DEF;&#x5F84;(&#x53EF;&#x9009;)*/
-       ralateUid:'2388250330', /**&#x5173;&#x8054;&#x7528;&#x6237;&#x7684;UID&#xFF0C;&#x5206;&#x4EAB;&#x5FAE;&#x535A;&#x4F1A;@&#x8BE5;&#x7528;&#x6237;(&#x53EF;&#x9009;)*/
-       language:'zh_cn', /**&#x8BBE;&#x7F6E;&#x8BED;&#x8A00;&#xFF0C;zh_cn|zh_tw(&#x53EF;&#x9009;)*/
-       rnd:new Date().valueOf()
-     }
-     var temp = [];
-     for( var p in param ){
-     temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
-     }
-     document.write('&lt;iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&amp;') + '" width="'+ _w+'" height="'+_h+'"&gt;&lt;/iframe&gt;')
-     })()
-    &lt;/script&gt;
-
-    &lt;h4&gt;Published&lt;/h4&gt;
-    &lt;div class="date"&gt;&lt;span&gt;2014-01-18&lt;/span&gt;&lt;/div&gt;
-    &lt;br&gt;
-    &lt;h4&gt;Categories&lt;/h4&gt;
-    &lt;ul class="tag_box"&gt;
-      &lt;li&gt;
-        &lt;a href="/categories#reading notes-ref"&gt;reading notes &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
-      &lt;/li&gt;    &lt;/ul&gt;
-    &lt;br&gt;
-    &lt;h4&gt;Tags&lt;/h4&gt;
-    &lt;ul class="tag_box"&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-      &lt;/div&gt;
-
-      &lt;footer&gt;
-        &lt;p&gt;&amp;copy; tiemei 2012 
-          with help from &lt;a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework"&gt;ruhoh&lt;/a&gt;
-          and &lt;a href="http://twitter.github.com/bootstrap/" target="_blank"&gt;Twitter Bootstrap&lt;/a&gt;
-        &lt;/p&gt;
-        &lt;p&gt;
-        &lt;script src="http://s9.cnzz.com/stat.php?id=5379369&amp;web_id=5379369&amp;online=1&amp;show=line" language="JavaScript"&gt;&lt;/script&gt;
-        &lt;/p&gt;
-      &lt;/footer&gt;
-
-    &lt;/div&gt; &lt;!-- /container --&gt;
-
-    &lt;!-- Google Prettify --&gt;
-&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-  var pres = document.getElementsByTagName("pre");
-  for (var i=0; i &lt; pres.length; ++i) {
-    pres[i].className = "prettyprint linenums";
-  }
-  prettyPrint();
-&lt;/script&gt;
-&lt;!-- end Google Prettify --&gt;
-    &lt;script&gt;
-var clicky_site_ids = clicky_site_ids || [];
-clicky_site_ids.push(defworld.com);
-(function() {
-  var s = document.createElement('script');
-  s.type = 'text/javascript';
-  s.async = true;
-  s.src = '//static.getclicky.com/js';
-  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
-})();
-&lt;/script&gt;
-&lt;noscript&gt;&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/defworld.comns.gif" /&gt;&lt;/p&gt;&lt;/noscript&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</description>
     </item>
   </channel>
 </rss>

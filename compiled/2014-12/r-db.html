@@ -11,9 +11,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.043828919590258364" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/stylesheets/style.css?0.7403191874075159" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.09762196142571" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css?0.37963221620420506" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css?0.5145753233527148" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.3058674487360159" type="text/css" rel="stylesheet" media="all">
 
  
 
@@ -200,11 +200,79 @@
 
 <h2 id="toc_13">RoR</h2>
 
+<h1 id="toc_14">事务</h1>
+
+<h2 id="toc_15">mysql事务</h2>
+
+<p>上层的封装其实依赖底层DB支持，mysql如何支持，后续再展开。  </p>
+
+<h2 id="toc_16">jdbc事务</h2>
+
+<h3 id="toc_17">JDBC事务隔离级别</h3>
+
+<p>JDBC定义了五种事务隔离级别：  </p>
+
+<ul>
+<li>TRANSACTION_NONE JDBC驱动不支持事务</li>
+<li>TRANSACTION<em>READ</em>UNCOMMITTED 允许脏读、不可重复读和幻读。</li>
+<li>TRANSACTION<em>READ</em>COMMITTED 禁止脏读，但允许不可重复读和幻读。</li>
+<li>TRANSACTION<em>REPEATABLE</em>READ 禁止脏读和不可重复读，但允许幻读。</li>
+<li>TRANSACTION_SERIALIZABLE 禁止脏读、不可重复读和幻读</li>
+</ul>
+
+<p>JDBC定义了SavePoint接口，提供在一个更细粒度的事务控制机制。当设置了一个保存点后，可以rollback到该保存点处的状态，而不是rollback整个事务。<br>
+JDBC规范虽然定义了事务的以上支持行为，但是各个JDBC驱动，数据库厂商对事务的支持程度可能各不相同。为此，JDBC提供了DatabaseMetaData接口，提供了一系列JDBC特性支持情况的获取方法。  </p>
+
+<pre><code>脏读(dirty read)：一个事物读取了另一个事务尚未提交的数据
+不可重复读(non-repeatable read) ：解决了脏读问题，一个事务的操作导致另一个事务前后两次读取到不同的数据
+幻读(phantom read) ：解决了不可重复读问题。保证了同一个事务里，查询的结果都是事务开始时的状态（一致性）。但是，如果另一个事务同时提交了新数据，本事务再更新时，就会“惊奇的”发现了这些新数据。
+
+脏读和不可重复读的区别是，脏读是读到未提交的数据，不可重复读读到的确实是已经提交的数据。  
+</code></pre>
+
+<h3 id="toc_18">jdbc savepoint</h3>
+
+<p>将一个事务再细分，不是整个事务都要回滚。</p>
+
+<h2 id="toc_19">spring事务支持</h2>
+
+<h3 id="toc_20">隔离级别（isolation level）</h3>
+
+<p>参考jdbc事务隔离</p>
+
+<h3 id="toc_21">事务只读（transaction readonly）</h3>
+
+<p>Spring只是提供设置入口，最终起作用是在ORM框架和JDBC impl层，这里<a href="http://www.codeinstructions.com/2009/04/read-only-transactions-with-spring-and.html">有篇文章</a></p>
+
+<h3 id="toc_22">事务传播（transaction propagation）</h3>
+
+<pre><code>outer transaction : 外部methodA对应的transaction
+inner transaction : methodA调用的methodB对ing的transaction
+</code></pre>
+
+<p>以下说明，相似的实现带扣Spring源码。  </p>
+
+<h4 id="toc_23">Required</h4>
+
+<p>outer transaction和inner transaction公用一个physical transaction（对应DB transaction），但其实是两个独立的logical transaction。methodB失败，会在physical tranaction身上mark roolback only，然后methodB methodA都需要回滚。</p>
+
+<h4 id="toc_24">RequiresNew</h4>
+
+<p>outer transaction和inner transaction各自一个physical transaction，commit / rollback都是独立的。  </p>
+
+<h4 id="toc_25">Nested</h4>
+
+<p>跟RequiresNew不同的是，用transaction的savapoint概念来实现，methodB开始之前启动一个savapoint，methodB失败，只是这个savapoint回滚，而整个transaction可以不回滚。   </p>
+
 <p>参考:  </p>
 
 <p><a href="http://www.zhihu.com/question/24696366">知乎：解释一下关系数据库的第一第二第三范式？</a><br>
 <a href="http://www3.ntu.edu.sg/home/ehchua/programming/index.html">一个教程</a><br>
-<a href="http://docs.oracle.com/javase/tutorial/jdbc/overview/index.html">oracle官方jdbc教程</a>  </p>
+<a href="http://docs.oracle.com/javase/tutorial/jdbc/overview/index.html">oracle官方jdbc教程</a><br>
+《Mysql技术内幕-InnoDB存储引擎》<br>
+《Marking Rollback Only》<a href="https://docs.oracle.com/cd/E23095_01/Platform.93/ATGProgGuide/html/s1204markingrollbackonly01.html">https://docs.oracle.com/cd/E23095_01/Platform.93/ATGProgGuide/html/s1204markingrollbackonly01.html</a><br>
+《spring-reference-3.2x Transaction propagation》<br>
+《Spring声明式事务管理与配置详解》<a href="http://www.cnblogs.com/hellojava/archive/2012/11/21/2780694.html">http://www.cnblogs.com/hellojava/archive/2012/11/21/2780694.html</a>  </p>
 
     <hr>
     <div class="pagination">
@@ -214,7 +282,7 @@
 
             <li><a href="/archive">Archive</a></li>
 
-            <li class="next disabled"><a>Next &rarr;</a>
+            <li class="next"><a href="/2014-12/java-annotation.html" title="笔记 - java annotation">Next &rarr;</a></li>
         </ul>
       </ul>
     </div>

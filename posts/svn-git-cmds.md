@@ -33,6 +33,7 @@ tags:
 * `svn rm path/file` 移除某个分支/文件
 * `svn merge URL local_dir/url`合并分支，先将原分支cm，然后merge到本地新开发分支，
 或者merge到远程svn新分支
+* `svn update -r version`更新到指定版本
 
 ### 配置
 #### 排除

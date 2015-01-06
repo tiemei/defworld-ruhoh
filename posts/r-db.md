@@ -223,3 +223,4 @@ outer transaction和inner transaction各自一个physical transaction，commit /
 《Marking Rollback Only》https://docs.oracle.com/cd/E23095_01/Platform.93/ATGProgGuide/html/s1204markingrollbackonly01.html  
 《spring-reference-3.2x Transaction propagation》  
 《Spring声明式事务管理与配置详解》http://www.cnblogs.com/hellojava/archive/2012/11/21/2780694.html  
+《HTTP幂等性概念和应用》http://coolshell.cn/articles/4787.html  
